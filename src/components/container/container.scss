@@ -1,0 +1,28 @@
+.guidePack{
+
+    max-width: 1440px;
+    width: calc(100% - 200px);
+    margin: 0 auto;
+    overflow: hidden;
+
+}
+
+@media (max-width : 1100px) {
+
+    .guidePack{
+
+        width: calc(100% - 60px);
+    
+    }
+
+}
+
+@media (max-width : 500px) {
+
+    .guidePack{
+
+        width: calc(100% - 40px);
+    
+    }
+
+}

@@ -1,0 +1,251 @@
+.appHeader{
+
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+
+    .strip_lines{
+
+        display: flex;
+    
+       .lineIn{
+        
+        width: 25%;
+        height: 5px;
+    
+       }
+    
+       .lasg_red {
+        background-color: #E83B50;
+       } 
+    
+       .lasg_blue {
+        background-color: #4D8EFF;
+       } 
+    
+       .lasg_yellow {
+        background-color: #FFBB32;
+       } 
+    
+       .lasg_green {
+        background-color: #32C76D;
+       } 
+    
+    }
+
+    .seth_Link{
+
+        background-color: var(--primary);
+        height: 45px;
+        font-size: 14px;
+        color: #fff;
+        display: flex !important;
+        align-items: center;
+        gap: 20px;
+        justify-content: space-between;
+
+        .newsScroll{
+
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            display: none;
+
+        }
+
+        .quick_links{
+
+            display: flex;
+            gap: 20px;
+            font-size: 11px;
+            margin-left: auto;
+            justify-content: flex-end;
+
+            a{
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                text-transform: uppercase;
+                font-weight: 600;
+    
+                &:hover{
+                    color: var(--lasgGreen);
+                }
+            }
+        }
+
+        
+    }
+
+    .navigation{
+
+        background-color: #fff;
+
+        .siteBranding{
+
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+            .logo{
+                height: 60px;
+                width: 60px;
+
+                img{
+                    width: 100%;
+                }
+            }
+
+            .siteName{
+                font-size: 12px;
+            }
+        }
+
+        .seth_nav{
+
+            display: flex;
+            gap: 50px;
+            
+        }
+
+        .main_nav{
+            //height: 80px;
+            align-items: center;
+        }
+
+        .parentLink{
+            cursor: pointer;
+
+            &:hover .last{
+
+                right: -15px;
+                top: -15px;
+        
+            }
+        
+            &:hover .first{
+        
+                left: 0px;
+                bottom: 0px;
+        
+            }
+
+            .ParentName{
+                height: 80px;
+                font-size: 12px;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                border-bottom: 2px solid transparent;
+            }
+
+            .navi{
+                transition: all .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            }
+
+            &:hover .nests{
+                display: block;
+            }
+
+            &:hover .ParentName{
+                border-bottom: 2px solid var(--lasgGreen);
+                color: var(--primary);
+
+                .navi{
+                    rotate: (180deg);
+                }
+            }
+        }
+
+        .nests{
+
+            position: fixed;
+            width: 100%;
+            left: 0;
+            top: 130px;
+            padding-top: 80px;
+            padding-bottom: 120px;
+            height: calc(100vh - 130px);
+            overflow: hidden;
+            display: none;
+
+            &:hover{
+                display: block;
+            }
+
+            .vectorPhoto{
+
+                width: 600px;
+                position: absolute;
+                bottom: 0px;
+                right: 0px;
+                z-index: 3;
+                display: flex;
+                align-items: center;
+
+                img{
+                    width: 100%;
+                }
+            }
+
+            .nest_heading{
+
+                font-size: 35px;
+                letter-spacing: -.5px;
+                width: 40%;
+                line-height: 44px;
+                margin-bottom: 70px;
+                font-weight: 700;
+            }
+
+            .nest_links{
+
+                display: flex;
+                flex-direction: column;
+                gap: 35px;
+                cursor: pointer;
+
+                .linker{
+
+                    display: flex;
+                    align-items: center;
+                    width: 50%;
+                    border-bottom: 1px solid hsl(104, 8%, 85%);
+                    padding-bottom: 35px;
+                    justify-content: space-between;
+                    transition: all .4s ease-in-out ;
+
+                    &:hover {
+                        border-color: var(--primary);
+                    }
+
+                    &:last-child{
+                        border: none;
+                    }
+
+                    .linkUp{
+
+                        display: flex;
+                        flex-direction: column;
+                        gap: 8px;
+
+                        .link{
+                            color: var(--primary);
+                        }
+
+                        p{
+                            font-size: 14px;
+                            width : 100%
+                        }
+                        
+                    }
+
+                }
+
+
+            }
+        }
+
+    }
+    
+}

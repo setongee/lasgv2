@@ -1,0 +1,39 @@
+:root {
+
+    --primary: #00484D;
+    --primary25: #0C766F;
+    --primary75: #095F59;
+    --secondary: #FFFCF1;
+    --accent: #FFD681;
+    --dark: #131414;
+    --lasgGreen : #78E183;
+    --lime : #32C76D
+
+  }
+
+* a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.gridPadding{
+
+    padding: 0 8%;
+
+}
+
+.uppercase{
+  text-transform: uppercase;
+}
+
+.thick{
+  font-weight: 600;
+}
+
+.underline{
+  text-decoration: underline;
+}
+
+body{
+  background-color: var(--secondary);
+}
