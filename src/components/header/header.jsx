@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState} from 'react'
 
 //------------Start of styles -------------
 
@@ -12,10 +12,19 @@ import NavElements from './navElements';
 import { navigationRoutes } from './navData';
 import lasgLogo from '../../assets/navBar/lasg_logo.png'
 import Container from '../container/container';
+import NestedView from './nestedView';
 
 export default function Header() {  
 
-  return (
+  
+//-------------------- States Management - The problem of dynamic animated nests lolz ---------------------
+  
+
+//-------------------- End of Nested States Management ---------------------
+
+
+
+return (
 
     <IconoirProvider 
     
@@ -42,7 +51,7 @@ export default function Header() {
 
             </div>
 
-            <div className="seth_Link gridPadding">
+            <div className="seth_Link">
 
                 <Container>
 
@@ -88,7 +97,7 @@ export default function Header() {
             </div>
 
             {/* main navigation links */}
-            <div className="navigation gridPadding"> 
+            <div className="navigation"> 
 
                 <Container>
                     
@@ -115,7 +124,7 @@ export default function Header() {
 
                             </div>
 
-                        </div>
+                    </div>
                     
                 </Container>
             

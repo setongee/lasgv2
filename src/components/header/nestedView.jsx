@@ -3,6 +3,7 @@ import { NavArrowRight } from 'iconoir-react';
 import { useNavigate } from 'react-router';
 import vector1 from '../../assets/navBar/gov.svg'
 import { motion } from "framer-motion"
+import Container from '../container/container';
 
 export default function NestedView({navData}) {
 
@@ -53,7 +54,7 @@ const removeClass = (e) => {
 
   return (
     
-    <div className="nests gridPadding" style={{backgroundColor : navData.theme}} onMouseOut={ e => removeClass(e) } onMouseOver={ e => addClass(e) }>
+    <div className="nests" style={{backgroundColor : navData.theme}} onMouseOut={ e => removeClass(e) } onMouseOver={ e => addClass(e) }>
 
         <motion.div 
         className="vectorPhoto"
@@ -77,6 +78,8 @@ const removeClass = (e) => {
         </motion.div>
 
         {/* Heading Area */}
+
+        <Container >
 
         <motion.div 
         className="nest_heading thick"
@@ -127,6 +130,8 @@ const removeClass = (e) => {
             }
 
         </div>
+
+        </Container>
 
     </div>
 

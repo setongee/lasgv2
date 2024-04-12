@@ -10,10 +10,13 @@ export default function NavElements(navigationRoutes) {
 const navData = navigationRoutes.navigationRoutes;
 let navigate = useNavigate();
 
+const [showNest, setShowNest] = useState(false)
+
 const addClass = (e) => {
 
     const parent = e.target;
     parent.classList.add('remain')
+    console.log(parent);
 
 }
 
@@ -53,7 +56,7 @@ return (
                 {/* ---------------------------------- Conditional Rendered Dropdown Component ---------------------------------- */}
 
                 {/* Nested Links */}
-                { navData.isNest ? <NestedView navData = {navData} /> : null }
+                { navData.isNest ? <NestedView navData = {navData} isOpen={showNest} setOpen = {setShowNest} /> : null }
 
                 </div>
 

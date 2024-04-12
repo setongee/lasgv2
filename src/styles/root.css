@@ -3,23 +3,24 @@
     --primary: #00484D;
     --primary25: #0C766F;
     --primary75: #095F59;
-    --secondary: #FFFCF1;
+    --secondary: #FFF8DE;
     --accent: #FFD681;
     --dark: #131414;
     --lasgGreen : #78E183;
-    --lime : #32C76D
+    --lime : #32C76D;
+    --gold : #FDCF6E;
+    --bgLime : #F8FFF7;
+    --secondary2 : #FFFCF1
 
+  }
+
+  html{
+    scroll-behavior: smooth;
   }
 
 * a{
     text-decoration: none;
     color: #fff;
-}
-
-.gridPadding{
-
-    padding: 0 8%;
-
 }
 
 .uppercase{
@@ -34,6 +35,16 @@
   text-decoration: underline;
 }
 
+.padbody{
+  padding: 50px 0;
+}
+
 body{
-  background-color: var(--secondary);
+  background-color: var(--secondary2);
+}
+
+*{
+
+  box-sizing: border-box;
+
 }

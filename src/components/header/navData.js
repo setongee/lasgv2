@@ -40,7 +40,7 @@ export const navigationRoutes = {
         parentName : "Services",
         theme : "#f9f9f9",
         isNest : true,
-        index : 1,
+        index : 2,
         nests : {
             heading : 'Connecting the citizens of Lagos State to engage with their Government.',
             vector : '#',
@@ -76,7 +76,7 @@ export const navigationRoutes = {
         parentName : "News & Events",
         theme : "#f9f9f9",
         isNest : true,
-        index : 1,
+        index : 3,
         nests : {
             heading : 'Explore the Lagos State Government, Officials and parastatals.',
             vector : '#',
@@ -112,6 +112,13 @@ export const navigationRoutes = {
         parentName : "Connect",
         theme : "#f9f9f9",
         isNest : false,
-        index : 1
+        index : 4
+    },
+
+    route5 : {
+        parentName : "Search",
+        theme : "#f9f9f9",
+        isNest : false,
+        index : 5
     }
 }

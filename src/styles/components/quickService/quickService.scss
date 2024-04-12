@@ -1,0 +1,316 @@
+.quickCheck{
+
+    padding: 50px 0;
+
+    .recentlySearchedServices{
+
+        .title{
+
+            font-size: 13px;
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+        margin-top: 60px;
+        
+        .popularCards{
+            
+            display: flex;
+            gap: 30px;
+    
+            .flip_cards{
+                position: relative;
+                height: 450px;
+                width: 350px;
+                perspective: 1000px;
+                padding: 35px 0;
+                flex-shrink: 0;
+        
+                .card-inner{
+                    width: 100%;
+                    height: 100%;
+                    transition: transform .8s cubic-bezier(0.175, 0.885, 0.32, 1);
+                    transform-style: preserve-3d;
+        
+                    .frontCard, .backCard{
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        backface-visibility: hidden;
+                        background-color: var(--primary75);
+                        padding: 30px;
+                        color: #fff;
+                    }
+        
+                    .backCard{
+                        background-color: #fff;
+                        transform: rotateY(180deg);
+                        color: #000;
+                    }
+                }
+        
+                &:hover .card-inner{
+                    transform: rotateY(-180deg);
+                }
+            }
+
+        }
+
+    }
+
+
+    .contain_body{
+
+        display: flex;
+        align-items: center;
+        gap: 70px;
+        position: relative;
+        display: none;
+
+        h1{
+            font-size: 16px;
+            flex-shrink: 0;
+        }
+
+        .arrowPush{
+
+            background-color: var(--lime);
+            width: 35px;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            border-radius: 5px;
+            cursor: pointer;
+            display: none;
+
+            &.prev {
+                left: 8%;
+            }
+
+            &.next{
+
+                right: 0%;
+
+            }
+
+        }
+
+        .serviceBox{
+            display: flex;
+            gap: 20px;
+            overflow-x: scroll;
+            scrollbar-width: none;
+            align-items: center;
+            width: calc(100% - 208px);
+            scroll-behavior: smooth;
+
+            .QuickService{
+                padding: 15px 20px;
+                flex-shrink: 0;
+                width: max-content;
+                background-color: var(--primary);
+                font-size: 11px;
+                display: flex;
+                gap: 12px;
+                align-items: center;
+                border-radius: 5px;
+
+                .prima{
+
+                    .iconAnim{
+                    
+                        position: relative;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        overflow: hidden;
+                        height: 13px;
+                        width: 13px;
+                       
+                       .arr{
+                        
+                        
+                        position: absolute;
+                        height: 13px;
+                        width: 13px;
+
+
+                       } 
+                
+                       .last{
+
+                            transition: all .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+                       }
+                
+                       .first{
+
+                            color: var(--lime);
+                            transition: all .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+                       }
+                    
+                    }
+                
+                }
+
+                &:hover .last{
+                
+                    right: -20px;
+                    top: -20px;
+            
+                }
+            
+                &:hover .first{
+            
+                    left: 0px;
+                    bottom: 0px;
+            
+                }
+            }
+        }
+    }
+}
+
+.getStarted{
+
+    margin-top: 50px;
+    padding-bottom: 100px;
+    display: flex;
+    justify-content: space-between;
+
+    .textString{
+
+        font-size: 28px;
+        font-weight: 500;
+        width: 45%;
+        padding-bottom: 10px;
+        position: relative;
+        padding-right: 50px;
+        padding-top: 30px;
+
+        .how{
+            margin-top: 0px;
+            font-size: 21px;
+        }
+
+        .textChange{
+
+            margin-top: 20px;
+            line-height: 73px;
+            font-weight: 700;
+            font-size: 75px;
+            margin-bottom: 100px;
+            color: var(--dark);
+
+            .Typewriter__cursor{
+                    
+                font-size: 70px;
+                font-weight: 100 !important;
+
+            }
+
+            
+        }
+
+        .arry{
+
+            position: absolute;
+            bottom: 0px;
+            right: 0;
+
+        }
+
+        
+    }
+
+    .p{
+        position: absolute;
+        bottom: 0;
+        font-size: 16px;
+        width: 90%;
+        line-height: 24px;
+        border-top: 1px solid #e3e3e3;
+        padding-top: 50px;
+
+        .txt{
+            width: 70%;
+            font-weight: 400;
+
+            span{
+
+                color: var(--lime);
+                text-decoration: underline;
+
+            }
+        }
+    }
+
+    .quickAsapLinks{
+
+        a{
+            color: var(--primary);
+            font-weight: 500;
+            font-size: 15px;
+            text-decoration: underline;
+        }
+
+        width: 50%;
+        background-color: #fff;
+        box-shadow: 0 3px 30px rgba($color: #000000, $alpha: .02);
+        padding: 50px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+
+        .linkBin{
+            width: calc(50% - 15px);
+            height: max-content;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 30px;
+            cursor: pointer;
+            transition: all .4s ease-in-out;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            &.untold{
+
+                gap: 10px;
+
+                p{
+                    margin-left: auto;
+                    margin-top: -1px;
+                    font-weight: 600;
+                    color: var(--lime);
+                }
+
+            }
+
+            &:hover{
+
+                border-color: var(--lime);
+
+            }
+
+            h1{
+                color: var(--dark);
+                font-size: 21px;
+            }
+
+            &.milt{
+                border: none;
+            }
+
+            p{
+                margin-top: 8px;
+                font-size: 14px;
+                color: #777;
+            }
+        }
+
+    }
+}

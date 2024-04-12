@@ -226,6 +226,7 @@ export default function HomepageSlider() {
             </div>
             </div>
         </div>
+        
         {/* next prev */}
         <div className="arrows">
             <button id="prev">&lt;</button>
