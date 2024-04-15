@@ -1,10 +1,8 @@
 import React from 'react'
-import Container from '../../components/container/container'
-import '../../styles/components/quickService/quickService.scss'
-import Arrow from '../../components/arrowEvents/arrow'
-import { ArrowDown, ArrowDownLeftCircleSolid, ArrowUpRight, IconoirProvider, NavArrowLeft, NavArrowRight } from 'iconoir-react'
-import {motion} from 'framer-motion'
+import '../../../styles/components/quickService/quickService.scss'
+import { ArrowDown, ArrowUpRight, IconoirProvider } from 'iconoir-react'
 import Typewriter from 'typewriter-effect';
+import { motion } from 'framer-motion';
 
 export default function QuickCheck() {
 
@@ -47,18 +45,6 @@ const dataService = {
 
 }
 
-const moveScrollRight = () => {
-
-    document.querySelector('.serviceBox').scrollLeft += 300;
-
-}
-
-const moveScrollLeft = () => {
-
-    document.querySelector('.serviceBox').scrollLeft -= 300;
-
-}
-
   return (
     
         <div className="quickCheck">
@@ -85,10 +71,10 @@ const moveScrollLeft = () => {
                             <Typewriter
             
                             options={{
-                                strings: ['Report an Emergncy / Disaster.', 'Find health care services around you.', 'Register / Renew your Lisences, Permits etc.', 'Find out more about Lagos State Govt. benefits.', 'Explore Ministries, Departments and Agencies'],
+                                strings: ['Browse 250+ online citizen and business services.','Report an Emergncy / Disaster.', 'Find health care services around you.', 'Register / Renew your Lisences, Permits etc.', 'Find out more about Lagos State Govt. benefits.', 'Explore Ministries, Departments and Agencies.'],
                                 autoStart: true,
                                 loop: true,
-                                delay : 30,
+                                delay : 40,
                                 deleteSpeed : 10
                             }}
             
@@ -114,7 +100,14 @@ const moveScrollLeft = () => {
                     
                     >
 
-                    <div className="quickAsapLinks">
+                    <motion.div 
+                    
+                    initial = {{ x : 150, opacity : 0 }} 
+                    whileInView = {{x : 0, opacity : 1}} 
+                    transition={{duration : .4}}
+                    viewport={{once : true}}
+                    
+                    className="quickAsapLinks">
 
                         <div className="linkBin milt">
 
@@ -241,7 +234,7 @@ const moveScrollLeft = () => {
 
                         
 
-                    </div>
+                    </motion.div>
 
                     </IconoirProvider>
 

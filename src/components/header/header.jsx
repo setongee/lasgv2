@@ -14,7 +14,13 @@ import lasgLogo from '../../assets/navBar/lasg_logo.png'
 import Container from '../container/container';
 import NestedView from './nestedView';
 
+import { useLocation, useNavigate } from 'react-router';
+
+
 export default function Header() {  
+
+    let location = useLocation();
+    let navigate = useNavigate();
 
   
 //-------------------- States Management - The problem of dynamic animated nests lolz ---------------------
@@ -104,7 +110,22 @@ return (
                     <div className="flex space_fully">
 
                         {/* Site Branding Information */}
-                        <div className="siteBranding">
+                        <div className="siteBranding"  
+                        
+                        onClick = { 
+                            () => { 
+                                
+
+                                if (location.pathname === '/') {
+
+                                    window.scroll(0,0);
+
+                                }
+
+                                
+                                navigate('/')
+
+                            } }>
 
                             <div className="logo"> <img src={lasgLogo} alt="Lagos State Official Digital Logo" /> </div>
                             <div className="seth_textTop siteName uppercase thick">Official Website of Lagos State  </div>

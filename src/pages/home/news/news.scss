@@ -1,0 +1,158 @@
+.recent_news{
+
+    background-color: #fff;
+    padding: 80px 0;
+
+    .newsAreaHome{
+        
+        margin-top: 80px;
+        display: flex;
+        justify-content: space-between;
+
+        .media{
+            width: 48%;
+            background-color: var(--lime3);
+            max-width: 600px;
+            height: 600px;
+            position: relative;
+
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            .mintVideo{
+
+                width: 100%;
+                max-width: 600px;
+                height: 600px;
+
+                video{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+
+                .console{
+
+                    width: 100%;
+                    max-width: 600px;
+                    height: 600px;
+                    background: -moz-linear-gradient(180deg, rgba(138,231,0,0) 0%, rgba(0,0,0,0.33519345238095233) 100%);
+                    background: -webkit-linear-gradient(180deg, rgba(138,231,0,0) 0%, rgba(0,0,0,0.33519345238095233) 100%);
+                    background: linear-gradient(180deg, rgba(138,231,0,0) 0%, rgba(0,0,0,0.33519345238095233) 100%);
+                    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#8ae700",endColorstr="#000000",GradientType=1);
+                    position: absolute;
+                    bottom: 0;
+
+                }
+
+                .control{
+                    width: 60px;
+                    height: 60px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 50%;
+                    background-color: #fff;
+                    position: absolute;
+                    z-index: 999;
+                    bottom: 0;
+                    margin: 30px;
+                    right: 0;
+                    cursor: pointer;
+                }
+
+                .sound{
+                    bottom: 0;
+                }
+
+                .play{
+                    left: 0;
+                }
+
+            }
+        }
+
+        .content{
+
+            width: 48%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+
+            .tag{
+                font-size: 13px;
+                display: none;
+            }
+
+            .main{
+
+                font-size: 50px;
+                line-height: 55px;
+
+            }
+
+            .sub{
+                width: 65%;
+                line-height: 25px;
+                margin-bottom: 50px;
+                margin-top: 40px;
+            }
+
+            .date_control{
+                display: flex;
+                justify-content: space-between;
+                margin-top: auto;
+                border-top: 1px solid #e3e3e3;
+                padding-top: 40px;
+                position: relative;
+
+                .lineCheck{
+                    
+                    width: 100%;
+                    height: 2px;
+                    background-color: var(--lime);
+                    position: absolute;
+                    top: -2px;
+                    
+                    &.running{
+
+                        animation: lineShock 5s forwards;
+
+                    }
+                }
+
+                @keyframes lineShock {
+                    
+                    from {
+                        width: 100%;
+                    }
+
+                    to {
+                        width: 0%;
+                    }
+
+                }
+
+                .arrowOpp{
+                    display: flex;
+                    align-items: center;
+                    gap: 25px;
+                    
+                    .arrowChange{
+
+                        cursor: pointer;
+                        
+                        &:hover{
+                            color: var(--lime);
+                        }
+                    }
+                }
+            }
+
+        }
+
+    }
+}

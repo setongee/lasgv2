@@ -1,7 +1,9 @@
 import React from 'react'
 import HomepageSlider from './HomepageSlider'
-import QuickCheck from '../quickCheck/QuickCheck'
+import QuickCheck from './quickCheck/QuickCheck'
 import Container from '../../components/container/container'
+import RecentlySearched from './recentlySearched/RecentlySearched'
+import News from './news/News'
 
 export default function Homepage() {
 
@@ -14,9 +16,12 @@ export default function Homepage() {
       <Container>
 
           <QuickCheck/>
-          <h1>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur, fuga!</h1>
+          <RecentlySearched />
 
       </Container>
+
+
+      <News/>
 
     </div>
 
