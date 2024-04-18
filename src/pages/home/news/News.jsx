@@ -9,7 +9,8 @@ import Gov from '../../../assets/pelumi.jpeg'
 export default function News() {
 
 const [news, setNews] = useState(0)
-const [muted, setMuted] = useState(false)
+const [muted, setMuted] = useState(false);
+const [timemap, setTimeMap] = useState(5);
 
 const newsData = [
 
@@ -45,11 +46,11 @@ const nextShow = () => {
 
         setNews( news + 1 );
         document.querySelector('.lineCheck').classList.remove('running');
+        setMuted(false);
         
         setTimeout(() => {
 
             document.querySelector('.lineCheck').classList.add('running');
-            document.querySelector('.lineCheck').style.animationDuration = '5s';
             
         }, 100);
 
@@ -57,6 +58,7 @@ const nextShow = () => {
     } else{
         resetSlider();
         document.querySelector('.lineCheck').classList.remove('running');
+        setMuted(false);
         
         setTimeout(() => {
 
@@ -73,17 +75,18 @@ const prevShow = () => {
 
         setNews(news-1);
         document.querySelector('.lineCheck').classList.remove('running');
+        setMuted(false);
         
         setTimeout(() => {
 
             document.querySelector('.lineCheck').classList.add('running');
-            document.querySelector('.lineCheck').style.animationDuration = '5s';
             
         }, 100);
 
     } else {
         setNews(newsData.length - 1)
         document.querySelector('.lineCheck').classList.remove('running');
+        setMuted(false);
         
         setTimeout(() => {
 
@@ -114,6 +117,8 @@ useEffect(() => {
 
     if(newsData[news].type !== 'video') {   
 
+        setTimeMap(5);
+
         const interval = setInterval(() => {
 
             nextShow();
@@ -128,8 +133,7 @@ useEffect(() => {
         videoPlaying.onloadedmetadata = function() {
 
             const duration = Math.round(this.duration);
-            document.querySelector('.lineCheck').style.animationDuration = `${duration}s`;
-            
+            setTimeMap(duration);
 
           };
     }
@@ -157,7 +161,7 @@ useEffect(() => {
 
                     <div className="date_control">
 
-                        <div className="lineCheck running"></div>
+                        <div className="lineCheck" style={{animationDuration : `${timemap}s`}} ></div>
 
                         <div className="date thick"> { newsData[news].date } </div>
 
