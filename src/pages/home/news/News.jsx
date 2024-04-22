@@ -4,7 +4,6 @@ import Container from '../../../components/container/container'
 import TabTitle from '../../../components/tabHeading/tabTitle'
 import { ArrowLeft, ArrowRight, Play, PlaySolid, SoundHigh } from 'iconoir-react'
 import { motion } from 'framer-motion'
-import Gov from '../../../assets/pelumi.jpeg'
 
 export default function News() {
 

@@ -71,7 +71,7 @@ const dataService = {
                             <Typewriter
             
                             options={{
-                                strings: ['Browse 250+ online citizen and business services.','Report an Emergncy / Disaster.', 'Find health care services around you.', 'Register / Renew your Lisences, Permits etc.', 'Find out more about Lagos State Govt. benefits.', 'Explore Ministries, Departments and Agencies.'],
+                                strings: ['Browse 250+ online citizen and business services.','Report an Emergncy / Disaster.', 'Find health care services around you.', 'Register / Renew your Lisences, Permits etc.', 'Stay up-to-date with News & Events.', 'Find out more about Lagos State Govt. benefits.', 'Explore Ministries, Departments and Agencies.'],
                                 autoStart: true,
                                 loop: true,
                                 delay : 40,

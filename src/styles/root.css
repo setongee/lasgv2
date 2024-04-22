@@ -29,8 +29,24 @@
   text-transform: uppercase;
 }
 
+.thick_500{
+  font-weight: 500;
+}
+
 .thick{
   font-weight: 600;
+}
+
+.thick_700{
+  font-weight: 700;
+}
+
+.thick_800{
+  font-weight: 800;
+}
+
+.thick_900{
+  font-weight: 900;
 }
 
 .underline{
@@ -43,6 +59,7 @@
 
 body{
   background-color: var(--secondary2);
+  overflow-x: hidden;
 }
 
 *{
@@ -53,3 +70,16 @@ body{
   font-optical-sizing: auto;
 
 }
+
+.a-dark a{
+  color : #000
+}
+
+.a-light a{
+  color : #fff
+}
+
+.flex_col{
+  flex-direction: column;
+}
+

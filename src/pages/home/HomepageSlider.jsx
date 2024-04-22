@@ -25,7 +25,9 @@ export default function HomepageSlider() {
         let timeAutoNext = 7000;
 
         nextDom.onclick = function(){
-            showSlider('next');    
+
+            showSlider('next');   
+             
         }
 
         prevDom.onclick = function(){
@@ -34,7 +36,9 @@ export default function HomepageSlider() {
 
         let runTimeOut;
         let runNextAuto = setTimeout(() => {
+
             nextDom.click();
+
         }, timeAutoNext)
 
         function showSlider(type){
