@@ -95,8 +95,8 @@ export default function HomepageSlider() {
 
                     <div className="buttons">
 
-                        <button>Explore Lagos</button>
-                        <button>Search Services</button>
+                        <button> Read More </button>
+                        <button> Explore Services </button>
 
                     </div>
 
@@ -123,8 +123,8 @@ export default function HomepageSlider() {
 
                     <div className="buttons">
 
-                        <button>Explore Lagos</button>
-                        <button>Search Services</button>
+                        <button> Read More </button>
+                        <button> Explore Services </button>
 
                     </div>
 
@@ -151,8 +151,8 @@ export default function HomepageSlider() {
 
                     <div className="buttons">
 
-                        <button>Explore Lagos</button>
-                        <button>Search Services</button>
+                        <button> Read More </button>
+                        <button> Explore Services </button>
 
                     </div>
 
@@ -179,8 +179,8 @@ export default function HomepageSlider() {
 
                     <div className="buttons">
 
-                        <button>Explore Lagos</button>
-                        <button>Search Services</button>
+                        <button> Read More </button>
+                        <button> Explore Services </button>
 
                     </div>
 
@@ -199,21 +199,10 @@ export default function HomepageSlider() {
 
                 <img src={img1} />
 
-                <div className="content">
-
-                    <div className="title">Name Slider</div>
-                    <div className="description">Description</div>
-
-                </div>
-
             </div>
 
             <div className="item">
             <img src={img2} />
-            <div className="content">
-                <div className="title">Name Slider</div>
-                <div className="description">Description</div>
-            </div>
             </div>
             <div className="item">
             <img src={img3} />

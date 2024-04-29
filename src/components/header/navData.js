@@ -112,13 +112,15 @@ export const navigationRoutes = {
         parentName : "Connect",
         theme : "#f9f9f9",
         isNest : false,
-        index : 4
+        index : 4,
+        url : '/connect'
     },
 
     route5 : {
         parentName : "Search",
         theme : "#f9f9f9",
         isNest : false,
-        index : 5
+        index : 5,
+        url : '/search'
     }
 }

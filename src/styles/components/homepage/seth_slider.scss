@@ -106,16 +106,16 @@
     gap: 20px;
 }
 .thumbnail .item{
-    width: 150px;
-    height: 220px;
+    width: 100px;
+    height: 100px;
     flex-shrink: 0;
     position: relative;
     transition: all .6s ease-in-out;
 }
 
 .thumbnail .item:nth-child(3){
-    width:150px;
-    height: 220px;
+    width: 150px;
+    height: 100px;
     flex-shrink: 0;
     position: relative;
     border: 5px solid white;
@@ -133,6 +133,7 @@
     position: absolute;
     bottom: 20px;
     left: 20px;
+    display: none;
 }
 .thumbnail .item .content .title{
     font-weight: 500;

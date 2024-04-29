@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React,{useState, useEffect} from 'react'
 
 //------------Start of styles -------------
 
@@ -7,27 +7,61 @@ import '../../styles/global.scss'
 
 //----------- End of styles -----------------
 
-import {ArrowUpRight, IconoirProvider } from 'iconoir-react';
-import NavElements from './navElements';
+import {ArrowUpRight, IconoirProvider, NavArrowDown } from 'iconoir-react';
 import { navigationRoutes } from './navData';
 import lasgLogo from '../../assets/navBar/lasg_logo.png'
 import Container from '../container/container';
-import NestedView from './nestedView';
 
 import { useLocation, useNavigate } from 'react-router';
+import NestedView from './nestedView';
+import Pong from './pong';
 
 
 export default function Header() {  
 
-    let location = useLocation();
-    let navigate = useNavigate();
+const [showTab, setShowTab] = useState(false);
+const [indexing, setIndexing] = useState('')
+
+let location = useLocation();
+let navigate = useNavigate();
 
   
 //-------------------- States Management - The problem of dynamic animated nests lolz ---------------------
-  
+
+
+const showMenuIndex = (index) => {
+
+    setShowTab(true);
+    const arrParent = Array.from(document.querySelectorAll('.parentName'));
+    
+    if( document.querySelector('.fix') === null ) {
+        
+        arrParent[index].classList.add('fix');
+
+    } else {
+
+        document.querySelector('.fix').classList.remove('fix');
+        arrParent[index].classList.add('fix');
+
+    }
+
+    if(index === indexing && showTab) {
+
+        setShowTab(false);
+        document.querySelector('.fix').classList.remove('fix');
+
+    }
+
+}  
+
+useEffect(() => {
+    
+    //setShowTab(true);
+
+}, [indexing]);
+
 
 //-------------------- End of Nested States Management ---------------------
-
 
 
 return (
@@ -136,12 +170,52 @@ return (
                             <div className="seth_nav"> 
 
                             {
-                                Object.keys(navigationRoutes).length ? Object.entries(navigationRoutes).map( (nav, index) => {
+                                Object.values(navigationRoutes).map( (data, index) => {
 
-                                    return <NavElements navigationRoutes = {nav[1]} key = {index} point = {nav[0]} /> // Main Nav Links                           
+                                    return (
+                                    
+                                    <div 
+                                        key = {index} 
+                                        className="parentName thick uppercase" 
+                                        onClick = { 
 
-                                } ) : null
+                                            () => {
+                                                
+                                                if(data.isNest) {
+
+                                                    showMenuIndex(index); setIndexing(index)
+
+                                                } else {
+
+                                                    window.location.href = data.url
+
+                                                }
+
+                                            } 
+                                            
+                                        } 
+                                        
+                                        > 
+                                        
+                                        {data.parentName}
+                                        {
+                                            data.isNest ? <NavArrowDown color='#131414' className='navi' /> : <ArrowUpRight color='#131414' /> 
+                                        }
+                                        
+                                        </div> 
+                                
+                                )
+
+                                } )
                             }
+
+                            </div>
+
+                            <div className="showPage">
+
+                                {
+                                    showTab ?  <NestedView navData = {navigationRoutes[`route${indexing+1}`]} /> : null
+                                }
 
                             </div>
 

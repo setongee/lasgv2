@@ -25,7 +25,7 @@ export default function Homepage() {
 
       <News/>
 
-      <Services bgColor = "#FFF8DE" />
+      <Services bgColor = "#095F59" />
 
       <Resources/>
 
