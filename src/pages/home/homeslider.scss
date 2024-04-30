@@ -88,12 +88,13 @@
                 font-weight: 700;
                 margin: 50px 0;
                 
-                -webkit-box-orient: vertical;
-                display: -webkit-box;
-                -webkit-line-clamp: 7;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                white-space: normal;
+                
+                // -webkit-box-orient: vertical;
+                // display: -webkit-box;
+                // -webkit-line-clamp: 7;
+                // overflow: hidden;
+                // text-overflow: ellipsis;
+                // white-space: normal;
 
                 .lime{
 
@@ -221,23 +222,38 @@
                 }
 
                 .topic{
-                    font-size: 24px;
-                    line-height: 20px;
+
+                    font-size: 26px;
+                    line-height: 23px;
                     margin: 25px 0;
-                    -webkit-line-clamp: 4;
                     margin-bottom: 20px;
+                    position: relative;
+                    max-height: calc(26px * 8);
+                    overflow: hidden;
+                    padding-right: 1rem;
+
+                    &::before {
+                        position: absolute;
+                        content: "...";
+                        bottom: 0;
+                        right: 0;
+                      }
+                      &::after {
+                        content: "";
+                        position: absolute;
+                        right: 0;
+                        width: 1rem;
+                        height: 1rem;
+                        background: white;
+                      }
+
                 }
 
                 .description{
                     width: 90%;
                     font-size: 11px;
                     line-height: 17px;
-                    -webkit-box-orient: vertical;
-                    display: -webkit-box;
-                    -webkit-line-clamp: 3;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                    white-space: normal;
+                    display: none;
                 }
 
                 .fillUp{

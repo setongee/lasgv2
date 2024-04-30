@@ -240,7 +240,7 @@ useEffect(() => {
                                             visible: i => ({
                                                 y: 0,
                                                 transition: {
-                                                duration : 2
+                                                duration : 1
                                                 }
                                             })
                                             }}
