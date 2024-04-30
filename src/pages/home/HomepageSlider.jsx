@@ -20,22 +20,29 @@ const newsData = [
         main : "The best online platform to find all Lagos State Government Services, Topics & Information.",
         sub : "Lorem ipsum dolor sit amet, consectetur elit adfh, Curabitur venenatis velit eget massa volutpat, at rhoncus turpis consequat.",
         date : "Tues. 06 April, 2024",
-        // photo : "https://lagostoday.com.ng/wp-content/uploads/2024/03/IMG_8916.jpeg",
-        photo : 'https://images.unsplash.com/photo-1589797688224-5fc840fa09e5?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+        //photo : 'https://images.unsplash.com/photo-1589797688224-5fc840fa09e5?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+        photo : 'https://firebasestorage.googleapis.com/v0/b/lasg-a9f5c.appspot.com/o/IMG_1282%20(2).jpg?alt=media&token=7708e0a3-5211-411b-b2c4-fbda2c88cd4c'
     },
 
     {
-        main : "Gov. Sanwo-Olu meets London - Lagos solo driver, Ms. Pelumi Nubi, at the Lagos house, marina, on Monday, 8th April 2024.",
+        main : "Press Conference On Lagos Tourism Nbc Trade Fair At Bagauda Kaltho Press Centre, Alausa, Ikeja.",
         sub : "Lorem ipsum dolor sit amet, consectetur elit adfh, Curabitur venenatis velit eget massa volutpat, at rhoncus turpis consequat.",
         date : "Tues. 06 April, 2024",
-        photo : "https://pbs.twimg.com/media/GKpzMPhWsAAP1zB?format=jpg",
+        photo : "https://www.securenigeria365.com/wp-content/uploads/2024/04/PIX-9474.jpg",
     },
 
     {
-        main : "I met with the National Emergency Management Agency (NEMA) team led by the Director-General, Mrs. Zubaida Umar.",
+        main : "Gov. Sanwo-olu At The Presentation Of Eko Cares Initiative (An Initiative To Ease Economic Hardship On Lagosians) At The Sports...",
         sub : "Lorem ipsum dolor sit amet, consectetur elit adfh, Curabitur venenatis velit eget massa volutpat, at rhoncus turpis consequat.",
         date : "Tues. 06 April, 2024",
-        photo : "https://pbs.twimg.com/media/GK-gJQ_XUAEDeia?format=jpg&name=large",
+        photo : "https://pbs.twimg.com/media/GL8vjqvXIAAmnat.jpg",
+    },
+
+    {
+        main : "Gov. Sanwo-olu, Fashola At The Lateef Jakande Leadership Academy Lagos Summit At Konga Place, Lekki.",
+        sub : "Lorem ipsum dolor sit amet, consectetur elit adfh, Curabitur venenatis velit eget massa volutpat, at rhoncus turpis consequat.",
+        date : "17th April 2024",
+        photo : "https://pbs.twimg.com/media/GLZkwX4XcAAhWJW.jpg:large",
     }
 
 ]
@@ -44,14 +51,28 @@ const nextShow = () => {
 
     if ( news !== (newsData.length - 1) ) {
 
+        const zoom = document.querySelector('.imageZoom');
+
         setNews( news + 1 );
         document.querySelector('.lineCheck').classList.remove('running');
-        document.querySelector('.newsImage').classList.remove('imageZoom');
+        document.querySelector('.newsPhotoshop').scrollLeft += document.body.scrollWidth;
+        
+        if (zoom !== null) {
+
+            document.querySelector('.imageZoom').classList.remove('imageZoom');
+
+        } else {
+
+            const newsphoto = Array.from(document.querySelectorAll('.newsImage'));
+            newsphoto[news+1].classList.add('imageZoom');
+
+        }
         
         setTimeout(() => {
 
             document.querySelector('.lineCheck').classList.add('running');
-            document.querySelector('.newsImage').classList.add('imageZoom');
+            const newsphoto = Array.from(document.querySelectorAll('.newsImage'));
+            newsphoto[news+1].classList.add('imageZoom');
             
         }, 100);
 
@@ -59,12 +80,10 @@ const nextShow = () => {
     } else{
         resetSlider();
         document.querySelector('.lineCheck').classList.remove('running');
-        document.querySelector('.newsImage').classList.remove('imageZoom');
         
         setTimeout(() => {
 
             document.querySelector('.lineCheck').classList.add('running');
-            document.querySelector('.newsImage').classList.add('imageZoom');
             
         }, 100);
     }
@@ -75,24 +94,55 @@ const prevShow = () => {
 
     if ( news !== 0 ) {
 
+        const zoom = document.querySelector('.imageZoom');
+
         setNews(news-1);
         document.querySelector('.lineCheck').classList.remove('running');
-        setMuted(false);
+        document.querySelector('.newsPhotoshop').scrollLeft -= document.body.scrollWidth;
+
+        if (zoom !== null) {
+
+            document.querySelector('.imageZoom').classList.remove('imageZoom');
+
+        } else {
+
+            const newsphoto = Array.from(document.querySelectorAll('.newsImage'));
+            newsphoto[news-1].classList.add('imageZoom');
+
+        }
         
         setTimeout(() => {
 
             document.querySelector('.lineCheck').classList.add('running');
+            const newsphoto = Array.from(document.querySelectorAll('.newsImage'));
+            newsphoto[news-1].classList.add('imageZoom');
             
         }, 100);
 
     } else {
+
+        const zoom = document.querySelector('.imageZoom');
+
         setNews(newsData.length - 1)
         document.querySelector('.lineCheck').classList.remove('running');
-        setMuted(false);
+        document.querySelector('.newsPhotoshop').scrollLeft += document.body.scrollWidth * newsData.length;
+
+        if (zoom !== null) {
+
+            document.querySelector('.imageZoom').classList.remove('imageZoom');
+
+        } else {
+
+            const newsphoto = Array.from(document.querySelectorAll('.newsImage'));
+            newsphoto[newsData.length - 1].classList.add('imageZoom');
+
+        }
         
         setTimeout(() => {
 
             document.querySelector('.lineCheck').classList.add('running');
+            const newsphoto = Array.from(document.querySelectorAll('.newsImage'));
+            newsphoto[newsData.length - 1].classList.add('imageZoom');
             
         }, 100);
     }
@@ -102,6 +152,14 @@ const prevShow = () => {
 const resetSlider = () => {
 
     setNews(0);
+    document.querySelector('.newsPhotoshop').scrollTo(0,0);
+   
+    document.querySelector('.imageZoom').classList.remove('imageZoom');
+    setTimeout(() => {
+
+        document.querySelector('.newsImage').classList.add('imageZoom');
+        
+    }, 100);
 
 }
 
@@ -113,6 +171,12 @@ const soundControl = e => {
     videoPlaying.muted = muted;
 
 }
+
+useEffect(() => {
+    
+    document.querySelector('.newsImage').classList.add('imageZoom');
+    
+}, []);
 
 
 useEffect(() => {
@@ -148,7 +212,7 @@ useEffect(() => {
 
         <div className="contents">
 
-            <Container>
+            <Container classList = "pinty">
 
                 <div className="coreItem">
 
@@ -176,7 +240,7 @@ useEffect(() => {
                                             visible: i => ({
                                                 y: 0,
                                                 transition: {
-                                                duration : 1
+                                                duration : 2
                                                 }
                                             })
                                             }}
@@ -223,11 +287,23 @@ useEffect(() => {
 
             </Container>
 
-            <div className="newsImage" style={{animationDuration : `${timemap}s`}}>
+            <div className="newsPhotoshop">
 
-                <img src={newsData[news].photo} alt="" />
+                {
+                    newsData.map((newsRes, index) => (
 
+                        <div className="newsImage" style={{animationDuration : `${timemap}s`}}>
+
+                            <img src={newsRes.photo} alt="" />
+
+                        </div>   
+                        
+                    ))
+                }
+                
             </div>
+
+            <div className="overlayImg"></div>
 
         </div>
 
