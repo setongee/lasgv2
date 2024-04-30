@@ -1,0 +1,146 @@
+.homeSlider{
+
+    // background-color: red;
+    height: 1080px;
+    max-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    .contents{
+
+        width: 100%;
+
+        .newsImage{
+
+            height: 100%;
+            width: 100%;
+            background-color: green;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            overflow: hidden;
+
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;                
+            }
+
+            &.imageZoom{
+
+                img{
+    
+                    animation: imageZoom 10s ease-in-out;
+                    
+                }
+
+            }
+
+        }
+
+        .coreItem{
+
+            background-color: #fff;
+            width: 600px;
+            height: 100vh;
+            padding: 50px;
+            position: relative;
+            z-index: 2;
+            box-shadow: 3px 5px 20px rgba($color: #000000, $alpha: .1);
+            padding-top: 200px;
+            color: var(--dark);
+
+            .topTag{
+                font-size: 12px;
+                letter-spacing: 5px;
+            }
+
+            .topic{
+
+                font-size: 48px;
+                line-height: 45px;
+                letter-spacing: -1px;
+                font-weight: 700;
+                margin: 50px 0;
+
+                .lime{
+
+                    padding-bottom: 10px;
+
+                }
+
+            }
+
+            .description{
+
+                font-size: 14px;
+                width: 350px;
+                line-height: 20px;
+
+            }
+
+            .fillUp{
+                width: calc(100% - 100px);
+                position: absolute;
+                bottom: 50px;
+            }
+
+            .actionBtn{
+
+                gap: 20px;
+                font-size: 13px;
+
+                .button{
+                    
+                    padding: 15px 35px;
+                    background-color: var(--lime);
+                    cursor: pointer;
+
+                    &.button1{
+                        color: #fff;
+                    }
+
+                    &.button2{
+                        background-color: transparent;
+                        border: 1px solid #c6c6c6;
+                        color: var(dark) !important;
+                    }
+
+                }
+
+            }
+
+            .arrowNavigation{
+
+                cursor: pointer;
+                display: flex;
+                gap: 20px;
+
+                .arrowNav:hover{
+
+                    color: var(--lime);
+
+                }
+
+            }
+
+            
+        }
+
+    }
+
+}
+
+@keyframes imageZoom {
+
+    from {
+        scale : 1;
+    }
+
+    to {
+        scale: 1.3;
+    }
+    
+}

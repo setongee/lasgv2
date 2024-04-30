@@ -7,7 +7,7 @@ import '../../styles/global.scss'
 
 //----------- End of styles -----------------
 
-import {ArrowUpRight, IconoirProvider, NavArrowDown } from 'iconoir-react';
+import {ArrowUpRight, IconoirProvider, Menu, MenuScale, NavArrowDown } from 'iconoir-react';
 import { navigationRoutes } from './navData';
 import lasgLogo from '../../assets/navBar/lasg_logo.png'
 import Container from '../container/container';
@@ -163,6 +163,8 @@ return (
 
                             <div className="logo"> <img src={lasgLogo} alt="Lagos State Official Digital Logo" /> </div>
                             <div className="seth_textTop siteName uppercase thick">Official Website of Lagos State  </div>
+
+                            <div className="mobileBurger"> <MenuScale color='#131414' width={20} height={20} strokeWidth={1.9} /></div>
 
                             </div>
 

@@ -1,5 +1,6 @@
 /* carousel */
 .carousel .overlay{
+    
     height: 1080px;
     max-height: 100vh;
     width: 100%;
@@ -327,4 +328,45 @@
     .carousel .list .item .content .title{
         font-size: 30px;
     }
+}
+
+
+@media screen and (max-width : 500px) {
+
+    .carousel .list .item .content{
+
+        position: absolute;
+        top: 120px;
+        width: 100%;
+        max-width: 100%;
+        left: 0px;
+        padding: 0 20px;
+
+    }
+
+    .carousel .list .item .title,
+    .carousel .list .item .topic{
+
+        font-size: 5em;
+        font-weight: 700;
+        line-height: 1em;
+        width: 100%;
+
+    }
+
+    .carousel .overlay{
+
+        background: rgb(0,28,3);
+        background: -moz-linear-gradient(90deg, rgba(0,28,3,1) 0%, rgba(0,41,4,1) 16%, rgba(0,59,6,0.7217480742296919) 100%, rgba(53,84,19,0) 77%);
+        background: -webkit-linear-gradient(90deg, rgba(0,28,3,1) 0%, rgba(0,41,4,1) 16%, rgba(0,59,6,0.7217480742296919) 45%, rgba(53,84,19,0) 77%);
+        background: linear-gradient(90deg, rgba(0,28,3,1) 0%, rgba(0,41,4,1) 16%, rgba(0,59,6,0.7217480742296919) 45%, rgba(53,84,19,0) 77%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#001c03",endColorstr="#355413",GradientType=1);
+    }
+
+    .carousel .list .item img{
+        
+        display: none;
+
+    }
+    
 }

@@ -156,7 +156,7 @@ useEffect(() => {
                     
                     <div className="main thick"> { newsData[news].main } </div>
 
-                    <div className="sub"> L{ newsData[news].sub } </div>
+                    <div className="sub"> { newsData[news].sub } </div>
 
                     <div className="date_control">
 
