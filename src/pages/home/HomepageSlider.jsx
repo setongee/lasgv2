@@ -18,7 +18,7 @@ const [timemap, setTimeMap] = useState(5);
 const NewsDesktop = [
 
     {
-        main : "The best online platform to find all Lagos State Government Services, Topics & Information.",
+        main : "The best platform to find all Lagos State Government Services, Topics & Information.",
         sub : "Lorem ipsum dolor sit amet, consectetur elit adfh, Curabitur venenatis velit eget massa volutpat, at rhoncus turpis consequat.",
         date : "Tues. 06 April, 2024",
         photo : 'https://images.unsplash.com/photo-1589797688224-5fc840fa09e5?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
