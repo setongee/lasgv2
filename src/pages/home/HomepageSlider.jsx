@@ -277,7 +277,7 @@ useEffect(() => {
                     Explore all Lagos State Services & Information. 
                 </div>
 
-                <p> Search services in one place </p>
+                <p> Search services in one place <ArrowRight color='#32C76D' strokeWidth={2.5} width={20}/> </p>
 
                 <div className="buttons">
 
