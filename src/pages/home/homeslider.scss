@@ -177,7 +177,7 @@
 
     .homeSlider{
 
-        background-color: #fff;
+        background-color: #fffcf3;
         position: relative;
         overflow: hidden;
         align-items: flex-start;
@@ -188,7 +188,7 @@
             height: 300px;
             width: 100%;
             margin-top: 90px;
-            background-color: #fff;
+            background-color: #fffcf3;
             display: block;
 
             .mainText{
@@ -221,7 +221,6 @@
                     font-size: 14px;
                     font-weight: 600;
                     color: #fff;
-                    border-radius: 5px;
 
                     &:last-child{
                         background-color: transparent;
@@ -237,10 +236,10 @@
         .contents{
 
             display: flex;
-            background-color: var(--secondary2);
+            background-color: white;
             height: 500px;
             overflow: hidden;
-            margin-top: 30px;
+            margin-top: 20px;
             padding: 20px;
 
             .overlayImg{
