@@ -288,8 +288,6 @@
 
    .appHeader{
 
-    box-shadow: none;
-
         .seth_Link{
             display: none;
         }
@@ -297,11 +295,10 @@
         .strip_lines{
             position: fixed;
             width: 100%;
-            top: 60px;
-            display: none;
+            top: 90px;
 
             .lineIn{
-                height: 5px;
+                height: 7px;
             }
 
         }
@@ -309,7 +306,6 @@
         .navigation{
 
             padding: 20px 0;
-            background-color: transparent;
 
             .siteBranding{
 
@@ -343,9 +339,6 @@
                 margin-right: 0px;
                 width: 40px;
                 height: 40px;
-                background-color: var(--primary);
-                color: #fff;
-                border-radius: 50%;
             }
 
             .mobileBurger2{

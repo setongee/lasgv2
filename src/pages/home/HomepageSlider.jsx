@@ -14,7 +14,8 @@ const [news, setNews] = useState(0)
 const [muted, setMuted] = useState(false);
 const [timemap, setTimeMap] = useState(5);
 
-const newsData = [
+
+const NewsDesktop = [
 
     {
         main : "The best online platform to find all Lagos State Government Services, Topics & Information.",
@@ -46,6 +47,41 @@ const newsData = [
     }
 
 ]
+
+const NewsMobile = [
+
+    {
+        main : "The best platform to find Lagos State Government Services, Topics & Information.",
+        sub : "Lorem ipsum dolor sit amet, consectetur elit adfh, Curabitur venenatis velit eget massa volutpat, at rhoncus turpis consequat.",
+        date : "Tues. 06 April, 2024",
+        photo : 'https://images.unsplash.com/photo-1589797688224-5fc840fa09e5?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+        // photo : 'https://firebasestorage.googleapis.com/v0/b/lasg-a9f5c.appspot.com/o/IMG_1282%20(2).jpg?alt=media&token=7708e0a3-5211-411b-b2c4-fbda2c88cd4c'
+    },
+
+    {
+        main : "Press Conference On Lagos Tourism Nbc Trade Fair At Bagauda Kaltho Press Centre, Alausa, Ikeja.",
+        sub : "Lorem ipsum dolor sit amet, consectetur elit adfh, Curabitur venenatis velit eget massa volutpat, at rhoncus turpis consequat.",
+        date : "Tues. 06 April, 2024",
+        photo : "https://www.securenigeria365.com/wp-content/uploads/2024/04/PIX-9474.jpg",
+    },
+
+    {
+        main : "Gov. Sanwo-olu At The Presentation Of Eko Cares Initiative (An Initiative To Ease Economic Hardship On Lagosians) At The Sports...",
+        sub : "Lorem ipsum dolor sit amet, consectetur elit adfh, Curabitur venenatis velit eget massa volutpat, at rhoncus turpis consequat.",
+        date : "Tues. 06 April, 2024",
+        photo : "https://pbs.twimg.com/media/GL8vjqvXIAAmnat.jpg",
+    },
+
+    {
+        main : "Gov. Sanwo-olu, Fashola At The Lateef Jakande Leadership Academy Lagos Summit At Konga Place, Lekki.",
+        sub : "Lorem ipsum dolor sit amet, consectetur elit adfh, Curabitur venenatis velit eget massa volutpat, at rhoncus turpis consequat.",
+        date : "17th April 2024",
+        photo : "https://pbs.twimg.com/media/GLZkwX4XcAAhWJW.jpg:large",
+    }
+
+]
+
+const [newsData, setNewsData] = useState(NewsDesktop);
 
 const nextShow = () => {
 
@@ -178,18 +214,30 @@ useEffect(() => {
     
 }, []);
 
+useEffect(() => {
+    
+    const screen = document.body.offsetWidth;
+    if (screen <= 500) {
+
+        setNewsData(NewsMobile)
+
+    } else{
+        setNewsData(NewsDesktop)
+    }
+
+}, [document.body.offsetWidth]);
 
 useEffect(() => {
 
     if(newsData[news].type !== 'video') {   
 
-        setTimeMap(10);
+        setTimeMap(5);
 
         const interval = setInterval(() => {
 
             nextShow();
             
-        }, 10000);
+        }, 5000);
         
         return () => clearInterval(interval);
 
@@ -220,7 +268,7 @@ useEffect(() => {
 
                         <div className="placeHolder">
 
-                            <div className="topTag thick uppercase"> This is Lagos </div>
+                            <div className="topTag thick uppercase"> {newsData[news].date} </div>
 
                             <div className="topic">
 
@@ -275,8 +323,8 @@ useEffect(() => {
 
                             <div className="arrowNavigation flex">
 
-                                <motion.div whileHover = { { x : -3 } }  whileTap = { { scale : .9 } } className="arrowNav arrow1" onClick={()=> prevShow()} > <ArrowLeft/> </motion.div>
-                                <motion.div whileHover = { { x : 3 } }   whileTap = { { scale : .9 } } className="arrowNav arrow2" onClick={()=> nextShow()}> <ArrowRight/> </motion.div>
+                                <motion.div whileHover = { { x : -3 } }  whileTap = { { scale : .9 } } className="arrowNav arrow1" onClick={()=> prevShow()} > <ArrowLeft strokeWidth={2} /> </motion.div>
+                                <motion.div whileHover = { { x : 3 } }   whileTap = { { scale : .9 } } className="arrowNav arrow2" onClick={()=> nextShow()}> <ArrowRight strokeWidth={2} /> </motion.div>
 
                             </div>
 
