@@ -19,7 +19,9 @@ export default function Homepage() {
 
       <div className={`floatingBubble ${isActive ? "active" : ""}`} onClick={() => setisActive(!isActive)} >
 
-        <Search color='#fff' strokeWidth={2.5} width={20}/> 
+        <div className="activeWay">
+          <Search color='#fff' strokeWidth={2.5} width={20}/> 
+        </div>
 
       </div>
 
