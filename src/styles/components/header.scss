@@ -280,6 +280,64 @@
 
 }
 
+@media (max-width : 1000px) {
+
+    .appHeader{
+ 
+     box-shadow: none;
+ 
+         .seth_Link{
+         }
+ 
+         .navigation{
+ 
+             padding: 15px 0;
+             background-color: #fff;
+ 
+             .siteBranding{
+ 
+                 gap: 15px;
+                 width: 100%;
+ 
+                 .logo{
+                     width: 50px;
+                     height: 50px;
+                 }
+ 
+                 .siteName{
+ 
+                     width: 40%;
+                     font-size: 11px;
+                     font-weight: 700;
+ 
+                 }
+             }
+ 
+             .seth_nav{
+                 display: none;
+             }
+ 
+             .mobileBurger{
+                 width: 30px;
+                 height: 30px;
+                 display: flex;
+                 align-items: center;
+                 justify-content: center;
+                 margin-right: 0px;
+                 width: 40px;
+                 height: 40px;
+             }
+ 
+             .mobileBurger2{
+                 margin-left: auto;
+             }
+             
+         }
+ 
+    } 
+ 
+ }
+
 
 
 // -------------------- media query (500px) ------------------
@@ -297,7 +355,7 @@
         .navigation{
 
             padding: 20px 0;
-            background-color: #f9f9f9;
+            background-color: #fff;
 
             .siteBranding{
 

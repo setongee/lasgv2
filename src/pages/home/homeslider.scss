@@ -173,11 +173,45 @@
     
 }
 
+
+@media (max-width : 1000px) {
+
+    .homeSlider{
+
+        height: 500px;
+        background-color: red;
+        overflow: hidden;
+
+        .contents{
+            background-color: blue;
+            height: 100%;
+    
+            .overlayImg{
+                display: none;
+            }
+            
+            .coreItem{
+                background-color: grey;
+                height: calc(500px - 130px);
+                overflow: hidden;
+                margin-top: 130px;
+                width: 400px;
+                padding-top: 0;
+            }
+            
+        }
+    }
+
+
+    
+}
+
+
 @media (max-width : 500px) {
 
     .homeSlider{
 
-        background-color: #f9f9f9;
+        background-color: #fff;
         position: relative;
         align-items: flex-start;
         flex-direction: column;
@@ -190,7 +224,7 @@
             height: 300px;
             width: 100%;
             margin-top: 100px;
-            background-color: #f9f9f9;
+            background-color: #fff;
             display: block;
 
             .flashNews{
@@ -211,7 +245,7 @@
                 font-size: 30px;
                 font-weight: 700;
                 line-height: 35px;
-                margin-top: 30px;
+                margin-top: 40px;
                 color: var(--dark);
                 letter-spacing: -0.5px;
 
@@ -224,7 +258,7 @@
             }
 
             p{
-                margin-top: 20px;
+                margin-top: 15px;
                 font-size: 16px;
                 display: flex;
                 align-items: center;
@@ -235,7 +269,7 @@
 
                 display: flex;
                 gap: 15px;
-                margin-top: 40px;
+                margin-top: 30px;
 
                 .btnPrimary{
 
@@ -260,7 +294,7 @@
 
             display: flex;
             height: 500px;
-            margin-top: 45px;
+            margin-top: 30px;
             padding: 20px;
 
             .overlayImg{
@@ -328,15 +362,28 @@
                 .topic{
 
                     font-size: 24px;
-                    line-height: 20px;
+                    line-height: 12px;
                     margin:0px;
                     margin-bottom: 20px;
                     position: relative;
-                    max-height: calc(24px * 5);
+                    max-height: calc(21px * 5);
                     overflow: hidden;
                     margin-top: 10px;
                     font-weight: 500;
                     letter-spacing: -0.5px;
+
+                    .lime{
+                        padding-top: 10px;
+                        border-bottom: 2px solid var(--lime3);
+                    }
+
+                    &:hover{
+
+                        .lime{
+                            border-bottom: 2px solid var(--lime3);
+                        }
+
+                    }
 
                 }
 

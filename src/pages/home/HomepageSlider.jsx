@@ -52,7 +52,7 @@ const NewsMobile = [
 
     {
         main : "Press Conference On Lagos Tourism Nbc Trade Fair At Bagauda Kaltho Press Centre, Alausa, Ikeja.",
-        sub : "Lorem ipsum dolor sit amet, consectetur elit adfh, Curabitur venenatis.",
+        sub : "Lorem ipsum dolor sit amet, consectetur elit adfh, Curabitur venenatis velit.",
         date : "Tues. 06 April, 2024",
         photo : "https://www.securenigeria365.com/wp-content/uploads/2024/04/PIX-9474.jpg",
     },
@@ -66,7 +66,7 @@ const NewsMobile = [
 
     {
         main : "Gov. Sanwo-olu, Fashola At The Lateef Jakande Leadership Academy Lagos Summit At Konga Place, Lekki.",
-        sub : "Lorem ipsum dolor sit amet, consectetur elit adfh.",
+        sub : "Lorem ipsum dolor sit amet, consectetur elit adfh, Curabitur venenatis velit.",
         date : "17th April 2024",
         photo : "https://pbs.twimg.com/media/GLZkwX4XcAAhWJW.jpg:large",
     }
