@@ -6,45 +6,6 @@ import { motion } from 'framer-motion';
 
 export default function QuickCheck() {
 
-const dataService = {
-
-    service1 : {
-
-        title : "Report an emergency",
-        url : "#"
-
-    },
-
-    service2 : {
-
-        title : "move to lagos",
-        url : "#"
-
-    },
-
-    service3 : {
-
-        title : "Find Govt. hospitals near ME",
-        url : "#"
-
-    },
-
-    service4 : {
-
-        title : "pay traffic penalty fees",
-        url : "#"
-
-    },
-
-    service5 : {
-
-        title : "work in Lagos",
-        url : "#"
-
-    }
-
-}
-
   return (
     
         <div className="quickCheck">
@@ -54,13 +15,15 @@ const dataService = {
 
                     <div className="textString thick">
 
-                    <div className="p">
+                        <div className="p">
 
-                        <div className="txt">
-                            Welcome to <span>lagosstate.gov.ng</span>, the hub for information on lagos state government and services like education, business regulations, health, transparency, and more.
+                            <div className="txt">
+
+                                Welcome to <span>lagosstate.gov.ng</span>, the hub for information on lagos state government and services like education, business regulations, health, transparency, and more.
+                                
+                            </div>
+
                         </div>
-
-                    </div>
 
                     <ArrowUpRight className='arry first' color="#32C76D" strokeWidth={2} height={60} width={60} /> 
 

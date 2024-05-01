@@ -2,64 +2,6 @@
 
     padding-top: 80px;
 
-    .recentlySearchedServices{
-
-        .title{
-
-            font-size: 13px;
-            display: flex;
-            justify-content: space-between;
-
-        }
-
-        margin-top: 60px;
-        
-        .popularCards{
-            
-            display: flex;
-            gap: 30px;
-    
-            .flip_cards{
-                
-                position: relative;
-                height: 450px;
-                width: 350px;
-                perspective: 1000px;
-                padding: 35px 0;
-                flex-shrink: 0;
-        
-                .card-inner{
-                    width: 100%;
-                    height: 100%;
-                    transition: transform .8s cubic-bezier(0.175, 0.885, 0.32, 1);
-                    transform-style: preserve-3d;
-        
-                    .frontCard, .backCard{
-                        position: absolute;
-                        width: 100%;
-                        height: 100%;
-                        backface-visibility: hidden;
-                        background-color: var(--primary75);
-                        padding: 30px;
-                        color: #fff;
-                    }
-        
-                    .backCard{
-                        background-color: #fff;
-                        transform: rotateY(180deg);
-                        color: #000;
-                    }
-                }
-        
-                &:hover .card-inner{
-                    transform: rotateY(-180deg);
-                }
-            }
-
-        }
-
-    }
-
 
     .contain_body{
 
@@ -314,4 +256,212 @@
         }
 
     }
+}
+
+
+
+@media (max-width : 1200px) {
+
+    .quickCheck{
+        padding-top: 0;
+    }
+
+    .getStarted{
+
+        margin-top: 40px;
+        flex-direction: column;
+        gap: 60px;
+
+        .textString{
+
+            height: 480px;
+            width: 100%;
+
+            .how{
+                font-size: 18px;
+                margin-bottom: 40px;
+            }
+            
+            .textChange{
+
+                line-height: 75px;
+                font-size: 70px;
+                width: 70%;
+                
+                .Typewriter__cursor{
+                    
+                    font-size: 50px;
+                    font-weight: 100 !important;
+    
+                }
+            }
+
+        }
+
+        .p{
+            width: 100%;
+
+            .txt{
+                width: 75%;
+                line-height: 29px;
+                font-size:18px;
+            }
+        }
+
+        .quickAsapLinks{
+
+            width: 100%;
+    
+        }
+
+    }
+    
+}
+
+@media (max-width : 1000px) {
+
+    .quickCheck{
+        padding-top: 0;
+    }
+
+    .getStarted{
+
+        margin-top: 40px;
+        flex-direction: column;
+        gap: 60px;
+
+        .textString{
+
+            height: 480px;
+            width: 100%;
+
+            .how{
+                font-size: 18px;
+                margin-bottom: 40px;
+            }
+            
+            .textChange{
+
+                line-height: 65px;
+                font-size: 60px;
+                width: 80%;
+                
+
+            }
+
+        }
+
+        .p{
+            width: 100%;
+
+            .txt{
+                width: 75%;
+                line-height: 29px;
+                font-size:18px;
+            }
+        }
+
+        .quickAsapLinks{
+
+            width: 100%;
+    
+        }
+
+    }
+    
+}
+
+@media (max-width : 768px) {
+
+    .getStarted{
+
+        .textString{
+
+            width: 100%;
+            height: 500px;
+
+        }
+
+    }
+    
+}
+
+@media (max-width : 600px) {
+
+    .getStarted{
+
+        .textString{
+
+            width: 100%;
+            height: 600px;
+
+        }
+
+    }
+    
+}
+
+@media (max-width : 500px) {
+
+    .quickCheck{
+        padding-top: 0;
+    }
+
+    .getStarted{
+
+        margin-top: 40px;
+        flex-direction: column;
+        gap: 60px;
+
+        .textString{
+
+            height: 520px;
+            width: 100%;
+
+            .how{
+                font-size: 16px;
+                margin-bottom: 20px;
+                margin-top: 20px;
+            }
+            
+            .textChange{
+
+                line-height: 42px;
+                font-size: 38px;
+                width: 100%;
+                
+                .Typewriter__cursor{
+                    
+                    font-size: 40px;
+                    font-weight: 100 !important;
+    
+                }
+
+            }
+
+        }
+
+        .p{
+            width: 100%;
+
+            .txt{
+                width: 75%;
+                line-height: 26px;
+                font-size:16px;
+            }
+        }
+
+        .quickAsapLinks{
+
+            width: 100%;
+            gap: 20px;
+
+            .linkBin{
+                width: 100%;
+            }
+    
+        }
+
+    }
+    
 }
