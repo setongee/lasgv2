@@ -7,7 +7,7 @@ import '../../styles/global.scss'
 
 //----------- End of styles -----------------
 
-import {ArrowUpRight, IconoirProvider, Menu, MenuScale, NavArrowDown } from 'iconoir-react';
+import {ArrowUpRight, IconoirProvider, Menu, MenuScale, NavArrowDown, Search } from 'iconoir-react';
 import { navigationRoutes } from './navData';
 import lasgLogo from '../../assets/navBar/lasg_logo.png'
 import Container from '../container/container';
@@ -161,12 +161,15 @@ return (
 
                             } }>
 
+                            <div className="mobileBurger"> <MenuScale color='#131414' width={20} height={20} strokeWidth={2.5} /></div>
+
                             <div className="logo"> <img src={lasgLogo} alt="Lagos State Official Digital Logo" /> </div>
+
                             <div className="seth_textTop siteName uppercase thick">Official Website of Lagos State  </div>
 
-                            <div className="mobileBurger"> <MenuScale color='#131414' width={20} height={20} strokeWidth={1.9} /></div>
+                            <div className="mobileBurger mobileBurger2"> <Search color='#131414' width={20} height={20} strokeWidth={2} /></div>
 
-                            </div>
+                        </div>
 
                             {/* Main Navigation Links */}
                             <div className="seth_nav"> 

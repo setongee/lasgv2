@@ -293,12 +293,19 @@
         }
 
         .strip_lines{
-            display: none;
+            position: fixed;
+            width: 100%;
+            top: 60px;
+
+            .lineIn{
+                height: 5px;
+            }
+
         }
 
         .navigation{
 
-            padding: 15px 0;
+            padding: 10px 0;
 
             .siteBranding{
 
@@ -329,6 +336,10 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                margin-right: 0px;
+            }
+
+            .mobileBurger2{
                 margin-left: auto;
             }
             

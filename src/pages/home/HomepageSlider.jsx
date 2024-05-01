@@ -212,80 +212,85 @@ useEffect(() => {
 
         <div className="contents">
 
-            <Container classList = "pinty">
+            <div className="checkIn">
+                
+                <Container classList = "pinty">
 
-                <div className="coreItem">
+                    <div className="coreItem">
 
-                    <div className="placeHolder">
+                        <div className="placeHolder">
 
-                        <div className="topTag thick uppercase"> This is Lagos </div>
+                            <div className="topTag thick uppercase"> This is Lagos </div>
 
-                        <div className="topic">
+                            <div className="topic">
 
-                            <AnimatePresence>
+                                <AnimatePresence>
 
-                                {
-                                    visible && (
+                                    {
+                                        visible && (
 
-                                        <motion.div
-                                        initial={{ opacity: 1 }}
-                                        animate={{ opacity: 1 }}
-                                        exit={{ opacity: 0 }}
-                                        >
-
-                                            <SplitText
-                                            initial={{ y: '100%' }}
-                                            animate="visible"
-                                            variants={{
-                                            visible: i => ({
-                                                y: 0,
-                                                transition: {
-                                                duration : 1
-                                                }
-                                            })
-                                            }}
+                                            <motion.div
+                                            initial={{ opacity: 1 }}
+                                            animate={{ opacity: 1 }}
+                                            exit={{ opacity: 0 }}
                                             >
-                                            
-                                            {newsData[news].main}
 
-                                            </SplitText>
+                                                <SplitText
+                                                initial={{ y: '100%' }}
+                                                animate="visible"
+                                                variants={{
+                                                visible: i => ({
+                                                    y: 0,
+                                                    transition: {
+                                                    duration : 1
+                                                    }
+                                                })
+                                                }}
+                                                >
+                                                
+                                                {newsData[news].main}
 
-                                        </motion.div>
-                                    )
-                                }
+                                                </SplitText>
 
-                            </AnimatePresence>
+                                            </motion.div>
+                                        )
+                                    }
+
+                                </AnimatePresence>
+
+                            </div>
+
+                            <div className="description"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam, provident, sequi optio placeat ad! Nostrum temporibus possimus quod deserunt! </div>
+    
+                        </div>
+
+                        <div className="fillUp flex flex_justify_space_between flex_align_center">
+
+                            <div className="actionBtn flex thick">
+
+                                <div className="button button1"> Read More </div>
+                                <div className="button button2"> Explore Services </div>
+
+                            </div>
+
+                            <div className="arrowNavigation flex">
+
+                                <motion.div whileHover = { { x : -3 } }  whileTap = { { scale : .9 } } className="arrowNav arrow1" onClick={()=> prevShow()} > <ArrowLeft/> </motion.div>
+                                <motion.div whileHover = { { x : 3 } }   whileTap = { { scale : .9 } } className="arrowNav arrow2" onClick={()=> nextShow()}> <ArrowRight/> </motion.div>
+
+                            </div>
 
                         </div>
 
-                        <div className="description"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam, provident, sequi optio placeat ad! Nostrum temporibus possimus quod deserunt! </div>
- 
+
+                        <div className="lineCheck" style={{animationDuration : `${timemap}s`}} ></div>
+
                     </div>
 
-                    <div className="fillUp flex flex_justify_space_between flex_align_center">
+                </Container>
 
-                        <div className="actionBtn flex thick">
+            </div>
 
-                            <div className="button button1"> Read More </div>
-                            <div className="button button2"> Explore Services </div>
-
-                        </div>
-
-                        <div className="arrowNavigation flex">
-
-                            <motion.div whileHover = { { x : -3 } }  whileTap = { { scale : .9 } } className="arrowNav arrow1" onClick={()=> prevShow()} > <ArrowLeft/> </motion.div>
-                            <motion.div whileHover = { { x : 3 } }   whileTap = { { scale : .9 } } className="arrowNav arrow2" onClick={()=> nextShow()}> <ArrowRight/> </motion.div>
-
-                        </div>
-
-                    </div>
-
-
-                    <div className="lineCheck" style={{animationDuration : `${timemap}s`}} ></div>
-
-                </div>
-
-            </Container>
 
             <div className="newsPhotoshop">
 
