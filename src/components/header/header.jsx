@@ -161,13 +161,13 @@ return (
 
                             } }>
 
-                            <div className="mobileBurger"> <MenuScale color='#131414' width={20} height={20} strokeWidth={2.5} /></div>
+                            {/* <div className="mobileBurger"> <MenuScale color='#131414' width={20} height={20} strokeWidth={2.5} /></div> */}
 
                             <div className="logo"> <img src={lasgLogo} alt="Lagos State Official Digital Logo" /> </div>
 
                             <div className="seth_textTop siteName uppercase thick">Official Website of Lagos State  </div>
 
-                            <div className="mobileBurger mobileBurger2"> <Search color='#131414' width={20} height={20} strokeWidth={2} /></div>
+                            <div className="mobileBurger mobileBurger2"> <MenuScale color='#131414' width={20} height={20} strokeWidth={2} /></div>
 
                         </div>
 

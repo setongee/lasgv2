@@ -288,6 +288,8 @@
 
    .appHeader{
 
+    box-shadow: none;
+
         .seth_Link{
             display: none;
         }
@@ -296,6 +298,7 @@
             position: fixed;
             width: 100%;
             top: 90px;
+            display: none;
 
             .lineIn{
                 height: 7px;
@@ -306,6 +309,7 @@
         .navigation{
 
             padding: 20px 0;
+            background-color: #f9f9f9;
 
             .siteBranding{
 

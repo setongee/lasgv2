@@ -1,14 +1,14 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 
-export function SplitText({ children, ...rest }) {
+export function SplitText({ children, major, ...rest }) {
   let words = children.split(' ')
   return words.map((word, i) => {
     return (
       <div
         key={children + i}
         style={{ display: 'inline-block', overflow: 'hidden'}}
-        className='lime'
+        className={`lime ${major === 0 ? 'isHome' : null}`}
       >
         <motion.div
 

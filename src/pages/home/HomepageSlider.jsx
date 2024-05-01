@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 import './homeslider.scss'
 import Container from '../../components/container/container'
 import img1 from './image/img1.jpg'
-import { ArrowLeft, ArrowRight } from 'iconoir-react'
+import { ArrowLeft, ArrowRight, Search } from 'iconoir-react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { SplitText } from './SplitText'
 
@@ -52,8 +52,8 @@ const NewsMobile = [
 
     {
         main : "The best platform to find Lagos State Government Services, Topics & Information.",
-        sub : "Lorem ipsum dolor sit amet, consectetur elit adfh, Curabitur venenatis velit eget massa volutpat, at rhoncus turpis consequat.",
-        date : "Tues. 06 April, 2024",
+        sub : "lagosstate.gov.ng helps you locate and understand government benefits.",
+        date : "Today",
         photo : 'https://images.unsplash.com/photo-1589797688224-5fc840fa09e5?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
         // photo : 'https://firebasestorage.googleapis.com/v0/b/lasg-a9f5c.appspot.com/o/IMG_1282%20(2).jpg?alt=media&token=7708e0a3-5211-411b-b2c4-fbda2c88cd4c'
     },
@@ -82,16 +82,20 @@ const NewsMobile = [
 ]
 
 const [newsData, setNewsData] = useState(NewsDesktop);
+const [widthTo, setWidthTo] = useState(0);
 
 const nextShow = () => {
+
 
     if ( news !== (newsData.length - 1) ) {
 
         const zoom = document.querySelector('.imageZoom');
 
+        console.log(widthTo);
+
         setNews( news + 1 );
         document.querySelector('.lineCheck').classList.remove('running');
-        document.querySelector('.newsPhotoshop').scrollLeft += document.body.scrollWidth;
+        document.querySelector('.newsPhotoshop').scrollLeft += widthTo;
         
         if (zoom !== null) {
 
@@ -132,10 +136,13 @@ const prevShow = () => {
 
         const zoom = document.querySelector('.imageZoom');
 
+        console.log(zoom);
+
         setNews(news-1);
         document.querySelector('.lineCheck').classList.remove('running');
-        document.querySelector('.newsPhotoshop').scrollLeft -= document.body.scrollWidth;
 
+        document.querySelector('.newsPhotoshop').scrollLeft -= document.body.scrollWidth;
+        
         if (zoom !== null) {
 
             document.querySelector('.imageZoom').classList.remove('imageZoom');
@@ -215,14 +222,18 @@ useEffect(() => {
 }, []);
 
 useEffect(() => {
+
     
     const screen = document.body.offsetWidth;
+
     if (screen <= 500) {
 
-        setNewsData(NewsMobile)
+        setNewsData(NewsMobile);
+        setWidthTo(document.body.scrollWidth - 40)
 
     } else{
-        setNewsData(NewsDesktop)
+        setNewsData(NewsDesktop);
+        setWidthTo(document.body.scrollWidth);
     }
 
 }, [document.body.offsetWidth]);
@@ -258,6 +269,27 @@ useEffect(() => {
    
    <div className="homeSlider">
 
+        <div className="mobileHome">
+
+            <Container>
+
+                <div className="mainText">
+                    Explore all Lagos State Services & Information. 
+                </div>
+
+                <p> Search services in one place </p>
+
+                <div className="buttons">
+
+                    <div className="btnPrimary"> Explore Services </div>
+                    <div className="btnPrimary"> Latest News </div>
+
+                </div>
+
+            </Container>
+
+        </div>
+
         <div className="contents">
 
             <div className="checkIn">
@@ -284,6 +316,7 @@ useEffect(() => {
                                             >
 
                                                 <SplitText
+                                                major = {news}
                                                 initial={{ y: '100%' }}
                                                 animate="visible"
                                                 variants={{
@@ -308,7 +341,7 @@ useEffect(() => {
 
                             </div>
 
-                            <div className="description"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam, provident, sequi optio placeat ad! Nostrum temporibus possimus quod deserunt! </div>
+                            <div className="description"> {newsData[news].sub} </div>
     
                         </div>
 
