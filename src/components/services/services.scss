@@ -118,3 +118,115 @@
 
     }
 }
+
+
+
+@media (max-width : 1000px) {
+
+   .services{
+    padding: 0;
+
+    .midTopic{
+
+        text-align: center;
+        margin-bottom: 50px;
+
+        .topic{
+            font-size: 34px;
+            text-align: center;
+            width: 90%;
+            line-height: 43px;
+        }
+
+        .subtitle{
+            line-height: 24px;
+        }
+
+    }
+
+    .servicesPlatoon{
+        gap: 20px;
+    }
+
+    .services_card{
+
+        width: calc(33% - 11px);  
+
+    }
+
+   }
+
+}
+
+@media (max-width : 768px) {
+
+    .services{
+ 
+     .midTopic{
+ 
+         .topic{
+             margin-bottom: 10px;
+         }
+ 
+     }
+ 
+     .services_card{
+        
+        .title{
+            width: 100%;
+        }
+
+        .subtext{
+
+            max-height: calc(16px * 4 );
+            overflow: hidden;
+        }
+
+     }
+ 
+    }
+ 
+ }
+
+ @media (max-width : 600px) {
+
+    .services{
+ 
+     .midTopic{
+ 
+         .topic{
+             margin-bottom: 20px;
+             font-size: 30px;
+             width: 90%;
+             line-height: 38px;
+         }
+ 
+     }
+
+     .servicesPlatoon{
+        flex-wrap: nowrap;
+        flex-direction: column;
+        align-items: center;
+     }
+ 
+     .services_card{
+
+        width: 85%;  
+        height: 320px;
+        padding: 50px 10px;
+        
+        .title{
+            width: 75%;
+        }
+
+        .subtext{
+
+            max-height: calc(16px * 4 );
+            overflow: hidden;
+        }
+
+     }
+ 
+    }
+ 
+ }

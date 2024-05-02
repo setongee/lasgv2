@@ -49,6 +49,7 @@ const nextShow = () => {
         
         setTimeout(() => {
 
+            //const pl = document.querySelector('.lineCheck')
             document.querySelector('.lineCheck').classList.add('running');
             
         }, 100);
@@ -160,7 +161,7 @@ useEffect(() => {
 
                     <div className="date_control">
 
-                        <div className="lineCheck" style={{animationDuration : `${timemap}s`}} ></div>
+                        <div className="lineCheck" style={{animationDuration :`${timemap}s`}} ></div>
 
                         <div className="date thick"> { newsData[news].date } </div>
 

@@ -83,10 +83,7 @@ const nextShow = () => {
 
         const zoom = document.querySelector('.imageZoom');
 
-        console.log(widthTo);
-
         setNews( news + 1 );
-        document.querySelector('.lineCheck').classList.remove('running');
         document.querySelector('.newsPhotoshop').scrollLeft += widthTo;
         
         if (zoom !== null) {
@@ -102,7 +99,6 @@ const nextShow = () => {
         
         setTimeout(() => {
 
-            document.querySelector('.lineCheck').classList.add('running');
             const newsphoto = Array.from(document.querySelectorAll('.newsImage'));
             newsphoto[news+1].classList.add('imageZoom');
             
@@ -111,11 +107,8 @@ const nextShow = () => {
 
     } else{
         resetSlider();
-        document.querySelector('.lineCheck').classList.remove('running');
         
         setTimeout(() => {
-
-            document.querySelector('.lineCheck').classList.add('running');
             
         }, 100);
     }
@@ -131,7 +124,6 @@ const prevShow = () => {
         console.log(zoom);
 
         setNews(news-1);
-        document.querySelector('.lineCheck').classList.remove('running');
 
         document.querySelector('.newsPhotoshop').scrollLeft -= document.body.scrollWidth;
         
@@ -148,7 +140,6 @@ const prevShow = () => {
         
         setTimeout(() => {
 
-            document.querySelector('.lineCheck').classList.add('running');
             const newsphoto = Array.from(document.querySelectorAll('.newsImage'));
             newsphoto[news-1].classList.add('imageZoom');
             
@@ -159,7 +150,6 @@ const prevShow = () => {
         const zoom = document.querySelector('.imageZoom');
 
         setNews(newsData.length - 1)
-        document.querySelector('.lineCheck').classList.remove('running');
         document.querySelector('.newsPhotoshop').scrollLeft += document.body.scrollWidth * newsData.length;
 
         if (zoom !== null) {
@@ -175,7 +165,6 @@ const prevShow = () => {
         
         setTimeout(() => {
 
-            document.querySelector('.lineCheck').classList.add('running');
             const newsphoto = Array.from(document.querySelectorAll('.newsImage'));
             newsphoto[newsData.length - 1].classList.add('imageZoom');
             
@@ -392,9 +381,6 @@ useEffect(() => {
                             </div>
 
                         </div>
-
-
-                        <div className="lineCheck" style={{animationDuration : `${timemap}s`}} ></div>
 
                     </div>
 

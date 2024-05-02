@@ -77,7 +77,7 @@ export default function Services({bgColor}) {
     }
 
     
-    const [limit, setLimit] = useState(11);
+    const [limit, setLimit] = useState(7);
 
     
 
