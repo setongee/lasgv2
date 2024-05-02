@@ -10,6 +10,7 @@
         overflow-x: scroll;
         scrollbar-width: none;
         scroll-behavior: smooth;
+        scrollbar-width: none;
 
     }
 
@@ -70,4 +71,22 @@
         }
 
     }
+}
+
+
+@media (max-width : 500px) {
+
+    .resources{
+        padding: 50px 0;
+        padding-bottom: 0px;
+
+        .resource_container{
+            padding-bottom: 30px;
+        }
+
+        .slideShift{
+            width: 100%;
+        }
+    }
+
 }

@@ -211,7 +211,7 @@
  
      .services_card{
 
-        width: 85%;  
+        width: 55%;  
         height: 320px;
         padding: 50px 10px;
         
@@ -228,5 +228,15 @@
      }
  
     }
+ 
+ }
+
+ @media (max-width : 485px) {
+ 
+     .services_card{
+
+        width: 80% !important;  
+
+     }
  
  }

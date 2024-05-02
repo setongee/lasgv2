@@ -225,3 +225,214 @@
     }
 
 }
+
+
+@media (max-width : 1300px) {
+
+    .footer{
+
+        padding-top: 0;
+
+        .picture{
+            height: 250px;
+
+            img{
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .footerContent{
+
+            padding: 50px 0;
+
+            .topPart{
+
+                padding-bottom: 50px;
+                
+                h1{
+
+                    font-size: 45px;
+                    letter-spacing: -1px;
+                    line-height: 50px;
+
+                    span{
+                        display: none;
+                    }
+                }
+            }
+
+            .linksPart{
+
+                margin-top: 50px;
+                gap: 20px;
+                flex-wrap: wrap;
+
+                .linkHolder{
+
+                    gap: 30px;
+                    width: 30%;
+
+                    .linkHeader{
+
+                        font-size: 15px;
+                        font-weight: 700;
+                    }
+
+                    .links{
+
+
+                        a{
+                            width: 90%;
+                        }
+                        
+                    }
+                }
+
+            }
+
+            .linksTabs{
+
+                margin-top: 40px;
+                overflow-x: scroll;
+                scrollbar-width: none;
+                scroll-behavior: smooth;
+
+                .tab{
+                    min-width: max-content;
+                }
+
+            }
+
+            .footest_footer{
+
+                .copyright{
+
+                    gap: 40px;
+                    justify-content: space-between;
+
+                }
+            }
+
+        }
+
+    }
+}
+
+@media (max-width : 600px) {
+
+    .footer{
+
+        padding-top: 30px;
+
+        .picture{
+            height: 200px;
+
+            img{
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .footerContent{
+
+            padding: 50px 0;
+            padding-bottom: 0;
+
+            .topPart{
+
+                padding-bottom: 30px;
+
+                p{
+                    font-size: 14px;
+                }
+                
+                h1{
+
+                    font-size: 30px;
+                    letter-spacing: -1px;
+                    line-height: 35px;
+
+                    span{
+                        display: none;
+                    }
+                }
+            }
+
+            .linksPart{
+
+                margin-top: 30px;
+                gap: 30px;
+                flex-wrap: wrap;
+                font-size: 12px;
+
+                .linkHolder{
+
+                    gap: 30px;
+                    width: 45%;
+
+                    .linkHeader{
+
+                        font-size: 13px;
+                        font-weight: 700;
+                    }
+
+                    .links{
+
+                        gap : 20px;
+
+                        a{
+                            width: 100%;
+                            padding-bottom: 20px;
+                        }
+                        
+                    }
+                }
+
+            }
+
+            .linksTabs{
+
+                margin-top: 30px;
+                overflow-x: scroll;
+                scrollbar-width: none;
+                scroll-behavior: smooth;
+                gap: 15px;
+
+                .tab{
+                    min-width: max-content;
+                    font-size: 11px;
+                }
+
+            }
+
+            .footest_footer{
+
+                margin-top: 50px;
+
+                .socialMedia{
+                    flex-direction: column;
+                    gap: 25px;
+                }
+
+                .copyright{
+
+                    flex-direction: column;
+                    gap: 20px;
+                    text-align: center;
+                    line-height: 20px;
+
+                    .col{
+                        background-color: var(--primary);
+                        margin-bottom: 20px;
+                        color: #fff;
+                        padding: 20px;
+                    }
+
+                }
+            }
+
+        }
+
+    }
+}

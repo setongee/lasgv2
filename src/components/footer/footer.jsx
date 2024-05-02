@@ -52,7 +52,7 @@ export default function Footer() {
 
                       <div className="links a-dark flex flex_col">
 
-                          <a href="#" className="link"> Job Opportunities in Lagos </a>
+                          <a href="#" className="link"> Work in Lagos </a>
                           <a href="#" className="link"> Housing & Lands </a>
                           <a href="#" className="link"> Tourism & Travels </a>
                           <a href="#" className="link"> Payments & Levies </a>
@@ -62,22 +62,6 @@ export default function Footer() {
 
                   </div>
 
-
-                  <div className="linkHolder flex flex_col">
-
-                      <div className="linkHeader thick_500">Safety & Emergencies</div>
-
-                      <div className="links a-dark flex flex_col">
-
-                          <a href="#" className="link"> Emergency Contacts </a>
-                          <a href="#" className="link"> Hospitals Near Me </a>
-                          <a href="#" className="link"> Get an Ambulance </a>
-                          <a href="#" className="link"> Police Stations Near Me </a>
-
-                      </div>
-
-                  </div>
-                  
 
                   <div className="linkHolder flex flex_col">
 
