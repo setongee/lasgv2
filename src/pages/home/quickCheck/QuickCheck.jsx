@@ -72,7 +72,7 @@ export default function QuickCheck() {
                     
                     className="quickAsapLinks">
 
-                        <div className="linkBin milt">
+                        <div className="linkBin milt milo">
 
                             <h1>How do I : </h1>
 
@@ -180,7 +180,7 @@ export default function QuickCheck() {
 
                         </div>
 
-                        <div className="linkBin milt">
+                        <div className="linkBin milt milo_pro_max">
 
                             <div className="content">
 

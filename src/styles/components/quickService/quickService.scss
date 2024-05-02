@@ -411,11 +411,11 @@
 
         margin-top: 40px;
         flex-direction: column;
-        gap: 60px;
+        gap: 40px;
 
         .textString{
 
-            height: 520px;
+            height: 430px;
             width: 100%;
 
             .how{
@@ -432,7 +432,7 @@
                 
                 .Typewriter__cursor{
                     
-                    font-size: 40px;
+                    font-size: 35px;
                     font-weight: 100 !important;
     
                 }
@@ -441,23 +441,67 @@
 
         }
 
+        .arry{
+            display: none;
+        }
+
         .p{
             width: 100%;
+            padding-top: 40px;
 
             .txt{
-                width: 75%;
-                line-height: 26px;
-                font-size:16px;
+                width: 100%;
+                line-height: 22px;
+                font-size:14px;
             }
         }
 
         .quickAsapLinks{
 
+            a{
+                color: var(--primary);
+                font-weight: 700;
+                font-size: 15px;
+                text-decoration: underline;
+            }
+
             width: 100%;
-            gap: 20px;
+            gap:15px;
+            padding: 30px;
 
             .linkBin{
                 width: 100%;
+                padding-bottom: 15px;
+
+                &.untold{
+                    display: none;
+                }
+
+                p{
+                    font-size: 13px;
+                }
+
+                &.milt{
+
+                    border-bottom: 1px solid #eee;
+
+                }
+
+                &.milo{
+                    border: none;
+                    margin-bottom: 10px;
+                }
+
+                &.milo_pro_max{
+                    border: none;
+                }
+
+                h1{
+                    border: none;
+                    font-size: 28px;
+                    letter-spacing: -0.5px;
+                }
+    
             }
     
         }
