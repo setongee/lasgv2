@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import { NavArrowRight } from 'iconoir-react';
-import { useNavigate } from 'react-router';
+import { useNavigate, Link } from 'react-router';
 import vector1 from '../../assets/navBar/gov.svg'
 import { motion } from "framer-motion"
 import Container from '../container/container';
@@ -63,6 +63,7 @@ const removeClass = (e) => {
 
                     className="linker" 
                     key = {index}
+                    onClick={ () => navigate(res.url) }
                     
                     >
 

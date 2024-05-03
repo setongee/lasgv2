@@ -60,6 +60,13 @@ useEffect(() => {
 
 }, [indexing]);
 
+useEffect(() => {
+    
+    setShowTab(false);
+    window.scroll(0,0);
+
+}, [location.pathname]);
+
 
 //-------------------- End of Nested States Management ---------------------
 

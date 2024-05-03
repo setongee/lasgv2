@@ -4,6 +4,7 @@ import './styles/root.css'
 import Header from './components/header/header';
 import RouterClass from './routes/router';
 import { useParams, useLocation } from 'react-router';
+import Footer from './components/footer/footer';
 
 function App() {
   
@@ -36,6 +37,8 @@ function App() {
 
     {/* All Routers and pages in the Lagos State Web Application */}
     <RouterClass/>
+
+    <Footer/>
 
     </div>
 
