@@ -19,7 +19,7 @@ export const navigationRoutes = {
                 {
                     name : 'Explore Ministries and Departments',
                     desc : 'Explore Lagos State Ministries, Departments and Agencies',
-                    url : 'government/mdas/all'
+                    url : 'government/mdas'
                 },
                 {
                     name : 'Legislative Officers',

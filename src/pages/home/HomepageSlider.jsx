@@ -291,7 +291,7 @@ useEffect(() => {
                             )
                         }
 
-                        </AnimatePresence>
+                    </AnimatePresence>
 
                     
                 </div>
@@ -300,8 +300,8 @@ useEffect(() => {
 
                 <div className="buttons">
 
-                    <div className="btnPrimary"> Explore Services </div>
-                    <div className="btnPrimary"> Latest News </div>
+                    <a href = '#services' className="btnPrimary"> Explore Services </a>
+                    <a href = '#news' className="btnPrimary"> Latest News </a>
 
                 </div>
 

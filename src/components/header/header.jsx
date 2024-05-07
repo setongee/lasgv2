@@ -87,6 +87,16 @@ return (
     } >
 
         <div className="appHeader"> 
+
+            <div className="menuMobile">
+
+                    <div className="menu_sm"> Government <NavArrowDown/> </div>
+                    <div className="menu_sm">Services</div>    
+                    <div className="menu_sm">News & Events </div>    
+                    <div className="menu_sm"> Contact </div>   
+                    <div className="menu_sm"> Search </div>                        
+
+            </div>
         
             {/* Lagos State Color Strip */}
             <div className="strip_lines">
@@ -162,7 +172,6 @@ return (
                                     window.scroll(0,0);
 
                                 }
-
                                 
                                 navigate('/')
 

@@ -1,12 +1,12 @@
 import React from 'react'
 
-export default function Officials( { officials } ) {
+export default function Officials( { officials, uid } ) {
 
   return (
     
     <div className="officialsPage">
 
-        <div className="photosPoint">
+        <div className="photosPoint" onClick = { ()=> window.location.href = `/government/elected_officials/${uid}/view` } >
 
             <div className="photoHolder">
 

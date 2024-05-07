@@ -83,7 +83,7 @@ export default function Services({bgColor}) {
 
   return (
 
-    <div className="services" style={{backgroundColor : bgColor}} >
+    <div className="services" id='services' style={{backgroundColor : bgColor}} >
 
         <Container>
 

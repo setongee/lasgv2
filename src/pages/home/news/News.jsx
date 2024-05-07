@@ -143,7 +143,7 @@ useEffect(() => {
 
   return (
 
-   <div className="recent_news">
+   <div className="recent_news" id = 'news' >
 
        <Container>
 
@@ -206,7 +206,7 @@ useEffect(() => {
                     {
                         newsData[news].type !== "video" ? <img src={ newsData[news].photo } alt="" /> : <div className="mintVideo">
 
-                            <video autoPlay muted src={newsData[news].video} id='videoControl' onEnded = { () => nextShow() } > </video>
+                            <video autoPlay muted src={newsData[news].video} id='videoControl' onEnded = { () => nextShow() } playsInline > </video>
 
                             <div className="console">
 

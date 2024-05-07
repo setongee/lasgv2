@@ -14,7 +14,7 @@ const [paramsUrl, setparamsUrl] = useState(location.pathname.split('/')[2]);
 
   return (
 
-    <div className="officials_body">
+    <div className="officials_body bagElect">
 
         <Container>
 
@@ -35,7 +35,7 @@ const [paramsUrl, setparamsUrl] = useState(location.pathname.split('/')[2]);
                 {
                     Object.entries(OFFICIALS_DATA[paramsUrl]).map( (resData, index) => {
 
-                        return <Officials officials = { resData[1] } />
+                        return <Officials officials = { resData[1] } key = {index} uid = {resData[0]} />
 
                     } )
                 }
