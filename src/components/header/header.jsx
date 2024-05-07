@@ -7,7 +7,7 @@ import '../../styles/global.scss'
 
 //----------- End of styles -----------------
 
-import {ArrowUpRight, IconoirProvider, Menu, MenuScale, NavArrowDown, Search } from 'iconoir-react';
+import {ArrowUpRight, IconoirProvider, Menu, MenuScale, NavArrowDown, Search, Xmark } from 'iconoir-react';
 import { navigationRoutes } from './navData';
 import lasgLogo from '../../assets/navBar/lasg_logo.png'
 import Container from '../container/container';
@@ -15,12 +15,14 @@ import Container from '../container/container';
 import { useLocation, useNavigate } from 'react-router';
 import NestedView from './nestedView';
 import Pong from './pong';
+import MobileView from './mobileView';
 
 
 export default function Header() {  
 
 const [showTab, setShowTab] = useState(false);
 const [indexing, setIndexing] = useState('')
+const [isMobileOpen, setIsMobileOpen] = useState(false);
 
 let location = useLocation();
 let navigate = useNavigate();
@@ -52,7 +54,7 @@ const showMenuIndex = (index) => {
 
     }
 
-}  
+} 
 
 useEffect(() => {
     
@@ -88,15 +90,11 @@ return (
 
         <div className="appHeader"> 
 
-            <div className="menuMobile">
 
-                    <div className="menu_sm"> Government <NavArrowDown/> </div>
-                    <div className="menu_sm">Services</div>    
-                    <div className="menu_sm">News & Events </div>    
-                    <div className="menu_sm"> Contact </div>   
-                    <div className="menu_sm"> Search </div>                        
-
-            </div>
+            {
+                isMobileOpen ? <MobileView closeModal = {setIsMobileOpen} /> : null
+            }
+            
         
             {/* Lagos State Color Strip */}
             <div className="strip_lines">
@@ -183,7 +181,7 @@ return (
 
                             <div className="seth_textTop siteName uppercase thick">Official Website of Lagos State  </div>
 
-                            <div className="mobileBurger mobileBurger2"> <MenuScale color='#131414' width={20} height={20} strokeWidth={2} /></div>
+                            <div className="mobileBurger mobileBurger2" onClick={ () => setIsMobileOpen(true) } > <MenuScale color='#131414' width={20} height={20} strokeWidth={2} /></div>
 
                         </div>
 
