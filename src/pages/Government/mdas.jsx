@@ -13,7 +13,7 @@ import Mda_modal from './mda_modal';
 
 export default function Mdas() {
 
- const [a_z, seta_z] = useState([]);
+  const alpha = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
 
  const [indexFilter, setIndexFilter] = useState('');
  //const [searchTerm, setSearchTerm] = useState('');
@@ -81,25 +81,6 @@ if (indexFilter !== '') {
  
  }, [indexFilter]);
 
-
- useEffect(() => {
-  
-  return () => {
-
-    var alphabetArr = [];
-
-  for ( var a = 65; a <= 90; a++ ){
-
-    alphabetArr.push(String.fromCharCode(a));
-
-  }
-
-  seta_z(alphabetArr);
-    
-  };
-
- }, []);
-
  //UseRef in Intersection Observer;
 
  useEffect(() => {
@@ -146,11 +127,11 @@ if (indexFilter !== '') {
                       <div className="mdas_index" onClick={ () => setIndexFilter('') }> - </div>
 
                         {
-                          a_z.length ? a_z.map( (e, index) => (
+                          alpha.map( (e, index) => (
 
-                              <div className="mdas_index" key = {index} onClick={ () => setIndexFilter(a_z[index].toLowerCase()) }> {e} </div>
+                              <div className="mdas_index" key = {index} onClick={ () => setIndexFilter(alpha[index].toLowerCase()) }> {e} </div>
 
-                          ) ) : null
+                          ) )
                         }
                       
                     </div>
@@ -212,11 +193,11 @@ if (indexFilter !== '') {
                       <div className="mdas_index" onClick={ () => setIndexFilter('') }> - </div>
 
                       {
-                        a_z.length ? a_z.map( (e, index) => (
+                        alpha.map( (e, index) => (
 
-                            <div className="mdas_index" key = {index} onClick={ () => setIndexFilter(a_z[index].toLowerCase()) }> {e} </div>
+                            <div className="mdas_index" key = {index} onClick={ () => setIndexFilter(alpha[index].toLowerCase()) }> {e} </div>
 
-                         ) ) : null
+                         ) )
                       }
 
                 </div>
