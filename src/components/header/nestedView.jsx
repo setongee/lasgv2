@@ -63,7 +63,13 @@ const removeClass = (e) => {
 
                     className="linker" 
                     key = {index}
-                    onClick={ () => navigate(res.url) }
+                    onClick={ () => {
+                        if(res.external){
+                            window.open(res.url)
+                        }else{
+                            navigate(res.url)
+                        }
+                    } }
                     
                     >
 

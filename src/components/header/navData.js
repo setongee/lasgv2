@@ -13,23 +13,27 @@ export const navigationRoutes = {
                 {
                     name : 'Elected Officials',
                     desc : 'View all the officers elected by lagosians this tenure.',
-                    url : 'government/elected_officials'
+                    url : 'government/elected_officials',
+                    external : false
                 },
                 
                 {
                     name : 'Explore Ministries and Departments',
                     desc : 'Explore Lagos State Ministries, Departments and Agencies',
-                    url : 'government/mdas'
+                    url : 'government/mdas',
+                    external : false
                 },
                 {
                     name : 'Legislative Officers',
                     desc : 'View all the Legitlative Officers elected by lagosians this tenure.',
-                    url : 'government/legistlative_officials'
+                    url : 'https://www.lagoshouseofassembly.gov.ng/4388-2/',
+                    external : true
                 },
                 {
                     name : 'Judiciary Officers',
                     desc : 'View all the Judiciary Officers appointed for this tenure.',
-                    url : 'government/judiciary_officials'
+                    url : 'https://lagosjudiciary.gov.ng/directories.html#directories',
+                    external : true
                 } 
 
             ]
