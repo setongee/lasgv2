@@ -4,7 +4,7 @@ import Container from '../../components/container/container'
 import Typewriter from 'typewriter-effect';
 import { ArrowUpRight } from 'iconoir-react';
 import Services from '../../components/services/services';
-import LASG_SERVICES from '../../api/data/services';
+import { servicesDB } from '../../api/data/servicesDB';
 import Fuse from 'fuse.js';
 import ServiceSearchResults from './serviceSearchResults';
 
@@ -21,13 +21,14 @@ export default function ServicesPage() {
     includeScore : true,
   
       keys: [
-        "title",
-        "text"
+        "theme",
+        "sub_service",
+        "short"
       ]
     
     };
   
-    const fuse = new Fuse(LASG_SERVICES, fuseOptions);
+    const fuse = new Fuse(servicesDB, fuseOptions);
     const results = fuse.search(query);
     const queriedRes =  results.map(res => res.item);
     setQueryResults(queriedRes);
@@ -49,8 +50,10 @@ export default function ServicesPage() {
 // }, [queryResults]);
 
 
-   const openModal = () => {
-    console.log("open");
+   const openModal = (data) => {
+    
+        window.open(data.url)
+
    }
 
   return (
@@ -183,7 +186,7 @@ export default function ServicesPage() {
 
                         <div className="mdas_sections">
 
-                            <div className="section all"> {totalResults} Results Found </div>
+                            <div className="section all"> {queryResults.length} Results Found </div>
 
                         </div>
 
@@ -196,7 +199,7 @@ export default function ServicesPage() {
                       {
                          queryResults.length && query !== '' ? queryResults.map( (data, index) => (
 
-                            <ServiceSearchResults data = {data} key = {index} openModal = {openModal} icon = {data.id} />
+                            <ServiceSearchResults data = {data} key = {index} openModal = {openModal} icon = {data.theme} />
 
                         ) ) : query !== '' ? <h1>Oops! Sorry No results Found, Try Again!</h1> : null
 

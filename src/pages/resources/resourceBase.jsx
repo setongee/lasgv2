@@ -5,25 +5,21 @@ import LogoDepartment from '../../assets/MDA/department.svg'
 import LogoAgency from '../../assets/MDA/agency.svg'
 
 import { ArrowUpRight, Internet } from 'iconoir-react';
-import Mda_modal from './mda_modal';
 
 
 
-export default function MdaResultsComponent( { data, openModal } ) {
-
-  console.log(data.tags);
+export default function ResourceBase( { data, openModal } ) {
 
   return (
 
     <div className="mda_card" onClick={ () => openModal(data) }>
 
 
-        <div className="logo"> <img src={data.tags === 'ministry ' ? LogoMinistry : data.tags === 'department ' ? LogoDepartment : LogoAgency} alt="Lagos State Ministries, Departments & Agencies" /> </div>
+        <div className="logo"> <img src={LogoDepartment} alt="Lagos State Ministries, Departments & Agencies" /> </div>
 
         <div className="topx">
 
-            <div className="mda_name"> {data.mda} </div>
-            {/* <div className="mda_desc"> {data.short} </div> */}
+            <div className="mda_name"> {data.title} </div>
 
         </div>
 

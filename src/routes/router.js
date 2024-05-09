@@ -13,6 +13,8 @@ import HOSView from '../pages/Government/officialsView_hos';
 import COSView from '../pages/Government/officialsView_cos';
 import ServicesPage from '../pages/services/servicesPage';
 import ViewService from '../pages/services/viewService';
+import News_Events from '../pages/news_events/News_Events';
+import Resources from '../pages/resources/resources';
 
 const RouterClass = () => {
 
@@ -50,6 +52,9 @@ const RouterClass = () => {
                     
 
                 </Route>
+
+                <Route path = 'news' element = { <News_Events/> } />
+                <Route path = 'resources' element = { <Resources/> } />
 
                 {/* 404 Page Not Found */}
                 <Route path="*" element = {<h1>Page not found</h1>} />

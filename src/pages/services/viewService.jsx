@@ -40,6 +40,7 @@ import tourism from '../../assets/icons/service/tourism.svg'
 import transportation from '../../assets/icons/service/transportation.svg'
 import water from '../../assets/icons/service/water.svg'
 import ServiceSearchResults from './serviceSearchResults';
+import { servicesDB } from '../../api/data/servicesDB';
 
 // End of Icons
 
@@ -85,13 +86,15 @@ export default function ViewService() {
     const [data, setData] = useState([]);
     const [ query, setQuery ] = useState('');
     const [queryResults, setQueryResults] = useState([]);
-    const [totalResults, setTotalResults] = useState(0)
+    const [serviceData, setServiceData] = useState([]);
     
    useEffect(() => {
     
     const getService = LASG_SERVICES.filter( res => res.id === params.theme );
     setData(getService[0]);
 
+    const getServiceData = servicesDB.filter( res => res.theme === params.theme );
+    setServiceData(getServiceData);
 
    }, []); 
 
@@ -102,36 +105,25 @@ export default function ViewService() {
     includeScore : true,
   
       keys: [
-        "title",
-        "text"
+        "sub_service",
+        "short"
       ]
     
     };
   
-    const fuse = new Fuse(LASG_SERVICES, fuseOptions);
+    const fuse = new Fuse(serviceData, fuseOptions);
     const results = fuse.search(query);
-    const queriedRes =  query ? results.map(res => res.item) : LASG_SERVICES;
+    const queriedRes =  query ? results.map(res => res.item) : serviceData;
     setQueryResults(queriedRes);
    
    }, [query]);
 
 
-// useEffect(() => {
-    
-//     const mapple = queryResults.map( e => e.services.length);
-//     const rest = mapple.reduce( (a, b) => {
 
-//         return a + b;
+   const openModal = (data) => {
 
-//     }, 0 );
+      window.open(data.url)
 
-//     setTotalResults(rest);
-
-// }, [queryResults]);
-
-
-   const openModal = () => {
-    console.log("open");
    }
 
    let navigate = useNavigate()
@@ -194,7 +186,7 @@ export default function ViewService() {
 
                 <div className="mdas_sections">
 
-                    <div className="section all"> {queryResults.length} Results Found </div>
+                    <div className="section all"> { query !=='' ? queryResults.length : serviceData.length} Results Found </div>
 
                 </div>
 
@@ -204,10 +196,10 @@ export default function ViewService() {
                       {
                          queryResults.length ? queryResults.map( (data, index) => (
 
-                            <ServiceSearchResults data = {data} key = {index} openModal = {openModal} icon = {data.id} />
+                            <ServiceSearchResults data = {data} key = {index} openModal = {openModal} icon = {data.theme.trim() } />
 
 
-                        ) ) : <h1>Oops! Sorry No results Found, Try Again!</h1>
+                        ) ) : query !== '' ? <h1>Oops! Sorry No results Found, Try Again!</h1> : serviceData.map((e, index) => <ServiceSearchResults data = {e} key = {index} openModal = {openModal} icon = {e.theme.trim() } /> )
 
                       }
                     

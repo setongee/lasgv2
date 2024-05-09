@@ -5,7 +5,7 @@ import LogoDepartment from '../../assets/MDA/department.svg';
 import LogoAgency from '../../assets/MDA/agency.svg';
 import { Globe, Internet, Phone, Message, Xmark, MailOut, MailOpen } from 'iconoir-react';
 
-export default function Mda_modal( { data, closeModal } ) {
+export default function ResourceComp( { data, closeModal } ) {
 
   return (
 
@@ -19,21 +19,21 @@ export default function Mda_modal( { data, closeModal } ) {
 
                 <div className="tag"> {data.type} </div>
 
-                <div className="name_mda"> {data.mda} </div>
+                <div className="name_mda"> {data.name} </div>
 
-                {/* <div className="short"> {data.short} </div> */}
+                <div className="short"> {data.short} </div>
 
                 <div className="address_icon"> <Globe/> Office Address </div>
 
                 <div className="address"> {data.address} </div>
 
-                <div className="getDirections" onClick={ () => window.open(`https://www.google.com/maps?q=${data.mda}`) } >Get Directions</div>
+                <div className="getDirections">Get Directions</div>
 
                 <div className="contactArea">
 
                     <div className="icon" onClick={ () => window.open(data.website) } title='Visit Website'> <Internet/> </div>
-                    <div className="icon" onClick={() => window.open(data.contact)} title='Make a phone call or send SMS' > <Phone/> </div>
-                    <div className="icon" title='Send an Email' onClick={ () => window.open(`mailto:${data.email}`) } > <MailOpen /> </div>
+                    <div className="icon" onClick={() => window.open("tel:5551234567")} title='Make a phone call or send SMS' > <Phone/> </div>
+                    <div className="icon" title='Send an Email'> <MailOpen /> </div>
 
                 </div>
 

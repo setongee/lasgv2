@@ -142,21 +142,21 @@ return (
                             </div> 
                         </a>
 
-                        <a href="#" className='prima' >Resources 
+                        <a href="/resources" className='prima' >Resources 
                             <div className="iconAnim"> 
                                 <ArrowUpRight className='arr first'/> 
                                 <ArrowUpRight className='arr last'/> 
                             </div> 
                         </a>
                         
-                        <a href="#" className='prima' >Visit Lagos 
+                        <a href="/services/tourism" className='prima' >Visit Lagos 
                             <div className="iconAnim"> 
                                 <ArrowUpRight className='arr first'/> 
                                 <ArrowUpRight className='arr last'/> 
                             </div> 
                         </a>
 
-                        <a href="#" className='prima' > Emergency 
+                        <a href="/services/disaster_emergencies" className='prima' > Emergency 
                             <div className="iconAnim"> 
                                 <ArrowUpRight className='arr first'/> 
                                 <ArrowUpRight className='arr last'/> 

@@ -60,10 +60,10 @@ export default function MobileView({closeModal}) {
 
           <div className="others">
 
-              <div className="mobileMenu"> Themes Agenda <ArrowUpRight color='#42FF01' /> </div>
-              <div className="mobileMenu"> Resources <ArrowUpRight color='#42FF01' /> </div>
-              <div className="mobileMenu"> Visit Lagos <ArrowUpRight color='#42FF01' /> </div>
-              <div className="mobileMenu"> Report Emergency <ArrowUpRight color='#42FF01' /> </div>
+              <div className="mobileMenu" onClick={ () => navigate('/') } > Themes Agenda <ArrowUpRight color='#42FF01' /> </div>
+              <div className="mobileMenu" onClick={ () => navigate('/resources') } > Resources <ArrowUpRight color='#42FF01' /> </div>
+              <div className="mobileMenu" onClick={ () => navigate('/tourism') } > Visit Lagos <ArrowUpRight color='#42FF01' /> </div>
+              <div className="mobileMenu" onClick={ () => navigate('/disasters_emergencies') } > Report Emergency <ArrowUpRight color='#42FF01' /> </div>
 
           </div>                       
 

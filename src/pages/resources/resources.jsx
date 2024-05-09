@@ -1,17 +1,19 @@
 import React, {useRef, useState, useEffect} from 'react'
-import './mda.scss'
+import '../Government/mda.scss'
 import Container from '../../components/container/container'
 import { useNavigate } from 'react-router';
 import Typewriter from 'typewriter-effect';
-import { mdaDBv2 } from '../../api/data/mdaDBReal';
+import mdaDB from '../Government/mda';
 import LogoAgency from '../../assets/MDA/agency.svg'
 
 import Fuse from 'fuse.js';
-import MdaResultsComponent from './mdaResultsComponent';
 import { Globe, Internet, Message, Phone, PinSolid, Xmark } from 'iconoir-react';
-import Mda_modal from './mda_modal';
+import Mda_modal from '../Government/mda_modal';
+import MdaResultsComponent from '../Government/mdaResultsComponent';
+import { resourcesDB } from '../../api/data/resourcesDB';
+import ResourceBase from './resourceBase';
 
-export default function Mdas() {
+export default function Resources() {
 
   const alpha = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
 
@@ -24,7 +26,7 @@ export default function Mdas() {
  let navigate = useNavigate();
 
  const [ query, setQuery ] = useState('');
- const [queryResults, setQueryResults] = useState(mdaDBv2);
+ const [queryResults, setQueryResults] = useState(resourcesDB);
 
 
  const [isOpen, setIsOpen] = useState(false);
@@ -39,7 +41,7 @@ export default function Mdas() {
   const openModal = (modal_data) => {
 
     setModalData(modal_data);
-    setIsOpen(true);
+window.open(modal_data.url)
 
   }
 
@@ -49,16 +51,15 @@ export default function Mdas() {
   const fuseOptions = {
 
     keys: [
-      "mda",
-      "tags",
-      "short"
+      "title",
+      "theme"
     ]
   
   };
 
-  const fuse = new Fuse(mdaDBv2, fuseOptions);
+  const fuse = new Fuse(resourcesDB, fuseOptions);
   const results = fuse.search(query);
-  const queriedRes =  query ? results.map(res => res.item) : mdaDBv2;
+  const queriedRes =  query ? results.map(res => res.item) : resourcesDB;
   setQueryResults(queriedRes); 
   
  
@@ -69,14 +70,12 @@ export default function Mdas() {
 
 if (indexFilter !== '') {
 
-  const filterByIndex = mdaDBv2.filter(e=>e.index === indexFilter.toUpperCase());
+  const filterByIndex = resourcesDB.filter(e=>e.index === indexFilter);
   setQueryResults(filterByIndex);
-
-  console.log(indexFilter);
 
 } else {
 
-  setQueryResults(mdaDBv2);
+  setQueryResults(resourcesDB);
 
 }
   
@@ -120,23 +119,9 @@ if (indexFilter !== '') {
             }
 
             {
-                !isVisible ? (
+                isVisible ? (
 
                   <div className="abcAgain">
-
-                    <div className="indexHeader">
-
-                      <div className="mdas_index" onClick={ () => setIndexFilter('') }> - </div>
-
-                        {
-                          alpha.map( (e, index) => (
-
-                              <div className="mdas_index" key = {index} onClick={ () => setIndexFilter(alpha[index].toLowerCase()) }> {e} </div>
-
-                          ) )
-                        }
-                      
-                    </div>
 
                     <div className="searchField fixedTop">
 
@@ -182,25 +167,11 @@ if (indexFilter !== '') {
 
                     <div className="mdaHeader flex flex_col">
 
-                        <div className="mdaTitle"> <span className='thick_700'> A-Z index </span> of Lagos government Ministries, Departments & Agencies. </div>
+                        <div className="mdaTitle"> All Lagos State Resources & Archive </div>
 
                         <div className="mdaTitleSubs">Find contact information for Lagos government ministries, departments and agencies including websites, emails, phone numbers, addresses, and more. </div>
 
                     </div>
-
-                </div>
-
-                <div className="abcZone" ref = { targetRef } >
-
-                      <div className="mdas_index" onClick={ () => setIndexFilter('') }> - </div>
-
-                      {
-                        alpha.map( (e, index) => (
-
-                            <div className="mdas_index" key = {index} onClick={ () => setIndexFilter(alpha[index].toLowerCase()) }> {e} </div>
-
-                         ) )
-                      }
 
                 </div>
 
@@ -243,7 +214,7 @@ if (indexFilter !== '') {
                       {
                          queryResults.length ? queryResults.map( (data, index) => {
 
-                            return <MdaResultsComponent data = {data} key = {index} openModal = {openModal} />
+                            return <ResourceBase data = {data} key = {index} openModal = {openModal} />
 
                          } ) : <h1>Oops! Sorry No results Found, Try Again!</h1>
                       }

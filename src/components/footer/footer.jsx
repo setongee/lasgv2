@@ -23,7 +23,7 @@ export default function Footer() {
               <div className="topPart">
 
                 <p className='thick'>lagosstate.gov.ng -</p>
-                <h1> Your <span> <Search width={60} strokeWidth={1.8} color='#32C76D' /> </span> go-to government resource & service.</h1>
+                <h1> Your go-to government resource & service.</h1>
 
               </div>
 

@@ -34,7 +34,7 @@ export default function QuickCheck() {
                             <Typewriter
             
                             options={{
-                                strings: ['Browse 250+ online citizen and business services.','Report an Emergncy / Disaster.', 'Find health care services around you.', 'Register / Renew your Lisences, Permits etc.', 'Stay up-to-date with News & Events.', 'Find out more about Lagos State Govt. benefits.', 'Explore Ministries, Departments and Agencies.'],
+                                strings: ['Browse 250+ online citizen and business services.','Report an Emergency / Disaster.', 'Find health care services around you.', 'Register / Renew your Lisences, Permits etc.', 'Stay up-to-date with News & Events.', 'Find out more about Lagos State Govt. benefits.', 'Explore Ministries, Departments and Agencies.'],
                                 autoStart: true,
                                 loop: true,
                                 delay : 40,
@@ -89,8 +89,8 @@ export default function QuickCheck() {
 
                             <div className="content">
 
-                                <a href="#"> About Lagos </a>
-                                <p>Lorem ipsum dolor sit amet.</p>
+                                <a href="/services/housing"> Live in Lagos </a>
+                                <p>Residents permits, Housing in Lagos</p>
 
                             </div>
 
@@ -102,8 +102,8 @@ export default function QuickCheck() {
 
                             <div className="content">
 
-                                <a href="#"> Live in Lagos </a>
-                                <p>Lorem ipsum dolor sit amet.</p>
+                                <a href="/services/tourism"> Visit & Tour Lagos </a>
+                                <p> Book yout trip, Get a guide, etc. </p>
 
                             </div>
 
@@ -115,21 +115,8 @@ export default function QuickCheck() {
 
                             <div className="content">
 
-                                <a href="#"> Visit & Tour Lagos </a>
-                                <p>Lorem ipsum dolor sit amet.</p>
-
-                            </div>
-
-                            <ArrowUpRight/>
-
-                        </div>
-
-                        <div className="linkBin">
-
-                            <div className="content">
-
-                                <a href="#"> School in Lagos </a>
-                                <p>Lorem ipsum dolor sit amet.</p>
+                                <a href="/services/education"> School in Lagos </a>
+                                <p> Scholarships, School Applications...</p>
 
                             </div>
 
@@ -142,8 +129,8 @@ export default function QuickCheck() {
 
                             <div className="content">
 
-                                <a href="#"> Explore Agencies </a>
-                                <p>Lorem ipsum dolor sit amet.</p>
+                                <a href="/government/mdas"> Explore Agencies </a>
+                                <p> View Agencies directories </p>
 
                             </div>
 
@@ -156,8 +143,8 @@ export default function QuickCheck() {
 
                             <div className="content">
 
-                                <a href="#"> Laws & Guidlines </a>
-                                <p>Lorem ipsum dolor sit amet.</p>
+                                <a href="/services/laws"> Laws & Guidlines </a>
+                                <p>Get acquianted with Lagos Laws.</p>
 
                             </div>
 
@@ -170,8 +157,8 @@ export default function QuickCheck() {
 
                             <div className="content">
 
-                                <a href="#"> Report Emergencies </a>
-                                <p>Lorem ipsum dolor sit amet.</p>
+                                <a href="/services/disasters_emergencies"> Report Emergencies </a>
+                                <p> Call numbers to instant authorities.</p>
 
                             </div>
 
@@ -184,8 +171,8 @@ export default function QuickCheck() {
 
                             <div className="content">
 
-                                <a href="#">Work in Lagos </a>
-                                <p>Lorem ipsum dolor sit amet.</p>
+                                <a href="/services/jobs">Work in Lagos </a>
+                                <p>Find job oppurtunities in Lagos.</p>
 
                             </div>
 

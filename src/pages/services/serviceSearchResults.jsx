@@ -82,8 +82,6 @@ export default function ServiceSearchResults( { data, openModal, icon } ) {
 
     }
 
-    console.log(data);
-
   return (
 
     <div className="mda_card" id = 'na_me_be_this' onClick={ () => openModal(data) }>
@@ -93,8 +91,8 @@ export default function ServiceSearchResults( { data, openModal, icon } ) {
 
         <div className="topx">
 
-            <div className="mda_name"> {data.title} </div>
-            <div className="mda_desc"> {data.text} </div>
+            <div className="mda_name"> {data.sub_service} </div>
+            {/* <div className="mda_desc"> {data.short} </div> */}
 
         </div>
 
