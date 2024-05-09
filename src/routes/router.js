@@ -11,6 +11,8 @@ import DGovernorsView from '../pages/Government/officialsView_dgov';
 import SSGView from '../pages/Government/officialsView_ssg';
 import HOSView from '../pages/Government/officialsView_hos';
 import COSView from '../pages/Government/officialsView_cos';
+import ServicesPage from '../pages/services/servicesPage';
+import ViewService from '../pages/services/viewService';
 
 const RouterClass = () => {
 
@@ -37,6 +39,14 @@ const RouterClass = () => {
                     <Route path='legistlative_officials' element = { <LegistlativeOfficials/> } />
 
                     <Route path='mdas' element = { <Mdas/> } />
+                    
+
+                </Route>
+
+                <Route path = 'services'>
+
+                    <Route path='' element = {<ServicesPage/>} />
+                    <Route path=':theme' element = { <ViewService/> } />
                     
 
                 </Route>

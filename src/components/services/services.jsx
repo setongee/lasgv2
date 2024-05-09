@@ -39,7 +39,7 @@ import water from '../../assets/icons/service/water.svg'
 import { ArrowDown, ArrowRight, ArrowUp } from 'iconoir-react'
 
 
-export default function Services({bgColor}) {
+export default function Services({bgColor, location, data_limit}) {
 
     const icons = {
 
@@ -77,7 +77,9 @@ export default function Services({bgColor}) {
     }
 
     
-    const [limit, setLimit] = useState(7);
+    const [limit, setLimit] = useState(Number(data_limit));
+    
+    let navigation = useNavigate();
 
     
 
@@ -87,12 +89,18 @@ export default function Services({bgColor}) {
 
         <Container>
 
-            <div className="midTopic">
-                <div className="topic thick_700">All Government Topics & Services</div>
-                <div className="subtitle">Empowering Citizens of Lagos State to Engage with their Government.</div>
-            </div>
+            {
+                location === 'home' ? (
 
-            <div className="servicesPlatoon">
+                    <div className="midTopic">
+                        <div className="topic thick_700">All Government Topics & Services</div>
+                        <div className="subtitle">Empowering Citizens of Lagos State to Engage with their Government.</div>
+                    </div>
+
+                ) : null
+            }
+
+            <div className = { `servicesPlatoon ${location === 'services' ? 'servicePagePlatoon' : '' } ` } >
 
                 {
                     LASG_SERVICES.map( (lasg_service, index) => {
@@ -139,23 +147,30 @@ export default function Services({bgColor}) {
 
             </div>
 
-            <motion.div className="view_all thick"
-            
-            onClick={ () => {
-                
-                if (limit === 11) {
+            {
+                location === 'home' ? (
 
-                    setLimit( LASG_SERVICES.length )
-
-                } else {
-                    setLimit(11)
-                }
-
-            } } > 
+                    <motion.div className="view_all thick"
             
-            Explore More { limit === 11 ? <ArrowDown strokeWidth={2} width={15} height={15} /> : <ArrowUp strokeWidth={2} width={15} height={15} /> } 
-            
-            </motion.div>
+                        onClick={ () => {
+                            
+                            if (limit === 7) {
+
+                                setLimit( LASG_SERVICES.length )
+
+                            } else {
+                                setLimit(7);
+                                window.location.href = '/#services'
+                            }
+
+                        } } > 
+                        
+                        Explore More { limit === 7 ? <ArrowDown strokeWidth={2} width={15} height={15} /> : <ArrowUp strokeWidth={2} width={15} height={15} /> } 
+                        
+                    </motion.div>
+
+                ) : null
+            }
 
         </Container>
 

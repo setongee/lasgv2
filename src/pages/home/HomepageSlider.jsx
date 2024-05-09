@@ -369,7 +369,7 @@ useEffect(() => {
                             <div className="actionBtn flex thick">
 
                                 <div className="button button1"> Read More </div>
-                                <div className="button button2"> Explore Services </div>
+                                <a href='#services' className="button button2"> Explore Services </a>
 
                             </div>
 

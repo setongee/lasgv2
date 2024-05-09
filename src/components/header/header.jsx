@@ -66,6 +66,7 @@ useEffect(() => {
     
     setShowTab(false);
     window.scroll(0,0);
+    setIsMobileOpen(false);
 
 }, [location.pathname]);
 
@@ -159,9 +160,13 @@ return (
                     <div className="flex space_fully">
 
                         {/* Site Branding Information */}
-                        <div className="siteBranding"  
-                        
-                        onClick = { 
+                        <div className="siteBranding">
+
+                            {/* <div className="mobileBurger"> <MenuScale color='#131414' width={20} height={20} strokeWidth={2.5} /></div> */}
+
+                            <div className="logo" 
+                            
+                            onClick = { 
                             () => { 
                                 
 
@@ -173,13 +178,22 @@ return (
                                 
                                 navigate('/')
 
-                            } }>
+                            } }> <img src={lasgLogo} alt="Lagos State Official Digital Logo" /> </div>
 
-                            {/* <div className="mobileBurger"> <MenuScale color='#131414' width={20} height={20} strokeWidth={2.5} /></div> */}
+                            <div className="seth_textTop siteName uppercase thick" 
+                            onClick = { 
+                            () => { 
+                                
 
-                            <div className="logo"> <img src={lasgLogo} alt="Lagos State Official Digital Logo" /> </div>
+                                if (location.pathname === '/') {
 
-                            <div className="seth_textTop siteName uppercase thick">Official Website of Lagos State  </div>
+                                    window.scroll(0,0);
+
+                                }
+                                
+                                navigate('/')
+
+                            } } >Official Website of Lagos State  </div>
 
                             <div className="mobileBurger mobileBurger2" onClick={ () => setIsMobileOpen(true) } > <MenuScale color='#131414' width={20} height={20} strokeWidth={2} /></div>
 

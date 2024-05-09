@@ -39,37 +39,9 @@ export const navigationRoutes = {
     route2 : {
         parentName : "Services",
         theme : "#f9f9f9",
-        isNest : true,
+        isNest : false,
         index : 2,
-        nests : {
-            heading : 'Connecting the citizens of Lagos State to engage with their Government.',
-            vector : '#',
-            links : [ 
-
-                {
-                    name : 'Popularly Searched Services',
-                    desc : 'View the top 6 most searched services in Lagos State.',
-                    url : '#'
-                },
-                
-                {
-                    name : 'Online Fees and Payments',
-                    desc : 'View all supported digital fees & payments',
-                    url : '#'
-                },
-                {
-                    name : 'Apply for Lagos State Scholarship & Bursary',
-                    desc : 'Recieve support and schorlaship for Lagosians',
-                    url : '#'
-                },
-                {
-                    name : 'View All Government Services',
-                    desc : 'View all the services offered by Lagos State',
-                    url : '#'
-                } 
-
-            ]
-        }
+        url : '/services'
     },
 
     route3 : {

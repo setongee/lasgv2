@@ -85,7 +85,6 @@ const LASG_SERVICES = [
         id: "health",
         title : "Health Services",
         text : "Renewal of life stock feed, Tow millers, Ground rent, planning licence and more.",
-
     },
 
     {

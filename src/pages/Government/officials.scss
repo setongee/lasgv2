@@ -373,6 +373,11 @@
         align-items: center;
         padding-top: 230px;
 
+        &.bagElect{
+            padding-top: 170px;
+        }
+    
+
 
         .topMan{
             .pageHeader{
@@ -556,6 +561,12 @@
     .officials_body{
 
         padding-top: 190px;
+
+        &.bagElect{
+
+            padding-top: 130px;
+
+        }
 
         .topMan{
 

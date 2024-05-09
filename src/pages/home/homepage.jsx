@@ -36,7 +36,7 @@ export default function Homepage() {
 
       <News/>
 
-      <Services bgColor = "#095F59" />
+      <Services bgColor = "#095F59" location = 'home' data_limit={7} />
 
       <Resources/>
 
