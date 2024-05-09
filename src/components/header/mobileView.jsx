@@ -13,11 +13,11 @@ export default function MobileView({closeModal}) {
     
     if(isClicked) {
 
-      document.querySelector('.dropdown').classList.add('active')
+      document.querySelector('.dropdownBottom').style.display = 'flex';
 
     } else{
 
-      document.querySelector('.dropdown').classList.remove('active')
+      document.querySelector('.dropdownBottom').style.display = 'none';
 
     }
     
