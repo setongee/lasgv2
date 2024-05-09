@@ -45,8 +45,8 @@ export default function MobileView({closeModal}) {
 
             <div className="dropdownBottom">
 
-                <a href="/government/elected_officials"> Elected Officials </a>
-                <a href="/government/mdas"> Explore Ministries </a>
+                <p onClick={()=>navigate('/government/elected_officials')} > Elected Officials </p>
+                <p onClick={()=>navigate('/government/mdas')}> Explore Ministries </p>
                 <a href="https://www.lagoshouseofassembly.gov.ng/4388-2/" target='_Blank' onClick={()=>closeModal(false)} > Legislative Officers </a>
                 <a href="https://lagosjudiciary.gov.ng/directories.html#directories" target='_Blank' onClick={()=>closeModal(false)} > Judiciary Officers </a>
 

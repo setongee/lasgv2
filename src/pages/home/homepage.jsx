@@ -17,13 +17,13 @@ export default function Homepage() {
 
     <div className="home">
 
-      <div className={`floatingBubble ${isActive ? "active" : ""}`} onClick={() => setisActive(!isActive)} >
+      {/* <div className={`floatingBubble ${isActive ? "active" : ""}`} onClick={() => setisActive(!isActive)} >
 
         <div className="activeWay">
           <Search color='#fff' strokeWidth={2.5} width={20}/> 
         </div>
 
-      </div>
+      </div> */}
 
       <HomepageSlider />
       
