@@ -31,13 +31,13 @@ export default function MobileView({closeModal}) {
         <div className="menuMobile">
 
           <div className="menuBarArea uppercase">
-              <div className="title" onClick={ () => { navigate('/'); closeModal(false); window.scrollTo(0,0) } } > LASG Home </div>
+              <div className="title" onClick={ () => { navigate('/'); closeModal(); window.scrollTo(0,0) } } > LASG Home </div>
               <div className="close" onClick={ () => closeModal(false) } > <Xmark width={30} height={30} strokeWidth={1}/> </div>
           </div>
 
           <div className="menu_sm dropdown"> 
 
-            <div className="dropdownTop" onClick={ () => setIsClicked(!isClicked) } >  
+            <div className='dropdownTop' onClick={ () => setIsClicked(!isClicked) } >  
             
                 Government <div className="tagArr"><NavArrowDown/></div>
             

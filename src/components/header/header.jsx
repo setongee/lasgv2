@@ -67,8 +67,25 @@ useEffect(() => {
     setShowTab(false);
     window.scroll(0,0);
     setIsMobileOpen(false);
+    document.body.style.overflowY = 'visible';
 
 }, [location.pathname]);
+
+const openMobileMenu = () => {
+
+    setIsMobileOpen(true);
+    document.body.style.overflowY = 'hidden';
+
+
+}
+
+const closeMobileMenu = () => {
+
+    setIsMobileOpen(false);
+    document.body.style.overflowY = 'visible';
+
+
+}
 
 
 //-------------------- End of Nested States Management ---------------------
@@ -93,7 +110,7 @@ return (
 
 
             {
-                isMobileOpen ? <MobileView closeModal = {setIsMobileOpen} /> : null
+                isMobileOpen ? <MobileView closeModal = {closeMobileMenu} /> : null
             }
             
         
@@ -195,7 +212,7 @@ return (
 
                             } } >Official Website of Lagos State  </div>
 
-                            <div className="mobileBurger mobileBurger2" onClick={ () => setIsMobileOpen(true) } > <MenuScale color='#131414' width={20} height={20} strokeWidth={2} /></div>
+                            <div className="mobileBurger mobileBurger2" onClick={ () => openMobileMenu() } > <MenuScale color='#131414' width={20} height={20} strokeWidth={2} /></div>
 
                         </div>
 

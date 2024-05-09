@@ -94,23 +94,12 @@
     .recentlyServiced{
 
         gap: 40px;
-        justify-content: center;
-        flex-direction: column;
         margin-top: 50px;
-
-        .PopularlySearchedTerms{
-
-            text-transform: uppercase;
-            font-size: 12px;
-            font-weight: 500;
-            letter-spacing: 2px;
-
-        }
 
         .linksTabs{
 
             gap: 20px;
-            justify-content: center;
+            width: 100%;
 
             .tab{
 

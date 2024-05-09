@@ -159,6 +159,19 @@ export default function ServicesPage() {
                         
                         </a>
 
+                        <a href ='#' className="tab flex"> 
+                        
+                        Book LAGRIDE - Download App
+
+                        <div className="arowBon"> 
+
+                            <div className="arrowMin arrow2"><ArrowUpRight color = '#fff' /> </div>
+                            <div className="arrowMin arrow1"><ArrowUpRight color='#42FF01'/> </div>
+                        
+                        </div> 
+                        
+                        </a>
+
                     </div>
 
                 </div>
