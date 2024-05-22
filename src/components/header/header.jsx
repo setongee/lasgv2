@@ -134,13 +134,6 @@ return (
 
                     {/* quick_links */}
                     <div className="quick_links"> 
-                    
-                        <a href="#" className='prima' >Themes Agenda 
-                            <div className="iconAnim"> 
-                                <ArrowUpRight className='arr first'/> 
-                                <ArrowUpRight className='arr last'/> 
-                            </div> 
-                        </a>
 
                         <a href="/resources" className='prima' >Resources 
                             <div className="iconAnim"> 
@@ -156,7 +149,7 @@ return (
                             </div> 
                         </a>
 
-                        <a href="/services/disaster_emergencies" className='prima' > Emergency 
+                        <a href="/services/disasters_emergencies" className='prima' > Emergency 
                             <div className="iconAnim"> 
                                 <ArrowUpRight className='arr first'/> 
                                 <ArrowUpRight className='arr last'/> 

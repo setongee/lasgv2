@@ -1449,24 +1449,6 @@ export const servicesDB = [
                 short : ""
             },
 
-
-
-            {
-                id : 183,
-                 theme : 'security',
-               sub_service : "",
-               url : "http://trafficradio961.ng/",
-               short : ""
-           },
-
-         {
-               id : 184,
-              theme : 'security',
-               sub_service : "",
-               url : "https://ekofm897.com/",
-               short : ""
-           },
-
            {
             id : 185,
              theme : 'identity',

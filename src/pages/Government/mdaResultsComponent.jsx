@@ -11,8 +11,6 @@ import Mda_modal from './mda_modal';
 
 export default function MdaResultsComponent( { data, openModal } ) {
 
-  console.log(data.tags);
-
   return (
 
     <div className="mda_card" onClick={ () => openModal(data) }>

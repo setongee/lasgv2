@@ -60,12 +60,18 @@ export default function Mdas() {
   const results = fuse.search(query);
   const queriedRes =  query ? results.map(res => res.item) : mdaDBv2;
   setQueryResults(queriedRes); 
+
+
+
   
  
  }, [query]);
 
 
+
  useEffect(() => {
+
+window.scrollTo(0,0)
 
 if (indexFilter !== '') {
 
@@ -206,7 +212,7 @@ if (indexFilter !== '') {
 
                 <div className="searchField">
 
-                      <input type="text" className="searchInput" value = {query} onChange={ e => setQuery(e.target.value) }/>
+                      <input type="text" id = "yass" className="searchInput" value = {query} onChange={ e => setQuery(e.target.value) }/>
 
                       {
                         

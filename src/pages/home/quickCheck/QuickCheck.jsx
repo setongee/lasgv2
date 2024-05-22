@@ -103,7 +103,7 @@ export default function QuickCheck() {
                             <div className="content">
 
                                 <a href="/services/tourism"> Visit & Tour Lagos </a>
-                                <p> Book yout trip, Get a guide, etc. </p>
+                                <p> Book your trip, Get a guide, etc. </p>
 
                             </div>
 

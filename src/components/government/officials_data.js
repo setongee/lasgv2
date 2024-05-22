@@ -41,14 +41,14 @@ const OFFICIALS_DATA = {
         legi : { 
 
             image : "https://ikejarecord.com/wp-content/uploads/2023/09/sdfdsdfds.png",
-            fullname : "Legistlative Officilas",
+            fullname : "Legistlative Officials",
             position : "Lagos State"
         },
 
         judi : { 
 
             image : "https://guardian.ng/wp-content/uploads/2020/02/scale-of-justice.jpg",
-            fullname : "Judiciary Officilas",
+            fullname : "Judiciary Officials",
             position : "Lagos State"
         }
 

@@ -1,17 +1,41 @@
-import React,{useState} from 'react'
+import React,{useState,useEffect} from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import '../recentlySearched/recently.scss'
 import { ArrowRight, ArrowUpRight, Car, Xmark, XmarkCircleSolid } from 'iconoir-react'
 import TabTitle from '../../../components/tabHeading/tabTitle'
 import { useNavigate } from 'react-router'
+import { servicesDB } from '../../../api/data/servicesDB'
 
 export default function RecentlySearched() {
 
     const [selectedId, setSelectedId] = useState(null)
     const [objectNumber, setObjectNumber] = useState(0)
-    const [isOpen, setIsOpen] = useState(false)
+    const [isOpen, setIsOpen] = useState(false);
+    const [data, setData] = useState([]);
 
     let navigateTo = useNavigate();
+
+    useEffect(() => {
+
+    const length = (servicesDB.length) - 1;
+    
+    const piper = []
+    
+    for( var x = 0; x < 6; x++ ){
+
+        piper.push( servicesDB[Math.floor(Math.random() * length)] )
+
+    }
+
+    if(piper.length === 6 ) {
+
+        setData(piper);
+
+    }
+        
+        
+    }, []);
+
 
     const listItems = {
 
@@ -37,239 +61,6 @@ export default function RecentlySearched() {
         )
     }
 
-    const items = [
-
-        {
-            
-            id : "service1",
-            title : "Vehicle Services.",
-            subtitle : "Lisenses, Vehicle Registrations, online payments etc. ",
-            url : [
-                {
-                    id : 'vehicle lisense',
-                    name : 'Vehicle Lisense',
-                    url : '#'
-                },
-
-                {
-                    id : 'inspection',
-                    name : 'Book an inspection',
-                    url : '#'
-                },
-
-                {
-                    id : 'Driver\'s license',
-                    name : 'Driver\'s license',
-                    url : '#'
-                },
-
-                {
-                    id : 'vehicle lisense',
-                    name : 'Auto-Vin Certificate',
-                    url : '#'
-                },
-
-                {
-                    id : 'vehicle lisense',
-                    name : 'Vehicle Insurance',
-                    url : '#'
-                }
-            ]
-    
-        },
-    
-       {
-            
-            id : "service2",
-            title : "Explore Agencies.",
-            subtitle : "Quickly locate and access applicable agency websites, contact information, and more.",
-            url : [
-                {
-                    id : 'vehicle lisense',
-                    name : 'Vehicle Lisense',
-                    url : '#'
-                },
-
-                {
-                    id : 'inspection',
-                    name : 'Book an inspection',
-                    url : '#'
-                },
-
-                {
-                    id : 'Driver\'s license',
-                    name : 'Driver\'s license',
-                    url : '#'
-                },
-
-                {
-                    id : 'vehicle lisense',
-                    name : 'Auto-Vin Certificate',
-                    url : '#'
-                },
-
-                {
-                    id : 'vehicle lisense',
-                    name : 'Vehicle Insurance',
-                    url : '#'
-                }
-            ]
-    
-        },
-    
-        {
-            id : "service3",
-            title : "Pay Bills & Levies.",
-            subtitle : "lorem20",
-            url : [
-                {
-                    id : 'vehicle lisense',
-                    name : 'Vehicle Lisense',
-                    url : '#'
-                },
-
-                {
-                    id : 'inspection',
-                    name : 'Book an inspection',
-                    url : '#'
-                },
-
-                {
-                    id : 'Driver\'s license',
-                    name : 'Driver\'s license',
-                    url : '#'
-                },
-
-                {
-                    id : 'vehicle lisense',
-                    name : 'Auto-Vin Certificate',
-                    url : '#'
-                },
-
-                {
-                    id : 'vehicle lisense',
-                    name : 'Vehicle Insurance',
-                    url : '#'
-                }
-            ]
-    
-        },
-    
-        {
-            id : "service4",
-            title : "Visit & Tour Lagos.",
-            subtitle : "lorem20",
-            url : [
-                {
-                    id : 'vehicle lisense',
-                    name : 'Vehicle Lisense',
-                    url : '#'
-                },
-
-                {
-                    id : 'inspection',
-                    name : 'Book an inspection',
-                    url : '#'
-                },
-
-                {
-                    id : 'Driver\'s license',
-                    name : 'Driver\'s license',
-                    url : '#'
-                },
-
-                {
-                    id : 'vehicle lisense',
-                    name : 'Auto-Vin Certificate',
-                    url : '#'
-                },
-
-                {
-                    id : 'vehicle lisense',
-                    name : 'Vehicle Insurance',
-                    url : '#'
-                }
-            ]
-    
-        },
-    
-        {
-            id : "service5",
-            subtitle : "lorem20",
-            title : "Lagos Colleges & Universities.",
-            url : [
-                {
-                    id : 'vehicle lisense',
-                    name : 'Vehicle Lisense',
-                    url : '#'
-                },
-
-                {
-                    id : 'inspection',
-                    name : 'Book an inspection',
-                    url : '#'
-                },
-
-                {
-                    id : 'Driver\'s license',
-                    name : 'Driver\'s license',
-                    url : '#'
-                },
-
-                {
-                    id : 'vehicle lisense',
-                    name : 'Auto-Vin Certificate',
-                    url : '#'
-                },
-
-                {
-                    id : 'vehicle lisense',
-                    name : 'Vehicle Insurance',
-                    url : '#'
-                }
-            ]
-    
-        },
-        {
-            id : "service6",
-            subtitle : "lorem20",
-            title : "Job Openings in Lagos.",
-            url : [
-                {
-                    id : 'vehicle lisense',
-                    name : 'Vehicle Lisense',
-                    url : '#'
-                },
-
-                {
-                    id : 'inspection',
-                    name : 'Book an inspection',
-                    url : '#'
-                },
-
-                {
-                    id : 'Driver\'s license',
-                    name : 'Driver\'s license',
-                    url : '#'
-                },
-
-                {
-                    id : 'vehicle lisense',
-                    name : 'Auto-Vin Certificate',
-                    url : '#'
-                },
-
-                {
-                    id : 'vehicle lisense',
-                    name : 'Vehicle Insurance',
-                    url : '#'
-                }
-            ]
-    
-        }
-    
-    ]
-
     const handleElementsFix = () => {
 
         document.querySelector('.recentlySearchedDom').classList.add('blur');
@@ -282,6 +73,18 @@ export default function RecentlySearched() {
 
     }
 
+    const handleThemeEdit = (theme) => {
+
+        let initial = theme.replaceAll("_", " & ")
+        let wordSplit = initial.split(" ");
+        let join = wordSplit.join().replaceAll(",", " ");
+
+        return join;
+
+    }
+
+
+
   return (
 
     <div className="recentlySearchedDom">
@@ -292,7 +95,7 @@ export default function RecentlySearched() {
 
             {
             
-            items.map((item, index) => (
+            data.map((item, index) => (
 
                 <motion.div className='cardPoint' layoutId={item.id} 
 
@@ -304,14 +107,7 @@ export default function RecentlySearched() {
                 
                 onClick={() => {
 
-                    if (!isOpen) {
-
-                        setSelectedId(item.id);
-                        setObjectNumber(index);
-                        handleElementsFix();
-                        setIsOpen(true);
-
-                    }
+                    window.open(item.url)
                     
 
                 }}>
@@ -323,11 +119,11 @@ export default function RecentlySearched() {
 
                     </div>
 
-                    <div className="contentPin">
+                    <div className="contentPin"> 
 
                         <motion.div className='title thick'>
                             
-                            <div className="titleForm"> {item.title} </div>
+                            <div className="titleForm"> {item.sub_service} </div>
                             <div className="arrowIn"> 
                                 <div className="arrow_Z arrow1"><ArrowUpRight /> </div>
                                 <div className="arrow_Z arrow2"><ArrowUpRight /> </div>
@@ -335,7 +131,7 @@ export default function RecentlySearched() {
 
                         </motion.div>
 
-                        <motion.div className='subtitle'>{item.subtitle}</motion.div>
+                        <div className='themed'> { handleThemeEdit(item.theme) } - </div>
 
                     </div>
 
@@ -345,7 +141,7 @@ export default function RecentlySearched() {
             
             }
             
-            <AnimatePresence>
+            {/* <AnimatePresence>
 
             {
 
@@ -388,7 +184,7 @@ export default function RecentlySearched() {
 
             }
 
-            </AnimatePresence>
+            </AnimatePresence> */}
 
         </div>
 
