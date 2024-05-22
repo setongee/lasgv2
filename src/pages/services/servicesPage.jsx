@@ -199,7 +199,7 @@ export default function ServicesPage() {
                       {
                          queryResults.length && query !== '' ? queryResults.map( (data, index) => (
 
-                            <ServiceSearchResults data = {data} key = {index} openModal = {openModal} icon = {data.theme} />
+                            <ServiceSearchResults data = {data} key = {index} openModal = {openModal} icon = {data.theme.trim()} />
 
                         ) ) : query !== '' ? <h1>Oops! Sorry No results Found, Try Again!</h1> : null
 

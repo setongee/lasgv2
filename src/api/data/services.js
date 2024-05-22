@@ -4,7 +4,7 @@ const LASG_SERVICES = [
 
         id: "advertisement",
         title : "Advertisement",
-        text : "Learn how to get financial assistance and recover from a disaster or emergency.",
+        text : "Register for different signage options, Outdoor practioner permit...",
 
     },
 
@@ -12,7 +12,7 @@ const LASG_SERVICES = [
 
         id: "agriculture",
         title : "Agriculture",
-        text : "Renewal of life stock feed, Tow millers, Ground rent, planning licence and more.",
+        text : "Farm allocations, MEMR applications, Training permit, Agripreneurship..."
 
     },
 
@@ -20,23 +20,15 @@ const LASG_SERVICES = [
 
         id: "business_trade_commerce",
         title : "Business, Trade & Commerce",
-        text : "Renewal of life stock feed, Tow millers, Ground rent, planning licence and more.",
+        text : "SMEDAN Registration, Tax payment, SME digital academy, LCCI...",
 
     },
 
     {
 
         id: "complaints_feedbacks",
-        title : "Complaints / Feedbacks",
-        text : "Renewal of life stock feed, Tow millers, Ground rent, planning licence and more.",
-
-    },
-
-    {
-
-        id: "disability_services",
-        title : "Disability Services",
-        text : "Renewal of life stock feed, Tow millers, Ground rent, planning licence and more.",
+        title : "Complaints & Feedbacks",
+        text : "Send a feedback or Make a complain to the Lagos State Government.",
 
     },
 
@@ -44,7 +36,7 @@ const LASG_SERVICES = [
 
         id: "disasters_emergencies",
         title : "Disasters & Emergencies",
-        text : "Renewal of life stock feed, Tow millers, Ground rent, planning licence and more.",
+        text : "Quick emergency numbers, Missing Person or vehicles reports...",
 
     },
 
@@ -52,7 +44,7 @@ const LASG_SERVICES = [
 
         id: "education",
         title : "Education",
-        text : "Renewal of life stock feed, Tow millers, Ground rent, planning licence and more.",
+        text : "Lagos State Scholarships, Schools registration form, Students Loan Scheme...",
 
     },
 
@@ -60,15 +52,7 @@ const LASG_SERVICES = [
 
         id: "environment",
         title : "Environment",
-        text : "Renewal of life stock feed, Tow millers, Ground rent, planning licence and more.",
-
-    },
-
-    {
-
-        id: "events",
-        title : "Events & Culture",
-        text : "Renewal of life stock feed, Tow millers, Ground rent, planning licence and more.",
+        text : "Environmental permits, LASEPA Bills payments, noise pollution control... ",
 
     },
 
@@ -76,7 +60,7 @@ const LASG_SERVICES = [
 
         id: "government",
         title : "Government Benefits",
-        text : "Renewal of life stock feed, Tow millers, Ground rent, planning licence and more.",
+        text : "Find out more about benefits rendered to citizens by Lagos State Government.",
 
     },
 
@@ -84,22 +68,14 @@ const LASG_SERVICES = [
 
         id: "health",
         title : "Health Services",
-        text : "Renewal of life stock feed, Tow millers, Ground rent, planning licence and more.",
+        text : "Know more about Lagos State Health Insurance, Request an ambulance, Hospital...",
     },
 
     {
 
         id: "housing",
         title : "Housing and Lands",
-        text : "Renewal of life stock feed, Tow millers, Ground rent, planning licence and more.",
-
-    },
-
-    {
-
-        id: "insurance",
-        title : "Insurance",
-        text : "Renewal of life stock feed, Tow millers, Ground rent, planning licence and more.",
+        text : "LASBCA Certificate verification, Property listing, LBIC application form, Opal Membership..."
 
     },
 
@@ -107,7 +83,7 @@ const LASG_SERVICES = [
 
         id: "identity",
         title : "Identity Management",
-        text : "Renewal of life stock feed, Tow millers, Ground rent, planning licence and more.",
+        text : "LASRRA Registration online, check LAG-ID status.",
 
     },
 
@@ -115,38 +91,38 @@ const LASG_SERVICES = [
 
         id: "jobs",
         title : "Job Opportunities in Lagos State",
-        text : "Renewal of life stock feed, Tow millers, Ground rent, planning licence and more.",
+        text : "Apply for government recruitment, ferry services recruitment, find jobs...",
 
     },
 
-    {
+    // {
 
-        id: "lands",
-        title : "Lands Bureau & Management",
-        text : "Renewal of life stock feed, Tow millers, Ground rent, planning licence and more.",
+    //     id: "lands",
+    //     title : "Lands Bureau & Management",
+    //     text : "Renewal of life stock feed, Tow millers, Ground rent, planning licence and more.",
 
-    },
+    // },
 
     {
 
         id: "laws",
         title : "Laws & Safety Guide",
-        text : "Renewal of life stock feed, Tow millers, Ground rent, planning licence and more.",
+        text : "Know more about the Lagos State Laws, Read / Download the Lagos State Gazette...",
 
     },
 
     {
 
         id: "lisense",
-        title : "Licensing Purchases",
-        text : "Renewal of life stock feed, Tow millers, Ground rent, planning licence and more.",
+        title : "License, Permits & Applications",
+        text : "Find out and explore all Lagos State applications, permits and licenses.",
 
     },
 
     {
 
         id: "loans",
-        title : "Loan, Trust funds",
+        title : "Loans & Trust funds",
         text : "Renewal of life stock feed, Tow millers, Ground rent, planning licence and more.",
 
     },
@@ -155,80 +131,75 @@ const LASG_SERVICES = [
 
         id: "media",
         title : "Media & Entertainment",
-        text : "Renewal of life stock feed, Tow millers, Ground rent, planning licence and more.",
+        text : "Apply for SMEDAN loans, LSETF loan programme, Hub Loan innovative",
 
     },
 
-    {
+    // {
 
-        id: "news",
-        title : "News & Events",
-        text : "Renewal of life stock feed, Tow millers, Ground rent, planning licence and more.",
+    //     id: "news",
+    //     title : "News & Events",
+    //     text : "Renewal of life stock feed, Tow millers, Ground rent, planning licence and more.",
 
-    },
+    // },
 
     {
 
         id: "payments",
         title : "Payments & Levies",
-        text : "Renewal of life stock feed, Tow millers, Ground rent, planning licence and more.",
+        text : "Find out and make all Lagos State payments and levies in one place",
 
     },
 
-    {
+    // {
 
-        id: "permits",
-        title : "Permits",
-        text : "Renewal of life stock feed, Tow millers, Ground rent, planning licence and more.",
+    //     id: "pilgrims",
+    //     title : "Pilgrim Services",
+    //     text : "Renewal of life stock feed, Tow millers, Ground rent, planning licence and more.",
 
-    },
-    {
+    // },
 
-        id: "pilgrims",
-        title : "Pilgrim Services",
-        text : "Renewal of life stock feed, Tow millers, Ground rent, planning licence and more.",
+    // {
 
-    },
-    {
+    //     id: "reports",
+    //     title : "Reports & Archive",
+    //     text : "Renewal of life stock feed, Tow millers, Ground rent, planning licence and more.",
 
-        id: "reports",
-        title : "Reports & Archive",
-        text : "Renewal of life stock feed, Tow millers, Ground rent, planning licence and more.",
+    // },
 
-    },
     {
 
         id: "security",
         title : "Security Services",
-        text : "Renewal of life stock feed, Tow millers, Ground rent, planning licence and more.",
+        text : "Find out all you can on Lagos State Safty Corps, Lagos State Security Trust Fund...",
 
     },
-    {
+    // {
 
-        id: "science",
-        title : "Science & Technology ",
-        text : "Renewal of life stock feed, Tow millers, Ground rent, planning licence and more.",
+    //     id: "science",
+    //     title : "Science & Technology ",
+    //     text : "MEMR Permits / licensing",
 
-    },
+    // },
     {
 
         id: "tourism",
-        title : "Tourism & Travel ",
-        text : "Renewal of life stock feed, Tow millers, Ground rent, planning licence and more.",
+        title : "Tourism, Events & Culture",
+        text : "Learn more about visiting Lagos, tourist spots and attractions in Lagos State...",
 
     },
     {
 
         id: "transportation",
         title : "Transportation",
-        text : "Renewal of life stock feed, Tow millers, Ground rent, planning licence and more.",
+        text : "Book LAGOSRIDE, Learn how to drive, Motor dealership license, Make BRT Payment... ",
 
     },
     {
 
         id: "water",
         title : "Water Services",
-        text : "Renewal of life stock feed, Tow millers, Ground rent, planning licence and more.",
+        text : "Explore all water services provided by Lagos Waterways Authority",
 
     }
 

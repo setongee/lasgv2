@@ -93,7 +93,7 @@ export default function ViewService() {
     const getService = LASG_SERVICES.filter( res => res.id === params.theme );
     setData(getService[0]);
 
-    const getServiceData = servicesDB.filter( res => res.theme === params.theme );
+    const getServiceData = servicesDB.filter( res => res.theme.trim() === params.theme );
     setServiceData(getServiceData);
 
    }, []); 

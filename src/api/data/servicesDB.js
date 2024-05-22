@@ -1323,7 +1323,7 @@ export const servicesDB = [
 
                 {
                     id : 167,
-                    theme : 'housing ',
+                    theme : 'housing',
                     sub_service : "Verify LASBCA Certificate ",
                     url : "https://lasbca.lagosstate.gov.ng/lasbca-verify/",
                     short : ""
