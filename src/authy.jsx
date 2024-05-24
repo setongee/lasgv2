@@ -6,7 +6,7 @@ export default function Authy() {
 
     const [error, setError] = useState('');
     const [isValidated, setIsValidated] = useState(false);
-    const access = "?.lasg_access_007";
+    const access = "$2024?.lasg_access$008";
 
     const handleSub = () => {
 
@@ -24,7 +24,7 @@ export default function Authy() {
 
         } else {
 
-            window.sessionStorage.setItem('lasg_token', '?.lasg_access_007');
+            window.sessionStorage.setItem('lasg_token', access);
             middle("Login Successful!", "ok");
             
             setTimeout(() => {
