@@ -8,6 +8,9 @@ import Services from '../../components/services/services'
 import Footer from '../../components/footer/footer'
 import Resources from './resources/Resources'
 import { Search } from 'iconoir-react'
+import Photo_slider_component from '../../components/photo_slider/Photo_slider_component'
+import Quick from '../../components/quickIn/quick'
+import Themes from './themes__agenda/Themes'
 
 export default function Homepage() {
 
@@ -17,28 +20,17 @@ export default function Homepage() {
 
     <div className="home">
 
-      {/* <div className={`floatingBubble ${isActive ? "active" : ""}`} onClick={() => setisActive(!isActive)} >
+      <Photo_slider_component/>
 
-        <div className="activeWay">
-          <Search color='#fff' strokeWidth={2.5} width={20}/> 
-        </div>
+      <QuickCheck/>
 
-      </div> */}
+      <Quick/>
 
-      <HomepageSlider />
-      
-      <Container>
-
-          <QuickCheck/>
-          <RecentlySearched />
-
-      </Container>
+      {/* <Themes/> */}
 
       <News/>
 
-      <Services bgColor = "#095F59" location = 'home' data_limit={7} />
-
-      <Resources/>
+      <Services bgColor = "#FFF8DE" location = 'home' data_limit={70} />
 
     </div>
 

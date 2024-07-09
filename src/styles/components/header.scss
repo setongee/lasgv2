@@ -1,9 +1,22 @@
+.searchScreen{
+
+    height: 100vh;
+    width: 70%;
+    background-color: #fdfdfd;
+    position: fixed;
+    z-index: 9999;
+    right: 0;
+    border-left: 1px solid #eee;
+    display: none;
+}
+
 .appHeader{
 
     position: fixed;
     width: 100%;
     box-shadow: 0px 2px 30px rgba($color: #000000, $alpha: .06);
     z-index: 9999;
+    top: 0;
 
     .menuMobile{
         display: none;
@@ -41,6 +54,7 @@
     .seth_Link{
 
         background-color: var(--primary);
+        background-color: #108a00;
         height: 45px;
         font-size: 14px;
         color: #fff;
@@ -51,7 +65,9 @@
         position: relative;
         z-index: 4;
         letter-spacing: 2px;
-        font-weight: 500;
+        font-weight: 300;
+
+        // background-color: #101010;
 
         .newsScroll{
 
@@ -75,7 +91,7 @@
                 align-items: center;
                 gap: 5px;
                 text-transform: uppercase;
-                font-weight: 600;
+                font-weight: 400;
     
                 &:hover{
                     color: var(--lasgGreen);
@@ -108,8 +124,8 @@
             cursor: pointer;
 
             .logo{
-                height: 60px;
-                width: 60px;
+                height: 55px;
+                width: 55px;
 
                 img{
                     width: 100%;
@@ -145,6 +161,28 @@
                     transition: all .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
                 }
 
+                &.active{
+                    
+                    border-color:  var(--lasgGreen);
+                    color: var(--primary);
+
+                    .navi{
+                        rotate: (180deg);
+                        color: var(--primary) !important;
+                    }
+
+                }
+
+                &:last-child{
+
+                    border: none;
+
+                    .pink{
+                        color: #131313;
+                    }
+
+                }
+
                 &:hover{
 
                     border-color:  var(--lasgGreen);
@@ -155,6 +193,15 @@
                         color: var(--primary) !important;
                     }
 
+                }
+
+
+                &:last-child:hover{
+
+                    .pink{
+                        color: #199b4d;
+                    }
+                    
                 }
 
                 &.fix{
@@ -188,8 +235,8 @@
             top: 130px;
             padding-top: 80px;
             padding-bottom: 120px;
-            height: calc(100vh - 130px);
-            overflow: hidden;
+            height: calc(100vh - 120px);
+            overflow-y: scroll;
 
             // &:hover{
             //     display: block !important;
@@ -197,13 +244,14 @@
 
             .vectorPhoto{
 
-                width: 600px;
-                position: absolute;
+                width: 400px;
+                position: fixed;
                 bottom: 0px;
                 right: 0px;
                 z-index: 3;
                 display: flex;
                 align-items: center;
+                display: none;
 
                 img{
                     width: 100%;
@@ -227,7 +275,6 @@
                 flex-direction: column;
                 gap: 35px;
                 cursor: pointer;
-                height: 100vh;
 
                 .linker{
 

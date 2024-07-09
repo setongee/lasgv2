@@ -8,7 +8,7 @@ export function SplitText({ children, major, ...rest }) {
       <div
         key={children + i}
         style={{ display: 'inline-block', overflow: 'hidden'}}
-        className={`lime ${major === "yep" ? 'isHome' : null}`}
+        className={`lime ${major === "yep" ? 'isHome' : "many"}`}
       >
         <motion.div
 

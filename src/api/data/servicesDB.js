@@ -5,23 +5,41 @@ export const servicesDB = [
         theme: 'advertisement',
         sub_service : "On-Premise Signage",
         url : "https://lasaa.lg.gov.ng/permits/on-premise-signage-permit",
-        short : "On-premise signage advertising remains a stalwart in the marketing landscape, leveraging physical locations to captivate audiences."
+        cta : "Apply for Signage now",
+        media : {
+            type : 'video',
+            src : "firebase link"
+        },
+        short : `
+        
+        <p>1st Party Signage Registration : These are applications for on-premise signages for companies, business owners and shops. Permit fees are charged using parameters such as type of sign, size and location.&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>On-premise signage advertising remains a stalwart in the marketing landscape, leveraging physical locations to captivate audiences. These static or digital displays strategically placed at business premises wield a unique power, offering immediate visibility to passersby.&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>Whether through eye-catching graphics, compelling messages, or dynamic digital content, on-premise signage serves as a silent yet impactful brand ambassador. It fosters brand recognition, communicates promotions, and guides potential customers to the doorstep. In an age inundated with digital marketing, on-premise signage stands tall, connecting with the local community and establishing a tangible presence that transcends the virtual realm, making it an enduring and effective advertising medium.</p>
+        <p>&nbsp;</p>
+        <p>Related Links</p>
+        <p>Mobile Branding</p>
+        <p>Small Format Advertising</p>
+        <p>&nbsp;</p>`,
     },
 
     {
         id : 2,
-      theme: 'advertisement',
+        theme: 'advertisement',
         sub_service : "Third-party Advertising",
         url : "https://lasaa.lg.gov.ng/permits/3rd-party-ad-permit",
-        short : "This category applies only to registered outdoor advertising companies to deploy permanent structures. The roadside outdoor billboards range from LED Screens, Unipole, Overhead Gantries, Rooftops, Iconic Billboards, 48-Sheet, 96-Sheets, Water Tanks, Wall Panels and Wall Drapes."
+         cta : "Register to become a practitioner",
+        short : `<p>This category applies only to registered outdoor advertising companies to deploy permanent structures. The roadside outdoor billboards range from LED Screens, Unipole, Overhead Gantries, Rooftops, Iconic Billboards, 48-Sheet, 96-Sheets, Water Tanks, Wall Panels and Wall Drapes.</p>`,
     },
 
     {
         id : 3,
         theme: 'advertisement',
         sub_service : "Mobile Branding,",
+        cta : "Apply for permit",
         url : "https://lasaa.lg.gov.ng/permits/mobile-branding-permit",
-        short : "Mobile Branding Advertising are branding options for vehicles, bikes, trucks, taxis etc. Permit fees are flexible under categories such as partial and full branding. In addition, rates are monthly, quarterly, biannually or yearly."
+        short : `<p>Mobile Branding Advertising are branding options for vehicles, bikes, trucks, taxis etc. Permit fees are flexible under categories such as partial and full branding. In addition, rates are monthly, quarterly, biannually or yearly.</p>`,
     },
 
     {
@@ -29,7 +47,8 @@ export const servicesDB = [
         theme: 'advertisement',
         sub_service : "Tempoary Advertisement",
         url : "https://lasaa.lg.gov.ng/permits/temporary-ad-permit",
-        short : "this are advertising such as banners, Parasols, road shows, branded shirts, activations, flag signs, feather signs and Gazebo. Such applications are carried out for short periods, per daily, week and month."
+        cta : "Apply for permit",
+        short : `<p>Temporary Advertising: this are advertising such as banners, Parasols, road shows, branded shirts, activations, flag signs, feather signs and Gazebo. Such applications are carried out for short periods, per daily, week and month</p>`,
     },
 
     {
@@ -37,7 +56,8 @@ export const servicesDB = [
         theme: 'advertisement',
         sub_service : "Small Format Advertisement",
         url : "https://lasaa.lg.gov.ng/permits/small-formats-street-furniture-ads-permit",
-        short : "Products under this category are Street-Furniture, Temporary Wall Drapes, Special Builds, Bus Shelters, Police Posts, Blimps, Inflatables, Water Signs, Kiosks and Roundabout Branding. These applications range from daily, weekly, monthly, quarterly, biannually or yearly."
+        cta : "Apply for permit",
+        short : `<p>Small Format Advertising: Products under this category are Street-Furniture, Temporary Wall Drapes, Special Builds, Bus Shelters, Police Posts, Blimps, Inflatables, Water Signs, Kiosks and Roundabout Branding. These applications range from daily, weekly, monthly, quarterly, biannually or yearly.</p>`,
     },
 
     {
@@ -45,7 +65,22 @@ export const servicesDB = [
        theme: 'advertisement',
         sub_service : "Street Lamps Poles",
         url : "https://lasaa.lg.gov.ng/permits/street-lamp-poles-ad-permit",
-        short : "this category of advertising falls under the 3rd party application for registered outdoor practitioners in Lagos State. This product has options such as of static banners, light box and digital screens."
+        cta : "Make payment fir Lamp poles Ads Permit",
+        short : `<figure class="image"><img style="aspect-ratio:3840/1450;" src="https://lasaa.lg.gov.ng/images/2023/11/23/3rd-party-2.jpg" width="3840" height="1450"></figure>
+<p>&nbsp;</p>
+<p><strong>1st Party Signage Registration :</strong> These are applications for on-premise signage's for companies, business owners and shops. Permit fees are charged using parameters such as type of sign, size and location.&nbsp;</p>
+<p>&nbsp;</p>
+<p>On-premise signage advertising remains a stalwart in the marketing landscape, leveraging physical locations to captivate audiences. These static or digital displays strategically placed at business premises wield a unique power, offering immediate visibility to passersby.&nbsp;</p>
+<p>&nbsp;</p>
+<p>Whether through eye-catching graphics, compelling messages, or dynamic <a target="_blank" rel="noopener noreferrer" href="https://lasaa.lg.gov.ng/">lasaa</a> digital content, on-premise signage serves as a silent yet impactful brand ambassador. It fosters brand recognition, communicates promotions, and guides potential customers to the doorstep. In an age inundated with digital marketing, on-premise signage stands tall, connecting with the local community and establishing a tangible presence that transcends the virtual realm, making it an enduring and effective advertising medium.</p>
+<p>&nbsp;</p>
+<p><strong>Related Links</strong></p>
+<ol>
+    <li><a target="_blank" rel="noopener noreferrer" href="https://lasaa.lg.gov.ng/permits/mobile-branding-permit">Mobile Branding</a></li>
+    <li><a target="_blank" rel="noopener noreferrer" href="https://lasaa.lg.gov.ng/permits/small-formats-street-furniture-ads-permit">Small Format Advertising</a></li>
+</ol>
+<p>&nbsp;</p>
+<p>&nbsp;</p>`,
     },
 
     {
@@ -53,15 +88,26 @@ export const servicesDB = [
        theme: 'advertisement',
         sub_service : "How Do I Pay For LASAA",
         url : "http://www.lasaa.com/need-permission/pay-a-fee-or-bill/",
-        short : "To Register and Pay for LASAA, you need to get to the Office in person however,you can apply for an EXPRESSION OF INTEREST and when reviewed,you will be callled."
+        cta : "Make payment for LASAA",
+        short : `<p>Make payment to ECOBANK. Name of Account: LASAA MOBILE ADVERTISEMENT; Account Number: 2832037833. Bring teller to the Customer Service Desk or submit to any LASAA Branch Office close to you. LASAA permit (sticker) is processed</p>`
     },
 
     {
         id : 8,
       theme: 'advertisement',
         sub_service : "How To Register For LASAA",
-        url : "http://www.lasaa.com/need-permission/apply-for-signage-permit/#:~:text=Applicant%20should%20obtain%20the%20applicable,Government%20or%20Development%20Area%20offices.",
-        short : "To Register and Pay for LASAA, you need to get to the Office in person however,you can apply for an EXPRESSION OF INTEREST and when reviewed,you will be callled."
+        url : "https://app.lasaa.lg.gov.ng/auth/register",
+        cta : "Register for LASAA",
+        short : `
+        <iframe width="1713" height="790" src="https://www.youtube.com/embed/Xeis2p8v3wk" title="How To Apply for Mobile Advert Branding Permit Online" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <p>&nbsp;</p>
+        <p>Types of Advertisements</p>
+        <p>1.Mobile Branding</p>
+        <p>2.On-Premise Signage</p>
+        <p>3.Third-party Advertising</p>
+        <p>4.Tempoary Advertisement</p>
+        <p>5.Small Format Advertisement</p>
+        <p>6.Street Lamps Poles</p`,
     },
 
     {
@@ -69,7 +115,8 @@ export const servicesDB = [
         theme: 'advertisement',
         sub_service : "How Much Is Signage Permit",
         url : "http://www.lasaa.com/wp-content/uploads/2012/06/1ST-PARTY-RATE-20211.pdf",
-        short : ""
+        cta : "Check Prices for Signage Permit",
+        short : `<p>Find out the cost of obtaining a signage permit in Lagos State, Nigeria. Get instant quotes and information on requirements and regulations</p>`,
     },
 
        {
@@ -77,7 +124,8 @@ export const servicesDB = [
           theme: 'agriculture',
             sub_service : "How to Register For a Farm in Lagos",
             url : "https://lagosappeals.ng/Programmes/Farm-Owner-Registration",
-            short : "You will need to fill all the required informations for us to process your request."
+            cta : "Register for a Farm",
+            short :  `<p>The allocated lands are those reserved and zoned for agricultural purpose within Lagos State or other locations where the state has land holding</p>`,
         },
 
         {
@@ -85,7 +133,8 @@ export const servicesDB = [
        theme: 'agriculture',
         sub_service : "How to Apply For Agric-Land Allocation ",
         url : "https://lagosappeals.ng/Programmes/Farm-Owner-Registration",
-        short : "The allocated lands are those reserved and zoned for agricultural purpose within Lagos State or other locations where the state has land holdings"
+        cta : "Apply for a Farm",
+        short : `<p>The allocated lands are those reserved and zoned for agricultural purpose within Lagos State or other locations where the state has land holding</p>`,
     },
 
         {
@@ -93,7 +142,8 @@ export const servicesDB = [
          theme: 'agriculture',
         sub_service : "Lagos Agric Investment Application",
         url : "https://lagosagric.com/investment-application/",
-        short : "You will need to fill all the required informations for your investment application to be reviewed "
+        cta : "Apply for Investment",
+        short : `<p>LAIs a digital platform connecting investors, farmers, and stakeholders to promote sustainable agri-business growth, improve food security, and create economic opportunities in Lagos State</p>`,
     },
 
         {
@@ -101,7 +151,8 @@ export const servicesDB = [
          theme: 'agriculture',
         sub_service : "Lagos Agric License Application",
         url : "https://lagosagric.com/license-application/",
-        short : "Lagos Agric license application"
+        cta : "Apply for lagos Agric License",
+        short : `<p>Providing sustainable farming practices and food security in Lagos State through innovative agricultural services and support for a healthier and prosperous future</p>`,
     },
 
         {
@@ -109,7 +160,8 @@ export const servicesDB = [
         theme: 'agriculture',
         sub_service : "Lagos Agric Permit Application",
         url : "https://lagosagric.com/permit-application/",
-        short : "Lagos Agricultural Premit Application"
+        cta : "Apply for lagos state Agric Permit",
+        short : `<p>Providing sustainable farming practices and food security in Lagos State through innovative agricultural services and support for a healthier and prosperous future</p>`,
     },
 
         {
@@ -117,7 +169,8 @@ export const servicesDB = [
         theme: 'agriculture',
         sub_service : "Lagos Agric Training Application",
         url : "https://lagosagric.com/training-application/",
-        short : "Lagos Agricultural Training Application"
+        cta : "Start Lagos State Agric Training",
+        short : `<p>Providing sustainable farming practices and food security in Lagos State through innovative agricultural services and support for a healthier and prosperous future</p>`,
     },
 
         {
@@ -125,7 +178,8 @@ export const servicesDB = [
         theme: 'agriculture',
         sub_service : "Lagos Agric Strategic Plan 2020 - 2025",
         url : "https://lagosagric.com/2020-2025-strategic-plan/",
-        short : "Lagos Agricultural Strategic Plan for year 2020 - 2025"
+        cta : "View Lagos State Agric Strategic Plan",
+        short : `<p>Providing sustainable farming practices and food security in Lagos State through innovative agricultural services and support for a healthier and prosperous future</p>`
     },
 
         {
@@ -133,15 +187,17 @@ export const servicesDB = [
         theme: 'agriculture',
         sub_service : "Food Stats In Lagos",
         url : "https://lagosagric.com/food-stats-in-lagos/",
-        short : "The Current Food Statistics In Lagos State"
+        cta : "View the Lagos State Food Statistics Today",
+        short : `<p>Providing sustainable farming practices and food security in Lagos State through innovative agricultural services and support for a healthier and prosperous future</p>`
     },
 
         {
             id : 18,
            theme: 'agriculture',
-        sub_service : "Lagos Agric Opprtunities",
+        sub_service : "Lagos Agric Opportunities",
+        cta : "Check out for agricultural Opportunities",
         url : "https://lagosagric.com/opportunities/",
-        short : "Lagos State Agricultural Opportunities"
+        short : `<p>Providing sustainable farming practices and food security in Lagos State through innovative agricultural services and support for a healthier and prosperous future</p>`,
     },
 
         {
@@ -149,7 +205,8 @@ export const servicesDB = [
            theme: 'agriculture',
         sub_service : "Lagos Agric Trajectory Development",
         url : "https://lagosagric.com/lagos-agric-sector-development-trajectory/",
-        short : ""
+        cta : "View Lagos State Trajectory Develpment",
+        short : `<p>Providing sustainable farming practices and food security in Lagos State through innovative agricultural services and support for a healthier and prosperous future</p>`,
     },
 
         {
@@ -157,7 +214,8 @@ export const servicesDB = [
            theme: 'agriculture',
         sub_service : "Lagos Economy",
         url : "https://lagosagric.com/lagos-economy/",
-        short : ""
+        cta : "",
+        short : `<p><Providing sustainable farming practices and food security in Lagos State through innovative agricultural services and support for a healthier and prosperous future</p>`,
     },
 
         {
@@ -165,7 +223,8 @@ export const servicesDB = [
             theme: 'agriculture',
         sub_service : "Lagos Foods System Stats",
         url : "https://lagosagric.com/food-system-stat/",
-        short : ""
+        cta : "Check Out Lagos State Food Statistics ",
+        short :` <p>Providing sustainable farming practices and food security in Lagos State through innovative agricultural services and support for a healthier and prosperous future</p>`
     },
 
         {
@@ -173,7 +232,8 @@ export const servicesDB = [
        theme: 'agriculture',
         sub_service : "Lagos State Agric Projects",
         url : "https://lagosagric.com/projects/",
-        short : ""
+        cta : "Check Out Lagos State Agric Projects",
+        short : `<p>Providing sustainable farming practices and food security in Lagos State through innovative agricultural services and support for a healthier and prosperous future</p>`
     },
 
     {
@@ -181,15 +241,17 @@ export const servicesDB = [
         theme: 'agriculture',
         sub_service : "Lagos Agripreneurship Programme",
         url : "https://lagosagric.com/lagos-agripreneurship-program/",
-        short : ""
+        cta : "Lagos Agripreneurship Programme",
+        short : `<p>Providing sustainable farming practices and food security in Lagos State through innovative agricultural services and support for a healthier and prosperous future</p>`
     },
 
         {
              id : 24,
             theme : 'business_trade_commerce',
-            sub_service : "How Much is Value Added Tax in Lagos",
+            sub_service : "How Much is Value Added Tax in Lagos?",
+            cta : "Download Lagos VAT fees",
             url : "https://pwcnigeria.typepad.com/files/lagos-state-draft-vat-law.pdf",
-            short : ""
+            short : `<p>Lagos State, Nigeria's commercial hub, thrives with busy ports, markets, and a dynamic business environment, driving growth and opportunity</p>`
         },
 
             {
@@ -197,7 +259,8 @@ export const servicesDB = [
              theme : 'business_trade_commerce',
             sub_service : "How to Register SMEDAN",
             url : "https://smedanregister.ng/",
-            short : ""
+            cta : "Get Started with SMEDAN",
+            short : `<p>SMEDAN gives you access to government and private sector benefits to help you grow your small or medium scale business faster.</p>`,
         },
 
             {
@@ -205,7 +268,8 @@ export const servicesDB = [
            theme : 'business_trade_commerce',
             sub_service : "How to Pay Tax In Lagos",
             url : "https://www.firs.gov.ng/e-tax-payment/",
-            short : ""
+            cta : "Know more on how to pay Lagos tax",
+            short : `<p>Lagos State, Nigeria's commercial hub, thrives with busy ports, markets, and a dynamic business environment, driving growth and opportunity</p>`
         },
 
         {
@@ -213,7 +277,8 @@ export const servicesDB = [
             theme : 'business_trade_commerce',
             sub_service : "SME Digital Academy ",
             url : "https://smedigitalacademy.com/",
-            short : ""
+            cta : "Start Learning",
+            short : `<pre><code class="language-plaintext">Educating, Empowering &amp; Elevating MSMEs in Nigeria and Africa</code></pre>`,
         },
 
             {
@@ -221,7 +286,7 @@ export const servicesDB = [
            theme : 'business_trade_commerce',
             sub_service : "LCCI Membership - New Local Subscription",
             url : "https://memberships.lagoschamber.com/local-subscription",
-            short : ""
+            short : `<p>Lagos State, Nigeria's commercial hub, thrives with busy ports, markets, and a dynamic business environment, driving growth and opportunity</p>`,
         },
 
             {
@@ -229,7 +294,8 @@ export const servicesDB = [
            theme : 'business_trade_commerce',
             sub_service : "Lagos State Trade Fair",
             url : "https://lagosinternationaltradefair.com/",
-            short : ""
+            cta : "Exhibit with us",
+            short : `<pre><code class="language-plaintext">Lagos International Trade Fair is reputed to be the largest business market in the ecowas sub-region as it attracts investors from other parts of the world</code></p`,
         },
 
             {
@@ -237,7 +303,8 @@ export const servicesDB = [
             theme : 'business_trade_commerce',
             sub_service : "LCCI Membership Registration",
             url : "https://www.lagoschamber.com/diaspora-members-registration/",
-            short : ""
+            cta : "Register for LCCI",
+            short : `<p>Lagos State, Nigeria's commercial hub, thrives with busy ports, markets, and a dynamic business environment, driving growth and opportunity</p>`,
         },
 
         {
@@ -245,7 +312,8 @@ export const servicesDB = [
             theme : 'business_trade_commerce',
             sub_service : "Diasporal Membership Registration",
             url : "https://www.lagoschamber.com/diaspora-members-registration/",
-            short : ""
+            cta : "Register for Lagos Diasporal membership",
+            short : `<p>Lagos State, Nigeria's commercial hub, thrives with busy ports, markets, and a dynamic business environment, driving growth and opportunity</p>`,
         },
 
         {
@@ -253,7 +321,8 @@ export const servicesDB = [
            theme : 'business_trade_commerce',
            sub_service : "Apply for SMEDAN Loan ",
            url : "https://cip.smedan.gov.ng/",
-           short : ""
+           cta : "Apply for SMEDAN loan",
+           short : `<p>Lagos State, Nigeria's commercial hub, thrives with busy ports, markets, and a dynamic business environment, driving growth and opportunity</p>`,
        },
 
         {
@@ -261,15 +330,17 @@ export const servicesDB = [
            theme : 'business_trade_commerce',
             sub_service : "MSME Loan Program ",
             url : "https://lsetf.ng/content/msme-loan-programme",
-            short : ""
+            cta : "Apply Now",
+            short : `<p>Lagos State, Nigeria's commercial hub, thrives with busy ports, markets, and a dynamic business environment, driving growth and opportunity</p>`,
         },
 
         {
             id : 34,
           theme : 'business_trade_commerce',
-            sub_service : "Register for Lagos  State Innovatives ",
+            sub_service : "Register for Lagos State Innovatives ",
             url : "https://app.lagosinnovates.ng/wp-login.php?action=register",
-            short : ""
+            cta : "Register Now",
+            short : `<p>Lagos State, Nigeria's commercial hub, thrives with busy ports, markets, and a dynamic business environment, driving growth and opportunity</p>`,
         },
 
         {
@@ -277,7 +348,8 @@ export const servicesDB = [
           theme : 'business_trade_commerce',
            sub_service : "Join Lagos State MEMR Investment Forum ",
            url : "https://lagosmemr.com/investors/",
-           short : ""
+           cta : "Join Lagos MEMR forum",
+           short : `<p>Lagos State, Nigeria's commercial hub, thrives with busy ports, markets, and a dynamic business environment, driving growth and opportunity</p>`,
        },
 
         {
@@ -285,7 +357,8 @@ export const servicesDB = [
            theme : 'education',
            sub_service : "LASU Registration ",
            url : "https://lasu.edu.ng/home/",
-           short : ""
+           cta : "Apply Now",
+           short : `<p>Lagos State: a centre of learning excellence, providing quality education from primary to tertiary institutions, shaping minds and building a brighter future</p>`,
        },
 
         {
@@ -293,7 +366,8 @@ export const servicesDB = [
            theme : 'education',
            sub_service : "Become a LASUBEB Partner",
            url : "https://lasubeb.lg.gov.ng/lasubeb-partners",
-           short : ""
+           cta : "Become a partner",
+           short : `<p>Lagos State: a centre of learning excellence, providing quality education from primary to tertiary institutions, shaping minds and building a brighter future</p>`,
        },
 
         {
@@ -301,7 +375,8 @@ export const servicesDB = [
            theme : 'education',
            sub_service : "LASUBEB Educational Data",
            url : "https://lasubeb.lg.gov.ng/download-education-data-report",
-           short : ""
+           cta : "Check out LASU Education data",
+           short : `<p>Lagos State: a centre of learning excellence, providing quality education from primary to tertiary institutions, shaping minds and building a brighter future</p>`,
        },
 
         {
@@ -309,7 +384,8 @@ export const servicesDB = [
            theme : 'education',
            sub_service : "UNILAG Application",
            url : "https://applications.unilag.edu.ng/(S(fcdhqrsoxvqo3myvn1vg1gmm))/default.aspx",
-           short : ""
+           cta : "Apply for UNILAG ",
+           short : `<p>Lagos State: a centre of learning excellence, providing quality education from primary to tertiary institutions, shaping minds and building a brighter future</p>`,
        },
 
        {
@@ -317,7 +393,8 @@ export const servicesDB = [
            theme : 'education',
            sub_service : "UNILAG Online Screening",
            url : "https://unilag.edu.ng/?p=32568#:~:text=With%20UTME%20Number%20as%20Username,and%20print%20the%20Screening%20Form.",
-           short : ""
+           cta : "Apply for online screening form",
+           short : `<p>Lagos State: a centre of learning excellence, providing quality education from primary to tertiary institutions, shaping minds and building a brighter future</p>`,
        },
 
          {
@@ -325,7 +402,8 @@ export const servicesDB = [
            theme : 'education',
            sub_service : "UNILAG Fees Per Semester",
            url : "https://www.myschoolgist.com/ng/unilag-school-fees/",
-           short : ""
+           cta : "Check UNILAG payment information",
+           short : `<p>Lagos State: a centre of learning excellence, providing quality education from primary to tertiary institutions, shaping minds and building a brighter future</p>`,
        },
 
             {
@@ -333,7 +411,8 @@ export const servicesDB = [
           theme : 'education',
             sub_service : "UNILAG School Fees Payment",
             url : "https://www.myschoolgist.com/ng/unilag-school-fees/",
-            short : ""
+            cta : "Check UNILAG payment information",
+            short : `<p>Lagos State: a centre of learning excellence, providing quality education from primary to tertiary institutions, shaping minds and building a brighter future</p>`,
         },
 
             {
@@ -341,7 +420,8 @@ export const servicesDB = [
          theme : 'education',
             sub_service : "LASUTECH Application",
             url : "https://admission.lasustech.edu.ng/",
-            short : ""
+            cta : "Apply Now",
+            short : `<p>Lagos State: a centre of learning excellence, providing quality education from primary to tertiary institutions, shaping minds and building a brighter future</p>`,
         },
 
             {
@@ -349,7 +429,8 @@ export const servicesDB = [
             theme : 'education',
             sub_service : "LASUED Application",
             url : "https://admission.lasued.edu.ng/#",
-            short : ""
+            cta : "apply Now",
+            short : `<p>Lagos State: a centre of learning excellence, providing quality education from primary to tertiary institutions, shaping minds and building a brighter future</p>`,
         },
 
             {
@@ -357,7 +438,8 @@ export const servicesDB = [
             theme : 'education',
             sub_service : "Lagos State Student Loan Scheme ",
             url : "https://lasucom.edu.ng/student-loan/#",
-            short : ""
+            cta : "Apply for Lagos State Student Loan scheme",
+            short : `<p>Lagos State: a centre of learning excellence, providing quality education from primary to tertiary institutions, shaping minds and building a brighter future</p>`,
         },
 
         {
@@ -365,7 +447,8 @@ export const servicesDB = [
             theme : 'education',
             sub_service : "Apply for Scholarship .",
             url : "https://portal.lagosscholarship.org/",
-            short : ""
+            cta : "Apply for Lagos Scholarship",
+            short : `<p>Lagos State: a centre of learning excellence, providing quality education from primary to tertiary institutions, shaping minds and building a brighter future</p>`,
         },
 
             {
@@ -373,7 +456,8 @@ export const servicesDB = [
                theme : 'education',
             sub_service : "BECE Examination",
             url : "https://bece.examsboard.lagosstate.gov.ng/",
-            short : ""
+            cta : "Login to BECE portal",
+            short : `<p>Lagos State: a centre of learning excellence, providing quality education from primary to tertiary institutions, shaping minds and building a brighter future</p>`,
         },
 
             {
@@ -381,7 +465,8 @@ export const servicesDB = [
                 theme : 'education',
             sub_service : "Screening Test ",
             url : "https://screeningtest.examsboard.lagosstate.gov.ng/",
-            short : ""
+            cta : "apply for Lagos State screening test",
+            short : `<p>Lagos State: a centre of learning excellence, providing quality education from primary to tertiary institutions, shaping minds and building a brighter future</p>`,
         },
 
             {
@@ -389,7 +474,8 @@ export const servicesDB = [
            theme : 'education',
             sub_service : "Placement Test",
             url : "https://placementtest.examsboard.lagosstate.gov.ng/",
-            short : ""
+            cta : "",
+            short : `<p>Lagos State: a centre of learning excellence, providing quality education from primary to tertiary institutions, shaping minds and building a brighter future</p>`,
         },
 
         {
@@ -397,7 +483,8 @@ export const servicesDB = [
         theme : 'education',
         sub_service : "Public service examination ",
         url : "https://publicservice.examsboard.lagosstate.gov.ng/",
-        short : ""
+        cta : "Apply Now",
+        short : `<p>Lagos State: a centre of learning excellence, providing quality education from primary to tertiary institutions, shaping minds and building a brighter future</p>`,
     },
 
         {
@@ -627,7 +714,8 @@ export const servicesDB = [
             theme : 'health',
            sub_service : "Lagos State Health Management Agency (LASHMA)",
            url : "https://www.lashmaregulations.com.ng/",
-           short : ""
+           cta : "Register for CIN today",
+           short : `<p>The Lagos State Health Scheme (LSHS) is a health insurance initiative of the Lagos State Government targeted at achieving universal health coverage for the teaming population of Lagos State residents. Backed by law, it seeks to bring to Lagosian affordable healthcare</p>`,
        },
 
      {
@@ -635,7 +723,8 @@ export const servicesDB = [
             theme : 'health',
            sub_service : "Register CIN",
            url : "https://portal.lashmaregulations.com.ng/",
-           short : ""
+            cta : "Register for CIN today",
+           short : `<p>Lagos State provides quality healthcare services, offering accessible and affordable medical solutions, state-of-the-art facilities, and skilled professionals, prioritizing the well-being of its diverse population</p>`,
        },
 
      {
@@ -643,7 +732,8 @@ export const servicesDB = [
                theme : 'health',
            sub_service : "HEFAMAA registration ",
            url : "https://hefamaa.lagosstate.gov.ng/registration/",
-           short : ""
+           cta : "Register for HEFAMAA",
+           short : `<p>Lagos State provides quality healthcare services, offering accessible and affordable medical solutions, state-of-the-art facilities, and skilled professionals, prioritizing the well-being of its diverse population</p>`,
        },
 
      {
@@ -651,14 +741,16 @@ export const servicesDB = [
              theme : 'health',
            sub_service : "Medical Service and Diseases Control",
            url : "https://lsphcb.lg.gov.ng/medical-services-and-disease-control/",
-           short : ""
+           cta : "Know more about Lagos Medical Service",
+           short : `<p>Lagos State provides quality healthcare services, offering accessible and affordable medical solutions, state-of-the-art facilities, and skilled professionals, prioritizing the well-being of its diverse population</p>`,
        },
          {
             id : 83,
              theme : 'health',
            sub_service : "Administration and Human Resource ",
            url : "https://lsphcb.lg.gov.ng/administration-and-human-resource/",
-           short : ""
+           cta : "Get more information on Lagos ",
+           short :`<p>Lagos State provides quality healthcare services, offering accessible and affordable medical solutions, state-of-the-art facilities, and skilled professionals, prioritizing the well-being of its diverse population</p>`,
        },
 
      {
@@ -666,7 +758,8 @@ export const servicesDB = [
             theme : 'health',
            sub_service : "Nursing Services",
            url : "https://lsphcb.lg.gov.ng/nursing-services/",
-           short : ""
+           cta : "Get more information on Lagos Nursing Service",
+           short :`<p>Lagos State provides quality healthcare services, offering accessible and affordable medical solutions, state-of-the-art facilities, and skilled professionals, prioritizing the well-being of its diverse population</p>`,
        },
 
      {
@@ -674,7 +767,8 @@ export const servicesDB = [
              theme : 'health',
            sub_service : "Medical Laboratory Services",
            url : "https://lsphcb.lg.gov.ng/medical-laboratory-services/",
-           short : ""
+           cta : "Get more information on Lagos Medical Laboratory Service",
+           short : `<p>Lagos State provides quality healthcare services, offering accessible and affordable medical solutions, state-of-the-art facilities, and skilled professionals, prioritizing the well-being of its diverse population</p>`,
        },
 
             {
@@ -682,7 +776,8 @@ export const servicesDB = [
              theme : 'health',
             sub_service : "Book Vaccination ",
             url : "https://lagosvaccine.com/",
-            short : ""
+            cta : "Book Vaccine",
+            short : `<p>Lagos State provides quality healthcare services, offering accessible and affordable medical solutions, state-of-the-art facilities, and skilled professionals, prioritizing the well-being of its diverse population</p>`,
         },
 
         {
@@ -690,7 +785,8 @@ export const servicesDB = [
          theme : 'health',
             sub_service : "Health Care Planning, Research & Statistics​",
             url : "https://lagosministryofhealth.org/health-care-planning-research-statistics/",
-            short : ""
+            cta : "",
+            short : `<p>Lagos State provides quality healthcare services, offering accessible and affordable medical solutions, state-of-the-art facilities, and skilled professionals, prioritizing the well-being of its diverse population</p>`
         },
 
         {
@@ -698,7 +794,8 @@ export const servicesDB = [
                theme : 'health',
             sub_service : "Hospital Services",
             url : "https://lagosministryofhealth.org/hospital-services-lasambus/",
-            short : ""
+            cta : "",
+            short : `<p>Lagos State provides quality healthcare services, offering accessible and affordable medical solutions, state-of-the-art facilities, and skilled professionals, prioritizing the well-being of its diverse population</p>`
         },
 
         {
@@ -706,7 +803,8 @@ export const servicesDB = [
            theme : 'health',
             sub_service : "Ambulance Services",
             url : "https://lasambus.org/home",
-            short : ""
+            cta : "",
+            short :`<p>Lagos State provides quality healthcare services, offering accessible and affordable medical solutions, state-of-the-art facilities, and skilled professionals, prioritizing the well-being of its diverse population</p>`
         },
 
             {
@@ -714,6 +812,7 @@ export const servicesDB = [
                  theme : 'loans',
                 sub_service : "LSETF Loan Programme",
                 url : "https://lsetf.ng/content/msme-loan-programme",
+                cta : "",
                 short : ""
             },
 
@@ -722,6 +821,7 @@ export const servicesDB = [
                 theme : 'loans',
                 sub_service : "Apply for SMEDAN Loan",
                 url : "https://smedan.gov.ng/smedan-loan/",
+                cta : "",
                 short : ""
             },
 
@@ -730,6 +830,7 @@ export const servicesDB = [
                theme : 'loans',
                 sub_service : "Lagos State Student Loan Scheme ",
                 url : "https://lasucom.edu.ng/student-loan/#",
+                cta : "",
                 short : ""
             },
 
@@ -738,6 +839,7 @@ export const servicesDB = [
                 theme : 'loans',
                 sub_service : "Hub Loan Lagos Innovatives ",
                 url : "https://www.lagosinnovates.ng/programs/startups-enterprises/hub-loans",
+                cta : "",
                 short : ""
             },
 
@@ -746,6 +848,7 @@ export const servicesDB = [
               theme : 'payments  ',
                sub_service : "Pay VIS",
                url : "https://payvis.ng/",
+               cta : "",
                short : ""
            },
 
@@ -754,6 +857,7 @@ export const servicesDB = [
               theme : 'payments',
                sub_service : "Tax payment" ,
                url : "http://etax.lirs.net/register",
+               cta : "",
                short : ""
            },
 
@@ -762,6 +866,7 @@ export const servicesDB = [
                 theme : 'payments',
                sub_service : "Pay Land Use Charge Online ",
                url : "https://luc.lagosstate.gov.ng/bill-payment",
+               cta : "",
                short : ""
            },
 
@@ -770,6 +875,7 @@ export const servicesDB = [
                theme : 'payments',
                sub_service : "Pay land use charge through Whatsapp ",
                url : "https://wa.me/message/J7NCO3ANVKGUH1",
+               cta : "",
                short : ""
            },
              {
@@ -777,6 +883,7 @@ export const servicesDB = [
                  theme : 'payments',
                sub_service : "Pay Land Use Charge via Remita",
                url : "https://login.remita.net/remita/lirs/internal/pay-invoice.reg",
+               cta : "",
                short : ""
            },
 
@@ -785,6 +892,7 @@ export const servicesDB = [
                theme : 'payments',
                sub_service : "Verify TTC ",
                url : "https://lagos.ebs-rcm.com/Home/VerifyTcc",
+               cta : "",
                short : ""
            },
 
@@ -793,6 +901,7 @@ export const servicesDB = [
                theme : 'payments',
                sub_service : "Lands bureau ",
                url : "https://landsbureau.lagosstate.gov.ng/schdule-of-fees/",
+               cta : "",
                short : ""
            },
 
@@ -801,6 +910,7 @@ export const servicesDB = [
                      theme : 'payments',
                 sub_service : "Survey Fees",
                 url : "http://housing.lagosstate.gov.ng/",
+                cta : "",
                 short : ""
             },
 
@@ -809,6 +919,7 @@ export const servicesDB = [
              theme : 'payments',
                 sub_service : "How to Verify Tax Clerance Card For Individual ",
                 url : "https://lagos.ebs-rcm.com/Home/VerifyeTCC",
+                cta : "",
                 short : ""
             },
             {
@@ -816,6 +927,7 @@ export const servicesDB = [
                  theme : 'payments',
                 sub_service : "Verify Tax Clerance Card For Company",
                 url : "https://lagos.ebs-rcm.com/Home/VerifycTCC",
+                cta : "",
                 short : ""
             },
 
@@ -824,6 +936,7 @@ export const servicesDB = [
               theme : 'payments',
                 sub_service : "Quick LASG-CBS Bill Receipt Validation/Print ",
                 url : "https://lagos.ebs-rcm.com/Home/ValidateCBSq",
+                cta : "",
                 short : ""
             },
 
@@ -832,6 +945,7 @@ export const servicesDB = [
              theme : 'payments',
                 sub_service : "Tax Receipt/Remittance statement ",
                 url : "https://lagos.ebs-rcm.com/Pages/RemitanceStmt",
+                cta : "",
                 short : ""
             },
 
@@ -840,6 +954,7 @@ export const servicesDB = [
                      theme : 'payments',
                     sub_service : "How To Validate My Receipt ",
                     url : "https://lagos.ebs-rcm.com/Home/Validates",
+                    cta : "",
                     short : ""
                 },
 
@@ -848,6 +963,7 @@ export const servicesDB = [
                      theme : 'payments',
                     sub_service : "Withholding Receipt Validation",
                     url : "https://lagos.ebs-rcm.com/Home/ValidateWht",
+                    cta : "",
                     short : ""
                 },
 
@@ -856,6 +972,7 @@ export const servicesDB = [
                       theme : 'payments',
                     sub_service : "How To Verify PayerID",
                     url : "https://lagos.ebs-rcm.com/Home/ValidatePayerID",
+                    cta : "",
                     short : ""
                 },
 
@@ -864,6 +981,7 @@ export const servicesDB = [
                      theme : 'payments',
                     sub_service : "Validate Receipts",
                     url : "https://lagos.ebs-rcm.com/Home/Validate",
+                    cta : "",
                     short : ""
                 },
 
@@ -872,6 +990,7 @@ export const servicesDB = [
                      theme : 'payments',
                     sub_service : "Merge PayerID Request",
                     url : "https://lagos.ebs-rcm.com/Home/PayerIDMergerRequest",
+                    cta : "",
                     short : ""
                 },
 
@@ -880,6 +999,7 @@ export const servicesDB = [
                      theme : 'payments',
                     sub_service : "Generate Payment Code",
                     url : "https://lagos.ebs-rcm.com/Webteller/WebGenCode",
+                    cta : "",
                     short : ""
                 },
 
@@ -888,6 +1008,7 @@ export const servicesDB = [
                      theme : 'payments',
                     sub_service : "Create Payer ID",
                     url : "https://lagos.ebs-rcm.com/Pages/SelServicePID",
+                    cta : "",
                     short : ""
                 },
 
@@ -896,6 +1017,7 @@ export const servicesDB = [
                      theme : 'payments',
                     sub_service : "Validate Email",
                     url : "https://lagos.ebs-rcm.com/Home/ValidateEmail",
+                    cta : "",
                     short : ""
                 },
 
@@ -904,6 +1026,7 @@ export const servicesDB = [
                      theme : 'payments',
                     sub_service : "Payment and Receipt Compliant",
                     url : "https://lagos.ebs-rcm.com/Home/PmtReceiptComplaints",
+                    cta : "",
                     short : ""
                 },
 
@@ -912,6 +1035,7 @@ export const servicesDB = [
                     theme : 'payments',
                     sub_service : "Check Web Teller Reference",
                     url : "https://lagos.ebs-rcm.com/WebTeller/WebtellerOptionMenu1",
+                    cta : "",
                     short : ""
                 },
 
@@ -920,6 +1044,7 @@ export const servicesDB = [
                     theme : 'payments',
                     sub_service : "Bank Reporting Procedure",
                     url : "https://lagos.ebs-rcm.com/Home/BankReportingProcedure",
+                    cta : "",
                     short : ""
                 },
 
@@ -928,6 +1053,7 @@ export const servicesDB = [
                      theme : 'payments',
                     sub_service : "Bank Compliance",
                     url : "https://lagos.ebs-rcm.com/",
+                    cta : "",
                     short : ""
                 },
 
@@ -936,6 +1062,7 @@ export const servicesDB = [
                      theme : 'payments',
                     sub_service : "Bank Performance",
                     url : "https://lagos.ebs-rcm.com/Home/BankPerformance",
+                    cta : "",
                     short : ""
                 },
 
@@ -944,6 +1071,7 @@ export const servicesDB = [
                      theme : 'payments',
                     sub_service : "Tax Paye Regulations",
                     url : "https://lagos.ebs-rcm.com/Home/Payeregulation",
+                    cta : "",
                     short : ""
                 },
 
@@ -952,6 +1080,7 @@ export const servicesDB = [
                      theme : 'payments',
                     sub_service : "Sales Tax",
                     url : "https://lagos.ebs-rcm.com/Home/salestax",
+                    cta : "",
                     short : ""
                 },
 
@@ -960,6 +1089,7 @@ export const servicesDB = [
                      theme : 'payments',
                     sub_service : "Validate Receipt for Central Billing System Transaction",
                     url : "https://lagos.ebs-rcm.com/Home/ValidateCBSq",
+                    cta : "",
                     short : ""
                 },
 
@@ -968,6 +1098,7 @@ export const servicesDB = [
                     theme : 'payments',
                     sub_service : "Verify Tax Clearance Certificate (TCC)",
                     url : "https://etax.lirs.net/",
+                    cta : "",
                     short : ""
                 },
 
@@ -976,6 +1107,7 @@ export const servicesDB = [
             theme : 'complaints_feedbacks ',
             sub_service : "Make Complaints",
             url : "https://citizensgate.lagosstate.gov.ng/#services",
+            cta : "",
             short : ""
         },
 

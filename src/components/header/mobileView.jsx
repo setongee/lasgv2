@@ -56,16 +56,16 @@ export default function MobileView({closeModal}) {
           <div className="menu_sm" onClick={ () => navigate('/services') } >Services</div>    
           <div className="menu_sm" onClick={ () => navigate('/news') } >News & Events </div>    
           <div className="menu_sm" onClick={ () => navigate('/contact') } > Contact </div>   
-          <div className="menu_sm" onClick={ () => navigate('/search') } > Search </div> 
+          <div className="menu_sm" onClick={ () => navigate('/services') } > Search </div> 
 
-          <div className="others">
+          {/* <div className="others">
 
               <div className="mobileMenu" onClick={ () => navigate('/') } > Themes Agenda <ArrowUpRight color='#42FF01' /> </div>
               <div className="mobileMenu" onClick={ () => navigate('/resources') } > Resources <ArrowUpRight color='#42FF01' /> </div>
               <div className="mobileMenu" onClick={ () => navigate('/tourism') } > Visit Lagos <ArrowUpRight color='#42FF01' /> </div>
               <div className="mobileMenu" onClick={ () => navigate('/disasters_emergencies') } > Report Emergency <ArrowUpRight color='#42FF01' /> </div>
 
-          </div>                       
+          </div>                        */}
 
         </div>
 

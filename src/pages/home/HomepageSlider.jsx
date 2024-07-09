@@ -21,7 +21,7 @@ const NewsDesktop = [
         main : "The best platform to find all Lagos State Government Services, Topics & Information.",
         sub : "Lorem ipsum dolor sit amet, consectetur elit adfh, Curabitur venenatis velit eget massa volutpat, at rhoncus turpis consequat.",
         date : "Tues. 06 April, 2024",
-        photo : 'https://images.unsplash.com/photo-1589797688224-5fc840fa09e5?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+        photo : 'https://instagram.flos2-1.fna.fbcdn.net/v/t39.30808-6/448331510_18227897629286314_8079582750796705461_n.jpg?stp=dst-jpg_e35&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xNDQweDE0NTkuc2RyLmYzMDgwOCJ9&_nc_ht=instagram.flos2-1.fna.fbcdn.net&_nc_cat=110&_nc_ohc=28F6RPr-fWcQ7kNvgGt2s4a&edm=AEhyXUkAAAAA&ccb=7-5&ig_cache_key=MzM4ODYxNjY4MjE0MzYwODY2MQ%3D%3D.2-ccb7-5&oh=00_AYApLG5jA7IDaQWyf7yJI5ltLQIJVTqIiMlo7FXqPU3SAA&oe=666D707B&_nc_sid=cf751b'
         // photo : 'https://firebasestorage.googleapis.com/v0/b/lasg-a9f5c.appspot.com/o/IMG_1282%20(2).jpg?alt=media&token=7708e0a3-5211-411b-b2c4-fbda2c88cd4c'
     },
 
@@ -29,21 +29,21 @@ const NewsDesktop = [
         main : "Press Conference On Lagos Tourism Nbc Trade Fair At Bagauda Kaltho Press Centre, Alausa, Ikeja.",
         sub : "Lorem ipsum dolor sit amet, consectetur elit adfh, Curabitur venenatis velit eget massa volutpat, at rhoncus turpis consequat.",
         date : "Tues. 06 April, 2024",
-        photo : "https://www.securenigeria365.com/wp-content/uploads/2024/04/PIX-9474.jpg",
+        photo : "https://instagram.flos2-1.fna.fbcdn.net/v/t39.30808-6/448307321_18227847775286314_6671530381215174455_n.jpg?stp=dst-jpg_e35&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xNDQweDEwMjguc2RyLmYzMDgwOCJ9&_nc_ht=instagram.flos2-1.fna.fbcdn.net&_nc_cat=110&_nc_ohc=hGpxd-FdBPYQ7kNvgFbQjz6&edm=AEhyXUkAAAAA&ccb=7-5&ig_cache_key=MzM4ODI5NDgxMzgzOTg3OTAzNg%3D%3D.2-ccb7-5&oh=00_AYC-DNQIB_Ub5xf30b0E1l73oy0pKWlNiRHBWKzZJD0wDA&oe=666F6FDF&_nc_sid=cf751b",
     },
 
     {
         main : "Gov. Sanwo-olu At The Presentation Of Eko Cares Initiative (An Initiative To Ease Economic Hardship On Lagosians) At The Sports...",
         sub : "Lorem ipsum dolor sit amet, consectetur elit adfh, Curabitur venenatis velit eget massa volutpat, at rhoncus turpis consequat.",
         date : "Tues. 06 April, 2024",
-        photo : "https://pbs.twimg.com/media/GL8vjqvXIAAmnat.jpg",
+        photo : "https://instagram.flos2-1.fna.fbcdn.net/v/t39.30808-6/448098357_18227716837286314_7994726927362427016_n.jpg?stp=dst-jpg_e35&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xNDQweDEwMDMuc2RyLmYzMDgwOCJ9&_nc_ht=instagram.flos2-1.fna.fbcdn.net&_nc_cat=110&_nc_ohc=kE5QaQPcAdoQ7kNvgFdje2G&edm=AEhyXUkAAAAA&ccb=7-5&ig_cache_key=MzM4NzQ5ODAzNjIzNjczNjg2Ng%3D%3D.2-ccb7-5&oh=00_AYADBqppDZ7Ic5ImFLsKbyoeqGvtyo0lj7A42ELYwlowTQ&oe=666F5E23&_nc_sid=cf751b",
     },
 
     {
         main : "Gov. Sanwo-olu, Fashola At The Lateef Jakande Leadership Academy Lagos Summit At Konga Place, Lekki.",
         sub : "Lorem ipsum dolor sit amet, consectetur elit adfh, Curabitur venenatis velit eget massa volutpat, at rhoncus turpis consequat.",
         date : "17th April 2024",
-        photo : "https://pbs.twimg.com/media/GLZkwX4XcAAhWJW.jpg:large",
+        photo : "https://instagram.flos2-1.fna.fbcdn.net/v/t39.30808-6/447808015_18227651758286314_7923946401428117150_n.jpg?stp=dst-jpg_e35&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xNDQweDExMTIuc2RyLmYzMDgwOCJ9&_nc_ht=instagram.flos2-1.fna.fbcdn.net&_nc_cat=110&_nc_ohc=KsYBHYDUn6MQ7kNvgEHeEAP&edm=AEhyXUkAAAAA&ccb=7-5&ig_cache_key=MzM4NzE1NzQ0NTc3MzE2NTczNA%3D%3D.2-ccb7-5&oh=00_AYCaTHRm5PuDDG9v0vyq5KP6YkQOYKl4REouLr0rE0yqig&oe=666F88C1&_nc_sid=cf751b",
     }
 
 ]

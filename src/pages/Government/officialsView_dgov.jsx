@@ -27,6 +27,8 @@ return (
 
             <p onClick={ () => window.location.href = '/government/elected_officials/cos/view'  } >Chief of Staff</p>
 
+            <p onClick={ () => window.location.href = '/government/elected_officials/lag/view'  } >Attorney General</p>
+
 
 
         </div>

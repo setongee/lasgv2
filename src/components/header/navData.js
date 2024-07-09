@@ -5,6 +5,7 @@ export const navigationRoutes = {
         theme : "#f9f9f9",
         isNest : true,
         index : 1,
+        url : '/government',
         nests : {
             heading : 'Explore the Lagos State Government, Officials and Parastatals.',
             vector : '#',
@@ -34,7 +35,8 @@ export const navigationRoutes = {
                     desc : 'View all the Judiciary Officers appointed for this tenure.',
                     url : 'https://lagosjudiciary.gov.ng/directories.html#directories',
                     external : true
-                } 
+                }
+
 
             ]
         }
@@ -53,7 +55,7 @@ export const navigationRoutes = {
         theme : "#f9f9f9",
         isNest : false,
         index : 3,
-        url : '/news'
+        url : '/news/trending'
     },
 
     route4 : {
@@ -64,11 +66,12 @@ export const navigationRoutes = {
         url : '/connect'
     },
 
-    route5 : {
-        parentName : "Search",
-        theme : "#f9f9f9",
-        isNest : false,
-        index : 5,
-        url : '/search'
-    }
+    // route5 : {
+    //     parentName : "",
+    //     theme : "#f9f9f9",
+    //     isNest : false,
+    //     type : "search",
+    //     index : 5,
+    //     url : '/search'
+    // }
 }

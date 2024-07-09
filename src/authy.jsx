@@ -6,7 +6,7 @@ export default function Authy() {
 
     const [error, setError] = useState('');
     const [isValidated, setIsValidated] = useState(false);
-    const access = "$2024?.lasg_access$008";
+    const access = "$2024/06?.lasg_access$009";
 
     const handleSub = () => {
 

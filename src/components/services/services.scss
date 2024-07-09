@@ -3,18 +3,19 @@
 
     .midTopic{
         
-        margin: 70px 0;
+        margin: 50px 0;
         display: flex;
         flex-direction: column;
         align-items: center;
         margin-bottom: 100px;
-        color: #fff;
+        color: #131313;
 
         .topic{
-            font-size: 50px;
+            font-size: 40px;
             letter-spacing: -1px;
-            color: #fff;
+            color: #131313;
             margin-bottom: 20px;
+            font-weight: 600 !important;
         }
 
     }
@@ -30,6 +31,7 @@
         margin: 50px auto;
         cursor: pointer;
         width: max-content;
+        border-radius: 5px;
     }
 
     .servicesPlatoon{
@@ -81,6 +83,7 @@
         justify-content: space-between;
         transition: all .4s ease-in-out;
         cursor: pointer;
+        border-radius: 10px;
 
         .icon{
             width: 70px;

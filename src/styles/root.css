@@ -13,6 +13,7 @@
     --secondary2 : #FFFCF1;
     --lime2 : #ABFA01;
     --lime3 : #42FF01;
+    --white : #fff;
 
     --Theme2 : #3168ff;
 
@@ -90,13 +91,14 @@
 }
 
 body{
-  background-color: var(--secondary2);
+  background-color: var(--white);
   overflow-x: hidden;
 }
 
 *{
 
-  box-sizing: border-box;margin : 0;
+  box-sizing: border-box;
+  margin : 0;
   padding: 0;
   font-family: "Plus Jakarta Sans", sans-serif;
   font-optical-sizing: auto;

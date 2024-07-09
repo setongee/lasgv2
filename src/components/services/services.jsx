@@ -93,8 +93,8 @@ export default function Services({bgColor, location, data_limit}) {
                 location === 'home' ? (
 
                     <div className="midTopic">
-                        <div className="topic thick_700">All Government Topics & Services</div>
-                        <div className="subtitle">Empowering Citizens of Lagos State to Engage with their Government.</div>
+                        <div className="topic thick_700">Browse all Lagos State services and topics</div>
+                        <div className="subtitle">Making it easier to have quick access to Lagos State services and information</div>
                     </div>
 
                 ) : null

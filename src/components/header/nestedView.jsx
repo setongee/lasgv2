@@ -36,12 +36,9 @@ const removeClass = (e) => {
     
     <div className="nests" style={{backgroundColor : navData.theme}} onMouseOut={ e => removeClass(e) } onMouseOver={ e => addClass(e) }>
 
-        <div 
-        className="vectorPhoto"
-
-        >
+        <div className="vectorPhoto">
         
-        <img src={vector1} alt="heading title part" /> 
+            <img src={vector1} alt="heading title part" /> 
 
         </div>
 

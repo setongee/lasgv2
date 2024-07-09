@@ -118,6 +118,7 @@
                         height: 100%;
                         width: 100%;
                         object-fit: cover;
+                        object-position: 0 0;
                         transition: all .4s ease-in-out;
                     }
 
@@ -127,6 +128,14 @@
                         }
                     }
 
+                }
+
+                .imageCarrier_sub{
+                    background-color: #f2faf0;
+                    height: 300px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                 }
 
                 .nameCarrier{

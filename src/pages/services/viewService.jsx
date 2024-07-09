@@ -41,6 +41,7 @@ import transportation from '../../assets/icons/service/transportation.svg'
 import water from '../../assets/icons/service/water.svg'
 import ServiceSearchResults from './serviceSearchResults';
 import { servicesDB } from '../../api/data/servicesDB';
+import ViewServiceModal from './viewServiceModal';
 
 // End of Icons
 
@@ -87,6 +88,10 @@ export default function ViewService() {
     const [ query, setQuery ] = useState('');
     const [queryResults, setQueryResults] = useState([]);
     const [serviceData, setServiceData] = useState([]);
+
+    // Modal States
+    const [modalData, setModalData] = useState({});
+    const [isModalOpen, setIsMOdalOpen] = useState(false);
     
    useEffect(() => {
     
@@ -96,9 +101,13 @@ export default function ViewService() {
     const getServiceData = servicesDB.filter( res => res.theme.trim() === params.theme );
     setServiceData(getServiceData);
 
+    document.body.style.overflow = "visible";
+
    }, []); 
 
   useEffect(() => {
+
+    document.body.style.overflow = "visible";
 
     const fuseOptions = {
 
@@ -122,15 +131,27 @@ export default function ViewService() {
 
    const openModal = (data) => {
 
-      window.open(data.url)
+      setModalData(data);
+      setIsMOdalOpen(true);
+      document.body.style.overflow = "hidden";
 
    }
 
-   let navigate = useNavigate()
+   const closeModal = (data) => {
+
+    setModalData({});
+    setIsMOdalOpen(false);
+    document.body.style.overflow = "visible";
+
+ }
 
   return (
 
     <div className="viewService">
+
+        {
+          isModalOpen ? <ViewServiceModal data = {modalData} close = {closeModal} /> : null
+        }
 
         <Container>
 

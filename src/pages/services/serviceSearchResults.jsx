@@ -105,6 +105,5 @@ export default function ServiceSearchResults( { data, openModal, icon } ) {
 
     </div>
 
-
   )
 }

@@ -34,6 +34,7 @@ let navigate = useNavigate();
 const showMenuIndex = (index) => {
 
     setShowTab(true);
+    document.body.style.overflowY = 'hidden';
     const arrParent = Array.from(document.querySelectorAll('.parentName'));
     
     if( document.querySelector('.fix') === null ) {
@@ -50,6 +51,7 @@ const showMenuIndex = (index) => {
     if(index === indexing && showTab) {
 
         setShowTab(false);
+        document.body.style.overflowY = 'visible';
         document.querySelector('.fix').classList.remove('fix');
 
     }
@@ -106,6 +108,14 @@ return (
 
     } >
 
+        {/* Search Screen Modal */}
+
+        <div className="searchScreen">
+
+            
+            
+        </div>
+
         <div className="appHeader"> 
 
 
@@ -142,14 +152,14 @@ return (
                             </div> 
                         </a>
                         
-                        <a href="/services/tourism" className='prima' >Visit Lagos 
+                        <a href="https://youtu.be/VJnu7lR4Kks" className='prima' >Visit Lagos 
                             <div className="iconAnim"> 
                                 <ArrowUpRight className='arr first'/> 
                                 <ArrowUpRight className='arr last'/> 
                             </div> 
                         </a>
 
-                        <a href="/services/disasters_emergencies" className='prima' > Emergency 
+                        <a href="https://lagosstate.gov.ng/emergency-numbers/" className='prima' > Emergency 
                             <div className="iconAnim"> 
                                 <ArrowUpRight className='arr first'/> 
                                 <ArrowUpRight className='arr last'/> 
@@ -203,7 +213,7 @@ return (
                                 
                                 navigate('/')
 
-                            } } >Official Website of Lagos State  </div>
+                            } } > Lagos State Official Website  </div>
 
                             <div className="mobileBurger mobileBurger2" onClick={ () => openMobileMenu() } > <MenuScale color='#131414' width={20} height={20} strokeWidth={2} /></div>
 
@@ -219,7 +229,7 @@ return (
                                     
                                     <div 
                                         key = {index} 
-                                        className="parentName thick uppercase" 
+                                        className={`parentName thick uppercase ${ data.url.split('/')[1] === location.pathname.split('/')[1] ? "active" : ""}`} 
                                         onClick = { 
 
                                             () => {
@@ -241,8 +251,9 @@ return (
                                         > 
                                         
                                         {data.parentName}
+                                        
                                         {
-                                            data.isNest ? <NavArrowDown color='#131414' className='navi' /> : <ArrowUpRight color='#131414' /> 
+                                            data.type === 'search' ? <Search className='pink' width={17} height={17} strokeWidth={2} /> : data.isNest ? <NavArrowDown color='#131414' className='navi' /> : <ArrowUpRight color='#131414' /> 
                                         }
                                         
                                         </div> 

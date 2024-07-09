@@ -4,6 +4,7 @@ import ekobridge from '../../assets/photoAssets/LASGIDI.svg'
 import Container from '../container/container'
 import './footer.scss'
 import { ArrowUpRight, Facebook, FacebookTag, Instagram, RssFeed, RssFeedTag, Search, X } from 'iconoir-react'
+import { Timeline } from 'react-twitter-widgets'
 
 export default function Footer() {
   return (
@@ -23,7 +24,7 @@ export default function Footer() {
               <div className="topPart">
 
                 <p className='thick'>lagosstate.gov.ng -</p>
-                <h1> Your go-to government resource & service.</h1>
+                <h1> Whats up Lagos? </h1>
 
               </div>
 
@@ -35,11 +36,10 @@ export default function Footer() {
 
                       <div className="links a-dark flex flex_col">
 
-                          <a href="#" className="link"> Elected Officials </a>
-                          <a href="#" className="link"> History of Lagos State </a>
-                          <a href="#" className="link"> Explore Lagos Agencies </a>
-                          <a href="#" className="link"> Lagos Local Information </a>
-                          <a href="#" className="link"> State Statistics </a>
+                          <a href="/government/elected_officials" className="link"> Elected officials </a>
+                          <a href="/government/mdas" className="link"> Explore agencies </a>
+                          <a href="https://lagoshouseofassembly.gov.ng/home/our-team/" className="link"> Legislative officers </a>
+                          <a href="https://lagosjudiciary.gov.ng/directories.html#directories" className="link"> Judiciary officers </a>
 
                       </div>
 
@@ -52,11 +52,12 @@ export default function Footer() {
 
                       <div className="links a-dark flex flex_col">
 
-                          <a href="#" className="link"> Work in Lagos </a>
-                          <a href="#" className="link"> Housing & Lands </a>
-                          <a href="#" className="link"> Tourism & Travels </a>
-                          <a href="#" className="link"> Payments & Levies </a>
-                          <a href="#" className="link"> Vehicle Services </a>
+                          <a href="/services/jobs" className="link"> Work in Lagos </a>
+                          <a href="/services/housing" className="link"> Housing and lands </a>
+                          <a href="/services/tourism" className="link"> Tourism and travels </a>
+                          <a href="/services/payments" className="link"> Payments and levies </a>
+                          <a href="/services/advertisement" className="link"> Advertisement services </a>
+                          <a href="/services/advertisement" className="link"> Give feedbacks and complaints </a>
 
                       </div>
 
@@ -69,70 +70,28 @@ export default function Footer() {
 
                       <div className="links a-dark flex flex_col">
 
-                          <a href="#" className="link"> Emergency Contacts </a>
-                          <a href="#" className="link"> Hospitals Near Me </a>
-                          <a href="#" className="link"> Get an Ambulance </a>
-                          <a href="#" className="link"> Police Stations Near Me </a>
+                          <a href="#" className="link"> Emergency contacts </a>
+                          <a href="#" className="link"> Hospitals near me </a>
+                          <a href="https://lasambus.org/home" className="link"> Get an ambulance </a>
+                          <a href="#" className="link"> Police stations near me </a>
 
                       </div>
 
                   </div>
 
-              </div>
+                  <div className="linkHolder flex flex_col twitter__holder">
 
-              <div className="linksTabs flex thick">
+                      <Timeline
+                        dataSource={{
+                            sourceType: 'profile',
+                            screenName: 'followlasg'
+                        }}
+                        options={{
+                            height: '400'
+                        }}
+                      />
 
-                <a href ='#' className="tab flex"> 
-                  
-                Fun spots in lagos 
-
-                  <div className="arowBon"> 
-
-                      <div className="arrowMin arrow1"><ArrowUpRight color = '#FDCF6E' /> </div>
-                      <div className="arrowMin arrow2"><ArrowUpRight color='#42FF01'/> </div>
-                   
-                  </div> 
-                
-                </a>
-
-                <a href ='#' className="tab flex"> 
-                  
-                pay traffic penalty fees 
-
-                  <div className="arowBon"> 
-
-                      <div className="arrowMin arrow1"><ArrowUpRight color = '#FDCF6E' /> </div>
-                      <div className="arrowMin arrow2"><ArrowUpRight color='#42FF01'/> </div>
-                   
-                  </div> 
-                
-                </a>
-
-                <a href ='#' className="tab flex"> 
-                  
-                Govt. hospitals near ME 
-
-                  <div className="arowBon"> 
-
-                      <div className="arrowMin arrow1"><ArrowUpRight color = '#FDCF6E' /> </div>
-                      <div className="arrowMin arrow2"><ArrowUpRight color='#42FF01'/> </div>
-                   
-                  </div> 
-                
-                </a>
-
-                <a href ='#' className="tab flex"> 
-                  
-                Advertise in Lagos 
-
-                  <div className="arowBon"> 
-
-                      <div className="arrowMin arrow1"><ArrowUpRight color = '#FDCF6E' /> </div>
-                      <div className="arrowMin arrow2"><ArrowUpRight color='#42FF01'/> </div>
-                   
-                  </div> 
-                
-                </a>
+                  </div>
 
               </div>
 
@@ -144,10 +103,9 @@ export default function Footer() {
 
                     <div className="socialsIcon flex">
 
-                      <div className="icon"><Instagram width={20} strokeWidth={1.6}/></div> 
-                      <div className="icon"><X width={20} strokeWidth={1.6}/></div>
-                      <div className="icon"><FacebookTag width={20} strokeWidth={1.6}/></div>  
-                      <div className="icon"><RssFeedTag width={20} strokeWidth={1.6}/></div>
+                      <a href='https://www.instagram.com/lagosstategovt/?hl=en' className="icon"><Instagram width={20} strokeWidth={1.6}/></a> 
+                      <a href = 'https://x.com/followlasg' className="icon"><X width={20} strokeWidth={1.6}/></a>
+                      <a href='https://web.facebook.com/followlasg' className="icon"><FacebookTag width={20} strokeWidth={1.6}/></a> 
 
                     </div>
 
@@ -172,12 +130,6 @@ export default function Footer() {
             
 
         </Container>
-
-        <div className="ekoBridge">
-
-          <img src={ekobridge} alt="LASG" />
-
-        </div>
 
     </div>
 

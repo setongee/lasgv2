@@ -2,104 +2,363 @@
 
     background-color: #FDFDFD;
 
+    .tweets{
+        background-color: red;
+    }
+
 
     .news{
 
-        .newMain{
+        .news_tag{
 
-            padding-top: 200px;
+            position: fixed;
+            top: 130px;
+            padding: 20px 0;
+            border-bottom: 1px solid #dadada;
+            border-top: 1px solid #dadada;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            z-index: 99;
+            background-color: #fff;
+            padding-left: 170px;
+            overflow-x: scroll;
+            scrollbar-width: none;
+            padding-right: 170px;
 
-            .topHeading{
+            .news_tagging{
 
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                width: 100%;
-                gap: 15px;
+                font-size: 11px;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                width: max-content;
+                flex-shrink: 0;
 
-                .title{
-                    font-size: 60px;
-                    font-weight: 700;
+                &.active{
+
+                    color: var(--primary25);
+                    font-weight: 600;
+
                 }
 
             }
-            
-            .resultsData{
+        }
 
-                margin: 100px 0;
-                display: flex;
-                flex-wrap: wrap;
-                gap: 40px;
-                justify-content: center;
+        .top_top_heading{
+            margin-top: 220px;
+            font-size: 20px;
+            font-weight: 500;
+        }
 
-                .newsCard{
-                    background-color: #fff;
-                    overflow: hidden;
-                    width: 320px;
-                    box-shadow: 0 2px 20px rgba($color: #000000, $alpha:.03);
+        .landingNews{
 
-                    .imageSide{
+            margin-top: 30px;
+            display: flex;
+            gap: 20px;
+
+            .mainHighlight{
+
+                height: 550px;
+                width: 100%;
+                overflow: hidden;
+                position: relative;
+                border-radius: 20px;
+                cursor: pointer;
+
+                &:hover{
+                    .highlight_content{
+                        .highlight_title{
+                            text-decoration: underline;
+                        }
+                    }
+                }
+
+                .overlay{
+
+                    background-color: red;
+                    position: absolute;
+                    height: 100%;
+                    width: 100%;
+                    z-index: 9;
+
+                    background: rgb(255,255,255);
+                    background: -moz-linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(0,0,0,0.2259497549019608) 26%, rgba(0,0,0,1) 75%, rgba(0,0,0,1) 100%);
+                    background: -webkit-linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(0,0,0,0.2259497549019608) 26%, rgba(0,0,0,1) 75%, rgba(0,0,0,1) 100%);
+                    background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(0,0,0,0.2259497549019608) 26%, rgba(0,0,0,1) 75%, rgba(0,0,0,1) 100%);
+                    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#000000",GradientType=1);
+
+                    // background: rgb(255,255,255);
+                    // background: -moz-linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(0,0,0,0) 20%, rgba(0,0,0,0.702140231092437) 75%, rgba(0,0,0,1) 100%);
+                    // background: -webkit-linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(0,0,0,0) 20%, rgba(0,0,0,0.702140231092437) 75%, rgba(0,0,0,1) 100%);
+                    // background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(0,0,0,0) 20%, rgba(0,0,0,0.702140231092437) 75%, rgba(0,0,0,1) 100%);
+                    // filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#000000",GradientType=1);
+
+
+                }
+
+                .highlight_image{
+
+                    position: absolute;
+                    height: 100%;
+                    width: 100%;
+
+                    img{
                         width: 100%;
-                        height: 160px;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+
+                }
+
+                .highlight_content{
+
+                    position: relative;
+                    padding: 0 50px;
+                    height: 100%;
+                    z-index: 91;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                    padding-bottom: 50px;
+                    color: #fff;
+
+                    .info{
+
+                        display: flex;
+                        align-items: center;
+                        gap: 20px;
+                        font-size: 14px;
+
+                        .highlight_theme{
+
+                            text-transform: uppercase;
+                            letter-spacing: 2px;
+                            font-size: 11px;
+                            background-color: var(--lasgGreen);
+                            color: var(--primary);
+                            padding: 3px 5px;
+                            font-weight: bold;
+                            border-radius: 3px;
+
+                        }
+
+                        .timeToRead{
+
+                            display: flex;
+                            align-items: center;
+                            gap: 5px;
+                            text-transform: uppercase;
+                            font-size: 11px;
+                            letter-spacing: 2px;
+                        }
+
+                        margin-top: 20px;
+
+                    }
+
+                    .highlight_title{
+                        font-size: 24px;
+                        line-height: 33px;
+                        width: 70%;
+                    }
+                    
+                }
+
+            }
+
+            .sub_highlight{
+
+                width: 34%;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+                .sub_highlight_item{
+
+                    display: flex;
+                    gap: 20px;
+                    align-items: center;
+                    cursor: pointer;
+
+                    .photo_item{
+
+                        height: 170px;
+                        width: 180px;
+                        background-color: purple;
+                        flex-shrink: 0;
+                        border-radius: 20px;
+                        overflow: hidden;
 
                         img{
                             width: 100%;
                             height: 100%;
                             object-fit: cover;
                         }
+
                     }
 
-                    .content{
-                        margin-top: 25px;
-                        padding: 0 25px;
-                        padding-bottom: 20px;
-
-                        .date{
-                            font-size: 11px;
-                            letter-spacing: 2px;
-                            margin-bottom: 10px;
+                    &:hover{
+                        .content_body{
+                            .content_title{
+                                text-decoration: underline;
+                            }
                         }
+                    }
 
-                        .news_head{
-                            font-weight: 600;
-                            line-height: 22px;
-                            margin-bottom: 20px;
-                            font-size: 16px;
-                            width: 80%;
-                        }
+                    .sub_highlight_item_content{
 
-                        .actions{
+                        .content_info{
+
+                            margin-bottom: 0px;
+
+                            .linehere{
+
+                                width: 1px;
+                                height: 12px;
+                                background-color: #999;
+
+                            }
+
+                            .highlight_themes{
+                                color: var(--primary25);
+                                display: none;
+                            }
+
                             display: flex;
-                            justify-content: space-between;
+                            font-size: 10px;
+                            text-transform: uppercase;
+                            font-weight: 500;
+                            gap: 10px;
                             align-items: center;
-                            width: 100%;
-                            background-color: var(--lime);
-                            padding: 10px 15px;
-
-                            .read{
-                                font-size: 11px;
-                                font-weight: 600;
-                                color:#fff;
-                                border-radius: 4px;
-                                text-transform: uppercase;
-                                letter-spacing: 2px;
-                            }
-
-                            .shareNews{
-                                font-size: 12px;
-                                display: flex;
-                                align-items: center;
-                                gap: 10px;
-                            }
+                            letter-spacing: 2px;
                         }
+
+                        .content_body{
+
+                            .content_title{
+                                font-weight: 500;
+                                margin-bottom: 15px;
+                            }
+
+                            .content_sub{
+                                font-size: 12px;
+                                line-height: 18px;
+                                color: #777;
+                            }
+
+                        }
+
                     }
+
                 }
 
             }
 
         }
-    
+        
+        .news_card_body{
+
+            margin : 50px 0;
+
+            .section_header{
+
+                font-size: 20px;
+                font-weight: 500;
+
+            }
+
+            .news_results_section{
+
+                margin-top: 30px;
+                margin-bottom: 100px;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 30px;
+                row-gap: 50px;
+
+                .news_card{
+
+                    width: 22%;
+                    cursor: pointer;
+
+                    &:hover{
+                        .news_body_content{
+
+                            .news_topic{
+
+                                text-decoration: underline;
+
+                            }
+                            
+                        }
+                    }
+
+                    .news_image{
+
+                        width: 100%;
+                        height: 200px;
+                        border-radius: 20px;
+                        background-color: orangered;
+                        overflow: hidden;
+
+                        img{
+
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            object-position: 0% 0%;
+
+                        }
+
+                    }
+
+                    .news_body_content{
+
+                        margin-top: 15px;
+
+                        .news_topic{
+                            font-weight: 600;
+                            line-height: 22px;
+                        }
+
+                        .news_details{
+
+                            display: flex;
+                            align-items: center;
+                            gap: 10px;
+                            margin-top: 15px;
+
+                            .details_themes{
+
+                                text-transform: uppercase;
+                                letter-spacing: 2px;
+                                font-size: 11px;
+                                background-color: var(--lasgGreen);
+                                color: var(--primary);
+                                padding: 3px 5px;
+                                font-weight: bold;
+                                border-radius: 3px;
+
+                            }
+
+                            .details_readTime{
+
+                                display: flex;
+                                align-items: center;
+                                gap: 5px;
+                                text-transform: uppercase;
+                                font-size: 11px;
+                                letter-spacing: 2px;
+                            }
+
+                        }
+                    }
+
+                }
+
+            }
+        }
     
     }
 

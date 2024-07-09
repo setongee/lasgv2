@@ -15,6 +15,9 @@ import ServicesPage from '../pages/services/servicesPage';
 import ViewService from '../pages/services/viewService';
 import News_Events from '../pages/news_events/News_Events';
 import Resources from '../pages/resources/resources';
+import LagView from '../pages/Government/officialsView_lag';
+import News_view from '../pages/news_events/news_view';
+import Connect from '../pages/connect/connect';
 
 const RouterClass = () => {
 
@@ -35,6 +38,7 @@ const RouterClass = () => {
                     <Route path='elected_officials/ssg/view' element = { <SSGView/> } />
                     <Route path='elected_officials/hos/view' element = { <HOSView/> } />
                     <Route path='elected_officials/cos/view' element = { <COSView/> } />
+                    <Route path='elected_officials/lag/view' element = { <LagView/> } />
 
 
                     <Route path='judiciary_officials' element = { <JudiciaryOfficials/> } />
@@ -53,8 +57,11 @@ const RouterClass = () => {
 
                 </Route>
 
-                <Route path = 'news' element = { <News_Events/> } />
+                <Route path = 'news/:tag' element = { <News_Events/> } />
+                <Route path = 'news/:tag/view/:id' element = { <News_view/> } />
                 <Route path = 'resources' element = { <Resources/> } />
+
+                <Route path = 'connect' element = { <Connect/> } />
 
                 {/* 404 Page Not Found */}
                 <Route path="*" element = {<h1>Page not found</h1>} />
