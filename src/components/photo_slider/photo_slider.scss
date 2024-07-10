@@ -96,6 +96,31 @@
                 margin: 0 auto;
             }
         }
+
+
+        // Motion illustrations
+        .motion__illustration{
+
+            width: 200px;
+            position: absolute;
+            bottom: 0;
+            z-index: 5;
+            left: -300px;
+            animation: lefttoright 8s ease-in-out infinite;
+
+            img{
+                width: 100%;
+            }
+
+        }
+        
+    }
+
+    @keyframes lefttoright {
+        
+        to{
+            left: calc(100% + 300px);
+        }
         
     }
 
@@ -690,6 +715,16 @@
                     margin: 0 auto;
                 }
             }
+
+            .motion__illustration{
+
+                width: 180px;
+    
+                img{
+                    width: 100%;
+                }
+    
+            }
             
         }
 
@@ -697,7 +732,7 @@
 
             width: 100%;
             display: flex;
-            margin-top: 160px;
+            margin-top: 150px;
     
             .home__content{
 

@@ -5,6 +5,9 @@ import water from '../../assets/LASG Illustrations/water.svg'
 import eko from '../../assets/LASG Illustrations/eko.svg'
 import clouds from '../../assets/LASG Illustrations/cloud.svg'
 
+// Motion Animation
+import danfo from '../../assets/LASG Illustrations/danfo.svg'
+
 export default function LasgIllustrations() {
 
   return (
@@ -40,6 +43,15 @@ export default function LasgIllustrations() {
         <div className="lasg__illustration__clouds lasg__illustration__clouds_2x">
             <img src={clouds} alt="" />
         </div>
+
+
+
+        {/* Motion Moves */}
+
+        <div className="motion__illustration danfo">
+            <img src={danfo} alt="Lagos State Assets" />
+        </div>
+        
 
     </div>
 
