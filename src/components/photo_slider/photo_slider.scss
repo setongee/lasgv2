@@ -150,14 +150,6 @@
         
     }
 
-    @keyframes righttoleft {
-        
-        to{
-            right: calc(100% + 300px);
-        }
-        
-    }
-
     .photo_container{
 
         width: 100%;
@@ -587,6 +579,47 @@
                     margin: 0 auto;
                 }
             }
+
+            // motion side
+            .motion__illustration{
+
+                width: 140px;
+                position: absolute;
+                bottom: 0;
+                z-index: 5;
+                left: -200px;
+                animation: lefttoright 10s ease-in-out infinite;
+    
+                img{
+                    width: 100%;
+                }
+    
+            }
+    
+            .lasumbus{
+    
+                animation-delay: 1s;
+    
+            }
+    
+            .brt{
+                width: 230px;
+                animation-delay: 3s;
+                left: -320px;
+            }
+    
+            .car{
+    
+                width: 180px;
+                animation-delay: 5s;
+    
+            }
+    
+            .lagride{
+    
+                animation-delay: 7s;
+    
+            }
             
         }
 
@@ -748,16 +781,6 @@
                     width: 100%;
                     margin: 0 auto;
                 }
-            }
-
-            .motion__illustration{
-
-                width: 180px;
-    
-                img{
-                    width: 100%;
-                }
-    
             }
             
         }
