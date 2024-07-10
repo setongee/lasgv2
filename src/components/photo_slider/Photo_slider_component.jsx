@@ -35,7 +35,7 @@ export default function Photo_slider_component() {
                   </div>
 
                   <div className="text__area_sub">
-                    Welcome to the official Lagos state government website dedicated to serving you. Find essential resources, services, and information... 
+                    lasg.gov.ng  helps you find essential Lagos state resources, services, information and loads more... 
                   </div>
 
               </div>

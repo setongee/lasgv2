@@ -3,15 +3,19 @@
     background-color: #f6fffa;
     background-color: var(--secondary2);
     position: relative;
-    height: 100vh;
+    height: 100svh;
     max-height: 1080px;
     overflow: hidden;
+
+    .mobile__flash__news{
+        display: none;
+    }
 
     .lasg__illustration{
 
         position: absolute;
         top: 0;
-        height: 100vh;
+        height: 100svh;
         max-height: 1080px;
         width: 100%;
 
@@ -598,6 +602,8 @@
 
     .slider{
 
+        background-color: #fff;
+
         .mobile__flash__news{
 
             width: 100%;
@@ -675,9 +681,9 @@
     
             .lasg__illustration__eko{
                 position: absolute;
-                bottom: 20px;
-                right: -100px;
-                width: 600px;
+                bottom: 40px;
+                right: -50px;
+                width: 500px;
                 z-index: 1;
     
                 img{
@@ -710,7 +716,7 @@
                     color: #fff;
                     color: #131313;
                     text-transform: uppercase;
-                    margin-top: 30px;
+                    margin-top: 15px;
                     margin-bottom: 20px;
     
                     span{
@@ -739,7 +745,7 @@
     
                 .text__area_sub{
     
-                    width: 90%;
+                    width: 80%;
                     line-height: 21px;
                     margin-top: 20px;
                     font-weight: 400;
