@@ -61,10 +61,6 @@ export default function LasgIllustrations() {
         <div className="motion__illustration brt">
             <img src={brt} alt="Lagos State Assets" />
         </div>
-
-        <div className="motion__illustration car">
-            <img src={car1} alt="Lagos State Assets" />
-        </div>
        
         <div className="motion__illustration lasumbus">
             <img src={lasumbus} alt="Lagos State Assets" />
