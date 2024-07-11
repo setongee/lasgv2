@@ -85,7 +85,7 @@ export default function Footer() {
                             screenName: 'followlasg'
                         }}
                         options={{
-                            height: '280'
+                            height: '285'
                         }}
                       />
 
