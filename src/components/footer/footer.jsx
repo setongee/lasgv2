@@ -56,8 +56,6 @@ export default function Footer() {
                           <a href="/services/housing" className="link"> Housing and lands </a>
                           <a href="/services/tourism" className="link"> Tourism and travels </a>
                           <a href="/services/payments" className="link"> Payments and levies </a>
-                          <a href="/services/advertisement" className="link"> Advertisement services </a>
-                          <a href="/services/advertisement" className="link"> Give feedbacks and complaints </a>
 
                       </div>
 
@@ -70,10 +68,10 @@ export default function Footer() {
 
                       <div className="links a-dark flex flex_col">
 
-                          <a href="#" className="link"> Emergency contacts </a>
-                          <a href="#" className="link"> Hospitals near me </a>
-                          <a href="https://lasambus.org/home" className="link"> Get an ambulance </a>
-                          <a href="#" className="link"> Police stations near me </a>
+                          <a href="https://lagos.npf.gov.ng/home/find/division" className="link"> Find police stations </a>
+                          <a href="https://lagos.npf.gov.ng/news/post/3" className="link"> Report missing person </a>
+                          <a href="https://citizensgate.lagosstate.gov.ng/" className="link">Make complaints or reports </a>
+                          <a href="https://hei.org.ng/emergency-numbers/rrs" className="link"> RRS Numbers </a>
 
                       </div>
 
@@ -87,7 +85,7 @@ export default function Footer() {
                             screenName: 'followlasg'
                         }}
                         options={{
-                            height: '400'
+                            height: '280'
                         }}
                       />
 

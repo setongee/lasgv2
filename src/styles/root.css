@@ -49,10 +49,6 @@
     width: 100%;
   }
 
-  html{
-    scroll-behavior: smooth;
-  }
-
 * a{
     text-decoration: none;
     color: #fff;
@@ -93,6 +89,7 @@
 body{
   background-color: var(--white);
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 *{
