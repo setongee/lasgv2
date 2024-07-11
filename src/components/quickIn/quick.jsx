@@ -49,7 +49,7 @@ export default function Quick() {
 
                 <div className="quick__content">
 
-                    <p> One card, {<br></br>} Multiple <span> benefits! </span> </p>
+                    <p> Empowering Lagosians : Streamlined Services at Your Fingertips</p>
 
                     <div className="subtitle">
                         Every family in Lagos has a duty to register with LASRRA to get card for each member of the family.
@@ -59,20 +59,20 @@ export default function Quick() {
 
                 <div className="search__cards__body flex">
 
-                    <div className="search__card active top" onMouseOver={ () => changeIndexToCurrent(1) }>
+                    <a target='_blank' href='https://registration.lagosresidents.gov.ng/register/' className="search__card active top" onMouseOver={ () => changeIndexToCurrent(1) }>
                        <p> Get your LAG-ID card today.</p>
                        <div className="cta flex flex_align_center">Apply Now <div className="arrt"> <ArrowRight height={18} /></div> </div>
-                    </div>
+                    </a>
 
-                    <div className="search__card" onMouseOver={ () => changeIndexToCurrent(2) } >
+                    <a target='_blank' href='https://lagosride.com/' className="search__card" onMouseOver={ () => changeIndexToCurrent(2) } >
                        <p> Ride in style with Lagos Ride</p>
-                       <div className="cta flex flex_align_center">Apply Now <div className="arrt"> <ArrowRight height={18} /></div> </div>
-                    </div>
+                       <div className="cta flex flex_align_center">Book a ride today <div className="arrt"> <ArrowRight height={18} /></div> </div>
+                    </a>
 
-                    <div className="search__card" onMouseOver={ () => changeIndexToCurrent(3) }>
+                    <a target='_blank' href = 'https://citizensgate.lagosstate.gov.ng/' className="search__card" onMouseOver={ () => changeIndexToCurrent(3) }>
                        <p> Send feedbacks to Lagos State </p>
                        <div className="cta flex flex_align_center"> Get Started Here <div className="arrt"> <ArrowRight height={18} /></div> </div>
-                    </div>
+                    </a>
 
                 </div>
 

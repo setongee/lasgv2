@@ -152,19 +152,26 @@ return (
                             </div> 
                         </a>
                         
-                        <a href="https://youtu.be/VJnu7lR4Kks" className='prima' >Visit Lagos 
+                        <a target='_blank' href="https://youtu.be/VJnu7lR4Kks" className='prima' >Visit Lagos 
                             <div className="iconAnim"> 
                                 <ArrowUpRight className='arr first'/> 
                                 <ArrowUpRight className='arr last'/> 
                             </div> 
                         </a>
 
-                        <a href="https://lagosstate.gov.ng/emergency-numbers/" className='prima' > Emergency 
-                            <div className="iconAnim"> 
-                                <ArrowUpRight className='arr first'/> 
-                                <ArrowUpRight className='arr last'/> 
-                            </div> 
-                        </a>
+                        <div className="fixUp uppercase flex">
+                            
+                            <p>Emergency Numbers : </p>
+
+                            <div className="numbers flex">
+
+                                <a href="tel:08056250710"> 08056250710 </a>
+                                <p>|</p>
+                                <a href="tel:08033482380">08033482380</a>
+
+                            </div>
+
+                        </div>
                     
                     </div>
 

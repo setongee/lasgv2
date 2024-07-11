@@ -229,21 +229,6 @@ export default function QuickCheck() {
                                 </div>
                                 
                             </a>
-
-                            <a href="/services/jobs" className="linkBin">
-
-                                <div className="content">
-
-                                    <div className='quick__title'> 
-                                        Work / find jobs in Lagos 
-                                        <div className="icon"><ArrowUpRight/></div> 
-                                    </div>
-
-                                    <p>Find job oppurtunities in Lagos.</p>
-
-                                </div>
-                                
-                            </a>
                             
 
                         </motion.div>

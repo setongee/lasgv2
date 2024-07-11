@@ -54,10 +54,6 @@ export default function LasgIllustrations() {
 
         {/* Motion Moves */}
 
-        <div className="motion__illustration lagride">
-            <img src={lagride} alt="Lagos State Assets" />
-        </div>
-
         <div className="motion__illustration brt">
             <img src={brt} alt="Lagos State Assets" />
         </div>
@@ -66,9 +62,13 @@ export default function LasgIllustrations() {
             <img src={lasumbus} alt="Lagos State Assets" />
         </div>
 
-        <div className="motion__illustration danfo">
-            <img src={danfo} alt="Lagos State Assets" />
+        <div className="motion__illustration lagride">
+            <img src={lagride} alt="Lagos State Assets" />
         </div>
+
+        {/* <div className="motion__illustration danfo">
+            <img src={danfo} alt="Lagos State Assets" />
+        </div> */}
         
 
     </div>
