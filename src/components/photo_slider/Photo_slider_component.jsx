@@ -7,6 +7,7 @@ import Typewriter from 'typewriter-effect';
 // import { Share } from 'react-twitter-widgets'
 import level1 from '../../assets/hd/oing__real.png'
 import LasgIllustrations from './lasg_landingpage_illustrations'
+import {motion} from 'framer-motion'
 
 export default function Photo_slider_component() {
     
@@ -24,7 +25,7 @@ export default function Photo_slider_component() {
                 
               </div>
           
-              <div className="home__content">
+              <motion.div initial = {{x : -100, opacity : 0}} animate = {{x : 0, opacity : 1}}  className="home__content">
 
                   <div className="title">Welcome to <span>Lasgidi</span></div>
 
@@ -38,7 +39,7 @@ export default function Photo_slider_component() {
                     lasg.gov.ng  helps you find essential Lagos state resources, services, information and loads more... 
                   </div>
 
-              </div>
+              </motion.div>
               
           </div>
 

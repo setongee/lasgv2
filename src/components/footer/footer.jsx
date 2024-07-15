@@ -4,7 +4,7 @@ import ekobridge from '../../assets/photoAssets/LASGIDI.svg'
 import Container from '../container/container'
 import './footer.scss'
 import { ArrowUpRight, Facebook, FacebookTag, Instagram, RssFeed, RssFeedTag, Search, X } from 'iconoir-react'
-import { Timeline } from 'react-twitter-widgets'
+// import { Timeline } from 'react-twitter-widgets'
 
 export default function Footer() {
   return (
@@ -79,7 +79,7 @@ export default function Footer() {
 
                   <div className="linkHolder flex flex_col twitter__holder">
 
-                      <Timeline
+                      {/* <Timeline
                         dataSource={{
                             sourceType: 'profile',
                             screenName: 'followlasg'
@@ -87,7 +87,7 @@ export default function Footer() {
                         options={{
                             height: '285'
                         }}
-                      />
+                      /> */}
 
                   </div>
 
