@@ -11,6 +11,8 @@ import { Search } from 'iconoir-react'
 import Photo_slider_component from '../../components/photo_slider/Photo_slider_component'
 import Quick from '../../components/quickIn/quick'
 import Themes from './themes__agenda/Themes'
+import NewsCarrier from './newsZone/NewsCarrier'
+import Subscribe from '../../components/subscriber/subscribe'
 
 export default function Homepage() {
 
@@ -21,16 +23,10 @@ export default function Homepage() {
     <div className="home">
 
       <Photo_slider_component/>
-
       <QuickCheck/>
-
       <Quick/>
-
-      {/* <Themes/> */}
-
-      <News/>
-
-      <Services bgColor = "#FFF8DE" location = 'home' data_limit={70} />
+      <Services bgColor = "rgb(249, 249, 249)" location = 'home' data_limit={11} />
+      <NewsCarrier/>
 
     </div>
 

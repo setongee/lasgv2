@@ -115,7 +115,10 @@ export default function ViewService() {
   
       keys: [
         "sub_service",
-        "short"
+        "short",
+        "cta",
+        "theme",
+        "url"
       ]
     
     };
@@ -145,12 +148,22 @@ export default function ViewService() {
 
  }
 
+ const handleCloseBar = (e) => {
+
+  if ( e.target.classList[0] === 'view_service_modal' ) {
+
+    closeModal();
+
+  }
+
+}
+
   return (
 
     <div className="viewService">
 
         {
-          isModalOpen ? <ViewServiceModal data = {modalData} close = {closeModal} /> : null
+          isModalOpen ? <div className="viewMax" onClick={handleCloseBar} > <ViewServiceModal data = {modalData} close = {closeModal}  /> </div> : null
         }
 
         <Container>

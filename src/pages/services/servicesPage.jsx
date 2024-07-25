@@ -7,6 +7,7 @@ import Services from '../../components/services/services';
 import { servicesDB } from '../../api/data/servicesDB';
 import Fuse from 'fuse.js';
 import ServiceSearchResults from './serviceSearchResults';
+import ViewServiceModal from './viewServiceModal';
 
 export default function ServicesPage() {
 
@@ -14,15 +15,18 @@ export default function ServicesPage() {
   const [queryResults, setQueryResults] = useState([]);
   const [totalResults, setTotalResults] = useState(0)
 
+  const [modalData, setModalData] = useState({});
+  const [isModalOpen, setIsMOdalOpen] = useState(false);
+
   useEffect(() => {
 
     const fuseOptions = {
 
-    includeScore : true,
+      includeScore : true,
   
       keys: [
-        "theme",
         "sub_service",
+        "theme",
         "short"
       ]
     
@@ -50,15 +54,41 @@ export default function ServicesPage() {
 // }, [queryResults]);
 
 
-   const openModal = (data) => {
-    
-        window.open(data.url)
 
-   }
+const openModal = (data) => {
+
+    setModalData(data);
+    setIsMOdalOpen(true);
+    document.body.style.overflow = "hidden";
+
+ }
+
+ const closeModal = (data) => {
+
+  setModalData({});
+  setIsMOdalOpen(false);
+  document.body.style.overflow = "visible";
+
+}
+
+
+ const handleCloseBar = (e) => {
+
+    if ( e.target.classList[0] === 'view_service_modal' ) {
+  
+      closeModal();
+  
+    }
+  
+  }
 
   return (
 
     <div className="servicesPage">
+
+        {
+          isModalOpen ? <div className="viewMax" onClick={handleCloseBar} > <ViewServiceModal data = {modalData} close = {closeModal}  /> </div> : null
+        }
 
         <Container>
 
@@ -101,81 +131,6 @@ export default function ServicesPage() {
                         : null
 
                       }
-
-                </div>
-
-                {/* Popularly searched Services */}
-
-                <div className="recentlyServiced flex flex_align_center">
-
-                    <div className="linksTabs flex thick">
-
-                        <a href ='#' className="tab flex"> 
-                        
-                        Pay for vehicle lisense
-
-                        <div className="arowBon"> 
-
-                            <div className="arrowMin arrow2"><ArrowUpRight color = '#fff' /> </div>
-                            <div className="arrowMin arrow1"><ArrowUpRight color='#42FF01'/> </div>
-                        
-                        </div> 
-                        
-                        </a>
-
-                        <a href ='#' className="tab flex"> 
-                        
-                        SMEDAN Application 
-
-                        <div className="arowBon"> 
-
-                            <div className="arrowMin arrow2"><ArrowUpRight color = '#fff' /> </div>
-                            <div className="arrowMin arrow1"><ArrowUpRight color='#42FF01'/> </div>
-                        
-                        </div> 
-                        
-                        </a>
-
-                        <a href ='#' className="tab flex"> 
-                        
-                        MOBILE BRANDING Advert in Lagos
-
-                        <div className="arowBon"> 
-
-                            <div className="arrowMin arrow2"><ArrowUpRight color = '#fff' /> </div>
-                            <div className="arrowMin arrow1"><ArrowUpRight color='#42FF01'/> </div>
-                        
-                        </div> 
-                        
-                        </a>
-
-                        <a href ='#' className="tab flex"> 
-                        
-                        AGRIPRENSHIP Programme
-
-                        <div className="arowBon"> 
-
-                            <div className="arrowMin arrow2"><ArrowUpRight color = '#fff' /> </div>
-                            <div className="arrowMin arrow1"><ArrowUpRight color='#42FF01'/> </div>
-                        
-                        </div> 
-                        
-                        </a>
-
-                        <a href ='#' className="tab flex"> 
-                        
-                        Book LAGRIDE - Download App
-
-                        <div className="arowBon"> 
-
-                            <div className="arrowMin arrow2"><ArrowUpRight color = '#fff' /> </div>
-                            <div className="arrowMin arrow1"><ArrowUpRight color='#42FF01'/> </div>
-                        
-                        </div> 
-                        
-                        </a>
-
-                    </div>
 
                 </div>
 

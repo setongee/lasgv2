@@ -40,12 +40,12 @@ export default function Quick() {
   return (
 
    <div className="quick">
+
+        <img src={image__data[`${image}`]} alt="quick images" />
     
         <Container>
 
             <div className="quick__main">
-
-                <img src={image__data[`${image}`]} alt="quick images" />
 
                 <div className="quick__content">
 

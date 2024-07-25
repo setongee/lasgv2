@@ -154,18 +154,18 @@ export default function Services({bgColor, location, data_limit}) {
             
                         onClick={ () => {
                             
-                            if (limit === 7) {
+                            if (limit === 11) {
 
                                 setLimit( LASG_SERVICES.length )
 
                             } else {
-                                setLimit(7);
+                                setLimit(11);
                                 window.location.href = '/#services'
                             }
 
                         } } > 
                         
-                        Explore More { limit === 7 ? <ArrowDown strokeWidth={2} width={15} height={15} /> : <ArrowUp strokeWidth={2} width={15} height={15} /> } 
+                        Explore More { limit === 11 ? <ArrowDown strokeWidth={2} width={15} height={15} /> : <ArrowUp strokeWidth={2} width={15} height={15} /> } 
                         
                     </motion.div>
 

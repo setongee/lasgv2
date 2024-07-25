@@ -53,10 +53,8 @@
 
     .seth_Link{
 
-        background-color: var(--primary);
-        background-color: #108a00;
-        background-color: #131313;
-        height: 35px;
+        background-color: rgb(0, 15, 0);
+        height: 40px;
         font-size: 14px;
         color: #fff;
         display: flex;
@@ -67,8 +65,6 @@
         z-index: 4;
         letter-spacing: 2px;
         font-weight: 300;
-
-        // background-color: #101010;
 
         .newsScroll{
 
@@ -95,7 +91,7 @@
                 font-weight: 400;
     
                 &:hover{
-                    color: var(--lasgGreen);
+                    color: #42FF01;
                 }
             }
 
@@ -203,12 +199,12 @@
 
                 &:hover{
 
-                    border-color:  var(--lasgGreen);
-                    color: var(--primary);
+                    //border-color:  var(--lasgGreen);
+                    color: #108a00;
 
                     .navi{
                         rotate: (180deg);
-                        color: var(--primary) !important;
+                        color: #108a00 !important;
                     }
 
                 }
@@ -250,11 +246,11 @@
             position: fixed;
             width: 100%;
             left: 0;
-            top: 130px;
+            top: 120px;
             padding-top: 80px;
             padding-bottom: 120px;
-            height: calc(100vh - 120px);
-            overflow-y: scroll;
+            overflow-y: auto;
+            height: 100%;
 
             // &:hover{
             //     display: block !important;
@@ -319,7 +315,7 @@
                         gap: 8px;
 
                         .link{
-                            color: var(--primary);
+                            color: #009C3E;
                         }
 
                         p{

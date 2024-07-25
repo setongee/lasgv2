@@ -7,15 +7,23 @@ import Container from '../../../components/container/container';
 import { SplitText } from '../SplitText';
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 import legi from '../../../assets/hd/Animation - 1720121509297.lottie'
+import SubscribeModal from '../../../components/subscriber/subscribeModal';
 
 export default function QuickCheck() {
 
-   const strings = ['Browse 250+ online citizen and business services.','Report an Emergency / Disaster.', 'Find health care services around you.', 'Register / Renew your Lisences, Permits etc.', 'Stay up-to-date with News & Events.', 'Find out more about Lagos State Govt. benefits.', 'Explore Ministries, Departments and Agencies.']
+    const handleServices = () => {
+
+        window.scrollTo({
+
+            top : document.querySelector('#services').getBoundingClientRect().top - document.body.getBoundingClientRect().top - 100,
+
+        })
+        
+    }
 
   return (
     
         <div className="quickCheck">
-
 
                 <Container>
                     
@@ -23,68 +31,31 @@ export default function QuickCheck() {
 
                         <div className="textString thick">
 
-                            <div className="p">
+                            <div className="title"> Get Started, You can - </div>
 
-                                <div className="txt">
+                            <div className="textChange">
 
-                                    Welcome to <span>lagosstate.gov.ng</span>, the hub for information on lagos state government and services like education, business regulations, health, transparency, and more.
-                                    
-                                </div>
-
-                            </div>
-
-                            <ArrowUpRight className='arry first' color="#32C76D" strokeWidth={2} height={60} width={60} /> 
-
-                            <div className="how"> Get Started, You can - </div>
-
-                            <div className="textChange sip">
-
-                                {/* <SplitText
+                                <SplitText
 
                                     major = "many"
                                     initial={{ y: '100%' }}
                                     whileInView={{ y: 0,
-                                    transition: { duration : 2 }}}   
+                                    transition: { duration : 1.4 }}}   
                                 >
                                 
-                                Browse 300+ online citizen and business services, health care and services, lagos state government benefits and many more.
+                                Browse 200+ online services for citizens and businesses
 
-                                </SplitText> */}
+                                </SplitText>
 
-                                <Typewriter
-                
-                                    options={
-                                        
-                                        {
+                            </div>
 
-                                            strings : ['Browse 250+ online citizen and business services.','Report Emergencies / Disasters.', 'Find health care services and benefits for you', 'Register / Renew your Lisences, Permits etc.', 'Stay up-to-date with trending news & events.', 'Find out more about Lagos State Govt. benefits.', 'Explore Lagos state government parastatals'],
-                                            autoStart: true,
-                                            loop: true,
-                                            delay : 40,
-                                            deleteSpeed : 10
-
-                                        }
-                                
-                                    }
-                
-                                />
-
+                            <div className="pasty">
+                                Discover and access a wide range of Lagos state services for citizens and businesses online
                             </div>
 
                         </div>
 
-                        <div className="searchAnimation">
-
-                            <dotlottie-player 
-                                src={legi} 
-                                background="transparent" 
-                                speed="1" 
-                                loop 
-                                autoplay>   
-                            </dotlottie-player>
-
-                        </div>
-
+                        
                         <IconoirProvider
                         
                         iconProps = {
@@ -99,31 +70,11 @@ export default function QuickCheck() {
                         
                         >
 
-                        
-
-                        <motion.div 
-                        
-                        initial = {{ x : 150, opacity : 0 }} 
-                        whileInView = {{x : 0, opacity : 1}} 
-                        transition={{duration : .4}}
-                        viewport={{once : true}}
+                        <div 
                         
                         className="quickAsapLinks">
 
-                            {/* <div className="linkBin milt milo">
-
-                                <h1>How do I : </h1>
-
-                            </div>
-
-                            <div className="linkBin milt untold">
-
-                                <p>Explore all services </p>
-                                <ArrowDown/>
-
-                            </div> */}
-
-                            <a href="/services/housing" className="linkBin">
+                            <motion.a initial = {{opacity : 0, y : -50}} whileInView = {{opacity : 1, y:1}} transition={{delay : 0.1 }} viewport = {{once : true}} href="/services/housing" className="linkBin">
 
                                 <div className="content">
 
@@ -136,9 +87,9 @@ export default function QuickCheck() {
 
                                 </div>
 
-                            </a>
+                            </motion.a>
 
-                            <a href='/services/tourism' className="linkBin">
+                            <motion.a initial = {{opacity : 0, y : -50}} whileInView = {{opacity : 1, y:1}} transition={{delay : 0.2 }} viewport = {{once : true}} href='/services/tourism' className="linkBin">
 
                                 <div className="content">
 
@@ -153,9 +104,9 @@ export default function QuickCheck() {
 
                                 </div>
 
-                            </a>
+                            </motion.a>
 
-                            <a href="/services/education" className="linkBin">
+                            <motion.a initial = {{opacity : 0, y : -50}} whileInView = {{opacity : 1, y:1}} transition={{delay : 0.3}} viewport = {{once : true}} href="/services/education" className="linkBin">
 
                                 <div className="content">
 
@@ -168,9 +119,9 @@ export default function QuickCheck() {
 
                                 </div>
                                 
-                            </a>
+                            </motion.a>
 
-                            <a href="/government/mdas" className="linkBin">
+                            <motion.a initial = {{opacity : 0, y : -50}} whileInView = {{opacity : 1, y:1}} transition={{delay : 0.4 }} viewport = {{once : true}} href="/government/mdas" className="linkBin">
 
                                 <div className="content">
 
@@ -183,9 +134,9 @@ export default function QuickCheck() {
 
                                 </div>
                                 
-                            </a>
+                            </motion.a>
 
-                            <a href="/services/laws" className="linkBin">
+                            <motion.a initial = {{opacity : 0, y : -50}} whileInView = {{opacity : 1, y:1}} transition={{delay : 0.5 }} viewport = {{once : true}} href="/services/laws" className="linkBin">
 
                                 <div className="content">
 
@@ -198,48 +149,18 @@ export default function QuickCheck() {
 
                                 </div>
                                 
-                            </a>
+                            </motion.a>
 
-                            <a href="/services/disasters_emergencies" className="linkBin">
+                            <div className="linkServices">
 
-                                <div className="content">
+                                Ready to explore? <a onClick={handleServices}>Browse all services</a>
 
-                                    <div className='quick__title'> 
-                                        Report emergencies
-                                        <div className="icon"><ArrowUpRight/></div> 
-                                    </div>
-
-                                    <p>Get rapid emergency contacts</p>
-
-                                </div>
-                                
-                            </a>
-
-                            <a href="/services/jobs" className="linkBin">
-
-                                <div className="content">
-
-                                    <div className='quick__title'> 
-                                        Work / find jobs in Lagos 
-                                        <div className="icon"><ArrowUpRight/></div> 
-                                    </div>
-
-                                    <p>Find job oppurtunities in Lagos.</p>
-
-                                </div>
-                                
-                            </a>
+                            </div>
                             
 
-                        </motion.div>
+                        </div>
 
                         </IconoirProvider>
-
-                        <div className="linkServices">
-
-                            Looking for more help? <a href='#services'>Browse all services</a>
-
-                        </div>
 
                     </div>
 

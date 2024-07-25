@@ -1,21 +1,42 @@
-import React, {useEffect} from 'react'
+import React, {useEffect, useState} from 'react'
 import './serviceModal.scss'
 import { motion } from 'framer-motion'
 import { Xmark } from 'iconoir-react'
 
 export default function ViewServiceModal({data, close}) {
 
-    console.log(data);
-
     const { sub_service, theme, url, short, cta } = data
-
-    console.log(short)
+    const [themeArea, setThemeArea] = useState('');
 
     useEffect(() => {
       
       const info = document.querySelector('.modal_info');
       info.innerHTML = short;
 
+      switch (theme.trim()) {
+
+        case 'business_trade_commerce' : setThemeArea('Business, Trade & Commerce')  
+        break;
+
+        case 'identity' : setThemeArea('My Identity')  
+        break;
+
+        case 'complaints_feedbacks' : setThemeArea('Complaints & Feedbacks')  
+        break;
+
+        case 'disasters_emergencies' : setThemeArea('Disasters & Emergencies')  
+        break;
+
+        case 'tourism' : setThemeArea('Tourism, Events & Culture')  
+        break;
+
+        case 'lisense' : setThemeArea('Licenses, Permits & Applications')  
+        break;
+      
+        default : setThemeArea(theme);
+        break;
+
+      }
       
     }, []);
 
@@ -27,7 +48,7 @@ export default function ViewServiceModal({data, close}) {
 
             <div className="closeModal" onClick={() => close()}> <Xmark/> </div>
 
-            <div className="modal_theme"> Theme Area </div>
+            <div className="modal_theme"> {themeArea} </div>
 
             <div className="modal_title"> {sub_service} </div>
             

@@ -71,7 +71,7 @@ export default function Mdas() {
 
  useEffect(() => {
 
-window.scrollTo(0,0)
+document.querySelector('.abcZone').scrollIntoView()
 
 if (indexFilter !== '') {
 

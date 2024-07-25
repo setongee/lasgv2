@@ -18,6 +18,7 @@ import Resources from '../pages/resources/resources';
 import LagView from '../pages/Government/officialsView_lag';
 import News_view from '../pages/news_events/news_view';
 import Connect from '../pages/connect/connect';
+import Search from '../pages/search/search';
 
 const RouterClass = () => {
 
@@ -59,6 +60,7 @@ const RouterClass = () => {
 
                 <Route path = 'news/:tag' element = { <News_Events/> } />
                 <Route path = 'news/:tag/view/:id' element = { <News_view/> } />
+
                 <Route path = 'resources' element = { <Resources/> } />
 
                 <Route path = 'connect' element = { <Connect/> } />

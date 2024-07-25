@@ -90,7 +90,7 @@ const LASG_SERVICES = [
     {
 
         id: "jobs",
-        title : "Job Opportunities in Lagos State",
+        title : "Job Opportunities",
         text : "Apply for government recruitment, ferry services recruitment, find jobs...",
 
     },

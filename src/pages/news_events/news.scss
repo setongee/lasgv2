@@ -9,10 +9,12 @@
 
     .news{
 
+        padding-bottom : 20px;
+
         .news_tag{
 
             position: fixed;
-            top: 130px;
+            top: 125px;
             padding: 20px 0;
             border-bottom: 1px solid #dadada;
             border-top: 1px solid #dadada;
@@ -22,10 +24,11 @@
             gap: 40px;
             z-index: 99;
             background-color: #fff;
-            padding-left: 170px;
+            padding-left: 260px;
             overflow-x: scroll;
             scrollbar-width: none;
-            padding-right: 170px;
+            padding-right: 255px;
+            cursor: pointer;
 
             .news_tagging{
 
@@ -45,17 +48,11 @@
             }
         }
 
-        .top_top_heading{
-            margin-top: 220px;
-            font-size: 20px;
-            font-weight: 500;
-        }
-
         .landingNews{
 
-            margin-top: 30px;
             display: flex;
             gap: 20px;
+            margin-top: 200px;
 
             .mainHighlight{
 
@@ -76,24 +73,15 @@
 
                 .overlay{
 
-                    background-color: red;
                     position: absolute;
                     height: 100%;
                     width: 100%;
                     z-index: 9;
-
-                    background: rgb(255,255,255);
-                    background: -moz-linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(0,0,0,0.2259497549019608) 26%, rgba(0,0,0,1) 75%, rgba(0,0,0,1) 100%);
-                    background: -webkit-linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(0,0,0,0.2259497549019608) 26%, rgba(0,0,0,1) 75%, rgba(0,0,0,1) 100%);
-                    background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(0,0,0,0.2259497549019608) 26%, rgba(0,0,0,1) 75%, rgba(0,0,0,1) 100%);
-                    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#000000",GradientType=1);
-
-                    // background: rgb(255,255,255);
-                    // background: -moz-linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(0,0,0,0) 20%, rgba(0,0,0,0.702140231092437) 75%, rgba(0,0,0,1) 100%);
-                    // background: -webkit-linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(0,0,0,0) 20%, rgba(0,0,0,0.702140231092437) 75%, rgba(0,0,0,1) 100%);
-                    // background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(0,0,0,0) 20%, rgba(0,0,0,0.702140231092437) 75%, rgba(0,0,0,1) 100%);
-                    // filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#000000",GradientType=1);
-
+                    background: rgb(0,0,0);
+                    background: -moz-linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7161458333333333) 100%);
+                    background: -webkit-linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7161458333333333) 100%);
+                    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7161458333333333) 100%);
+                    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#000000",GradientType=1);
 
                 }
 
@@ -107,6 +95,7 @@
                         width: 100%;
                         height: 100%;
                         object-fit: cover;
+                        object-position: 0 -110px;
                     }
 
                 }
@@ -167,119 +156,29 @@
 
             }
 
-            .sub_highlight{
-
-                width: 34%;
-                display: flex;
-                flex-direction: column;
-                gap: 20px;
-
-                .sub_highlight_item{
-
-                    display: flex;
-                    gap: 20px;
-                    align-items: center;
-                    cursor: pointer;
-
-                    .photo_item{
-
-                        height: 170px;
-                        width: 180px;
-                        background-color: purple;
-                        flex-shrink: 0;
-                        border-radius: 20px;
-                        overflow: hidden;
-
-                        img{
-                            width: 100%;
-                            height: 100%;
-                            object-fit: cover;
-                        }
-
-                    }
-
-                    &:hover{
-                        .content_body{
-                            .content_title{
-                                text-decoration: underline;
-                            }
-                        }
-                    }
-
-                    .sub_highlight_item_content{
-
-                        .content_info{
-
-                            margin-bottom: 0px;
-
-                            .linehere{
-
-                                width: 1px;
-                                height: 12px;
-                                background-color: #999;
-
-                            }
-
-                            .highlight_themes{
-                                color: var(--primary25);
-                                display: none;
-                            }
-
-                            display: flex;
-                            font-size: 10px;
-                            text-transform: uppercase;
-                            font-weight: 500;
-                            gap: 10px;
-                            align-items: center;
-                            letter-spacing: 2px;
-                        }
-
-                        .content_body{
-
-                            .content_title{
-                                font-weight: 500;
-                                margin-bottom: 15px;
-                            }
-
-                            .content_sub{
-                                font-size: 12px;
-                                line-height: 18px;
-                                color: #777;
-                            }
-
-                        }
-
-                    }
-
-                }
-
-            }
-
         }
         
         .news_card_body{
 
-            margin : 50px 0;
-
-            .section_header{
-
-                font-size: 20px;
-                font-weight: 500;
-
-            }
+            padding: 0;
+            margin-top: 30px;
 
             .news_results_section{
 
-                margin-top: 30px;
+                margin-top: 0px;
                 margin-bottom: 100px;
                 display: flex;
                 flex-wrap: wrap;
                 gap: 30px;
                 row-gap: 50px;
 
+                a{
+                    color: #000;
+                }
+
                 .news_card{
 
-                    width: 22%;
+                    width: 23%;
                     cursor: pointer;
 
                     &:hover{

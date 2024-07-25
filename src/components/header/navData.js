@@ -66,12 +66,12 @@ export const navigationRoutes = {
         url : '/connect'
     },
 
-    // route5 : {
-    //     parentName : "",
-    //     theme : "#f9f9f9",
-    //     isNest : false,
-    //     type : "search",
-    //     index : 5,
-    //     url : '/search'
-    // }
+    route5 : {
+        parentName : "",
+        theme : "#f9f9f9",
+        isNest : false,
+        type : "search",
+        index : 5,
+        url : '/search'
+    }
 }

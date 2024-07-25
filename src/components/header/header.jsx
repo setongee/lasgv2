@@ -16,6 +16,7 @@ import { useLocation, useNavigate } from 'react-router';
 import NestedView from './nestedView';
 import Pong from './pong';
 import MobileView from './mobileView';
+import SearchQuery from '../search/searchQuery';
 
 
 export default function Header() {  
@@ -24,12 +25,20 @@ const [showTab, setShowTab] = useState(false);
 const [indexing, setIndexing] = useState('')
 const [isMobileOpen, setIsMobileOpen] = useState(false);
 
+const [showSearch, setShowSearch] = useState(false);
+
 let location = useLocation();
 let navigate = useNavigate();
 
   
 //-------------------- States Management - The problem of dynamic animated nests lolz ---------------------
 
+const closeModal = () => {
+
+    setShowSearch(false);
+    document.body.style.overflowY = 'visible';
+
+}
 
 const showMenuIndex = (index) => {
 
@@ -95,201 +104,206 @@ const closeMobileMenu = () => {
 
 return (
 
-    <IconoirProvider 
-    
-    iconProps = {
+    <div>
 
         {
-            color: '#fff',
-            strokeWidth: 3,
-            width: 12,
-            height: 12,
+            showSearch ? <SearchQuery query = '' closeModal={closeModal} /> : null
         }
 
-    } >
-
-        {/* Search Screen Modal */}
-
-        <div className="searchScreen">
-
-            
-            
-        </div>
-
-        <div className="appHeader"> 
-
+        <IconoirProvider 
+    
+        iconProps = {
 
             {
-                isMobileOpen ? <MobileView closeModal = {closeMobileMenu} /> : null
+                color: '#fff',
+                strokeWidth: 3,
+                width: 12,
+                height: 12,
             }
+
+        } >
+
+            <div className="appHeader"> 
+
+
+                {
+                    isMobileOpen ? <MobileView closeModal = {closeMobileMenu} /> : null
+                }
+                
             
-        
-            {/* Lagos State Color Strip */}
-            <div className="strip_lines">
+                {/* Lagos State Color Strip */}
+                <div className="strip_lines">
 
-                <div className="lineIn lasg_red"></div>
-                <div className="lineIn lasg_blue"></div>
-                <div className="lineIn lasg_yellow"></div>
-                <div className="lineIn lasg_green"></div>
+                    <div className="lineIn lasg_red"></div>
+                    <div className="lineIn lasg_blue"></div>
+                    <div className="lineIn lasg_yellow"></div>
+                    <div className="lineIn lasg_green"></div>
 
-            </div>
+                </div>
 
-            <div className="seth_Link">
+                <div className="seth_Link">
 
-                <Container>
+                    <Container>
 
-                    <div className="newsScroll">
-                        <p>Monday, 8th April 2024</p>
-                    </div>
+                        <div className="newsScroll">
+                            <p>Monday, 8th April 2024</p>
+                        </div>
 
-                    {/* quick_links */}
-                    <div className="quick_links"> 
+                        {/* quick_links */}
+                        <div className="quick_links"> 
 
-                        <a href="/resources" className='prima' >Resources 
-                            <div className="iconAnim"> 
-                                <ArrowUpRight className='arr first'/> 
-                                <ArrowUpRight className='arr last'/> 
-                            </div> 
-                        </a>
+                            <a href="/resources" className='prima' >Resources 
+                                <div className="iconAnim"> 
+                                    <ArrowUpRight className='arr first'/> 
+                                    <ArrowUpRight className='arr last'/> 
+                                </div> 
+                            </a>
+                            
+                            <a target='_blank' href="https://youtu.be/VJnu7lR4Kks" className='prima' >Visit Lagos 
+                                <div className="iconAnim"> 
+                                    <ArrowUpRight className='arr first'/> 
+                                    <ArrowUpRight className='arr last'/> 
+                                </div> 
+                            </a>
+
+                            <div className="fixUp uppercase flex">
+                                
+                                <p>Emergency Numbers : </p>
+
+                                <div className="numbers flex">
+
+                                    <a href="tel:08056250710"> 08056250710 </a>
+                                    <p>|</p>
+                                    <a href="tel:08033482380">08033482380</a>
+
+                                </div>
+
+                            </div>
                         
-                        <a target='_blank' href="https://youtu.be/VJnu7lR4Kks" className='prima' >Visit Lagos 
-                            <div className="iconAnim"> 
-                                <ArrowUpRight className='arr first'/> 
-                                <ArrowUpRight className='arr last'/> 
-                            </div> 
-                        </a>
-
-                        <div className="fixUp uppercase flex">
-                            
-                            <p>Emergency Numbers : </p>
-
-                            <div className="numbers flex">
-
-                                <a href="tel:08056250710"> 08056250710 </a>
-                                <p>|</p>
-                                <a href="tel:08033482380">08033482380</a>
-
-                            </div>
-
-                        </div>
-                    
-                    </div>
-
-                </Container>
-
-            </div>
-
-            {/* main navigation links */}
-            <div className="navigation"> 
-
-                <Container>
-                    
-                    <div className="flex space_fully">
-
-                        {/* Site Branding Information */}
-                        <div className="siteBranding">
-
-                            {/* <div className="mobileBurger"> <MenuScale color='#131414' width={20} height={20} strokeWidth={2.5} /></div> */}
-
-                            <div className="logo" 
-                            
-                            onClick = { 
-                            () => { 
-                                
-
-                                if (location.pathname === '/') {
-
-                                    window.scroll(0,0);
-
-                                }
-                                
-                                navigate('/')
-
-                            } }> <img src={lasgLogo} alt="Lagos State Official Digital Logo" /> </div>
-
-                            <div className="seth_textTop siteName uppercase thick" 
-                            onClick = { 
-                            () => { 
-                                
-
-                                if (location.pathname === '/') {
-
-                                    window.scroll(0,0);
-
-                                }
-                                
-                                navigate('/')
-
-                            } } > Lagos State Official Website  </div>
-
-                            <div className="mobileBurger mobileBurger2" onClick={ () => openMobileMenu() } > <MenuScale color='#131414' width={20} height={20} strokeWidth={2} /></div>
-
                         </div>
 
-                            {/* Main Navigation Links */}
-                            <div className="seth_nav"> 
+                    </Container>
 
-                            {
-                                Object.values(navigationRoutes).map( (data, index) => {
+                </div>
 
-                                    return (
+                {/* main navigation links */}
+                <div className="navigation"> 
+
+                    <Container>
+                        
+                        <div className="flex space_fully">
+
+                            {/* Site Branding Information */}
+                            <div className="siteBranding">
+
+                                {/* <div className="mobileBurger"> <MenuScale color='#131414' width={20} height={20} strokeWidth={2.5} /></div> */}
+
+                                <div className="logo" 
+                                
+                                onClick = { 
+                                () => { 
                                     
-                                    <div 
-                                        key = {index} 
-                                        className={`parentName thick uppercase ${ data.url.split('/')[1] === location.pathname.split('/')[1] ? "active" : ""}`} 
-                                        onClick = { 
 
-                                            () => {
-                                                
-                                                if(data.isNest) {
+                                    if (location.pathname === '/') {
 
-                                                    showMenuIndex(index); setIndexing(index)
+                                        window.scroll(0,0);
 
-                                                } else {
+                                    }
+                                    
+                                    navigate('/')
 
-                                                    window.location.href = data.url
+                                } }> <img src={lasgLogo} alt="Lagos State Official Digital Logo" /> </div>
 
-                                                }
+                                <div className="seth_textTop siteName uppercase thick" 
+                                onClick = { 
+                                () => { 
+                                    
 
-                                            } 
-                                            
-                                        } 
-                                        
-                                        > 
-                                        
-                                        {data.parentName}
-                                        
-                                        {
-                                            data.type === 'search' ? <Search className='pink' width={17} height={17} strokeWidth={2} /> : data.isNest ? <NavArrowDown color='#131414' className='navi' /> : <ArrowUpRight color='#131414' /> 
-                                        }
-                                        
-                                        </div> 
-                                
-                                )
+                                    if (location.pathname === '/') {
 
-                                } )
-                            }
+                                        window.scroll(0,0);
+
+                                    }
+                                    
+                                    navigate('/')
+
+                                } } > Lagos State Official Website  </div>
+
+                                <div className="mobileBurger mobileBurger2" onClick={ () => openMobileMenu() } > <MenuScale color='#131414' width={20} height={20} strokeWidth={2} /></div>
 
                             </div>
 
-                            <div className="showPage">
+                                {/* Main Navigation Links */}
+                                <div className="seth_nav"> 
 
                                 {
-                                    showTab ?  <NestedView navData = {navigationRoutes[`route${indexing+1}`]} /> : null
+                                    Object.values(navigationRoutes).map( (data, index) => {
+
+                                        return (
+                                        
+                                        <div 
+                                            key = {index} 
+                                            className={`parentName thick uppercase ${ data.url.split('/')[1] === location.pathname.split('/')[1] ? "active" : ""}`} 
+                                            onClick = { 
+
+                                                () => {
+                                                    
+                                                    if(data.isNest) {
+
+                                                        showMenuIndex(index); setIndexing(index)
+
+                                                    } else if(data.url === '/search') {
+
+                                                        setShowSearch(true);
+                                                        document.body.style.overflowY = 'hidden'
+
+                                                    }else {
+
+                                                        window.location.href = data.url
+
+                                                    }
+
+                                                } 
+                                                
+                                            } 
+                                            
+                                            > 
+                                            
+                                            {data.parentName}
+                                            
+                                            {
+                                                data.type === 'search' ? <Search className='pink' width={17} height={17} strokeWidth={2} /> : data.isNest ? <NavArrowDown color='#131414' className='navi' /> : <ArrowUpRight color='#131414' /> 
+                                            }
+                                            
+                                            </div> 
+                                    
+                                    )
+
+                                    } )
                                 }
 
-                            </div>
+                                </div>
 
-                    </div>
-                    
-                </Container>
+                                <div className="showPage">
+
+                                    {
+                                        showTab ?  <NestedView navData = {navigationRoutes[`route${indexing+1}`]} /> : null
+                                    }
+
+                                </div>
+
+                        </div>
+                        
+                    </Container>
+                
+                </div>
+
             
             </div>
 
-        
-        </div>
+        </IconoirProvider>
 
-    </IconoirProvider>
+    </div>
 
   )
 
