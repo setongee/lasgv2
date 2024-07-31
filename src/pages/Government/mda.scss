@@ -191,6 +191,14 @@
             cursor: pointer;
             border-radius: 4px;
 
+            &.index__active{
+
+                background-color: #009C3E;
+                color: #fff;
+                border-color: #fff;
+
+            }
+
             &:hover{
                 background-color: #009C3E;
                 color: #fff;
@@ -238,6 +246,14 @@
                 border: 1px solid var(--dark);
                 cursor: pointer;
                 border-radius: 4px;
+
+                &.index__active{
+
+                    background-color: #009C3E;
+                    color: #fff;
+                    border-color: #fff;
+    
+                }
     
                 &:hover{
                     background-color: #009C3E;

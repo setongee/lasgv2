@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import './photo_slider.scss'
 import Container from '../container/container'
 import logo from '../../assets/navBar/lasg_logo.png'
-import { MoreVert, Send } from 'iconoir-react'
+import { ArrowDown, ArrowUpRight, MoreVert, Send } from 'iconoir-react'
 import Typewriter from 'typewriter-effect';
 // import { Share } from 'react-twitter-widgets'
 import LasgIllustrations from './lasg_landingpage_illustrations'
@@ -42,6 +42,35 @@ export default function Photo_slider_component() {
     }
 
   }
+
+  const handleFocus = e => {
+
+    document.querySelector('.input__body').style.borderColor = '#108a00'
+
+  }
+
+  const handleBlur = e => {
+
+     document.querySelector('.input__body').style.borderColor = '#131313'
+
+  }
+
+  const handleSearchTab = e => {
+
+    setSearchQuery(e.target.innerText.toLowerCase());
+    setShowSearchModal(true);
+
+  }
+
+  const handleScroll = (id) => {
+
+    window.scrollTo({
+
+        top : document.querySelector(`#${id}`).getBoundingClientRect().top - document.body.getBoundingClientRect().top - 100,
+
+    })
+    
+}
     
   return (
 
@@ -65,16 +94,12 @@ export default function Photo_slider_component() {
           
               <div className="home__content">
 
-                  <div className="title">Welcome to <span>Lasgidi</span></div>
+                  {/* <div className="title">Welcome to <span>Lasgidi</span></div> */}
 
                   <div className="text__area">
 
-                      <span>Simplifying </span>your access to Lagos state government services
+                      <span>Simplifying </span>your access to Lagos state government services.
 
-                  </div>
-
-                  <div className="text__area_sub">
-                    lagosstate.gov.ng helps you find essential Lagos state resources, services, information and loads more... 
                   </div>
 
               </div>
@@ -84,12 +109,12 @@ export default function Photo_slider_component() {
               <div className="searchBox">
 
 
-                  <label> Search for anything  </label>
+                  <label> How do i ...  </label>
 
                   <div className="input__body flex">
                     
-                    <input type="text" value={searchQuery} onChange={ e => setSearchQuery(e.target.value)} onKeyDownCapture={e => checkKey(e)} />
-                    <div className="search__action__btn" onClick={handleSearchQuery}> Search </div>
+                    <input type="text" value={searchQuery} onChange={ e => setSearchQuery(e.target.value)} onKeyDownCapture={e => checkKey(e)} onFocus={handleFocus} onBlur={handleBlur} />
+                    <div className="search__action__btn" onClick={handleSearchQuery}> Search <ArrowUpRight/> </div>
                     {
                       searchQuery === '' ?
                       
@@ -118,9 +143,21 @@ export default function Photo_slider_component() {
                     }
 
                   </div>
+
+                  <div className="quickSearches">
+                    <p onClick={ e => handleSearchTab(e) } >Register LASAA</p>
+                    <p onClick={ e => handleSearchTab(e) } >Tax Payment</p>
+                    <p onClick={ e => handleSearchTab(e) } >Apply for Loans</p>
+                    <p onClick={ e => handleSearchTab(e) } >LASRRA Registration</p>
+                    <p onClick={ e => handleSearchTab(e) } >Fire Services</p>
+                  </div>
                   
               </div>
               
+          </div>
+
+          <div onClick={ () => handleScroll('quickCheck') } className="trigger">
+            Get Started, <span>Scroll down <div className="icon"><ArrowDown strokeWidth={2.5} /></div></span> 
           </div>
 
         </Container>

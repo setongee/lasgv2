@@ -8,30 +8,26 @@ import '../../styles/global.scss'
 //----------- End of styles -----------------
 
 import {ArrowUpRight, IconoirProvider, Menu, MenuScale, NavArrowDown, Search, Xmark } from 'iconoir-react';
-import { navigationRoutes } from './navData';
 import lasgLogo from '../../assets/navBar/lasg_logo.png'
 import Container from '../container/container';
 
 import { useLocation, useNavigate } from 'react-router';
-import NestedView from './nestedView';
-import Pong from './pong';
 import MobileView from './mobileView';
 import SearchQuery from '../search/searchQuery';
+import Top__header from './top__header';
+import StripLines from './StripLines';
 
 
 export default function Header() {  
 
-const [showTab, setShowTab] = useState(false);
-const [indexing, setIndexing] = useState('')
 const [isMobileOpen, setIsMobileOpen] = useState(false);
 
 const [showSearch, setShowSearch] = useState(false);
 
 let location = useLocation();
 let navigate = useNavigate();
-
   
-//-------------------- States Management - The problem of dynamic animated nests lolz ---------------------
+//--- States Management - The problem of dynamic animated nests lolz --- 
 
 const closeModal = () => {
 
@@ -40,42 +36,15 @@ const closeModal = () => {
 
 }
 
-const showMenuIndex = (index) => {
+const openModal = () => {
 
-    setShowTab(true);
+    setShowSearch(true);
     document.body.style.overflowY = 'hidden';
-    const arrParent = Array.from(document.querySelectorAll('.parentName'));
-    
-    if( document.querySelector('.fix') === null ) {
-        
-        arrParent[index].classList.add('fix');
 
-    } else {
-
-        document.querySelector('.fix').classList.remove('fix');
-        arrParent[index].classList.add('fix');
-
-    }
-
-    if(index === indexing && showTab) {
-
-        setShowTab(false);
-        document.body.style.overflowY = 'visible';
-        document.querySelector('.fix').classList.remove('fix');
-
-    }
-
-} 
+}
 
 useEffect(() => {
     
-    //setShowTab(true);
-
-}, [indexing]);
-
-useEffect(() => {
-    
-    setShowTab(false);
     window.scroll(0,0);
     setIsMobileOpen(false);
     document.body.style.overflowY = 'visible';
@@ -87,7 +56,6 @@ const openMobileMenu = () => {
     setIsMobileOpen(true);
     document.body.style.overflowY = 'hidden';
 
-
 }
 
 const closeMobileMenu = () => {
@@ -95,12 +63,9 @@ const closeMobileMenu = () => {
     setIsMobileOpen(false);
     document.body.style.overflowY = 'visible';
 
-
 }
 
-
 //-------------------- End of Nested States Management ---------------------
-
 
 return (
 
@@ -115,7 +80,6 @@ return (
         iconProps = {
 
             {
-                color: '#fff',
                 strokeWidth: 3,
                 width: 12,
                 height: 12,
@@ -125,172 +89,76 @@ return (
 
             <div className="appHeader"> 
 
+                { isMobileOpen ? <MobileView closeModal = {closeMobileMenu} /> : null }
 
-                {
-                    isMobileOpen ? <MobileView closeModal = {closeMobileMenu} /> : null
-                }
+                <StripLines/>
                 
-            
-                {/* Lagos State Color Strip */}
-                <div className="strip_lines">
-
-                    <div className="lineIn lasg_red"></div>
-                    <div className="lineIn lasg_blue"></div>
-                    <div className="lineIn lasg_yellow"></div>
-                    <div className="lineIn lasg_green"></div>
-
-                </div>
-
-                <div className="seth_Link">
-
-                    <Container>
-
-                        <div className="newsScroll">
-                            <p>Monday, 8th April 2024</p>
-                        </div>
-
-                        {/* quick_links */}
-                        <div className="quick_links"> 
-
-                            <a href="/resources" className='prima' >Resources 
-                                <div className="iconAnim"> 
-                                    <ArrowUpRight className='arr first'/> 
-                                    <ArrowUpRight className='arr last'/> 
-                                </div> 
-                            </a>
-                            
-                            <a target='_blank' href="https://youtu.be/VJnu7lR4Kks" className='prima' >Visit Lagos 
-                                <div className="iconAnim"> 
-                                    <ArrowUpRight className='arr first'/> 
-                                    <ArrowUpRight className='arr last'/> 
-                                </div> 
-                            </a>
-
-                            <div className="fixUp uppercase flex">
-                                
-                                <p>Emergency Numbers : </p>
-
-                                <div className="numbers flex">
-
-                                    <a href="tel:08056250710"> 08056250710 </a>
-                                    <p>|</p>
-                                    <a href="tel:08033482380">08033482380</a>
-
-                                </div>
-
-                            </div>
-                        
-                        </div>
-
-                    </Container>
-
-                </div>
+                <Top__header/>
 
                 {/* main navigation links */}
+
                 <div className="navigation"> 
 
                     <Container>
-                        
+
                         <div className="flex space_fully">
 
                             {/* Site Branding Information */}
+
                             <div className="siteBranding">
 
-                                {/* <div className="mobileBurger"> <MenuScale color='#131414' width={20} height={20} strokeWidth={2.5} /></div> */}
-
-                                <div className="logo" 
-                                
-                                onClick = { 
-                                () => { 
-                                    
-
-                                    if (location.pathname === '/') {
-
-                                        window.scroll(0,0);
-
-                                    }
-                                    
-                                    navigate('/')
-
-                                } }> <img src={lasgLogo} alt="Lagos State Official Digital Logo" /> </div>
-
-                                <div className="seth_textTop siteName uppercase thick" 
-                                onClick = { 
-                                () => { 
-                                    
-
-                                    if (location.pathname === '/') {
-
-                                        window.scroll(0,0);
-
-                                    }
-                                    
-                                    navigate('/')
-
-                                } } > Lagos State Official Website  </div>
+                                <a href='/' className="logo"> <img src={lasgLogo} alt="Lagos State Official Digital Logo" /> </a>
 
                                 <div className="mobileBurger mobileBurger2" onClick={ () => openMobileMenu() } > <MenuScale color='#131414' width={20} height={20} strokeWidth={2} /></div>
 
                             </div>
 
-                                {/* Main Navigation Links */}
-                                <div className="seth_nav"> 
+                            {/* Main Navigation Links */}
 
-                                {
-                                    Object.values(navigationRoutes).map( (data, index) => {
+                            <div className="seth_nav"> 
 
-                                        return (
+                                <div className="parentName"> 
+                                   
+                                    Government <NavArrowDown/>
+
+                                    <div className="hovering">
+
+                                        <div className="title">Explore the Lagos State Government, Officials and Parastatals.
+                                        </div>
                                         
-                                        <div 
-                                            key = {index} 
-                                            className={`parentName thick uppercase ${ data.url.split('/')[1] === location.pathname.split('/')[1] ? "active" : ""}`} 
-                                            onClick = { 
+                                        <a href='/government/elected_officials' className="hover">
+                                            <p>Elected Officials  <ArrowUpRight/></p>
+                                            <span>View all the officers elected by lagosians this tenure.</span>
+                                        </a>
 
-                                                () => {
-                                                    
-                                                    if(data.isNest) {
+                                        <a href='/government/mdas/all' className="hover">
+                                            <p>Explore Ministries and Departments <ArrowUpRight/> </p>
+                                            <span>View all the Legitlative Officers elected by lagosians this tenure.</span>
+                                        </a>
 
-                                                        showMenuIndex(index); setIndexing(index)
+                                        <a target='_blank' href='https://lagoshouseofassembly.gov.ng/home/our-team/' className="hover">
+                                            <p>Legislative Officers  <ArrowUpRight/></p>
+                                            <span>View all the Legitlative Officers elected by lagosians this tenure.</span>
+                                        </a>
 
-                                                    } else if(data.url === '/search') {
+                                        <a target = '_blank' href='https://lagosjudiciary.gov.ng/directories.html#directories' className="hover">
+                                            <p>Judiciary Officers <ArrowUpRight/></p>
+                                            <span>View all the Judiciary Officers appointed for this tenure.</span>
+                                        </a>
 
-                                                        setShowSearch(true);
-                                                        document.body.style.overflowY = 'hidden'
-
-                                                    }else {
-
-                                                        window.location.href = data.url
-
-                                                    }
-
-                                                } 
-                                                
-                                            } 
-                                            
-                                            > 
-                                            
-                                            {data.parentName}
-                                            
-                                            {
-                                                data.type === 'search' ? <Search className='pink' width={17} height={17} strokeWidth={2} /> : data.isNest ? <NavArrowDown color='#131414' className='navi' /> : <ArrowUpRight color='#131414' /> 
-                                            }
-                                            
-                                            </div> 
-                                    
-                                    )
-
-                                    } )
-                                }
+                                    </div>
 
                                 </div>
 
-                                <div className="showPage">
+                                <a href='/services' className="parentName"> Services <ArrowUpRight/> </a>
 
-                                    {
-                                        showTab ?  <NestedView navData = {navigationRoutes[`route${indexing+1}`]} /> : null
-                                    }
+                                <a href='/news/trending' className="parentName"> News & Events <ArrowUpRight/> </a>
+                                
+                                <a href='/connect' className="parentName"> Connect <ArrowUpRight/> </a>
 
-                                </div>
+                                <div className="parentName" onClick={ () => openModal() } > <Search height={17} width={17} strokeWidth={2.4}/> </div>
+
+                            </div>
 
                         </div>
                         
@@ -298,7 +166,6 @@ return (
                 
                 </div>
 
-            
             </div>
 
         </IconoirProvider>

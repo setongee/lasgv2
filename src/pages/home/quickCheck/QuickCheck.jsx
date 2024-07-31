@@ -1,13 +1,10 @@
 import React from 'react'
 import '../../../styles/components/quickService/quickService.scss'
-import { ArrowDown, ArrowUpRight, IconoirProvider, Search, SplitArea } from 'iconoir-react'
-import Typewriter from 'typewriter-effect';
+import { ArrowDown, ArrowUpRight, IconoirProvider } from 'iconoir-react'
 import { motion } from 'framer-motion';
 import Container from '../../../components/container/container';
 import { SplitText } from '../SplitText';
-import { DotLottieReact } from '@lottiefiles/dotlottie-react';
-import legi from '../../../assets/hd/Animation - 1720121509297.lottie'
-import SubscribeModal from '../../../components/subscriber/subscribeModal';
+import line from '../../../assets/icons/random/line__lasg.svg'
 
 export default function QuickCheck() {
 
@@ -23,15 +20,13 @@ export default function QuickCheck() {
 
   return (
     
-        <div className="quickCheck">
+        <div className="quickCheck" id='quickCheck'>
 
                 <Container>
                     
                     <div className="getStarted">
 
                         <div className="textString thick">
-
-                            <div className="title"> Get Started, You can - </div>
 
                             <div className="textChange">
 
@@ -54,6 +49,8 @@ export default function QuickCheck() {
                             </div>
 
                         </div>
+
+                        <div className="title"> Frequently searched services - </div>
 
                         
                         <IconoirProvider
@@ -162,6 +159,10 @@ export default function QuickCheck() {
 
                         </IconoirProvider>
 
+                    </div>
+
+                    <div className="lineBg">
+                        <img src={line} alt="" />
                     </div>
 
                 </Container>

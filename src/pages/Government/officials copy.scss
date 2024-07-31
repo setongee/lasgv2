@@ -1,7 +1,7 @@
 .sideMenu{
 
     position: fixed;
-    top: 125px;
+    top: 130px;
     left: 0;
     display: flex;
     gap: 50px;
@@ -42,11 +42,12 @@
 
 .officials_body{
 
-    padding: 250px 0;
+    padding-top: 250px;
+    padding-bottom: 80px;
     margin: 0px 0;
     display: flex;
     flex-direction: column;
-    background-color: #fff;
+    background-color: #fdfdfd;
 
     &.bagElect{
         padding-top: 200px;
@@ -56,17 +57,17 @@
 
         .pageHeader{
 
-            margin-bottom: 100px;
+            margin-bottom: 80px;
             min-width: 100%;
             gap: 30px;
-            display: flex;
             align-items: center;
 
             .pageTitle{
 
-                font-size: 45px;
-                width: 70%;
+                font-size: 60px;
+                width: 100%;
                 line-height: 57px;
+                color: var(--dark);
                 letter-spacing: -0.5px;
                 font-weight: 700;
                 text-align: center;
@@ -80,10 +81,9 @@
 
             .pageTitleSubs{
 
-                width: 600px;
-                line-height: 26px;
+                width: 100%;
+                line-height: 24px;
                 text-align: center;
-                font-size: 16px;
 
             }
 
@@ -94,11 +94,10 @@
     .items{
 
         display: flex;
-        gap: 30px;
+        gap: 50px;
         flex-wrap: wrap;
         cursor: pointer;
         justify-content: center;
-        margin-top: 0px;
     }
 
     .officialsPage{
@@ -107,49 +106,14 @@
 
             .photoHolder{
 
-                width: 320px;
-                background-color: #fff;
-                box-shadow: 0px 3px 30px rgba($color: #000000, $alpha: 0.04);
-                border: 1px solid #eee;
-                border-radius: 10px;
-                overflow: hidden;
+                width: 300px;
 
                 .imageCarrier{
 
-                    height: 290px;
+                    height: 300px;
                     width: 100%;
                     overflow: hidden;
-                    position: relative;
-
-                    .trigger_anchor{
-                        height: 100%;
-                        width: 100%;
-                        position: absolute;
-                        z-index: 9;
-                        top: 0;
-                        display: none;
-                        align-items: center;
-                        justify-content: center;
-                        font-weight: 500;
-
-                        p{
-
-                            background-color: #009C3E;
-                            color: #fff;
-                            padding: 15px 20px;
-                            border-radius: 100px;
-                            font-size: 14px;
-                            display: flex;
-                            align-items: center;
-                            gap: 5px;
-
-                            .icon{
-                                font-size: 10px;
-                                margin-top: 3px;
-                            }
-
-                        }
-                    }
+                    border-radius: 10px;
 
                     img{
                         height: 100%;
@@ -157,32 +121,31 @@
                         object-fit: cover;
                         object-position: 0 0;
                         transition: all .4s ease-in-out;
-                        position: relative;
                     }
 
                     &:hover{
-
-                        background-color: #000000;
-
-                        .trigger_anchor{
-                            display: flex;
-                        }
-                        
                         img{
-                            scale: 1.2;
-                            opacity: .6;
+                            scale: 1.1;
                         }
                     }
 
                 }
 
+                .imageCarrier_sub{
+                    background-color: #f2faf0;
+                    height: 300px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+
                 .nameCarrier{
 
+                    margin-top: 25px;
                     width: 100%;
                     display: flex;
                     flex-direction: column;
                     gap: 5px;
-                    padding: 30px;
 
                     .position{
                         font-size: 14px;

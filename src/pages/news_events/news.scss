@@ -169,8 +169,7 @@
                 margin-bottom: 100px;
                 display: flex;
                 flex-wrap: wrap;
-                gap: 30px;
-                row-gap: 50px;
+                gap: 25px;
 
                 a{
                     color: #000;
@@ -178,8 +177,13 @@
 
                 .news_card{
 
-                    width: 23%;
+                    width: calc(31.5% + 5px);
                     cursor: pointer;
+                    background-color: #fff;
+                    border : 1px solid #eee;
+                    padding: 20px;
+                    border-radius: 8px;
+                    box-shadow: 0px 3px 20px rgba($color: #000000, $alpha: 0.04);
 
                     &:hover{
                         .news_body_content{
@@ -197,19 +201,19 @@
 
                         width: 100%;
                         height: 200px;
-                        border-radius: 20px;
-                        background-color: orangered;
+                        background-color: #eee;
                         overflow: hidden;
-
+        
                         img{
-
+        
                             width: 100%;
                             height: 100%;
                             object-fit: cover;
                             object-position: 0% 0%;
-
+                            transition: all .4s ease-in-out;
+        
                         }
-
+        
                     }
 
                     .news_body_content{

@@ -1,7 +1,7 @@
 import React, {useRef, useState, useEffect} from 'react'
 import './mda.scss'
 import Container from '../../components/container/container'
-import { useNavigate } from 'react-router';
+import { useNavigate, useParams } from 'react-router';
 import Typewriter from 'typewriter-effect';
 import { mdaDBv2 } from '../../api/data/mdaDBReal';
 import LogoAgency from '../../assets/MDA/agency.svg'
@@ -22,6 +22,7 @@ export default function Mdas() {
  const targetRef = useRef(null);
 
  let navigate = useNavigate();
+ let params = useParams().index;
 
  const [ query, setQuery ] = useState('');
  const [queryResults, setQueryResults] = useState(mdaDBv2);
@@ -60,10 +61,6 @@ export default function Mdas() {
   const results = fuse.search(query);
   const queriedRes =  query ? results.map(res => res.item) : mdaDBv2;
   setQueryResults(queriedRes); 
-
-
-
-  
  
  }, [query]);
 
@@ -71,14 +68,28 @@ export default function Mdas() {
 
  useEffect(() => {
 
-document.querySelector('.abcZone').scrollIntoView()
+const active = document.querySelector('.index__active')
 
-if (indexFilter !== '') {
+if (active === null) {
 
-  const filterByIndex = mdaDBv2.filter(e=>e.index === indexFilter.toUpperCase());
+  const pin = document.querySelectorAll(`.${params}`)
+  const p = Array.from(pin);
+  p.forEach( e => e.classList.add('index__active'));
+  
+} else {
+
+  active.classList.remove('index__active');
+  const pin = document.querySelectorAll(`.${params}`)
+  const p = Array.from(pin);
+  p.forEach( e => e.classList.add('index__active'));
+
+}
+
+
+if (params !== 'all') {
+
+  const filterByIndex = mdaDBv2.filter( e => e.index === params.toUpperCase());
   setQueryResults(filterByIndex);
-
-  console.log(indexFilter);
 
 } else {
 
@@ -86,8 +97,7 @@ if (indexFilter !== '') {
 
 }
   
- 
- }, [indexFilter]);
+ }, [params]);
 
  //UseRef in Intersection Observer;
 
@@ -125,19 +135,19 @@ if (indexFilter !== '') {
                 isOpen ? <Mda_modal data = {modalData} closeModal = { closeModal } /> : null
             }
 
-            {
+            {/* {
                 !isVisible ? (
 
                   <div className="abcAgain">
 
                     <div className="indexHeader">
 
-                      <div className="mdas_index" onClick={ () => setIndexFilter('') }> - </div>
+                      <div className="mdas_index all" onClick={ () => navigate(`/government/mdas/all`) }> - </div>
 
                         {
                           alpha.map( (e, index) => (
 
-                              <div className="mdas_index" key = {index} onClick={ () => setIndexFilter(alpha[index].toLowerCase()) }> {e} </div>
+                              <div className={`mdas_index ${e.toLowerCase()}`} key = {index} onClick={ () => navigate(`/government/mdas/${e.toLowerCase()}`) }> {e} </div>
 
                           ) )
                         }
@@ -180,7 +190,7 @@ if (indexFilter !== '') {
                   </div>
 
                 ) : null
-            }
+            } */}
 
             <Container>
 
@@ -198,12 +208,12 @@ if (indexFilter !== '') {
 
                 <div className="abcZone" ref = { targetRef } >
 
-                      <div className="mdas_index" onClick={ () => setIndexFilter('') }> - </div>
+                      <div className="mdas_index all" onClick={ () => navigate(`/government/mdas/all`) }> - </div>
 
                       {
                         alpha.map( (e, index) => (
 
-                            <div className="mdas_index" key = {index} onClick={ () => setIndexFilter(alpha[index].toLowerCase()) }> {e} </div>
+                            <div className={`mdas_index ${e.toLowerCase()}`} key = {index} onClick={ () => navigate(`/government/mdas/${e.toLowerCase()}`) }> {e} </div>
 
                          ) )
                       }

@@ -1,7 +1,6 @@
 import React from 'react'
-
-import judi from '../../assets/icons/service/laws.svg'
-import legi from '../../assets/icons/service/legistlative.svg'
+import { ArrowUpRight } from 'iconoir-react'
+import {motion} from 'framer-motion'
 
 export default function Officials( { officials, uid } ) {
 
@@ -18,55 +17,25 @@ export default function Officials( { officials, uid } ) {
 
             <div className="photoHolder">
 
-                {
-                    !officials.isIcon ? 
+                <div className="imageCarrier"> 
+
+                    <img src= {officials.image} /> 
+
+                    <motion.div 
+
+                        className="trigger_anchor"> 
+                        <motion.p whileHover={{
+                            scale: 1.1,
+                            transition: { duration: .1 },
+                        }}
+                        whileTap={{ scale: 0.9 }}> 
+                            View Profile  
+                            <div className="icon"><ArrowUpRight/></div> 
+                        </motion.p> 
                     
-                    (
-                        <div className="imageCarrier"> 
-                            <img src= {officials.image} /> 
-                        </div>
-                    )
+                    </motion.div>
 
-                    : 
-
-                    uid === 'legi' ? 
-
-                    (
-                        (
-                            <div className="imageCarrier_sub"> 
-    
-                                <dotlottie-player 
-                                src="https://lottie.host/d8708bb3-46d4-4e3e-9fde-4737f58941be/8QalVRPLnx.json" 
-                                background="transparent" 
-                                speed="1" 
-                                style={{width: "300px", height: "300px"}} 
-                                loop 
-                                autoplay>   
-                                </dotlottie-player>
-    
-                            </div>
-                        )
-                    )
-
-                    : 
-
-                    (
-                        (
-                            <div className="imageCarrier_sub"> 
-    
-                                <dotlottie-player 
-                                src="https://lottie.host/291c86ca-3894-4239-b95a-1b1ca75fe0d0/vErgv8KUky.json" 
-                                background="transparent" 
-                                speed="1" 
-                                style={{width: "130px", height: "130px"}} 
-                                loop 
-                                autoplay>   
-                                </dotlottie-player>
-    
-                            </div>
-                        )
-                    )
-                }
+                </div>
 
                 <div className="nameCarrier">
 

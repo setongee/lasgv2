@@ -22,9 +22,11 @@ const [paramsUrl, setparamsUrl] = useState(location.pathname.split('/')[2]);
 
                 <div className="pageHeader flex flex_col">
 
-                    <div className="pageTitle"> Working together for a <span className='thick_700'> greater </span> Lagos. </div>
+                    {/* <div className="pageTitle"> Working together for a <span className='thick_700'> greater </span> Lagos. </div> */}
 
-                    <div className="pageTitleSubs"> Learn more about the people who carry out the priorities of the administration of Lagos State. </div>
+                    <div className="pageTitle">Collaborating to Build a Better Lagos : Together Towards Progress</div>
+
+                    <div className="pageTitleSubs"> Our mission is to work together, leveraging our collective expertise and resources, to create a vibrant, prosperous, and sustainable Lagos. </div>
 
                 </div>
 

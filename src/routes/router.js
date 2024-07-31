@@ -45,7 +45,7 @@ const RouterClass = () => {
                     <Route path='judiciary_officials' element = { <JudiciaryOfficials/> } />
                     <Route path='legistlative_officials' element = { <LegistlativeOfficials/> } />
 
-                    <Route path='mdas' element = { <Mdas/> } />
+                    <Route path='mdas/:index' element = { <Mdas/> } />
                     
 
                 </Route>

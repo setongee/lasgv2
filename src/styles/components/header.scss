@@ -14,7 +14,7 @@
 
     position: fixed;
     width: 100%;
-    box-shadow: 0px 2px 30px rgba($color: #000000, $alpha: .06);
+    box-shadow: 0px 2px 30px rgba($color: #000000, $alpha: .03);
     z-index: 9999;
     top: 0;
 
@@ -53,7 +53,7 @@
 
     .seth_Link{
 
-        background-color: rgb(0, 15, 0);
+        background-color: #009C3E;
         height: 40px;
         font-size: 14px;
         color: #fff;
@@ -149,6 +149,7 @@
             .siteName{
                 font-size: 12px;
                 letter-spacing: 2px;
+                display: none;
             }
         }
 
@@ -157,7 +158,7 @@
         .seth_nav{
 
             display: flex;
-            gap: 50px;
+            gap: 40px;
 
             .parentName{
 
@@ -167,79 +168,96 @@
                 align-items: center;
                 gap: 10px;
                 border-bottom: 2px solid transparent;
-                cursor: pointer;
-                letter-spacing: 2px;
                 font-weight: 500;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                color: #131313;
+                position: relative;
 
-                .navi{
-                    transition: all .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-                }
+                .hovering{
+                    text-transform : capitalize;
+                    letter-spacing: 0px;
+                    position: absolute;
+                    display: none;
+                    box-shadow: 0px 30px 20px rgba($color: #000000, $alpha: .06);
+                    background-color: #fff;
+                    color: #000;
+                    top: 80px;
+                    padding: 30px;
+                    width: 600px;
+                    left: 40%;
+                    transform: translateX(-50%);
+                    border-radius: 0 0 10px 10px;
 
-                &.active{
-                    
-                    border-color:  var(--lasgGreen);
-                    color: var(--primary);
-
-                    .navi{
-                        rotate: (180deg);
-                        color: var(--primary) !important;
+                    .title{
+                        font-size: 18px;
+                        font-weight: 600;
+                        line-height: 26px;
+                        margin-bottom: 40px;
+                        color: #005c25;
+                        width: 70%;
                     }
 
-                }
-
-                &:last-child{
-
-                    border: none;
-
-                    .pink{
+                    .hover{
+                        margin-bottom: 20px;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 5px;
+                        width: 100%;
+                        padding-bottom: 20px;
+                        border-bottom: 1px solid #eee;
+                        cursor: pointer;
                         color: #131313;
+
+                        &:hover{
+                            color: #005c25;
+                            border-color: #005c25;
+
+                            p{
+                                gap: 15px;
+                            }
+                        }
+
+                        &:last-child{
+                            border: none;
+                            padding-bottom: 0;
+                        }
+
+                        p{
+                            font-size: 14px;
+                            display: flex;
+                            align-items: center;
+                            gap: 5px;
+                            transition: all .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                        }
+
+                        span{
+                            font-size: 13px;
+                            font-weight: 400;
+                            width: 80%;
+                            line-height: 20px;
+                            color: #777;
+                        }
                     }
+                }
+
+                &:hover .hovering{
+
+                    display: block;
 
                 }
 
                 &:hover{
-
-                    //border-color:  var(--lasgGreen);
-                    color: #108a00;
-
-                    .navi{
-                        rotate: (180deg);
-                        color: #108a00 !important;
-                    }
-
-                }
-
-
-                &:last-child:hover{
-
-                    .pink{
-                        color: #199b4d;
-                    }
-                    
-                }
-
-                &.fix{
-
-                    border-color:  var(--lasgGreen);
-                    color: var(--primary);
-
-                    .navi{
-                        rotate: (180deg);
-                        color: var(--primary) !important;
-                    }
-                    
+                    color: #009C3E;
                 }
 
             }
             
         }
 
-
         .main_nav{
-            //height: 80px;
             align-items: center;
         }
-
 
         .nests{
 
@@ -251,10 +269,6 @@
             padding-bottom: 120px;
             overflow-y: auto;
             height: 100%;
-
-            // &:hover{
-            //     display: block !important;
-            // }
 
             .vectorPhoto{
 
