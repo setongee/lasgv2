@@ -101,7 +101,7 @@ return (
 
                     <Container>
 
-                        <div className="flex space_fully">
+                        <div className="menuForm flex">
 
                             {/* Site Branding Information */}
 
@@ -152,11 +152,11 @@ return (
 
                                 <a href='/services' className="parentName"> Services <ArrowUpRight/> </a>
 
-                                <a href='/news/trending' className="parentName"> News & Events <ArrowUpRight/> </a>
+                                <a href='/news/trending' className="parentName">Newsroom <ArrowUpRight/> </a>
                                 
                                 <a href='/connect' className="parentName"> Connect <ArrowUpRight/> </a>
 
-                                <div className="parentName" onClick={ () => openModal() } > <Search height={17} width={17} strokeWidth={2.4}/> </div>
+                                <div className="parentName searching" onClick={ () => openModal() } > <Search height={17} width={17} strokeWidth={2.4}/> Search </div>
 
                             </div>
 

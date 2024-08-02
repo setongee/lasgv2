@@ -14,9 +14,9 @@
 
     position: fixed;
     width: 100%;
-    box-shadow: 0px 2px 30px rgba($color: #000000, $alpha: .03);
     z-index: 9999;
     top: 0;
+    border-bottom: 1px solid rgba($color: #000000, $alpha: .08);
 
     .menuMobile{
         display: none;
@@ -118,7 +118,7 @@
 
     .navigation{
 
-        background-color: #fff;
+        background-color: hsl(144, 100%, 99.3%);
         position: relative;
         z-index: 3;
 
@@ -128,6 +128,11 @@
 
         .showPage{
             position: fixed;
+        }
+
+        .menuForm{
+            gap: 40px;
+            width: 100%;
         }
 
         .siteBranding{
@@ -159,6 +164,8 @@
 
             display: flex;
             gap: 40px;
+            width: 100%;
+            align-items: center;
 
             .parentName{
 
@@ -172,30 +179,49 @@
                 text-transform: uppercase;
                 letter-spacing: 2px;
                 color: #131313;
-                position: relative;
+
+                &.searching{
+                    margin-left: auto;
+                    background-color: #131313;
+                    color: #fff;
+                    height: 48px;
+                    padding: 0 20px;
+                    border-radius: 5px;
+                    display: flex;
+                    align-items: center;
+                    cursor: pointer;
+
+                    &:hover{
+                        color: #fff;
+                        background-color: #009C3E;
+                    }
+                }
 
                 .hovering{
                     text-transform : capitalize;
                     letter-spacing: 0px;
                     position: absolute;
                     display: none;
-                    box-shadow: 0px 30px 20px rgba($color: #000000, $alpha: .06);
+                    box-shadow: 0px 20px 30px rgba($color: #000000, $alpha: .08);
                     background-color: #fff;
                     color: #000;
+                    z-index: -1;
                     top: 80px;
-                    padding: 30px;
-                    width: 600px;
-                    left: 40%;
-                    transform: translateX(-50%);
-                    border-radius: 0 0 10px 10px;
+                    padding: 50px;
+                    width: 90%;
+                    left: 0%;
+                    //transform: translateX(-50%);
+                    // border-radius: 0 0 10px 10px;
+                    border-top: 1px solid rgba($color: #000000, $alpha: .08);
 
                     .title{
-                        font-size: 18px;
-                        font-weight: 600;
-                        line-height: 26px;
-                        margin-bottom: 40px;
+                        font-size: 24px;
+                        font-weight: 400;
+                        line-height: 36px;
+                        margin-bottom: 60px;
                         color: #005c25;
-                        width: 70%;
+                        color: #000;
+                        width: 500px;
                     }
 
                     .hover{
