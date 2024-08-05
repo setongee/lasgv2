@@ -94,8 +94,6 @@ export default function Photo_slider_component() {
           
               <div className="home__content">
 
-                  {/* <div className="title">Welcome to <span>Lasgidi</span></div> */}
-
                   <div className="text__area">
 
                       <span>Simplifying </span>your access to Lagos State Government services and topics.

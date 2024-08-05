@@ -1177,23 +1177,6 @@
                 flex-shrink: 0;
                 z-index: 99;
     
-                .title{
-    
-                    font-size: 12px;
-                    letter-spacing: 2px;
-                    font-weight: 500;
-                    color: #fff;
-                    color: #131313;
-                    text-transform: uppercase;
-                    margin-top: 0px;
-                    margin-bottom: 35px;
-    
-                    span{
-                        color: #108a00;
-                    }
-    
-                }
-    
                 .text__area{
     
                     font-size: 45px;
@@ -1281,11 +1264,9 @@
         .mobile__flash__news{
 
             width: 100%;
-            position: absolute;
-            left: 0;
-            top: 0px;
+            position: relative;
             display: flex;
-            padding: 0 0px;
+            margin-top: 135px;
             
             .flashNews{
     
@@ -1296,7 +1277,6 @@
                 font-weight: 600;
                 width: max-content;
                 border-radius: 5px;
-                margin-top: 0px;
     
                 span{
                     margin-right: 8px;
@@ -1318,6 +1298,7 @@
                 right: -90px;
                 width: 750px;
                 z-index: 2;
+                display: none;
     
                 img{
                     width: 100%;
@@ -1330,6 +1311,7 @@
                 right: 100px;
                 width: 200px;
                 z-index: 2;
+                display: none;
     
                 img{
                     width: 100%;
@@ -1342,6 +1324,7 @@
                 right: 10px;
                 width: 200px;
                 z-index: 2;
+                display: none;
     
                 img{
                     width: 100%;
@@ -1354,6 +1337,7 @@
                 right: -200px;
                 width: 600px;
                 z-index: 1;
+                display: none;
     
                 img{
                     width: 100%;
@@ -1401,7 +1385,8 @@
 
             width: 100%;
             display: flex;
-            margin-top: 160px;
+            margin-top: 0px;
+            gap: 20px;
     
             .home__content{
     
@@ -1438,7 +1423,6 @@
                     letter-spacing: -2px;
                     color: #131313;
                     width: 100%;
-                    margin-top: 50px;
     
                     span{
                         color: #fff;
@@ -1465,92 +1449,53 @@
 
 }
 
-
-@media (max-width : 550px) {
+@media (max-width : 500px) {
 
     .slider{
 
         .mobile__flash__news{
-
-            width: 100%;
-            position: absolute;
-            left: 0;
-            top: 0px;
-            display: flex;
-            padding: 0 0px;
-            margin: 20px 0px;
-            
-            .flashNews{
-    
-                font-size: 12px;
-                background-color: #fff3d8;
-                padding: 5px 10px;
-                color: var(--dark);
-                font-weight: 600;
-                width: max-content;
-                border-radius: 5px;
-                margin-top: 0px;
-    
-                span{
-                    margin-right: 8px;
-                }
-    
-                a {
-                    color: #108a00;
-                }
-    
-            }
-
+            margin-top: 95px;
         }
-        
+
         .lasg__illustration{
-    
-            .lasg__illustration__theatre{
+
+            .lasg__illustration__road{
                 position: absolute;
-                bottom: -10px;
-                right: -90px;
-                width: 750px;
-                z-index: 2;
-                display: none;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                min-width: 1750px;
+                z-index: 3;
+                background-color: #384D4E;
     
                 img{
                     width: 100%;
+                    margin: 0 auto;
                 }
             }
-    
-            .lasg__illustration__clouds{
+
+            .lasg__illustration__water{
+
                 position: absolute;
-                top: 180px;
-                right: 100px;
-                width: 200px;
-                z-index: 2;
-                display: none;
+                bottom: -28px;
+                left: -10px;
+                width: 100%;
+                min-width: 1750px;
+                z-index: 1;
     
                 img{
                     width: 100%;
+                    margin: 0 auto;
                 }
             }
-    
-            .lasg__illustration__clouds_2x{
-                position: absolute;
-                top: 300px;
-                right: 10px;
-                width: 200px;
-                z-index: 2;
-                display: none;
-    
-                img{
-                    width: 100%;
-                }
-            }
-    
+
             .lasg__illustration__eko{
                 position: absolute;
-                bottom: 50px;
-                right: -200px;
+                bottom: -180px;
+                right: -80px;
                 width: 600px;
                 z-index: 1;
-                display: none;
+                display: block;
     
                 img{
                     width: 100%;
@@ -1596,11 +1541,6 @@
 
         .photo_container{
 
-            margin-top: 120px;
-            padding: 0px;
-            padding-bottom: 50px;
-            border-radius: 10px;
-
             .searchBox{
 
                 margin-top: 15px;
@@ -1754,7 +1694,7 @@
                     letter-spacing: -2px;
                     color: #131313;
                     width: 100%;
-                    margin-top: 60px;
+                    margin-top: 0px;
     
                     span{
                         color: #fff;
@@ -1781,134 +1721,13 @@
 
 }
 
-@media (max-width : 500px) {
+
+
+@media (max-width : 450px) {
 
     .slider{
 
         .photo_container{
-
-            margin-top: 85px;
-            padding: 0px;
-            padding-bottom: 50px;
-            border-radius: 10px;
-
-            .searchBox{
-
-                margin-top: 15px;
-    
-                label{
-                    font-size: 11px;
-                    color: var(--primary);
-                    font-weight: 600;
-                    letter-spacing: 2px;
-                    text-transform: uppercase;
-                }
-    
-                .input__body{
-    
-                    input, .typeing{
-    
-                        width: 360px;
-                        outline: none;
-                        border: none;
-                        background-color: transparent;
-                        border-right: none;
-                        padding-left: 13px;
-                        height: 100%;
-                        position: relative;
-                        z-index: 3;
-    
-                    }
-    
-                    .search__action__btn{
-    
-                        background-color: #108a00;
-                        height: 40px;
-                        width: 40px;
-                        border-radius: 50%;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        font-size: 14px;
-                        cursor: pointer;
-                        color: #fff;
-                        text-transform: uppercase;
-                        font-size: 11px;
-                        letter-spacing: 2px;
-                        font-weight: 600;
-                        flex-shrink: 0;
-                        margin-right: 5px;
-
-                        p{
-                            display: none;
-                        }
-                    }
-    
-                    .typeing{
-                        position: absolute;
-                        top: 50%;
-                        transform: translateY(-50%);
-                        display: flex;
-                        align-items: center;
-                        font-size: 14px;
-                        z-index: 1;
-                        color: #000;
-    
-                    }
-    
-                    input:focus ~ .typeing{
-    
-                        display: none;
-    
-                    }
-    
-                    width: 100%;
-                    height: 55px;
-                    position: relative;
-                    overflow: hidden;
-                    display: flex;
-                    align-items: center;
-                    margin-top: 15px;
-                    background-color: #fff;
-                    padding: 3px;
-                    border-radius: 8px;
-                    border: 1px solid #bebebe;
-                    border-radius: 100px;
-    
-    
-                }
-    
-                .quickSearches{
-                    width: 100%;
-                    overflow: hidden;
-                    display: flex;
-                    gap: 10px;
-                    margin-top: 15px;
-                    flex-wrap: nowrap;
-    
-                    p{
-                        min-width: max-content;
-                        font-size: 10.5px;
-                        background-color: #009C3E;
-                        border: 1px solid #009C3E;
-                        color: #fff;
-                        padding: 13px 18px;
-                        text-transform: uppercase;
-                        letter-spacing: 2px;
-                        border-radius: 100px;
-                        font-weight: 500;
-                        cursor: pointer;
-    
-                        &:hover{
-                            background-color: #009C3E;
-                            border-color: #009C3E;
-                            color: #fff;
-                        }
-    
-                    }
-                }
-    
-            }
     
             .home__content{
     
@@ -1938,29 +1757,13 @@
     
                 .text__area{
     
-                    font-size: 40px;
+                    font-size: 35px;
                     font-weight: 600;
                     color: #C1FFDA;
-                    line-height: 48px;
+                    line-height: 40px;
                     letter-spacing: -2px;
                     color: #131313;
                     width: 100%;
-                    margin-top: 60px;
-    
-                    span{
-                        color: #fff;
-                        color: #108a00;
-                        text-decoration: underline;
-                    }
-    
-                }
-    
-                .text__area_sub{
-    
-                    width: 400px;
-                    line-height: 25px;
-                    margin-top: 40px;
-                    font-weight: 400;
     
                 }
     
