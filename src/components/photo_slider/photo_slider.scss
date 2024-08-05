@@ -1572,9 +1572,7 @@
                     .search__action__btn{
     
                         background-color: #108a00;
-                        height: 40px;
-                        width: 40px;
-                        border-radius: 50%;
+                        border-radius: 5px;
                         display: flex;
                         align-items: center;
                         justify-content: center;
@@ -1586,11 +1584,8 @@
                         letter-spacing: 2px;
                         font-weight: 600;
                         flex-shrink: 0;
-                        margin-right: 5px;
-
-                        p{
-                            display: none;
-                        }
+                        position: relative;
+                        z-index: 8;
                     }
     
                     .typeing{
@@ -1622,7 +1617,7 @@
                     padding: 3px;
                     border-radius: 8px;
                     border: 1px solid #bebebe;
-                    border-radius: 100px;
+                    border-radius: 8px;
     
     
                 }
@@ -1633,18 +1628,18 @@
                     display: flex;
                     gap: 10px;
                     margin-top: 15px;
-                    flex-wrap: nowrap;
+                    flex-wrap: wrap;
     
                     p{
                         min-width: max-content;
                         font-size: 10.5px;
-                        background-color: #009C3E;
-                        border: 1px solid #009C3E;
-                        color: #fff;
+                        background-color: #fff;
+                        border: 1px solid #dadada;
+                        color: #131313;
                         padding: 13px 18px;
                         text-transform: uppercase;
                         letter-spacing: 2px;
-                        border-radius: 100px;
+                        border-radius: 8px;
                         font-weight: 500;
                         cursor: pointer;
     
@@ -1688,7 +1683,7 @@
                 .text__area{
     
                     font-size: 40px;
-                    font-weight: 600;
+                    font-weight: 650;
                     color: #C1FFDA;
                     line-height: 48px;
                     letter-spacing: -2px;
@@ -1761,7 +1756,7 @@
                     font-weight: 600;
                     color: #C1FFDA;
                     line-height: 40px;
-                    letter-spacing: -2px;
+                    letter-spacing: -1px;
                     color: #131313;
                     width: 100%;
     

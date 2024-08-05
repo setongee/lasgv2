@@ -107,7 +107,7 @@ export default function Photo_slider_component() {
               <div className="searchBox">
 
 
-                  <label> How do i ...  </label>
+                  <label> How can i ...  </label>
 
                   <div className="input__body flex">
                     
@@ -123,7 +123,7 @@ export default function Photo_slider_component() {
                           options = {
 
                             {
-                              strings: ['Register for LASSRA card', 'Explore government benefits', 'Give complaints and feedbacks', 'Land usecharge payments', 'Find quick emergency numbers', 'Plan a visit to Lagos state', 'Advertise in Lagos' ],
+                              strings: ['Register for LASSRA', 'Explore benefits', 'Give complaints', 'Pay Land use charge', 'Visit Lagos State', 'Advertise in Lagos' ],
                               autoStart: true,
                               loop: true,
                               delay : 40,
@@ -143,11 +143,13 @@ export default function Photo_slider_component() {
                   </div>
 
                   <div className="quickSearches">
+                    <p onClick={ e => handleSearchTab(e) } >Pay My Tax</p>
+                    <p onClick={ e => handleSearchTab(e) } >LASSRA</p>
+                    <p onClick={ e => handleSearchTab(e) } >PAY LUC</p>
+                    <p onClick={ e => handleSearchTab(e) } >Loans</p>
                     <p onClick={ e => handleSearchTab(e) } >Register LASAA</p>
-                    <p onClick={ e => handleSearchTab(e) } >Tax Payment</p>
-                    <p onClick={ e => handleSearchTab(e) } >Apply for Loans</p>
-                    <p onClick={ e => handleSearchTab(e) } >LASRRA Registration</p>
-                    <p onClick={ e => handleSearchTab(e) } >Fire Services</p>
+                    <p onClick={ e => handleSearchTab(e) } >Benefits</p>
+                    <p onClick={ e => handleSearchTab(e) } >Visit Lagos</p>
                   </div>
                   
               </div>
