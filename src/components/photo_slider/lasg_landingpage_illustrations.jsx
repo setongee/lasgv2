@@ -66,9 +66,9 @@ export default function LasgIllustrations() {
             <img src={lagride} alt="Lagos State Assets" />
         </div>
 
-        {/* <div className="motion__illustration danfo">
+        <div className="motion__illustration__2 danfo">
             <img src={danfo} alt="Lagos State Assets" />
-        </div> */}
+        </div>
         
 
     </div>

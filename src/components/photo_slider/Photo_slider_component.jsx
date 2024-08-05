@@ -51,7 +51,7 @@ export default function Photo_slider_component() {
 
   const handleBlur = e => {
 
-     document.querySelector('.input__body').style.borderColor = '#131313'
+     document.querySelector('.input__body').style.borderColor = '#bebebe70'
 
   }
 

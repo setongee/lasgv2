@@ -9,7 +9,7 @@
             "src":"/android-chrome-512x512.png","sizes":"512x512","type":"image/png"
         }
     ],
-    "theme_color":"#00484D",
-    "background_color":"#0C766F",
+    "theme_color":"#009C3E",
+    "background_color":"#fcfff5",
     "display":"standalone"
 }
