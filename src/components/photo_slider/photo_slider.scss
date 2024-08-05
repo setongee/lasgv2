@@ -1511,6 +1511,7 @@
                 right: -90px;
                 width: 750px;
                 z-index: 2;
+                display: none;
     
                 img{
                     width: 100%;
@@ -1523,6 +1524,7 @@
                 right: 100px;
                 width: 200px;
                 z-index: 2;
+                display: none;
     
                 img{
                     width: 100%;
@@ -1535,6 +1537,7 @@
                 right: 10px;
                 width: 200px;
                 z-index: 2;
+                display: none;
     
                 img{
                     width: 100%;
@@ -1547,6 +1550,7 @@
                 right: -200px;
                 width: 600px;
                 z-index: 1;
+                display: none;
     
                 img{
                     width: 100%;
@@ -1557,11 +1561,11 @@
             // motion side
             .motion__illustration{
 
-                width: 140px;
+                width: 120px;
                 position: absolute;
                 bottom: 0;
                 z-index: 5;
-                left: -140px;
+                left: -120px;
                 animation: lefttoright 10s ease-in-out infinite;
     
                 img{
@@ -1577,9 +1581,9 @@
             }
     
             .brt{
-                width: 200px;
+                width: 180px;
                 animation-delay: 4s;
-                left: -200px;
+                left: -180px;
             }
     
             .lagride{
@@ -1592,9 +1596,10 @@
 
         .photo_container{
 
-            background-color: rgba($color: #fff, $alpha: 0.8);
-            margin-top: 130px;
+            background-color: #fff;
+            margin-top: 120px;
             padding: 20px;
+            padding-bottom: 50px;
             border-radius: 10px;
 
             .searchBox{
@@ -1750,7 +1755,7 @@
                     letter-spacing: -2px;
                     color: #131313;
                     width: 100%;
-                    margin-top: 50px;
+                    margin-top: 45px;
     
                     span{
                         color: #fff;
@@ -1776,114 +1781,4 @@
     }
 
 }
-
-@media (max-width : 500px) {
-
-    .slider{
-
-        .mobile__flash__news{
-
-            width: 100%;
-            position: absolute;
-            left: 0;
-            top: 0px;
-            display: flex;
-            padding: 0 0px;
-            margin: 20px;
-            
-            .flashNews{
-    
-                font-size: 12px;
-                background-color: #fff3d8;
-                padding: 5px 10px;
-                color: var(--dark);
-                font-weight: 600;
-                width: max-content;
-                border-radius: 5px;
-                margin-top: 0px;
-    
-                span{
-                    margin-right: 8px;
-                }
-    
-                a {
-                    color: #108a00;
-                }
-    
-            }
-
-        }
-
-        .photo_container{
-
-            background-color: rgba($color: #fff, $alpha: 0.8);
-            margin-top: 85px;
-            padding: 20px;
-            border-radius: 10px;
-
-            .home__content{
-                margin-top: 5px;
-            }
-        }
-
-    }
-
-}
-
-@media (max-width : 500px) {
-
-    .slider{
-
-        .mobile__flash__news{
-
-            width: 100%;
-            position: absolute;
-            left: 0;
-            top: 0px;
-            display: flex;
-            padding: 0 0px;
-            margin: 20px;
-            
-            .flashNews{
-    
-                font-size: 12px;
-                background-color: #fff3d8;
-                padding: 5px 10px;
-                color: var(--dark);
-                font-weight: 600;
-                width: max-content;
-                border-radius: 5px;
-                margin-top: 0px;
-    
-                span{
-                    margin-right: 8px;
-                }
-    
-                a {
-                    color: #108a00;
-                }
-    
-            }
-
-        }
-
-        .photo_container{
-
-            background-color: rgba($color: #fff, $alpha: 0.8);
-            margin-top: 85px;
-            padding: 20px;
-            border-radius: 10px;
-
-            .home__content{
-                .text__area{
-                    font-size: 35px;
-                    line-height: 42px;
-                }
-            }
-        }
-
-    }
-
-}
-
 
