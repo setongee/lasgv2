@@ -2,12 +2,34 @@
 
     height: 100vh;
     width: 70%;
-    background-color: #fdfdfd;
+    background-color: hsl(0, 0%, 99.3%);
     position: fixed;
     z-index: 9999;
     right: 0;
     border-left: 1px solid #eee;
     display: none;
+}
+
+.emergency{
+
+    height: 100vh;
+    width: 100%;
+    background-color: rgba($color: #000000, $alpha: .4);
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99;
+    display: flex;
+    justify-content: flex-end;
+    display: none;
+
+    .emergency__body{
+
+        background-color: #fff;
+        width: 100%;
+        height: 100%;
+    }
+
 }
 
 .appHeader{
@@ -118,7 +140,7 @@
 
     .navigation{
 
-        background-color: hsl(144, 100%, 99.3%);
+        background-color: hsl(0, 0%, 99.3%);
         position: relative;
         z-index: 3;
 
@@ -209,14 +231,14 @@
                     top: 80px;
                     padding: 50px;
                     width: 90%;
-                    left: 0%;
+                    left: 45px;
                     //transform: translateX(-50%);
                     // border-radius: 0 0 10px 10px;
                     border-top: 1px solid rgba($color: #000000, $alpha: .08);
 
                     .title{
                         font-size: 24px;
-                        font-weight: 400;
+                        font-weight: 500;
                         line-height: 36px;
                         margin-bottom: 60px;
                         color: #005c25;

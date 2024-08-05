@@ -98,7 +98,7 @@ export default function Photo_slider_component() {
 
                   <div className="text__area">
 
-                      <span>Simplifying </span>your access to Lagos State Government services.
+                      <span>Simplifying </span>your access to Lagos State Government services and topics.
 
                   </div>
 
@@ -114,7 +114,7 @@ export default function Photo_slider_component() {
                   <div className="input__body flex">
                     
                     <input type="text" value={searchQuery} onChange={ e => setSearchQuery(e.target.value)} onKeyDownCapture={e => checkKey(e)} onFocus={handleFocus} onBlur={handleBlur} />
-                    <div className="search__action__btn" onClick={handleSearchQuery}> Search <ArrowUpRight/> </div>
+                    <div className="search__action__btn" onClick={handleSearchQuery}> <p>Search</p> <ArrowUpRight/> </div>
                     {
                       searchQuery === '' ?
                       

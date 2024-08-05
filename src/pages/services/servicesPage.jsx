@@ -98,7 +98,7 @@ const openModal = (data) => {
 
                     <div className="pageHeader flex flex_col">
 
-                        <div className="pageTitle"> All Government topics & services </div>
+                        <div className="pageTitle"> Explore Lagos State Government : Browse all Services in One Place </div>
                         <div className="pageTitleSubs"> Empowering Citizens of Lagos State to Engage with their Government. </div>
 
                     </div>

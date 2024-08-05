@@ -26,9 +26,11 @@ export default function Footer() {
 
   return (
 
-    <div className="footer">
+    <div className="footer footer__new">
 
-        <Subscribe/>
+        <div className="subscribe__holder">
+          <Subscribe/>
+        </div>
 
         <Container>
 
@@ -69,7 +71,7 @@ export default function Footer() {
 
                           <a target = '_blank' href="https://lagosjudiciary.gov.ng/directories.html#directories" className="link"> <span><ArrowUpRight/></span> Judiciary officers </a>
 
-                          <a target = '_blank' href="https://lagosjudiciary.gov.ng/directories.html#directories" className="link"> <span><ArrowUpRight/></span> Apply for Lag-ID </a>
+                          <a target = '_blank' href="https://registration.lagosresidents.gov.ng/register/" className="link"> <span><ArrowUpRight/></span> Apply for Lag-ID </a>
 
                       </div>
 

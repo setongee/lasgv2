@@ -1,27 +1,26 @@
 .servicesPage{
  
-    padding-top: 230px;
+    padding-top: 200px;
     padding-bottom: 150px;
     margin: 0px 0;
     display: flex;
     flex-direction: column;
-    background-color: #f9f9f9;
+    background-color: #fdfdfd;
 
     .servicesTop{
 
         .pageHeader{
 
-            margin-bottom: 80px;
+            margin-bottom: 50px;
             min-width: 100%;
-            gap: 30px;
+            gap: 26px;
             align-items: center;
 
             .pageTitle{
 
-                font-size: 60px;
-                width: 100%;
+                font-size: 45px;
+                width: 70%;
                 line-height: 57px;
-                color: var(--dark);
                 letter-spacing: -0.5px;
                 font-weight: 700;
                 text-align: center;
@@ -49,7 +48,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-top: 50px;
+        margin-top: 70px;
         position: relative;
 
         .searchInput{
@@ -58,7 +57,7 @@
             outline: none;
             border: none;
             background-color: transparent;
-            width: 60%;
+            width: 70%;
             position: relative;
             z-index: 5;
             padding: 0 20px;
@@ -69,7 +68,7 @@
         .typeSide{
 
             position: absolute;
-            width: 60%;
+            width: 70%;
             background: #fff;
             z-index: 3;
             height: 100%;
@@ -91,10 +90,16 @@
 
     }
 
+    .servicesSide{
+
+        background-color: green;
+
+    }
+
     .recentlyServiced{
 
         gap: 40px;
-        margin-top: 50px;
+        margin-top: 0px;
 
         .linksTabs{
 

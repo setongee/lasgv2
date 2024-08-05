@@ -75,6 +75,22 @@ return (
             showSearch ? <SearchQuery query = '' closeModal={closeModal} /> : null
         }
 
+        <div className="emergency">
+
+            <div className="emergency__body">
+
+                <div className="longCards">
+
+                    <div className="first">
+                        
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
         <IconoirProvider 
     
         iconProps = {
@@ -153,6 +169,8 @@ return (
                                 <a href='/services' className="parentName"> Services <ArrowUpRight/> </a>
 
                                 <a href='/news/trending' className="parentName">Newsroom <ArrowUpRight/> </a>
+
+                                <a href='/events/upcoming' className="parentName">Events <ArrowUpRight/> </a>
                                 
                                 <a href='/connect' className="parentName"> Connect <ArrowUpRight/> </a>
 

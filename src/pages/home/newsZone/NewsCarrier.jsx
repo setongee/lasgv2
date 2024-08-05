@@ -21,7 +21,7 @@ return (
             <div className="news_results_section">
 
                 {
-                    Object.entries(news).filter( (news_item, idx) => idx < 4 ).map( (res, index) => (
+                    Object.entries(news).filter( (news_item, idx) => idx < 5 ).map( (res, index) => (
 
                         <a className="news_card" key = {res[0]} href={`/news/trending/view/${res[0]}`}  >
 

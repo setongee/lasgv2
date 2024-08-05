@@ -19,6 +19,7 @@ import LagView from '../pages/Government/officialsView_lag';
 import News_view from '../pages/news_events/news_view';
 import Connect from '../pages/connect/connect';
 import Search from '../pages/search/search';
+import Events from '../pages/events/events';
 
 const RouterClass = () => {
 
@@ -28,8 +29,10 @@ const RouterClass = () => {
 
             <Route path = "/">
 
+                {/* homepage */}
                 <Route index element = {<Homepage/>} />
-                
+
+                {/* government */}
                 <Route path="government">
 
                     <Route path='elected_officials' element = { <ElectedOfficials/> } />
@@ -41,36 +44,39 @@ const RouterClass = () => {
                     <Route path='elected_officials/cos/view' element = { <COSView/> } />
                     <Route path='elected_officials/lag/view' element = { <LagView/> } />
 
-
                     <Route path='judiciary_officials' element = { <JudiciaryOfficials/> } />
                     <Route path='legistlative_officials' element = { <LegistlativeOfficials/> } />
 
                     <Route path='mdas/:index' element = { <Mdas/> } />
-                    
-
+          
                 </Route>
 
+                {/* services */}
                 <Route path = 'services'>
 
                     <Route path='' element = {<ServicesPage/>} />
                     <Route path=':theme' element = { <ViewService/> } />
                     
-
                 </Route>
 
+                {/* News */}
                 <Route path = 'news/:tag' element = { <News_Events/> } />
                 <Route path = 'news/:tag/view/:id' element = { <News_view/> } />
 
+                {/* resources */}
                 <Route path = 'resources' element = { <Resources/> } />
 
+                {/* connect */}
                 <Route path = 'connect' element = { <Connect/> } />
+
+                {/* events */}
+                <Route path = 'events/:id' element = { <Events/> } />
 
                 {/* 404 Page Not Found */}
                 <Route path="*" element = {<h1>Page not found</h1>} />
 
             </Route>
-
-            
+ 
         </Routes>
 
     );

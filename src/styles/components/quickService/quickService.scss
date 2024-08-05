@@ -1,7 +1,7 @@
 .quickCheck{
     overflow: hidden;
     position: relative;
-    background-color: hsl(144, 100%, 99.3%);
+    background-color: hsl(0, 0%, 99.3%);
 
     .lineBg{
         height: 100%;
@@ -113,6 +113,7 @@
                 width: 100%;
                 line-height: 27px;
                 color: #000;
+                font-size: 18px;
 
                 .icon{
                     position: absolute;
@@ -139,7 +140,7 @@
                 cursor: pointer;
                 display: flex;
                 position: relative;
-                padding: 25px;
+                padding: 35px 25px;
                 border-radius: 5px;
                 background-color: #fff;
 

@@ -297,7 +297,7 @@
             .highlight{
                 height: 200px;
                 min-width: 300px;
-                background-color: peachpuff;
+                background-color: #f9f9f9;
                 overflow: hidden;
                 border-radius: 10px;
 
@@ -337,7 +337,7 @@
         flex-direction: column;
         gap: 30px;
         line-height: 26px;
-
+        text-align: justify;
         .heading{
             font-weight: 600;
             color: var(--primary25);
@@ -358,7 +358,7 @@
                 height: 100%;
                 border-radius: 10px;
                 overflow: hidden;
-                background-color: red;
+                background-color: #f9f9f9;
                 display: flex;
 
                 img{

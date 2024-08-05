@@ -135,63 +135,6 @@ if (params !== 'all') {
                 isOpen ? <Mda_modal data = {modalData} closeModal = { closeModal } /> : null
             }
 
-            {/* {
-                !isVisible ? (
-
-                  <div className="abcAgain">
-
-                    <div className="indexHeader">
-
-                      <div className="mdas_index all" onClick={ () => navigate(`/government/mdas/all`) }> - </div>
-
-                        {
-                          alpha.map( (e, index) => (
-
-                              <div className={`mdas_index ${e.toLowerCase()}`} key = {index} onClick={ () => navigate(`/government/mdas/${e.toLowerCase()}`) }> {e} </div>
-
-                          ) )
-                        }
-                      
-                    </div>
-
-                    <div className="searchField fixedTop">
-
-                      <input type="text" className="searchInput" value = {query} onChange={ e => setQuery(e.target.value) }/>
-
-                      {
-                        
-                         query === '' 
-                         ?
-                         <div className="typeSide">
-
-                            <Typewriter          
-                            options={{
-                                strings: ['Search for Lagos State Ministries...', 'Search for Lagos State Departments...', 'Search for Lagos State Agencies...' ],
-                                autoStart: true,
-                                loop: true,
-                                delay : 40,
-                                deleteSpeed : 10
-                            }} />
-            
-                        </div> 
-
-                        : null
-
-                      }
-
-                     </div>
-
-                     <div className="mdas_sections fixedTop_2">
-
-                        <div className="section all"> {queryResults.length} Results Found </div>
-                       
-                    </div>
-
-                  </div>
-
-                ) : null
-            } */}
-
             <Container>
 
                 <div className="topArea">
@@ -206,64 +149,80 @@ if (params !== 'all') {
 
                 </div>
 
-                <div className="abcZone" ref = { targetRef } >
+                <div className="mid__area">
 
-                      <div className="mdas_index all" onClick={ () => navigate(`/government/mdas/all`) }> - </div>
+                    {/* index && search */}
 
-                      {
-                        alpha.map( (e, index) => (
+                    <div className="index__search">
 
-                            <div className={`mdas_index ${e.toLowerCase()}`} key = {index} onClick={ () => navigate(`/government/mdas/${e.toLowerCase()}`) }> {e} </div>
+                        <div className="abcZone" ref = { targetRef } >
 
-                         ) )
-                      }
+                            <div className="mdas_index all" onClick={ () => navigate(`/government/mdas/all`) }> - </div>
 
-                </div>
+                            {
+                              alpha.map( (e, index) => (
 
-                <div className="searchField">
+                                  <div className={`mdas_index ${e.toLowerCase()}`} key = {index} onClick={ () => navigate(`/government/mdas/${e.toLowerCase()}`) }> {e} </div>
 
-                      <input type="text" id = "yass" className="searchInput" value = {query} onChange={ e => setQuery(e.target.value) }/>
+                              ) )
+                            }
 
-                      {
-                        
-                         query === '' 
-                         ?
-                         <div className="typeSide">
+                          </div>
 
-                            <Typewriter          
-                            options={{
-                                strings: ['Search for Lagos State Ministries...', 'Search for Lagos State Departments...', 'Search for Lagos State Agencies...' ],
-                                autoStart: true,
-                                loop: true,
-                                delay : 40,
-                                deleteSpeed : 10
-                            }} />
-            
-                        </div> 
+                          <div className="searchField">
 
-                        : null
+                              <input type="text" id = "yass" className="searchInput" value = {query} onChange={ e => setQuery(e.target.value) }/>
 
-                      }
+                              {
+                                
+                                query === '' 
+                                ?
+                                <div className="typeSide">
 
-                </div>
+                                    <Typewriter          
+                                    options={{
+                                        strings: ['Search for Lagos State Ministries...', 'Search for Lagos State Departments...', 'Search for Lagos State Agencies...' ],
+                                        autoStart: true,
+                                        loop: true,
+                                        delay : 40,
+                                        deleteSpeed : 10
+                                    }} />
 
-                <div className="mdas_sections">
+                                </div> 
 
-                      <div className="section all"> {queryResults.length} Results Found </div>
+                                : null
 
-                </div>
+                              }
 
-                <div className="resultArea">
+                          </div>
+
+                      </div>
+
+                      {/* results Section */}
+
+                      <div className='results__section'>
+
+                        <div className="mdas_sections">
+
+                            <div className="section all"> {queryResults.length} Results Found </div>
+
+                        </div>
+
+                        <div className="resultArea">
 
 
-                      {
-                         queryResults.length ? queryResults.map( (data, index) => {
+                              {
+                                queryResults.length ? queryResults.map( (data, index) => {
 
-                            return <MdaResultsComponent data = {data} key = {index} openModal = {openModal} />
+                                    return <MdaResultsComponent data = {data} key = {index} openModal = {openModal} />
 
-                         } ) : <h1>Oops! Sorry No results Found, Try Again!</h1>
-                      }
-                    
+                                } ) : <h1>Oops! Sorry No results Found, Try Again!</h1>
+                              }
+                            
+
+                        </div>
+
+                    </div>
 
                 </div>
 

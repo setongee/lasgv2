@@ -81,8 +81,6 @@ export default function Services({bgColor, location, data_limit}) {
     
     let navigation = useNavigate();
 
-    
-
   return (
 
     <div className="services" id='services' style={{backgroundColor : bgColor}} >
