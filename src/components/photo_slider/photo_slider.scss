@@ -1,6 +1,7 @@
 .slider{
 
     background-color: #fcfff5;
+    background-color: #fff;
     position: relative;
     height: 100svh;
     max-height: 1080px;
@@ -132,6 +133,12 @@
 
         }
 
+        .danfo{
+
+            display: none;
+
+        }
+
         
     }
 
@@ -224,7 +231,7 @@
                 overflow: hidden;
                 display: flex;
                 align-items: center;
-                margin-top: 15px;
+                margin-top: 10px;
                 background-color: #fff;
                 padding: 3px;
                 border-radius: 8px;
@@ -292,17 +299,20 @@
 
             .text__area{
 
-                font-size: 50px;
-                font-weight: 600;
-                line-height: 60px;
-                letter-spacing: -2px;
+                font-size: 70px;
+                font-style: italic;
+                font-weight: 500;
+                line-height: 68px;
+                letter-spacing: -1px;
                 color: #131313;
                 width: 100%;
+                font-family: "Cormorant Garamond", serif;
 
                 span{
                     color: #fff;
                     color: #108a00;
-                    text-decoration: underline;
+                    // text-decoration: underline;
+                    font-family: "Cormorant Garamond", serif;
                 }
 
             }
@@ -532,7 +542,6 @@
                 .text__area{
     
                     font-size: 50px;
-                    font-weight: 600;
                     line-height: 60px;
                     letter-spacing: -2px;
                     color: #131313;
@@ -1595,7 +1604,7 @@
 
             .searchBox{
 
-                margin-top: 15px;
+                margin-top: 8px;
     
                 label{
                     font-size: 11px;
@@ -1664,7 +1673,7 @@
                     overflow: hidden;
                     display: flex;
                     align-items: center;
-                    margin-top: 10px;
+                    margin-top: 15px;
                     background-color: #fff;
                     padding: 3px;
                     border-radius: 8px;
@@ -1735,11 +1744,10 @@
     
                 .text__area{
     
-                    font-size: 40px;
-                    font-weight: 700;
-                    color: #C1FFDA;
-                    line-height: 48px;
-                    letter-spacing: -2px;
+                    font-size: 46px !important;
+                    font-weight: 500 !important;
+                    line-height: 43px !important;
+                    letter-spacing: -1px !important;
                     color: #131313;
                     width: 100%;
                     margin-top: 0px;
@@ -1747,7 +1755,7 @@
                     span{
                         color: #fff;
                         color: #108a00;
-                        text-decoration: underline;
+                        text-decoration: none;
                     }
     
                 }
