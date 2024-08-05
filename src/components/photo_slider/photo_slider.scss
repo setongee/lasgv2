@@ -1454,7 +1454,7 @@
     .slider{
 
         .mobile__flash__news{
-            margin-top: 95px;
+            margin-top: 80px;
         }
 
         .lasg__illustration{
@@ -1541,9 +1541,11 @@
 
         .photo_container{
 
+            gap: 15px;
+
             .searchBox{
 
-                margin-top: 15px;
+                margin-top: 10px;
     
                 label{
                     font-size: 11px;
@@ -1627,8 +1629,8 @@
                     overflow: hidden;
                     display: flex;
                     gap: 10px;
-                    margin-top: 15px;
-                    flex-wrap: wrap;
+                    margin-top: 10px;
+                    flex-wrap: nowrap;
     
                     p{
                         min-width: max-content;

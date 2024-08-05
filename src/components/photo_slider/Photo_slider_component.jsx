@@ -144,12 +144,12 @@ export default function Photo_slider_component() {
 
                   <div className="quickSearches">
                     <p onClick={ e => handleSearchTab(e) } >Pay My Tax</p>
-                    <p onClick={ e => handleSearchTab(e) } >LASSRA</p>
-                    <p onClick={ e => handleSearchTab(e) } >PAY LUC</p>
                     <p onClick={ e => handleSearchTab(e) } >Loans</p>
+                    <p onClick={ e => handleSearchTab(e) } >LASSRA</p>
+                    <p onClick={ e => handleSearchTab(e) } >Visit Lagos</p>
                     <p onClick={ e => handleSearchTab(e) } >Register LASAA</p>
                     <p onClick={ e => handleSearchTab(e) } >Benefits</p>
-                    <p onClick={ e => handleSearchTab(e) } >Visit Lagos</p>
+                    <p onClick={ e => handleSearchTab(e) } >PAY LUC</p>
                   </div>
                   
               </div>
