@@ -5,6 +5,10 @@ import { motion } from 'framer-motion';
 import Container from '../../../components/container/container';
 import { SplitText } from '../SplitText';
 import line from '../../../assets/icons/random/line__lasg.svg'
+import housing from '../../../assets/services__illustrations/housing.svg'
+import travel from '../../../assets/services__illustrations/travel.svg'
+import learn from '../../../assets/services__illustrations/learn.svg'
+import work from '../../../assets/services__illustrations/workinlagos.svg'
 
 export default function QuickCheck() {
 
@@ -30,7 +34,7 @@ export default function QuickCheck() {
 
                             <div className="textChange">
 
-                                <SplitText
+                                {/* <SplitText
 
                                     major = "many"
                                     initial={{ y: '100%' }}
@@ -38,9 +42,10 @@ export default function QuickCheck() {
                                     transition: { duration : 1.4 }}}   
                                 >
                                 
-                                Browse 200+ online services for citizens and businesses
 
-                                </SplitText>
+                                </SplitText> */}
+
+                                Browse 200+ online services for Citizens and businesses
 
                             </div>
 
@@ -50,7 +55,7 @@ export default function QuickCheck() {
 
                         </div>
 
-                        <div className="title"> Frequently searched services - </div>
+                        <div className="title"> Get started with Lagos State -  </div>
 
                         
                         <IconoirProvider
@@ -71,82 +76,110 @@ export default function QuickCheck() {
                         
                         className="quickAsapLinks">
 
-                            <motion.a initial = {{opacity : 0, y : -50}} whileInView = {{opacity : 1, y:1}} transition={{delay : 0.1 }} viewport = {{once : true}} href="/services/housing" className="linkBin">
+                            <motion.a initial = {{opacity : 0, x : -50}} whileInView = {{opacity : 1, x:1}} transition={{delay : 0.1 }} href="/services/housing" className="linkBin">
 
                                 <div className="content">
 
-                                    <div className='quick__title'> 
-                                        Housing in Lagos
-                                        <div className="icon"><ArrowUpRight/></div> 
+                                    <div className="img_quick">
+
+                                        <img src={housing} alt="" />
+
                                     </div>
 
-                                    <p>Get info on housing, permits etc.</p>
+                                    <div className='quick__title'>
+
+                                        <div className="main__text">
+                                            Housing in Lagos <span><ArrowUpRight/></span>
+                                        </div>
+
+                                        <p>Get info on housing, permits, OPAL membership, LUC Payments etc.</p>
+
+                                    </div>
+
+                                    <div className="button__quick"> Go to housing </div>
 
                                 </div>
 
                             </motion.a>
 
-                            <motion.a initial = {{opacity : 0, y : -50}} whileInView = {{opacity : 1, y:1}} transition={{delay : 0.2 }} viewport = {{once : true}} href='/services/tourism' className="linkBin">
+                            <motion.a initial = {{opacity : 0, x : -50}} whileInView = {{opacity : 1, x:1}} transition={{delay : 0.2 }} href="/services/tourism" className="linkBin">
 
                                 <div className="content">
 
-                                    <div className="quick__title">
+                                    <div className="img_quick">
 
-                                        Visit and tour Lagos
-                                        <div className="icon"><ArrowUpRight/></div> 
+                                        <img src={travel} alt="" />
 
                                     </div>
 
-                                    <p>Book your trip, Get a guide, etc.</p>
+                                    <div className='quick__title'>
+
+                                        <div className="main__text">
+                                            Visit and Tour Lagos <span><ArrowUpRight/></span>
+                                        </div>
+
+                                        <p>book your trip, get a tour guide, how to process your visa</p>
+
+                                    </div>
+
+                                    <div className="button__quick"> Go to housing </div>
 
                                 </div>
 
                             </motion.a>
 
-                            <motion.a initial = {{opacity : 0, y : -50}} whileInView = {{opacity : 1, y:1}} transition={{delay : 0.3}} viewport = {{once : true}} href="/services/education" className="linkBin">
+                            <motion.a initial = {{opacity : 0, x : -50}} whileInView = {{opacity : 1, x:1}} transition={{delay : 0.3 }} href="/services/housing" className="linkBin">
 
                                 <div className="content">
 
-                                    <div className='quick__title'> 
-                                        Education in Lagos
-                                        <div className="icon"><ArrowUpRight/></div> 
+                                    <div className="img_quick">
+
+                                        <img src={work} alt="" />
+
                                     </div>
 
-                                    <p>View Educational centers</p>
+                                    <div className='quick__title'>
+
+                                        <div className="main__text">
+                                            Work in Lagos <span><ArrowUpRight/></span>
+                                        </div>
+
+                                        <p>book your trip, get a tour guide, how to process your visa</p>
+
+                                    </div>
+
+                                    <div className="button__quick"> Go to housing </div>
 
                                 </div>
-                                
+
                             </motion.a>
 
-                            <motion.a initial = {{opacity : 0, y : -50}} whileInView = {{opacity : 1, y:1}} transition={{delay : 0.4 }} viewport = {{once : true}} href="/government/mdas" className="linkBin">
+                            <motion.a initial = {{opacity : 0, x : -50}} whileInView = {{opacity : 1, x:1}} transition={{delay : 0.4 }} href="/services/housing" className="linkBin">
 
                                 <div className="content">
 
-                                    <div className='quick__title'> 
-                                    Explore agencies
-                                        <div className="icon"><ArrowUpRight/></div> 
+                                    <div className="img_quick">
+
+                                        <img src={learn} alt="" />
+
                                     </div>
 
-                                    <p>View Agencies directories</p>
+                                    <div className='quick__title'>
 
-                                </div>
-                                
-                            </motion.a>
+                                        <div className="main__text">
+                                            School in Lagos State <span><ArrowUpRight/></span>
+                                        </div>
 
-                            <motion.a initial = {{opacity : 0, y : -50}} whileInView = {{opacity : 1, y:1}} transition={{delay : 0.5 }} viewport = {{once : true}} href="/services/laws" className="linkBin">
+                                        <p>book your trip, get a tour guide, how to process your visa</p>
 
-                                <div className="content">
-
-                                    <div className='quick__title'> 
-                                        State laws and guidlines
-                                        <div className="icon"><ArrowUpRight/></div> 
                                     </div>
 
-                                    <p>Get acquianted with Lagos Laws.</p>
+                                    <div className="button__quick"> Go to housing </div>
 
                                 </div>
-                                
+
                             </motion.a>
+
 
                             <div className="linkServices">
 

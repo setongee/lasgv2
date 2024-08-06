@@ -533,7 +533,6 @@
 
             width: 100%;
             display: flex;
-            margin-top: 170px;
     
             .home__content{
     
@@ -562,12 +561,6 @@
                 }
     
                 .text__area{
-    
-                    font-size: 50px;
-                    line-height: 60px;
-                    letter-spacing: -2px;
-                    color: #131313;
-                    width: 100%;
     
                     span{
                         color: #fff;
@@ -697,7 +690,6 @@
 
             width: 100%;
             display: flex;
-            margin-top: 170px;
     
             .home__content{
     
@@ -727,12 +719,7 @@
     
                 .text__area{
     
-                    font-size: 50px;
-                    font-weight: 600;
-                    line-height: 60px;
-                    letter-spacing: -2px;
-                    color: #131313;
-                    width: 100%;
+                    
     
                     span{
                         color: #fff;
@@ -863,7 +850,6 @@
 
             width: 100%;
             display: flex;
-            margin-top: 160px;
 
             .searchBox{
 
@@ -1003,12 +989,11 @@
     
                 .text__area{
     
-                    font-size: 45px;
+                    font-size: 55px;
                     font-weight: 600;
                     line-height: 55px;
-                    letter-spacing: -2px;
                     color: #131313;
-                    width: 100%;
+                    width: 90%;
     
                     span{
                         color: #fff;
@@ -1086,7 +1071,6 @@
 
             width: 100%;
             display: flex;
-            margin-top: 160px;
 
             .searchBox{
 
@@ -1209,19 +1193,7 @@
                 z-index: 99;
     
                 .text__area{
-    
-                    font-size: 45px;
-                    font-weight: 600;
-                    line-height: 55px;
-                    letter-spacing: -2px;
-                    color: #131313;
-                    width: 100%;
-    
-                    span{
-                        color: #fff;
-                        color: #108a00;
-                        text-decoration: underline;
-                    }
+
     
                 }
     
@@ -1447,11 +1419,10 @@
     
                 .text__area{
     
-                    font-size: 40px;
+                    font-size: 50px;
                     font-weight: 600;
                     color: #C1FFDA;
-                    line-height: 48px;
-                    letter-spacing: -2px;
+                    line-height: 50px;
                     color: #131313;
                     width: 100%;
     

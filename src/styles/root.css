@@ -72,6 +72,11 @@ html{
 
 }
 
+body{
+
+  font-family: "Cormorant Garamond", serif;
+}
+
 .a-dark a{
   color : #000
 }

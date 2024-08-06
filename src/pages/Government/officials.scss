@@ -64,12 +64,14 @@
 
             .pageTitle{
 
-                font-size: 45px;
+                font-size: 65px;
                 width: 70%;
-                line-height: 57px;
-                letter-spacing: -0.5px;
-                font-weight: 700;
+                line-height: 65px;
+                letter-spacing: -1px;
+                font-weight: 500;
+                font-style: italic;
                 text-align: center;
+                font-family: "Cormorant Garamond", serif;
 
                 span{
                     color: var(--primary25);
@@ -427,10 +429,7 @@
 
         .topMan{
             .pageHeader{
-                .pageTitle{
-                    font-size: 50px;
-                    line-height: 60px;
-                }
+                
             }
         }
 
@@ -455,6 +454,54 @@
 
     .viewport{
         width: 90%;
+    }
+
+}
+
+
+@media(max-width : 1000px) {
+    
+
+    .officials_body{
+
+        padding-top: 220px;
+
+        .topMan{
+
+            .pageHeader{
+
+                gap: 20px;
+                margin-bottom: 60px;
+
+                .pageTitle{
+                    width: 90%;
+                }
+
+                .pageTitleSubs{
+                    width: 70%;
+                }
+            }
+        }
+
+        .officialsPage{
+            
+            width: 350px;
+
+            .photosPoint{
+
+                .photoHolder{
+
+                    width: 100%;
+
+                    .imageCarrier{
+
+                        width: 100%;
+                        height: 300px;
+
+                    }
+                }
+            }
+        }
     }
 
 }
@@ -485,19 +532,75 @@
                 margin-bottom: 60px;
 
                 .pageTitle{
-                    font-size: 40px;
-                    line-height: 50px;
+                    font-size: 60px;
+                    line-height: 60px;
+                    width: 100%;
                 }
 
                 .pageTitleSubs{
-                    width: 70%;
+                    width: 100%;
                 }
             }
         }
 
         .officialsPage{
             
-            width: 30%;
+            width: 48%;
+
+            .photosPoint{
+                .photoHolder{
+                    width: 100%;
+                    .imageCarrier{
+                        width: 100%;
+                        height: 270px;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media(max-width : 550px) {
+    
+
+    .viewport{
+        width: 100%;
+
+        .official_details{
+            .shortBio{
+                width: 90%;
+            }
+        }
+    }
+
+    .officials_body{
+
+        padding-top: 220px;
+
+        .topMan{
+
+            .pageHeader{
+
+                gap: 20px;
+                margin-bottom: 60px;
+
+                .pageTitle{
+                    font-size: 50px;
+                    line-height: 50px;
+                }
+
+                .pageTitleSubs{
+                    width: 100%;
+                    font-size: 14px;
+                    line-height: 22px;
+                }
+            }
+        }
+
+        .officialsPage{
+            
+            width: 46%;
 
             .photosPoint{
                 .photoHolder{
@@ -518,7 +621,7 @@
     .sideMenu{
 
         position: fixed;
-        top: 95px;
+        top: 70px;
         left: 0;
         display: flex;
         gap: 30px;
@@ -619,17 +722,6 @@
 
                 gap: 20px;
                 margin-bottom: 50px;
-
-                .pageTitle{
-                    font-size: 30px;
-                    line-height: 40px;
-                }
-
-                .pageTitleSubs{
-                    width: 90%;
-                    font-size: 13px;
-                    line-height: 20px;
-                }
             }
         }
 
@@ -656,6 +748,61 @@
                 }
 
                 
+            }
+        }
+    }
+
+}
+
+@media(max-width : 420px) {
+    
+
+    .viewport{
+        width: 100%;
+
+        .official_details{
+            .shortBio{
+                width: 90%;
+            }
+        }
+    }
+
+    .officials_body{
+
+        padding-top: 220px;
+
+        .topMan{
+
+            .pageHeader{
+
+                gap: 20px;
+                margin-bottom: 60px;
+
+                .pageTitle{
+                    font-size: 50px;
+                    line-height: 50px;
+                }
+
+                .pageTitleSubs{
+                    width: 100%;
+                    font-size: 14px;
+                    line-height: 22px;
+                }
+            }
+        }
+
+        .officialsPage{
+            
+            width: 95%;
+
+            .photosPoint{
+                .photoHolder{
+                    width: 100%;
+                    .imageCarrier{
+                        width: 100%;
+                        height: 270px;
+                    }
+                }
             }
         }
     }

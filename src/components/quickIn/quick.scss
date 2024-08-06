@@ -1,6 +1,6 @@
 .quick{
 
-    background-color: #009C3E;
+    background-color: #003e19;
     position: relative;
 
     img{
@@ -119,7 +119,7 @@
 
     .quick{
 
-        margin-top: -50px;
+        margin-top: 0px;
 
         .quick__main{
 
@@ -131,7 +131,7 @@
             }
 
             .quick__content, .search__cards__body{
-                margin-left: 50px;
+                margin-left: 0px;
             }
 
         }
@@ -144,6 +144,10 @@
 
     .quick{
 
+        img{
+            opacity: .4;
+        }
+
         .quick__main{
 
             height: 100%;
@@ -155,7 +159,23 @@
 
             .quick__content {
 
-                opacity: 0;
+                opacity: 1;
+                width: 100%;
+                margin-top: 50px;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+
+                p{
+                    font-size: 40px;
+                    text-align: center;
+                    line-height: 47px;
+                }
+
+                .subtitle{
+                    width: 100%;
+                    text-align: center;
+                }
 
             }
 
@@ -165,6 +185,7 @@
                 margin: 0;
                 padding: 0;
                 align-items: center;
+                margin-bottom: 70px;
 
                 .search__card{
                     width: 90%;

@@ -46,7 +46,7 @@ export default function MobileView({closeModal}) {
             <div className="dropdownBottom">
 
                 <p onClick={()=>navigate('/government/elected_officials')} > Elected Officials </p>
-                <p onClick={()=>navigate('/government/mdas')}> Explore Ministries </p>
+                <p onClick={()=>navigate('/government/mdas/all')}> Explore Ministries </p>
                 <a href="https://lagoshouseofassembly.gov.ng/home/our-team/" target='_Blank' onClick={()=>closeModal(false)} > Legislative Officers </a>
                 <a href="https://lagosjudiciary.gov.ng/directories.html#directories" target='_Blank' onClick={()=>closeModal(false)} > Judiciary Officers </a>
 
@@ -54,9 +54,9 @@ export default function MobileView({closeModal}) {
 
           </div>
           <div className="menu_sm" onClick={ () => navigate('/services') } >Services</div>    
-          <div className="menu_sm" onClick={ () => navigate('/news') } >News & Events </div>    
-          <div className="menu_sm" onClick={ () => navigate('/contact') } > Contact </div>   
-          <div className="menu_sm" onClick={ () => navigate('/services') } > Search </div> 
+          <div className="menu_sm" onClick={ () => navigate('/news/trending') } >Newsroom </div>   
+          <div className="menu_sm" onClick={ () => navigate('/events') } >Events </div>    
+          <div className="menu_sm" onClick={ () => navigate('/connect') } > Connect </div>   
 
         </div>
 

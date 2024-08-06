@@ -141,7 +141,7 @@ if (params !== 'all') {
 
                     <div className="mdaHeader flex flex_col">
 
-                        <div className="mdaTitle"> <span className='thick_700'> A-Z index </span> of Lagos government Ministries, Departments & Agencies. </div>
+                        <div className="mdaTitle"> <span className='thick_700'> A-Z index </span> of Lagos Government Ministries, Departments & Agencies. </div>
 
                         <div className="mdaTitleSubs">Find contact information for Lagos government ministries, departments and agencies including websites, emails, phone numbers, addresses, and more. </div>
 

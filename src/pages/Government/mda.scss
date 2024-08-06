@@ -144,15 +144,18 @@
 
             .mdaTitle{
 
-                font-size: 45px;
+                font-size: 65px;
                 width: 70%;
-                line-height: 57px;
-                letter-spacing: -0.5px;
-                font-weight: 700;
+                line-height: 65px;
+                letter-spacing: -1px;
+                font-weight: 500;
+                font-style: italic;
                 text-align: center;
+                font-family: "Cormorant Garamond", serif;
 
                 span{
                     color: #009C3E;
+                    font-family: "Cormorant Garamond", serif;
                 }
 
             }
@@ -478,12 +481,6 @@
 
                 margin-bottom: 50px;
 
-                .mdaTitle{
-                    width: 100%;
-                    font-size: 50px;
-                    line-height: 63px;
-                }
-
                 .mdaTitleSubs{
 
                     width: 80%;
@@ -539,8 +536,8 @@
 
                 .mdaTitle{
                     width: 100%;
-                    font-size: 40px;
-                    line-height: 53px;
+                    font-size: 60px;
+                    line-height: 60px;
                 }
 
                 .mdaTitleSubs{
@@ -623,8 +620,8 @@
 
                 .mdaTitle{
                     width: 100%;
-                    font-size: 30px;
-                    line-height: 36px;
+                    font-size: 55px;
+                    line-height: 55px;
                 }
 
                 .mdaTitleSubs{
@@ -881,6 +878,29 @@
 
     .government_style{
 
+        .topArea{
+
+            .mdaHeader{
+
+                margin-bottom: 50px;
+
+                .mdaTitle{
+                    width: 100%;
+                    font-size: 48px;
+                    line-height: 48px;
+                }
+
+                .mdaTitleSubs{
+
+                    width: 100%;
+                    font-size: 14px;
+
+                }
+
+            }
+
+        }
+
         .openMdaModal{
 
             position: fixed;
@@ -1010,6 +1030,37 @@
 
     }
 
+
+}
+
+@media (max-width : 450px) {
+
+    .government_style{
+
+        .topArea{
+
+            .mdaHeader{
+
+                margin-bottom: 50px;
+
+                .mdaTitle{
+                    width: 100%;
+                    font-size: 40px;
+                    line-height: 40px;
+                }
+
+                .mdaTitleSubs{
+
+                    width: 90%;
+
+                }
+
+            }
+
+        }
+
+        
+    }
 
 }
 

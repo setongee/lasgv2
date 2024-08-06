@@ -25,7 +25,7 @@ export default function Homepage() {
       <Photo_slider_component/>
       <QuickCheck/>
       <Quick/>
-      <Services bgColor = "rgb(249, 249, 249)" location = 'home' data_limit={11} />
+      <Services bgColor = "#fcfff5" location = 'home' data_limit={11} />
       <NewsCarrier/>
 
     </div>

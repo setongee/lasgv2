@@ -7,6 +7,7 @@
     display: flex;
     align-items: flex-start;
     justify-content: center;
+    top: 0;
 
     .modal_item{
 
@@ -94,6 +95,37 @@
             font-size: 14px;
             font-weight: 500;
             cursor: pointer;
+
+        }
+
+    }
+}
+
+@media (max-width : 750px) {
+
+    .view_service_modal{
+
+        .modal_item{
+
+            width: 90%;
+
+        }
+
+    }
+}
+
+@media (max-width : 500px) {
+
+    .view_service_modal{
+
+        .modal_item{
+
+            width: 100%;
+            border-radius: 10px 10px 0 0;
+            position: absolute;
+            bottom: 0;
+            padding: 30px;
+            margin: 0;
 
         }
 

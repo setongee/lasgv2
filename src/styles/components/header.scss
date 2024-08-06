@@ -431,16 +431,17 @@
             display: flex;
             justify-content: flex-end;
 
+
             .menuMobile{
     
-                width: 60%;
+                width: 80%;
                 min-height: max-content;
-                background-color: var(--primary);
+                background-color: #009C3E;
                 z-index: 2;
                 padding: 35px;
                 display: flex;
                 flex-direction: column;
-                gap: 25px;
+                gap: 20px;
                 padding-top: 61px;
                 color: #fff;
                 z-index: 9999;
@@ -464,7 +465,7 @@
         
                 .menu_sm{
         
-                    font-size: 24px;
+                    font-size: 30px;
                     font-weight: 600;
                     display: flex;
                     align-items: center;

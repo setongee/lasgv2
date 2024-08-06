@@ -1,7 +1,7 @@
 .quickCheck{
     overflow: hidden;
     position: relative;
-    background-color: hsl(0, 0%, 99.3%);
+    background-color: #fcfff5;
 
     .lineBg{
         height: 100%;
@@ -13,6 +13,7 @@
         align-items: center;
         justify-content: center;
         transform: rotateY(180deg);
+        display: none;
 
         img{
             height: 150%;
@@ -26,14 +27,17 @@
         flex-direction: column;
         gap: 30px;
         width: 100%;
-        padding: 120px 0;
+        padding: 100px 0;
         position: relative;
         z-index: 3;
 
         .title{
             margin-top: 30px;
-            font-size: 17px;
+            font-size: 12px;
             font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 0px;
         }
 
         .real{
@@ -48,17 +52,20 @@
             position: relative;
             color: #000;
             border-radius: 10px;
-            width: 50%;
+            width: 60%;
             display: flex;
             flex-direction: column;
 
             .textChange{
     
                 width: 100%;
-                font-size: 45px;
-                font-weight: 600;
-                line-height: 45px;
+                font-size: 65px;
+                font-weight: 500;
+                line-height: 63px;
                 letter-spacing: -1px;
+                font-family: "Cormorant Garamond", serif;    
+                font-style: italic;
+                margin-bottom: 20px;
 
                 .many{
                     line-height: 35px;
@@ -70,11 +77,13 @@
             .pasty{
 
                 margin-top: 15px;
-                width: 80%;
+                width: 70%;
                 font-weight: 400;
                 font-size: 16px;
                 line-height: 24px;
                 color: #444;
+                border-left: 3px solid #009C3E;
+                padding-left: 20px;
             
             }
 
@@ -86,10 +95,14 @@
             display: flex;
             align-items: center;
             position: relative;
-            flex-wrap: wrap;
-            gap: 15px;
+            gap: 30px;
+            overflow: hidden;
+            overflow-x: auto;
+            scrollbar-width: none;
+            padding-bottom: 20px;
 
             .linkServices{
+
                 font-size: 16px;
                 color: #808080;
                 margin-top: 30px;
@@ -105,28 +118,6 @@
                     font-weight: 500;
                 }
             }
-    
-            .quick__title{
-                font-weight: 500;
-                display: flex;
-                align-items: center;
-                width: 100%;
-                line-height: 27px;
-                color: #000;
-                font-size: 18px;
-
-                .icon{
-                    position: absolute;
-                    top: 25px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    border-radius: 50%;
-                    color: #009C3E;
-                    right: 20px;
-                    transform: translateY(-50%);
-                }
-            }
             
             .content{
 
@@ -136,13 +127,15 @@
     
             .linkBin{
                 width: 320px;
-                border: 1px solid rgba($color: #000000, $alpha: 0.1);
+                min-width: 320px;
+                border: 1px solid rgba($color: #000000, $alpha: 0.06);
                 cursor: pointer;
                 display: flex;
                 position: relative;
-                padding: 35px 25px;
-                border-radius: 5px;
+                padding: 0;
+                border-radius: 8px;
                 background-color: #fff;
+                overflow: hidden;
 
                 &:last-child{
                     border: none;
@@ -160,6 +153,85 @@
                     }
     
                 }
+
+                .content{
+
+                    .img_quick{
+
+                        height: 220px;
+                        overflow: hidden;
+
+                        img{
+
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+
+                        }
+
+                    }
+
+                    .quick__title{
+
+                        font-weight: 500;
+                        display: flex;
+                        flex-direction: column;
+                        width: 100%;
+                        line-height: 21px;
+                        color: #131313;
+                        font-size: 18px;
+                        padding: 20px;
+
+                        .main__text{
+                            display: flex;
+                            align-items: center;
+                            gap: 5px;
+
+                            span{
+                                margin-top: 4px;
+                            }
+                        }
+
+
+                        p{
+                            font-weight: 400;
+                            font-size: 11px;
+                            letter-spacing: 2px;
+                            text-transform: uppercase;
+                            margin-top: 15px;
+                            color: #555;
+
+                        }
+        
+                        .icon{
+                            position: absolute;
+                            top: 25px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            border-radius: 50%;
+                            color: #009C3E;
+                            right: 20px;
+                            transform: translateY(-50%);
+                        }
+                    }
+
+                    .button__quick{
+
+                        margin: 0 20px;
+                        background-color: #009C3E;
+                        font-size: 11px;
+                        letter-spacing: 2px;
+                        text-transform: uppercase;
+                        padding: 12px 18px;
+                        width: max-content;
+                        border-radius: 3px;
+                        margin-bottom: 20px;
+                        margin-top: 10px;
+                        display: none;
+
+                    }
+                }
     
                 &:hover{
     
@@ -167,10 +239,6 @@
                     background-color: #009C3E;
                     color: #000;
                     border-radius: 5px;
-
-                    .content{
-                        padding-left: 10px;
-                    }
 
                     .icon{
                         color: #fff;
@@ -184,140 +252,28 @@
                     }
 
                     .quick__title, p{
-                        color: #fff;
+                        color: #fff !important;
                     }
     
                 }
-    
-                h1{
-                    color: #000;
-                    font-size: 21px;
-                }
-    
-                p{
-                    margin-top: 5px;
-                    font-size: 14px;
-                    color: #878787;
-                }
 
             }
     
         }
     }
 
-}
-
-
-
-
-@media (max-width : 1200px) {
-
-    .quickCheck{
-        padding-top: 0;
-    }
-
-    .getStarted{
-
-        margin-top: 40px;
-        flex-direction: column;
-        gap: 60px;
-
-        .textString{
-
-            width: 100%;
-
-            .how{
-                font-size: 18px;
-                margin-bottom: 0px;
-            }
-
-        }
-
-        .p{
-            width: 100%;
-
-            .txt{
-                width: 75%;
-                line-height: 29px;
-                font-size:18px;
-            }
-        }
-
-        .quickAsapLinks{
-
-            width: 100%;
-    
-        }
-
-    }
-    
 }
 
 @media (max-width : 1000px) {
 
     .quickCheck{
-        padding-top: 0;
-    }
 
-    .getStarted{
+        .getStarted{
 
-        margin-top: 40px;
-        flex-direction: column;
-        gap: 60px;
-        justify-content: center;
-
-        padding-right: 0px !important;
-
-        .textString{
-
-            width: 100%;
-
-            .how{
-                font-size: 18px;
-            }
-            
-            .sip{
-    
-                margin-top: 30px;
-                line-height: 53px;
-                font-weight: 550;
-                font-size: 48px;
-                color: #000;
-                letter-spacing: -1px;
-                height: 110px;
-                text-align: center;
-                width: 80% !important;
-
-                .many{
-                    line-height: 42px;
-                }
-    
-                .Typewriter__cursor{
-                        
-                    font-size: 40px;
-                    font-weight: 100 !important;
-    
-                }
-    
-                
+            .textString{
+                width: 80%;
             }
 
-        }
-
-        .p{
-            width: 100%;
-
-            .txt{
-                width: 75%;
-                line-height: 29px;
-                font-size:18px;
-            }
-        }
-
-        .quickAsapLinks{
-
-            width: 100%;
-    
         }
 
     }
@@ -326,132 +282,78 @@
 
 @media (max-width : 768px) {
 
-    .getStarted{
+    .quickCheck{
 
-        .linkServices{
-            font-size: 16px;
-            font-weight: 600;
-            color: #777;
-            margin-top: 0px !important;
+        .getStarted{
 
-            a{
-                color: #108a00;
-                text-decoration: underline;
-                cursor: pointer;
-            }
-        }
+            .textString{
+                width: 100%;
 
-        .textString{
-
-            width: 100%;
-
-            .sip{
-    
-                margin-top: 30px;
-                line-height: 44px !important;
-                font-weight: 550;
-                font-size: 38px !important;
-                color: #000;
-                letter-spacing: -1px;
-                height: 80px !important;
-                
-                text-align: center;
-                width: 57%;
-
-                .many{
-                    line-height: 42px;
+                .textChange{
+                    font-size: 60px;
+                    line-height: 60px;
                 }
-    
-                .Typewriter__cursor{
-                        
-                    font-size: 40px;
-                    font-weight: 100 !important;
-    
+            }
+
+            .quickAsapLinks{
+
+                flex-wrap: wrap;
+                gap: 20px;
+
+                .linkBin{
+
+                    width: calc(50% - 15px);
+                    min-width: calc(50% - 15px);
+
                 }
-    
-                
-            }
 
+            }
+            
         }
 
     }
     
 }
 
-@media (max-width : 600px) {
+@media (max-width : 550px) {
 
-    .getStarted{
+    .quickCheck{
 
-        .textString{
+        .getStarted{
 
-            width: 100%;
+            .textString{
+                width: 100%;
 
-            .sip{
-                height: 80px !important;
-                width: 100% !important;
+                .textChange{
+                    font-size: 55px;
+                    line-height: 55px;
+                }
+
+                .pasty{
+                    width: 90%;
+                }
             }
 
-        }
+            .quickAsapLinks{
 
+                flex-wrap: wrap;
+                gap: 20px;
 
+                .linkBin{
 
-        .linkBin{
-            width: 100% !important;
+                    width: 100%;
+                    min-width: 100%;
+
+                }
+
+            }
+            
         }
 
     }
     
 }
 
-@media (max-width : 500px) {
-
-    .getStarted{
-
-        .textString{
-
-            width: 100%;
-
-            .sip{
-                height: 95px !important;
-                width: 100% !important;
-                font-size: 35px !important;
-                line-height: 43px !important;
-            }
-
-        }
 
 
 
-        .linkBin{
-            width: 100% !important;
-        }
-
-    }
-    
-}
-
-@media (max-width : 423px) {
-
-    .getStarted{
-
-        .textString{
-
-            width: 100%;
-
-            .sip{
-                height: 70px !important;
-                width: 100% !important;
-                font-size: 30px !important;
-                line-height: 36px !important;
-            }
-
-        }
-
-
-
-        .linkBin{
-            width: 100% !important;
-        }
-
-    }
-}
