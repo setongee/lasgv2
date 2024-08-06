@@ -9,7 +9,32 @@
 
 
     .mobile__flash__news{
-        display: none;
+
+        width: 100%;
+        position: relative;
+        display: flex;
+        margin-top: 190px;
+        
+        .flashNews{
+
+            font-size: 12px;
+            background-color: #fff3d8;
+            padding: 5px 10px;
+            color: var(--dark);
+            font-weight: 600;
+            width: max-content;
+            border-radius: 5px;
+
+            span{
+                margin-right: 8px;
+            }
+
+            a {
+                color: #108a00;
+            }
+
+        }
+        
     }
 
     .lasg__illustration{
@@ -154,16 +179,15 @@
 
         width: 100%;
         display: flex;
-        margin-top: 220px;
         flex-direction: column;
-        gap: 30px;
+        gap: 40px;
         position: relative;
         z-index: 9;
 
 
         .searchBox{
 
-            margin-top: 15px;
+            margin-top: 0px;
 
             label{
                 font-size: 11px;
@@ -231,7 +255,7 @@
                 overflow: hidden;
                 display: flex;
                 align-items: center;
-                margin-top: 10px;
+                margin-top: 15px;
                 background-color: #fff;
                 padding: 3px;
                 border-radius: 8px;
@@ -299,20 +323,18 @@
 
             .text__area{
 
-                font-size: 70px;
-                // font-style: italic;
-                font-weight: 500;
-                line-height: 68px;
+                font-size: 60px;
+                font-weight: 600;
+                line-height: 61px;
                 letter-spacing: -1px;
                 color: #131313;
                 width: 100%;
                 font-family: "Cormorant Garamond", serif;
 
                 span{
-                    color: #fff;
                     color: #108a00;
-                    // text-decoration: underline;
                     font-family: "Cormorant Garamond", serif;
+                    font-style: italic;
                 }
 
             }
@@ -336,7 +358,7 @@
         font-size: 12px;
         font-weight: 600;
         letter-spacing: 2px;
-        margin-top: 80px;
+        margin-top: 60px;
         display: flex;
         align-items: center;
         gap: 4px;
@@ -1500,7 +1522,7 @@
 
             .lasg__illustration__eko{
                 position: absolute;
-                bottom: -200px;
+                bottom: -185px;
                 right: 55%;
                 transform: translateX(50%);
                 width: 600px;
@@ -1533,6 +1555,7 @@
 
                 width: 80px;
                 position: absolute;
+                display: block;
                 bottom: 76px;
                 z-index: 2;
                 right: -80px;
@@ -1604,7 +1627,7 @@
 
             .searchBox{
 
-                margin-top: 8px;
+                margin-top: 0px;
     
                 label{
                     font-size: 11px;
