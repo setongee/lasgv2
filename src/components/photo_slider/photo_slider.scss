@@ -1745,9 +1745,9 @@
                 .text__area{
     
                     font-size: 45px !important;
-                    font-weight: 600 !important;
-                    line-height: 40px !important;
-                    letter-spacing: -2px !important;
+                    font-weight: 500 !important;
+                    line-height: 43px !important;
+                    letter-spacing: -1.2px !important;
                     color: #131313;
                     width: 100%;
                     margin-top: 0px;
@@ -1756,6 +1756,7 @@
                         color: #fff;
                         color: #108a00;
                         text-decoration: none;
+                        font-style: italic !important;
                     }
     
                 }
