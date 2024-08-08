@@ -97,7 +97,7 @@ export default function Photo_slider_component() {
 
                   <div className="text__area">
 
-                      <SpanMotion text = 'Simplifying' /> your access to Lagos State Government Services and Topics.
+                      <SpanMotion text = 'Simplifying' /> your access to Lagos State Government Services.
 
                   </div>
 

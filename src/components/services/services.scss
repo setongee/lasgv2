@@ -12,14 +12,19 @@
         color: #131313;
 
         .topic{
-            font-size: 65px;
-            line-height: 65px;
+            font-size: 50px;
+            line-height: 55px;
             letter-spacing: -1px;
             color: #131313;
-            margin-bottom: 20px;
-            font-weight: 500 !important;
-            font-family: "Cormorant Garamond", serif; 
-            font-style: italic;
+            margin-bottom: 30px;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .subtitle{
+            letter-spacing: 2px;
+            font-size: 13px;
+            font-weight: 500;
         }
 
     }
@@ -177,16 +182,18 @@
 
         text-align: center;
         margin-bottom: 50px;
+        align-items: flex-start;
 
         .topic{
-            font-size: 55px;
-            text-align: center;
-            width: 90%;
-            line-height: 55px;
+            font-size: 45px;
+            text-align: left;
+            width: 70%;
+            line-height: 50px;
         }
 
         .subtitle{
             line-height: 24px;
+            font-size: 12px;
         }
 
     }
@@ -238,10 +245,11 @@
      }
  
      .midTopic{
+
+        .subtitle{
+            text-align: left;
+        }
  
-         .topic{
-             margin-bottom: 10px;
-         }
  
      }
  
@@ -286,17 +294,12 @@
  @media (max-width : 758px) {
 
     .services{
-
-        background-color: red;
  
      .midTopic{
- 
-         .topic{
-             margin-bottom: 20px;
-             font-size: 50px;
-             width: 90%;
-             line-height: 50px;
-         }
+
+        .topic{
+            width: 100%;
+        }
  
      }
 
@@ -335,10 +338,9 @@
      .midTopic{
  
          .topic{
-             margin-bottom: 20px;
-             font-size: 45px;
-             width: 90%;
-             line-height: 45px;
+             font-size: 38px;
+             width: 100%;
+             line-height: 43px;
          }
  
      }

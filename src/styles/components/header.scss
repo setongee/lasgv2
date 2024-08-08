@@ -77,56 +77,36 @@
 
         background-color: #009C3E;
         height: 40px;
-        font-size: 14px;
+        font-size: 11px;
         color: #fff;
         display: flex;
         align-items: center;
+        justify-content: center;
         gap: 20px;
         justify-content: space-between;
         position: relative;
         z-index: 4;
-        letter-spacing: 2px;
+        letter-spacing: 3px;
         font-weight: 300;
-
-        .newsScroll{
-
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            display: none;
-
-        }
 
         .quick_links{
 
             display: flex;
             gap: 20px;
-            font-size: 11px;
-            margin-left: auto;
-            justify-content: flex-end;
-
-            a{
-                display: flex;
-                align-items: center;
-                gap: 5px;
-                text-transform: uppercase;
-                font-weight: 400;
-    
-                &:hover{
-                    color: #42FF01;
-                }
-            }
+            justify-content: center;
 
             .fixUp{
 
                 gap: 10px;
+                font-weight: 600;
 
                 a{
                     display: flex;
                     align-items: center;
                     gap: 5px;
                     text-transform: uppercase;
-                    font-weight: 400;
+                    color: #ffd94f;
+                    font-weight: 700;
                 }
 
                 .numbers{

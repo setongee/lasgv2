@@ -92,7 +92,7 @@ export default function Services({bgColor, location, data_limit}) {
 
                     <div className="midTopic">
                         <div className="topic thick_700">Browse all Lagos State Services & Topics</div>
-                        <div className="subtitle">Making it easier to have quick access to Lagos State services and information</div>
+                        <div className="subtitle uppercase">Making it easier to have quick access to Lagos State services and information</div>
                     </div>
 
                 ) : null

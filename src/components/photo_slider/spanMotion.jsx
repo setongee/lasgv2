@@ -5,7 +5,7 @@ import './span.scss'
 export default function SpanMotion({text}) {
 
     const [textIndex, setTextIndex] = useState(0);
-    const textContent = ['Simplifying', 'Optimizing', 'Automating', 'Boosting']
+    const textContent = ['Simplifying', 'Optimizing', 'Automating']
 
     const nextText = () => {
 
@@ -28,7 +28,7 @@ export default function SpanMotion({text}) {
 
             nextText();
             
-        }, 4000);
+        }, 2000);
         
         return () => clearInterval(interval);
 
