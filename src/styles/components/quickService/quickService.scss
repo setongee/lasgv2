@@ -59,12 +59,10 @@
             .textChange{
     
                 width: 100%;
-                font-size: 65px;
+                font-size: 50px;
                 font-weight: 500;
-                line-height: 63px;
+                line-height: 55px;
                 letter-spacing: -1px;
-                font-family: "Cormorant Garamond", serif;    
-                font-style: italic;
                 margin-bottom: 20px;
 
                 .many{
@@ -264,7 +262,7 @@
 
 }
 
-@media (max-width : 1000px) {
+@media (max-width : 1200px) {
 
     .quickCheck{
 
@@ -290,8 +288,8 @@
                 width: 100%;
 
                 .textChange{
-                    font-size: 60px;
-                    line-height: 60px;
+                    font-size: 45px;
+                    line-height: 50px;
                 }
             }
 
@@ -325,8 +323,8 @@
                 width: 100%;
 
                 .textChange{
-                    font-size: 55px;
-                    line-height: 55px;
+                    font-size: 40px;
+                    line-height: 45px;
                 }
 
                 .pasty{

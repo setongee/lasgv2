@@ -28,17 +28,14 @@
     }
 
     .top{
-        font-size: 65px;
-        font-weight: 500;
+        font-size: 55px;
+        font-weight: 300;
         letter-spacing: -1px !important;
         line-height: 65px;
         color: #353535;
-        font-family: "Cormorant Garamond", serif;
-        font-style: italic;
 
         span{
             font-weight: 600;
-            font-family: "Cormorant Garamond", serif;
         }
     }
 
@@ -116,8 +113,8 @@
     flex-wrap: wrap;
     gap: 10px;
     overflow-y: auto;
-    height: 450px;
-    padding-bottom: 50px;
+    height: 500px;
+    padding-bottom: 200px;
 
     p{
         font-weight: 600;

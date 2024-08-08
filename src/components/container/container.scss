@@ -1,21 +1,21 @@
 .guidePack{
 
-    width: 70%;
+    width: 85%;
     max-width: 1440px;
     margin: 0 auto;
     position: relative;
 
 }
 
-@media (max-width : 1400px) {
+// @media (max-width : 1440px) {
 
-    .guidePack{
+//     .guidePack{
 
-        width: calc(100% - 60px);
+//         width: calc(100% - 60px);
     
-    }
+//     }
 
-}
+// }
 
 @media (max-width : 550px) {
 

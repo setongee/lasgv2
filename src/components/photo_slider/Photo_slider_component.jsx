@@ -8,6 +8,7 @@ import Typewriter from 'typewriter-effect';
 import LasgIllustrations from './lasg_landingpage_illustrations'
 import {motion} from 'framer-motion'
 import SearchQuery from '../search/searchQuery'
+import SpanMotion from './spanMotion'
 
 export default function Photo_slider_component() {
 
@@ -96,7 +97,7 @@ export default function Photo_slider_component() {
 
                   <div className="text__area">
 
-                      <span>Simplifying </span>your access to Lagos State Government Services and Topics.
+                      <SpanMotion text = 'Simplifying' /> your access to Lagos State Government Services and Topics.
 
                   </div>
 
@@ -162,8 +163,8 @@ export default function Photo_slider_component() {
 
         </Container>
 
-
         <LasgIllustrations/>
+
 
 
     </div>

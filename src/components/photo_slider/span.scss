@@ -1,0 +1,32 @@
+.holder{
+    overflow: hidden;
+    height: 67px;
+    width: fit-content;
+    // width: 310px;
+    // border-radius: 15px;
+    // padding: 0px 10px;
+    box-sizing: border-box;
+    display: inline-block;
+    margin-bottom: -13px;
+    // background-color: green;
+
+    p{
+        animation: slideIn .6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        transition: all .4s ease-in-out;
+        // color: #fff !important;
+        // text-decoration: underline;
+    }
+
+}
+
+@keyframes slideIn {
+
+    from {
+        margin-top: 50px;
+    }
+
+    to {
+        margin-top: 0;
+    }
+    
+}
