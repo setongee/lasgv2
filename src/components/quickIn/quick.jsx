@@ -65,7 +65,7 @@ export default function Quick() {
                        <div className="cta flex flex_align_center">Apply Now <div className="arrt"> <ArrowRight height={18} /></div> </div>
                     </a>
 
-                    <a target='_blank' href='https://registration.lagosresidents.gov.ng/register/' className="search__card top" onMouseOver={ () => changeIndexToCurrent(4) }>
+                    <a target='_blank' href='https://ileraeko.com/' className="search__card top" onMouseOver={ () => changeIndexToCurrent(4) }>
                        <p> Health plans as unique as you</p>
                        <div className="cta flex flex_align_center">Apply Now <div className="arrt"> <ArrowRight height={18} /></div> </div>
                     </a>
