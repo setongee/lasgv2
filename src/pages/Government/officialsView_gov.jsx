@@ -85,9 +85,9 @@ return (
 
                     <div className="missionStatement">
 
-                        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, atque ea. Ullam corrupti temporibus dolorum..."
+                        "The Governor of Lagos State and indeed, Lagos State Government  distance itself from any reckless, divisive and dangerous rhetoric. Lagos remains home to every Nigerian citizen regardless of their ethnic nationality"
 
-                        <p>- Position of the Official, June 2023</p>
+                        <p> - Governor Babajide Olusola Sanwo-Olu </p>
 
                     </div>
 

@@ -81,9 +81,9 @@ return (
 
                     <div className="missionStatement">
 
-                        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, atque ea. Ullam corrupti temporibus dolorum..."
+                        "Lagos is committed to providing the youth with ‘cutting-edge’ facilities and technology, thereby, empowering them to reach their full potential, including the desire to drive innovation and growth in the state"
 
-                        <p>- Position of the Official, June 2023</p>
+                        <p>- Dr. Kadri Obafemi Hamzat</p>
 
                     </div>
 

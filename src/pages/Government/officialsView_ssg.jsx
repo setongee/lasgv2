@@ -43,7 +43,7 @@ return (
 
                         <div className="official_name"> Barr. ‘Bimbola Salu-Hundeyin </div>
                         <div className="post"> - Secretary to the State Government - </div>
-                        <div className="shortBio">Dr. Kadri Obafemi Hamzat, was re-elected the Deputy Governor of Lagos State for a second term, following the victory of the All Progressives Congress (APC) at the March 18, 2023 gubernatorial election. He remained the running mate to the Governor...</div>
+                        <div className="shortBio">Mrs. Abimbola Salu-Hundeyin is an esteemed Nigerian lawyer, administrator, and public servant, whose career spans over three decades of dedicated service to the nation. A Solicitor of the Supreme Court of Nigeria...</div>
 
                     </div>
 
@@ -81,9 +81,9 @@ return (
 
                     <div className="missionStatement">
 
-                        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, atque ea. Ullam corrupti temporibus dolorum..."
+                        "Lagos is the only state that is not owing pensioners a kobo, if you retire today, you begin to get your pension immediately..."
 
-                        <p>- Position of the Official, June 2023</p>
+                        <p> - Barr. ‘Bimbola Salu-Hundeyin </p>
 
                     </div>
 
@@ -93,9 +93,10 @@ return (
                     
                     <div className='heading' id="intro"> About Barr. ‘Bimbola Salu-Hundeyin </div>
                     
-                    Dr. Kadri Obafemi Hamzat, was re-elected the Deputy Governor of Lagos State for a second term, following the victory of the All Progressives Congress (APC) at the March 18, 2023 gubernatorial election. He remained the running mate to the Governor, Mr. Babajide Olusola Sanwo-Olu after an outstanding first term performance.   </p>
+                    Mrs. Abimbola Salu-Hundeyin is an esteemed Nigerian lawyer, administrator, and public servant, whose career spans over three decades of dedicated service to the nation. A Solicitor of the Supreme Court of Nigeria, she holds a Bachelor of Laws degree from Obafemi Awolowo University (OAU), Ile-Ife, where she graduated in 1984. </p>
 
-                    <p>Born on September 19, 1964, ideologically progressive Dr. Hamzat joined the public service in 2005 from an impressive career in academics, financial services and engineering with accomplishments in information technology and consulting. Ever since then, he has increasingly established as a visionary leader with an impressive focus on excellence and performance. </p>
+                    <p>She further solidified her legal acumen by establishing her practice as the Principal Counsel of A & H Abimbola Hundeyin and Co., where she demonstrated her profound expertise in various aspects of law. Her public service journey is marked by significant contributions across various sectors. 
+                    </p>
 
                     
 
@@ -106,71 +107,32 @@ return (
                     <div className="imp_img">
 
                          <div className="imageContainer">
-                            <img src="https://pbs.twimg.com/media/F8N5KwQXQAA2AEy.jpg:large" alt="hamzat Elections" /> 
+                            <img src="https://pbs.twimg.com/media/Fy0CmF7WIAAbvk6.jpg" alt="SSG Elections" /> 
                          </div>
 
                          <div className="imageContainer">
-                            <img src="https://pbs.twimg.com/media/GIeZdpBWIAAwjKq.jpg:large" alt="sanwolu2019 Elections" /> 
+                            <img src="https://ssg.lagosstate.gov.ng/wp-content/uploads/sites/131/2023/06/IMG-20230616-WA0008.jpg" alt="sanwolu2019 Elections" /> 
                          </div>
 
                     </div>
                         
-                    Dr. Hamzat brought his energy and vitality into public service after over 2 decades of an exciting private sector career across various top positions in reputable organizations such as RTP Consulting Services, City of New York, College of New Rochelle, New York, Merrill Lynch Inc., Morgan Stanley and Oando Plc.</p>
+                    Mrs. Salu-Hundeyin initially made her mark as the Special Adviser (Legal) to the Minister of the Federal Capital Territory (FCT), Senator Bala Muhammad. In this capacity, she provided critical legal counsel and played an instrumental role in shaping policies that impacted the nation's capital. Mrs. Salu-Hundeyin's leadership skills were further recognized when she served as the Acting Chairman of the National Population Commission (NPC).</p>
 
-                    <p>While on his first public sector role, his headship as Commissioner at the Ministry of Science & Technology during the Bola Ahmed Tinubu administration, entrenched a new work culture among the staff who embraced his style of open and transparent leadership with enthusiasm.</p>
-
-                    <p>In only four years, he deployed cutting-edge technology that integrated the entire Lagos State Public Service, and with that initiative, Lagos became the first government institution in Africa to implement 11 modules of Oracle ERP. On the strength of his performance, he was retained in the first term of Babatunde Fashola administration (2007-2011) to continue with the technological innovation that brought such efficiency to government activities in Lagos State. </p>
-
-                    <p>In the second term of the administration (2011 to 2015), Dr. Hamzat was appointed Commissioner for Works and Infrastructure to champion the State’s infrastructural revolution agenda. He later served as Special Adviser (Technical) to His Excellency, Mr. Babatunde Raji Fashola, when he became the Honourable Minister of Works, Power and Housing before his nomination and subsequent election as the Deputy Governor of Lagos State in 2019.</p>
-                    
-                    
-                    <p>
-
-                    <div className='heading' id="education">Educational Background</div>
-                        
-                    Dr. Hamzat had his early education at Odu Abore Memorial Primary School in Mushin and Olivet Baptist High School, Oyo. For his tertiary education, he attended the Prestigious University of Ibadan, graduated with a B.Sc. (Second Class Upper) in Agricultural Engineering in 1986 and earned a M.Sc. in Agricultural Engineering in 1988 from the same University.</p>
-
-                    <p>
-                    In 1992, he earned a Ph.D. in System Process Engineering from Cranfield University, England and was the first student in the department to complete his doctorate within three years. He is also an alumnus of the Harvard Kennedy School of Government.
+                    <p>Her tenure was marked by strategic reforms and initiatives that bolstered the commission's mandate. Subsequently, she was confirmed as one of the 12 National Commissioners of the NPC, further cementing her reputation as an astute administrator. 
                     </p>
 
-                    <p>
+                    <p>Her expertise in population management earned her the prestigious role of Chairperson of the African Union-African Population Experts Committee (AU-APEC), where she continues to contribute to continental policies on population and development.
+                    </p>
 
-                    <div className='heading' id="qualifications"> Qualifications </div>
-
-                    Dr. Hamzat, who has two publications in reputable Scientific Journals to his name, is a Microsoft Certified System Engineer, a member of the Nigeria Computer Society and a Fellow of Nigerian Society of Engineers. He has gained further exposure through numerous training programme by international giants. One of such instances is his participation in the World Bank’s Third Country Training Programme held in Singapore which emphasized a holistic understanding of the challenges facing the developing nations of the world.
-                    
-                    {<br></br>} {<br></br>}
-
-                    A well-rounded Public Administrator, Dr. Hamzat is a strategic thinker, who has coordinated the execution of numerous world-class projects and developmental programs towards transforming Lagos State into Africa’s model megacity and financial hub. He is a doer, who pushes the boundaries of excellence in public service without seeking undue limelight and only finds joy in his public office achievements, only when his efforts impact lives positively while serving the overall public interest.</p>
+                    <p>In a testament to her versatile leadership, Mrs. Salu-Hundeyin currently serves as the Secretary to the State Government (SSG) under the administration of Governor Babajide Olusola Sanwo-Olu. In this role, she oversees the coordination of government activities, ensuring the effective implementation of policies and programs that align with the administration's vision for Lagos State.
+                    </p>
+            
 
                     <p>
-                    
-                    
                     
                     <div className='heading' id="highlights">Highlights & Contributions</div>
 
-                    Highly revered and extensively decorated for his efficient resource utilization in the private sector and gallantry in public service, he was the winner of the 2013 edition of the Lagos State Man of the Year Award.</p>
-
-                    <p>Beyond accolades, Dr. Hamzat’s extensive knowledge and leadership ability have earned him important seats at critical decision-making and advisory tables both in the state and countrywide.  He has also delivered papers and lectures at various fora.</p>
-
-                    <p>
-                    
-                    <div className='heading' id="family"> Hamzat's Family</div>
-
-                    <div className="imp_img">
-
-                         <div className="imageContainer">
-                            <img src="https://pbs.twimg.com/media/GIK_rzhW4AEzEq5?format=jpg&name=large" /> 
-                         </div>
-
-                         <div className="imageContainer">
-                            <img src="https://pbs.twimg.com/media/GDRfM0dXUAAKpl-?format=jpg&name=large" /> 
-                         </div>
-
-                    </div>
-                        
-                    Dr. Kadri Obafemi Hamzat is a devout Muslim and committed family man, whose marriage to Mrs. Oluremi Hamzat is blessed with lovely children. He is deeply interested in development economics, social welfare and gender empowerment, and has remained a strong voice against discriminatory policies that debase humanity.</p>
+                    Mrs. Abimbola Salu-Hundeyin is widely respected for her legal brilliance, administrative acumen, and unwavering commitment to public service. Her career reflects a deep dedication to advancing the legal profession and improving governance, making her a significant figure in Nigeria's public sector landscape.</p>                
 
                     </div>
 

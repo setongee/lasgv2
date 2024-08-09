@@ -79,9 +79,9 @@ return (
 
                     <div className="missionStatement">
 
-                        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, atque ea. Ullam corrupti temporibus dolorum..."
+                        "it is important we make sure that as workers we engage in regular exercise to make our body fit and sound..."
 
-                        <p>- Position of the Official, June 2023</p>
+                        <p>- Mr. Agoro Shuaheeb Olabode</p>
 
                     </div>
 

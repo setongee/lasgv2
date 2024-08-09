@@ -43,7 +43,7 @@ return (
 
                         <div className="official_name"> Mr. Sam Egube </div>
                         <div className="post"> - Deputy Chief of Staff - </div>
-                        <div className="shortBio">Moyosore Jubril Onigbanjo SAN (born 24 September 1964) is a Nigerian lawyer and a Senior Advocate of Nigeria (SAN). He has served as attorney general and commissioner for justice of Lagos State since 2019....</div>
+                        <div className="shortBio">Samuel Avwerosuo Egube, born on March 5, 1969, hails from Uwheru, Ugehelli in Delta State. He began his education at Agbado Model Primary School in Benin City, followed by Edo College in Benin City. He then earned a Second Class Upper Honours degree in Civil Engineering... </div>
 
                     </div>
 
@@ -55,24 +55,24 @@ return (
 
                     <div className="official_highlights">
 
-                        <div className="title">Secretary to the State Government in action</div>
+                        <div className="title">Deputy Chief of Staff</div>
 
                         <div className="highlights">
 
                             <div className="highlight">
-                                <img src="https://pbs.twimg.com/media/FywELqqXwAMaO1O.jpg:large" alt="highlight" />
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnvGqxudOcR8D8X7q9W9R6eyC2_UIx0puzOIEI6HWYWc1Cfl31QpZYe_oY&s=10" alt="highlight" />
                             </div>
 
                             <div className="highlight">
-                                <img src="https://pbs.twimg.com/media/Fyx1JP6XsAgA6DI?format=jpg&name=4096x4096" alt="highlight" />
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScjl5Q03q6eS7jbudK9zjjqvLUlEOQOuns2l4424y6uIIlZsdiUidaYNw&s=10" alt="highlight" />
                             </div>
 
                             <div className="highlight">
-                                <img src="https://i0.wp.com/lagosstate.gov.ng/wp-content/uploads/2023/11/2d3ba3f0-c4a7-4b05-b974-6db69b42eb3d.jpeg?resize=780%2C520&ssl=1" alt="highlight" />
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7RebP-JbKbEuAh6BgSE0KqQHtkJvG4BLo4g&usqp=CAU" alt="highlight" />
                             </div>
 
                             <div className="highlight">
-                                <img src="https://ssg.lagosstate.gov.ng/wp-content/uploads/sites/131/2023/11/6f39f8f6-4796-4e83-bb24-341b4224a1b5.jpeg" alt="highlight" />
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQP8hKpkXYaeunmW15M3YolBYNrYfUjhEPIqQ&usqp=CAU" alt="highlight" />
                             </div>
 
                         </div>
@@ -81,9 +81,9 @@ return (
 
                     <div className="missionStatement">
 
-                        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, atque ea. Ullam corrupti temporibus dolorum..."
+                        "It is a thing of joy to note that the Economic Plan of Lagos State can be duplicated for use at the national level..."
 
-                        <p>- Position of the Official, June 2023</p>
+                        <p>- Mr. Sam Egube</p>
 
                     </div>
 
@@ -91,86 +91,25 @@ return (
 
                     <p>
                     
-                    <div className='heading' id="intro"> About Barr. ‘Bimbola Salu-Hundeyin </div>
+                    <div className='heading' id="intro"> About Samuel Egube </div>
                     
-                    Dr. Kadri Obafemi Hamzat, was re-elected the Deputy Governor of Lagos State for a second term, following the victory of the All Progressives Congress (APC) at the March 18, 2023 gubernatorial election. He remained the running mate to the Governor, Mr. Babajide Olusola Sanwo-Olu after an outstanding first term performance.   </p>
+                    Samuel Avwerosuo Egube, born on March 5, 1969, hails from Uwheru, Ugehelli in Delta State. He began his education at Agbado Model Primary School in Benin City, followed by Edo College in Benin City. He then earned a Second Class Upper Honours degree in Civil Engineering from the University of Benin. Pursuing further education, he obtained an Executive MBA from the prestigious IESE Business School at the University of Navarra, Barcelona, Spain.</p>
 
-                    <p>Born on September 19, 1964, ideologically progressive Dr. Hamzat joined the public service in 2005 from an impressive career in academics, financial services and engineering with accomplishments in information technology and consulting. Ever since then, he has increasingly established as a visionary leader with an impressive focus on excellence and performance. </p>
-
-                    
-
-                    <p>
-
-                    <div className='heading' id="Public Service">Public Service</div>
-
-                    <div className="imp_img">
-
-                         <div className="imageContainer">
-                            <img src="https://pbs.twimg.com/media/F8N5KwQXQAA2AEy.jpg:large" alt="hamzat Elections" /> 
-                         </div>
-
-                         <div className="imageContainer">
-                            <img src="https://pbs.twimg.com/media/GIeZdpBWIAAwjKq.jpg:large" alt="sanwolu2019 Elections" /> 
-                         </div>
-
-                    </div>
-                        
-                    Dr. Hamzat brought his energy and vitality into public service after over 2 decades of an exciting private sector career across various top positions in reputable organizations such as RTP Consulting Services, City of New York, College of New Rochelle, New York, Merrill Lynch Inc., Morgan Stanley and Oando Plc.</p>
-
-                    <p>While on his first public sector role, his headship as Commissioner at the Ministry of Science & Technology during the Bola Ahmed Tinubu administration, entrenched a new work culture among the staff who embraced his style of open and transparent leadership with enthusiasm.</p>
-
-                    <p>In only four years, he deployed cutting-edge technology that integrated the entire Lagos State Public Service, and with that initiative, Lagos became the first government institution in Africa to implement 11 modules of Oracle ERP. On the strength of his performance, he was retained in the first term of Babatunde Fashola administration (2007-2011) to continue with the technological innovation that brought such efficiency to government activities in Lagos State. </p>
-
-                    <p>In the second term of the administration (2011 to 2015), Dr. Hamzat was appointed Commissioner for Works and Infrastructure to champion the State’s infrastructural revolution agenda. He later served as Special Adviser (Technical) to His Excellency, Mr. Babatunde Raji Fashola, when he became the Honourable Minister of Works, Power and Housing before his nomination and subsequent election as the Deputy Governor of Lagos State in 2019.</p>
-                    
-                    
                     <p>
 
                     <div className='heading' id="education">Educational Background</div>
                         
-                    Dr. Hamzat had his early education at Odu Abore Memorial Primary School in Mushin and Olivet Baptist High School, Oyo. For his tertiary education, he attended the Prestigious University of Ibadan, graduated with a B.Sc. (Second Class Upper) in Agricultural Engineering in 1986 and earned a M.Sc. in Agricultural Engineering in 1988 from the same University.</p>
+                    A lifelong learner, Mr. Sam Egube has attended numerous professional development courses, including leadership programmes at IESE (Spain), INSEAD (France), Wharton (USA), Harvard University (USA), Columbia Business School (USA), Lagos Business School, and technical conferences such as OTC and FIDIC in Houston and Geneva, respectively. He is a member of several professional bodies, including the Institute of Directors (IoD), the Nigerian Institute of Management (NIM), the International Coaching Federation (ICF), and the Council for the Regulation of Engineering in Nigeria (COREN). He is also a Fellow of the Nigerian Society of Engineers (FNSE), the Institute of Credit Administration (FICA), and an Honorary Senior Member of the Chartered Institute of Bankers (HCIB).</p>
 
                     <p>
-                    In 1992, he earned a Ph.D. in System Process Engineering from Cranfield University, England and was the first student in the department to complete his doctorate within three years. He is also an alumnus of the Harvard Kennedy School of Government.
-                    </p>
-
+                        
+                    With a remarkable 34-year career, Mr. Egube has achieved significant success in transformational banking and the public sector, consistently delivering effective results in optimizing and positioning teams and organizations for success. He served as Commissioner for Economic Planning and Budget during Governor Babajide Olusola Sanwo-Olu’s first term, beginning on August 20, 2019, where he oversaw strategic and economic policy development, resource allocation, and state-wide performance management. His dedication and contributions led to his appointment as Deputy Chief of Staff to Governor Sanwo-Olu on May 30, 2024.</p>
+                 
                     <p>
-
-                    <div className='heading' id="qualifications"> Qualifications </div>
-
-                    Dr. Hamzat, who has two publications in reputable Scientific Journals to his name, is a Microsoft Certified System Engineer, a member of the Nigeria Computer Society and a Fellow of Nigerian Society of Engineers. He has gained further exposure through numerous training programme by international giants. One of such instances is his participation in the World Bank’s Third Country Training Programme held in Singapore which emphasized a holistic understanding of the challenges facing the developing nations of the world.
-                    
-                    {<br></br>} {<br></br>}
-
-                    A well-rounded Public Administrator, Dr. Hamzat is a strategic thinker, who has coordinated the execution of numerous world-class projects and developmental programs towards transforming Lagos State into Africa’s model megacity and financial hub. He is a doer, who pushes the boundaries of excellence in public service without seeking undue limelight and only finds joy in his public office achievements, only when his efforts impact lives positively while serving the overall public interest.</p>
-
-                    <p>
-                    
-                    
                     
                     <div className='heading' id="highlights">Highlights & Contributions</div>
 
-                    Highly revered and extensively decorated for his efficient resource utilization in the private sector and gallantry in public service, he was the winner of the 2013 edition of the Lagos State Man of the Year Award.</p>
-
-                    <p>Beyond accolades, Dr. Hamzat’s extensive knowledge and leadership ability have earned him important seats at critical decision-making and advisory tables both in the state and countrywide.  He has also delivered papers and lectures at various fora.</p>
-
-                    <p>
-                    
-                    <div className='heading' id="family"> Hamzat's Family</div>
-
-                    <div className="imp_img">
-
-                         <div className="imageContainer">
-                            <img src="https://pbs.twimg.com/media/GIK_rzhW4AEzEq5?format=jpg&name=large" /> 
-                         </div>
-
-                         <div className="imageContainer">
-                            <img src="https://pbs.twimg.com/media/GDRfM0dXUAAKpl-?format=jpg&name=large" /> 
-                         </div>
-
-                    </div>
-                        
-                    Dr. Kadri Obafemi Hamzat is a devout Muslim and committed family man, whose marriage to Mrs. Oluremi Hamzat is blessed with lovely children. He is deeply interested in development economics, social welfare and gender empowerment, and has remained a strong voice against discriminatory policies that debase humanity.</p>
+                    Mr. Egube is also an accomplished author, having written several books, including “Thoughts from a Wealthy Perspective,” “Relationships are Value Propositions,” and “From a Long Way.” In his leisure time, he enjoys swimming, karate (holding a black belt), and table tennis, where he was the Bendel State junior schools champion. Mr. Egube is happily married and blessed with two lovely children.</p>
 
                     </div>
 

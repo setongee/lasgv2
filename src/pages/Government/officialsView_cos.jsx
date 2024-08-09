@@ -79,9 +79,9 @@ return (
 
                     <div className="missionStatement">
 
-                        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, atque ea. Ullam corrupti temporibus dolorum..."
+                        "People always want welfare, development, and good governance. I'm happy that Lagos delivers all these and lagosians agree with us..."
 
-                        <p>- Position of the Official, June 2023</p>
+                        <p>- Mr. Tayo Akinmade Ayinde</p>
 
                     </div>
 
