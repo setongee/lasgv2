@@ -13,7 +13,8 @@ export default function Quick() {
 
         image1 : quick,   
         image2 : carIn,  
-        image3 : feedback,     
+        image3 : feedback,
+        image4 : "https://cdn.prod.website-files.com/649e99ef8a9449db93f2c9ea/64e48289490a6936a9815b3c_blog%20%E2%80%93%E2%80%93%20what%20ilera%20eko.svg"     
 
     }
 
@@ -61,6 +62,11 @@ export default function Quick() {
 
                     <a target='_blank' href='https://registration.lagosresidents.gov.ng/register/' className="search__card active top" onMouseOver={ () => changeIndexToCurrent(1) }>
                        <p> Get your LAG-ID card today.</p>
+                       <div className="cta flex flex_align_center">Apply Now <div className="arrt"> <ArrowRight height={18} /></div> </div>
+                    </a>
+
+                    <a target='_blank' href='https://registration.lagosresidents.gov.ng/register/' className="search__card top" onMouseOver={ () => changeIndexToCurrent(4) }>
+                       <p> Health plans as unique as you</p>
                        <div className="cta flex flex_align_center">Apply Now <div className="arrt"> <ArrowRight height={18} /></div> </div>
                     </a>
 

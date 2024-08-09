@@ -5,17 +5,17 @@ const OFFICIALS_DATA = {
 
        governor : { 
 
-            image : "https://cdn.pmnewsnigeria.com/wp-content/uploads/2023/05/Sanwo-Olus-official-portrait.jpg",
+            image : "https://upload.wikimedia.org/wikipedia/commons/7/7a/Governor_Sanwoolu.jpg",
             isIcon : false,
-            fullname : "Babajide Sanwo-Olu",
+            fullname : "Babajide Olusola Sanwo-Olu",
             position : "Executive Governor"
         },
 
         deputy_governor : { 
 
-            image : "https://pbs.twimg.com/profile_images/1663219039093641218/MyS-CPuv_400x400.jpg",
+            image : "https://deputygovernor.lagosstate.gov.ng/wp-content/uploads/sites/130/2023/12/IMG_3035.jpeg",
             isIcon : false,
-            fullname : "Kadri Obafemi Hamzat",
+            fullname : "Dr. Kadri Obafemi Hamzat",
             position : "Deputy Governor"
         },
 
@@ -31,7 +31,7 @@ const OFFICIALS_DATA = {
 
             image : "https://thelagosmag.com/wp-content/uploads/2023/09/Shuaheeb-Olabode-Agoro.jpg",
             isIcon : false,
-            fullname : "Mr. Agoro Shuaheeb Olabode",
+            fullname : "Mr. Olabode Shuaheeb Agoro",
             position : "Head of Service"
         },
 
@@ -45,10 +45,10 @@ const OFFICIALS_DATA = {
 
         lag : { 
 
-            image : "https://www.courtroommail.com/wp-content/uploads/2019/08/IMG-20190820-WA0096.jpg",
+            image : "https://guardian.ng/wp-content/uploads/2022/06/Sam-Pix-1424x802.jpg",
             isIcon : false,
-            fullname : "Moyosore Jubril Onigbanjo (SAN)",
-            position : "Attorney General"
+            fullname : "Mr. Sam Egube",
+            position : "Deputy Chief of Staff"
         }
 
     }

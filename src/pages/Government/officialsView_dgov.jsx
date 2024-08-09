@@ -27,7 +27,7 @@ return (
 
             <p onClick={ () => window.location.href = '/government/elected_officials/cos/view'  } >Chief of Staff</p>
 
-            <p onClick={ () => window.location.href = '/government/elected_officials/lag/view'  } >Attorney General</p>
+            <p onClick={ () => window.location.href = '/government/elected_officials/dcos/view'  } >Deputy Chief of Staff</p>
 
 
 
@@ -41,7 +41,7 @@ return (
 
                     <div className="official_details">
 
-                        <div className="official_name">Kadri Obafemi Hamzat</div>
+                        <div className="official_name">Dr. Kadri Obafemi Hamzat</div>
                         <div className="post"> - Deputy Governor - </div>
                         <div className="shortBio">Dr. Kadri Obafemi Hamzat, was re-elected the Deputy Governor of Lagos State for a second term, following the victory of the All Progressives Congress (APC) at the March 18, 2023 gubernatorial election. He remained the running mate to the Governor...</div>
 
@@ -158,7 +158,7 @@ return (
                     
                     <div className='heading' id="family"> Hamzat's Family</div>
 
-                    <div className="imp_img">
+                    {/* <div className="imp_img">
 
                          <div className="imageContainer">
                             <img src="https://pbs.twimg.com/media/GIK_rzhW4AEzEq5?format=jpg&name=large" /> 
@@ -168,7 +168,7 @@ return (
                             <img src="https://pbs.twimg.com/media/GDRfM0dXUAAKpl-?format=jpg&name=large" /> 
                          </div>
 
-                    </div>
+                    </div> */}
                         
                     Dr. Kadri Obafemi Hamzat is a devout Muslim and committed family man, whose marriage to Mrs. Oluremi Hamzat is blessed with lovely children. He is deeply interested in development economics, social welfare and gender empowerment, and has remained a strong voice against discriminatory policies that debase humanity.</p>
 

@@ -41,17 +41,17 @@ return (
 
                     <div className="official_details">
 
-                        <div className="official_name"> Moyosore Jubril Onigbanjo (SAN) </div>
-                        <div className="post"> - Attorney General - </div>
+                        <div className="official_name"> Mr. Sam Egube </div>
+                        <div className="post"> - Deputy Chief of Staff - </div>
                         <div className="shortBio">Moyosore Jubril Onigbanjo SAN (born 24 September 1964) is a Nigerian lawyer and a Senior Advocate of Nigeria (SAN). He has served as attorney general and commissioner for justice of Lagos State since 2019....</div>
 
                     </div>
 
                     <div className="official_photo">
-                        <img src="https://www.courtroommail.com/wp-content/uploads/2019/08/IMG-20190820-WA0096.jpg" alt="" />
+                        <img src="https://guardian.ng/wp-content/uploads/2022/06/Sam-Pix-1424x802.jpg" alt="" />
                     </div>
 
-                    <div className="downloadPortrait" onClick={ () => window.open('https://www.courtroommail.com/wp-content/uploads/2019/08/IMG-20190820-WA0096.jpg') } > <DownloadCircle/> Download Official Portrait </div>
+                    <div className="downloadPortrait" onClick={ () => window.open('https://guardian.ng/wp-content/uploads/2022/06/Sam-Pix-1424x802.jpg') } > <DownloadCircle/> Download Official Portrait </div>
 
                     <div className="official_highlights">
 

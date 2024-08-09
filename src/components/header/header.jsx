@@ -143,7 +143,7 @@ return (
                                         </div>
                                         
                                         <a href='/government/elected_officials' className="hover">
-                                            <p>Elected Officials  <ArrowUpRight/></p>
+                                            <p>Members of the State Executive Council  <ArrowUpRight/></p>
                                             <span>View all the officers elected by lagosians this tenure.</span>
                                         </a>
 

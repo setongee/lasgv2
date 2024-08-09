@@ -65,7 +65,6 @@ export default function Mdas() {
  }, [query]);
 
 
-
  useEffect(() => {
 
 const active = document.querySelector('.index__active')
@@ -93,7 +92,19 @@ if (params !== 'all') {
 
 } else {
 
-  setQueryResults(mdaDBv2);
+  const sorted = mdaDBv2.sort(function (a, b) {
+
+    if (a.mda < b.mda) {
+      return -1;
+    }
+    if (a.mda > b.mda) {
+      return 1;
+    }
+    return 0;
+
+  });
+
+  setQueryResults(sorted);
 
 }
   

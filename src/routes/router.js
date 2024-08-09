@@ -42,7 +42,7 @@ const RouterClass = () => {
                     <Route path='elected_officials/ssg/view' element = { <SSGView/> } />
                     <Route path='elected_officials/hos/view' element = { <HOSView/> } />
                     <Route path='elected_officials/cos/view' element = { <COSView/> } />
-                    <Route path='elected_officials/lag/view' element = { <LagView/> } />
+                    <Route path='elected_officials/dcos/view' element = { <LagView/> } />
 
                     <Route path='judiciary_officials' element = { <JudiciaryOfficials/> } />
                     <Route path='legistlative_officials' element = { <LegistlativeOfficials/> } />

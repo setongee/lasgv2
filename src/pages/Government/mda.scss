@@ -144,18 +144,15 @@
 
             .mdaTitle{
 
-                font-size: 65px;
+                font-size: 55px;
                 width: 70%;
                 line-height: 65px;
                 letter-spacing: -1px;
-                font-weight: 500;
-                font-style: italic;
+                font-weight: 600;
                 text-align: center;
-                font-family: "Cormorant Garamond", serif;
 
                 span{
                     color: #009C3E;
-                    font-family: "Cormorant Garamond", serif;
                 }
 
             }
@@ -481,6 +478,10 @@
 
                 margin-bottom: 50px;
 
+                .mdaTitle{
+                    width: 100%;
+                }
+
                 .mdaTitleSubs{
 
                     width: 80%;
@@ -536,7 +537,7 @@
 
                 .mdaTitle{
                     width: 100%;
-                    font-size: 60px;
+                    font-size: 50px;
                     line-height: 60px;
                 }
 
@@ -610,7 +611,7 @@
 
     .government_style{
 
-        padding-top: 130px;
+        padding-top: 160px;
 
         .topArea{
 
@@ -620,8 +621,8 @@
 
                 .mdaTitle{
                     width: 100%;
-                    font-size: 55px;
-                    line-height: 55px;
+                    font-size: 45px;
+                    line-height: 50px;
                 }
 
                 .mdaTitleSubs{
@@ -878,6 +879,8 @@
 
     .government_style{
 
+        padding-top: 120px;
+
         .topArea{
 
             .mdaHeader{
@@ -886,7 +889,7 @@
 
                 .mdaTitle{
                     width: 100%;
-                    font-size: 48px;
+                    font-size: 45px;
                     line-height: 48px;
                 }
 

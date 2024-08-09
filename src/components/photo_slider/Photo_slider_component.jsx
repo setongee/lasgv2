@@ -87,7 +87,7 @@ export default function Photo_slider_component() {
 
         <Container>
 
-          <div className="emergencyField uppercase">
+          {/* <div className="emergencyField uppercase">
 
               <dotlottie-player src="https://lottie.host/5ce67638-6461-4ca0-8b2e-1112fbe4a5e8/1ToabaCPyc.json" background="transparent" speed="1" style={{width: '40px', height: '40px'}} direction="1" playMode="normal" loop  autoplay></dotlottie-player> 
 
@@ -95,7 +95,7 @@ export default function Photo_slider_component() {
                 Emergency Number (LASEMA) <a href="tel:767">767</a> <span> | </span> <a href="tel:112">112</a> 
               </p>
 
-          </div>
+          </div> */}
 
           <div className="photo_container">
 

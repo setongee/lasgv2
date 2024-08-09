@@ -27,7 +27,7 @@ return (
 
             <p onClick={ () => window.location.href = '/government/elected_officials/cos/view'  } >Chief of Staff</p>
 
-            <p onClick={ () => window.location.href = '/government/elected_officials/lag/view'  } >Attorney General</p>
+            <p onClick={ () => window.location.href = '/government/elected_officials/dcos/view'  } >Deputy Chief of Staff</p>
 
         </div>
 
@@ -39,7 +39,7 @@ return (
 
                     <div className="official_details">
 
-                        <div className="official_name"> Mr. Agoro Shuaheeb Olabode </div>
+                        <div className="official_name"> Mr. Olabode Shuaheeb Agoro </div>
                         <div className="post"> - Head of Service - </div>
                         <div className="shortBio">Mr. Agoro, Shuaheeb, Olabode, the last born of five, was born on the 3rd of August 1967 to the family of late Justice Idowu Olayimika Agoro, the first Solicitor General / Permanent Secretary, Lagos State Ministry of Justice and retired Justice of the Court of Appeal...</div>
 

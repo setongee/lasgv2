@@ -27,7 +27,7 @@ return (
 
             <p onClick={ () => window.location.href = '/government/elected_officials/cos/view'  } >Chief of Staff</p>
 
-            <p onClick={ () => window.location.href = '/government/elected_officials/lag/view'  } >Attorney General</p>
+            <p onClick={ () => window.location.href = '/government/elected_officials/dcos/view'  } >Deputy Chief of Staff</p>
 
 
 
@@ -41,9 +41,9 @@ return (
 
                     <div className="official_details">
 
-                        <div className="official_name">Babajide Sanwo-Olu</div>
+                        <div className="official_name">Babajide Olusola Sanwo-Olu</div>
                         <div className="post"> - Executive Governor - </div>
-                        <div className="shortBio">His Excellency, Mr. Babajide Olusola Sanwo-Olu was elected the 15th Governor of Lagos State on the platform of the All Progressives Congress (APC). He was declared winner of the March 9, 2019 gubernatorial elections by the Independent Electoral Commission (INEC) on Sunday, March 10, 2019...</div>
+                        <div className="shortBio"> Mr. Babajide Olusola Sanwo-Olu was elected the 15th Governor of Lagos State on the platform of the All Progressives Congress (APC). He was declared winner of the March 9, 2019 gubernatorial elections by the Independent Electoral Commission (INEC) on Sunday, March 10, 2019...</div>
 
                     </div>
 
@@ -97,7 +97,7 @@ return (
                     
                     <div className='heading' id="intro">About Governor Sanwo-Olu</div>
                     
-                    His Excellency, Mr. Babajide Olusola Sanwo-Olu was elected the 15th Governor of Lagos State on the platform of the All Progressives Congress (APC). He was declared winner of the March 9, 2019 gubernatorial elections by the Independent Electoral Commission (INEC) on Sunday, March 10, 2019 after defeating 44 other candidates who represented different parties at the election.</p>
+                    Mr. Babajide Olusola Sanwo-Olu was elected the 15th Governor of Lagos State on the platform of the All Progressives Congress (APC). He was declared winner of the March 9, 2019 gubernatorial elections by the Independent Electoral Commission (INEC) on Sunday, March 10, 2019 after defeating 44 other candidates who represented different parties at the election.</p>
 
                     <p>A product of resounding victory, His Excellency, Mr. Sanwo-Olu polled 75.6% of the total valid votes cast in the election to substantiate his legitimacy, which was further affirmed by a 72.12% vote difference between him and the next contestant.</p>
 

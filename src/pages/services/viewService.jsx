@@ -99,6 +99,19 @@ export default function ViewService() {
     setData(getService[0]);
 
     const getServiceData = servicesDB.filter( res => res.theme.trim() === params.theme );
+
+    getServiceData.sort(function (a, b) {
+
+      if (a.sub_service < b.sub_service) {
+        return -1;
+      }
+      if (a.sub_service > b.sub_service) {
+        return 1;
+      }
+      return 0;
+
+    });
+
     setServiceData(getServiceData);
 
     document.body.style.overflow = "visible";

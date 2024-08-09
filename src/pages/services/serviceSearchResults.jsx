@@ -39,11 +39,7 @@ import science from '../../assets/icons/service/science.svg'
 import tourism from '../../assets/icons/service/tourism.svg'
 import transportation from '../../assets/icons/service/transportation.svg'
 import water from '../../assets/icons/service/water.svg'
-
-
 // end of service icons
-
-
 
 export default function ServiceSearchResults( { data, openModal, icon } ) {
 
