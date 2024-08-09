@@ -1444,7 +1444,7 @@
             position: fixed;
             left: 0;
             z-index: 999;
-            font-size: 12px;
+            font-size: 11px;
             padding: 15px;
             top: 70px;
             width: 100%;
@@ -1455,6 +1455,7 @@
             display: flex;
             align-items: center;
             height: 45px;
+            display: none;
 
             a{
                 color: #00ff66;
@@ -1464,7 +1465,7 @@
 
         .mobile__flash__news{
 
-            margin-top: 125px;
+            margin-top: 90px;
 
         }
 
@@ -1710,7 +1711,7 @@
                     font-size: 45px;
                     line-height: 48px;
                     width: 100%;
-                    font-weight: 700;
+                    font-weight: 650;
 
                     .holder{
                         margin-bottom: -14.5px;
@@ -1779,7 +1780,7 @@
                 .text__area{
 
                     font-size: 43px;
-                    line-height: 46px;
+                    line-height: 45px;
 
                     .holder{
                         margin-bottom: -9.5px;
