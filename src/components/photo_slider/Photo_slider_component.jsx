@@ -9,6 +9,8 @@ import LasgIllustrations from './lasg_landingpage_illustrations'
 import {motion} from 'framer-motion'
 import SearchQuery from '../search/searchQuery'
 import SpanMotion from './spanMotion'
+import Top__header from '../header/top__header'
+import { DotLottie, DotLottieReact } from '@lottiefiles/dotlottie-react'
 
 export default function Photo_slider_component() {
 
@@ -85,11 +87,19 @@ export default function Photo_slider_component() {
 
         <Container>
 
+          <div className="emergencyField uppercase">
+
+              <dotlottie-player src="https://lottie.host/5ce67638-6461-4ca0-8b2e-1112fbe4a5e8/1ToabaCPyc.json" background="transparent" speed="1" style={{width: '40px', height: '40px'}} direction="1" playMode="normal" loop  autoplay></dotlottie-player> 
+
+              <p> 
+                Emergency Number (LASEMA) <a href="tel:767">767</a> <span> | </span> <a href="tel:112">112</a> 
+              </p>
+
+          </div>
+
           <div className="photo_container">
 
-              <div className="mobile__flash__news">
-
-                <div className="flashNews"> <span>💳 </span>  Unlimited benefits with a LASSRA card - <a href="#"> Apply Now </a> </div>
+              <div className="mobile__flash__news uppercase">
                 
               </div>
           
@@ -164,8 +174,6 @@ export default function Photo_slider_component() {
         </Container>
 
         <LasgIllustrations/>
-
-
 
     </div>
 

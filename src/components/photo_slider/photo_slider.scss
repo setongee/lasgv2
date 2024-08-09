@@ -1438,8 +1438,34 @@
 
     .slider{
 
+        .emergencyField{
+
+            background-color: #131313;
+            position: fixed;
+            left: 0;
+            z-index: 999;
+            font-size: 12px;
+            padding: 15px;
+            top: 70px;
+            width: 100%;
+            text-align: center;
+            letter-spacing: 2px;
+            font-weight: 600;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            height: 45px;
+
+            a{
+                color: #00ff66;
+            }
+
+        }
+
         .mobile__flash__news{
-            margin-top: 90px;
+
+            margin-top: 125px;
+
         }
 
         .lasg__illustration{
@@ -1682,7 +1708,7 @@
                 .text__area{
 
                     font-size: 45px;
-                    line-height: 50px;
+                    line-height: 48px;
                     width: 100%;
                     font-weight: 700;
 
