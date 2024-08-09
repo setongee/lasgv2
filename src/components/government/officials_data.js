@@ -43,7 +43,7 @@ const OFFICIALS_DATA = {
             position : "Chief of Staff"
         },
 
-        lag : { 
+        dcos : { 
 
             image : "https://guardian.ng/wp-content/uploads/2022/06/Sam-Pix-1424x802.jpg",
             isIcon : false,
