@@ -594,28 +594,28 @@
 
 }
 
-@media (max-height : 750px) {
+// @media (max-height : 750px) {
 
-    .slider{
+//     .slider{
 
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+//         display: flex;
+//         align-items: center;
+//         justify-content: space-between;
 
-        .trigger{
-            display: flex;
-        }
+//         .trigger{
+//             display: flex;
+//         }
 
-        .lasg__illustration{
-            display: none;
-        } 
+//         .lasg__illustration{
+//             display: none;
+//         } 
 
-        .photo_container{
-            margin-top: 80px !important;
-        }
-    }
+//         .photo_container{
+//             margin-top: 80px !important;
+//         }
+//     }
 
-}
+// }
 
 @media (max-width : 1680px) {
 
