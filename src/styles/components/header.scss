@@ -75,7 +75,7 @@
 
     .seth_Link{
 
-        background-color: #009C3E;
+        background-color: #3A5A40;
         height: 40px;
         font-size: 11px;
         color: #fff;
@@ -105,7 +105,7 @@
                     align-items: center;
                     gap: 5px;
                     text-transform: uppercase;
-                    color: #ffd94f;
+                    color: #f0ead2;
                     font-weight: 700;
                 }
 
@@ -120,9 +120,9 @@
 
     .navigation{
 
+        background-color: #fafffc;
         background-color: #fcfff5;
         background-color: #fff;
-        background-color: #fafffc;
         position: relative;
         z-index: 3;
 
@@ -135,8 +135,11 @@
         }
 
         .menuForm{
-            gap: 40px;
+            gap: 0px;
             width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
 
         .siteBranding{
@@ -162,14 +165,11 @@
             }
         }
 
-        
-
-        .seth_nav{
+        .seth_nav, .button__search{
 
             display: flex;
             gap: 40px;
-            width: 100%;
-            align-items: center;
+            // align-items: center;
 
             .parentName{
 
@@ -183,21 +183,26 @@
                 text-transform: uppercase;
                 letter-spacing: 2px;
                 color: #131313;
+                cursor: pointer;
+                
+                &.current{
+                    border-bottom: 1px solid #009C3E;
+                    color: #009C3E;
+                }
 
                 &.searching{
-                    margin-left: auto;
-                    background-color: #131313;
-                    color: #fff;
-                    height: 48px;
-                    padding: 0 20px;
-                    border-radius: 5px;
+                    color: #3A5A40;
+                    height: 40px;
+                    width: 40px;
                     display: flex;
                     align-items: center;
+                    justify-content: center;
+                    border-radius: 100px;
+                    display: flex;
                     cursor: pointer;
 
                     &:hover{
-                        color: #fff;
-                        background-color: #009C3E;
+                        color: #009C3E;
                     }
                 }
 

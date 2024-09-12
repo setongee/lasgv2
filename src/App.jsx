@@ -5,6 +5,7 @@ import Header from './components/header/header';
 import RouterClass from './routes/router';
 import { useParams, useLocation } from 'react-router';
 import Footer from './components/footer/footer';
+import { AnimatePresence } from 'framer-motion';
 
 function App() {
   
@@ -35,8 +36,13 @@ function App() {
     {/* Application Header */} 
     <Header/>
 
-    {/* All Routers and pages in the Lagos State Web Application */}
-    <RouterClass/>
+    <AnimatePresence mode='wait'>
+
+      {/* All Routers and pages in the Lagos State Web Application */}
+      <RouterClass key = {location.pathname} />
+
+    </AnimatePresence>
+
 
     <Footer/>
 

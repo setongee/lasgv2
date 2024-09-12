@@ -8,6 +8,7 @@ import { servicesDB } from '../../api/data/servicesDB';
 import Fuse from 'fuse.js';
 import ServiceSearchResults from './serviceSearchResults';
 import ViewServiceModal from './viewServiceModal';
+import Transitions from '../../utils/transitions';
 
 export default function ServicesPage() {
 
@@ -84,7 +85,8 @@ const openModal = (data) => {
 
   return (
 
-    <div className="servicesPage">
+    <Transitions>
+      <div className="servicesPage">
 
         {
           isModalOpen ? <div className="viewMax" onClick={handleCloseBar} > <ViewServiceModal data = {modalData} close = {closeModal}  /> </div> : null
@@ -181,6 +183,9 @@ const openModal = (data) => {
             ) : null
         }
 
-    </div>
+      </div>  
+
+    </Transitions>
+    
   )
 }

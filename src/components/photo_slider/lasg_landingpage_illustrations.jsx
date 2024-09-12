@@ -13,6 +13,8 @@ import lagride from '../../assets/LASG Illustrations/lagosride.svg'
 import okada from '../../assets/LASG Illustrations/okada.svg'
 import car1 from '../../assets/LASG Illustrations/car1.svg'
 import car2 from '../../assets/LASG Illustrations/car2.svg'
+import trainStation from '../../assets/LASG Illustrations/train__station.svg'
+import train from '../../assets/LASG Illustrations/lasg__blueline__rail.svg'
 
 export default function LasgIllustrations() {
 
@@ -40,14 +42,14 @@ export default function LasgIllustrations() {
             <img src={eko} alt="" />
         </div>
 
-        {/* Clouds Component */}
-        <div className="lasg__illustration__clouds">
-            <img src={clouds} alt="" />
+        {/* Station Component */}
+        <div className="lasg__illustration__station">
+            <img src={trainStation} alt="" />
         </div>
 
-        {/* Clouds Component */}
-        <div className="lasg__illustration__clouds lasg__illustration__clouds_2x">
-            <img src={clouds} alt="" />
+         {/* train Component */}
+         <div className="lasg__illustration__train">
+            <img src={train} alt="" />
         </div>
 
 

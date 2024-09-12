@@ -79,7 +79,7 @@ export default function SearchQuery({query, closeModal}) {
   
     const fuse = new Fuse(servicesDB, fuseOptions);
     const results = fuse.search(search);
-    const queriedRes =  results.map(res => res.item);
+    const queriedRes =  results.filter( item => item.score < 0.1 ).map(res => res.item);
     setQueryResults(queriedRes);
    
    }, [search]);

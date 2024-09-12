@@ -34,28 +34,27 @@ export default function QuickCheck() {
 
                             <div className="textChange">
 
-                                {/* <SplitText
+                                <SplitText
 
                                     major = "many"
                                     initial={{ y: '100%' }}
                                     whileInView={{ y: 0,
                                     transition: { duration : 1.4 }}}   
                                 >
-                                
 
-                                </SplitText> */}
+                                Browse 200+ online services for citizens and businesses
 
-                                Browse 200+ online services for Citizens and businesses
+                                </SplitText>
 
                             </div>
 
                             <div className="pasty">
-                                Discover and access a wide range of Lagos state services for citizens and businesses online
+                            Lagos State is driven to optimize access government tools for taxes, licenses, permits, and more, online.
                             </div>
 
                         </div>
 
-                        <div className="title"> Get started with Lagos State -  </div>
+                        {/* <div className="title"> Get started with Lagos State -  </div> */}
 
                         
                         <IconoirProvider

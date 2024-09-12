@@ -49,7 +49,30 @@ useEffect(() => {
     setIsMobileOpen(false);
     document.body.style.overflowY = 'visible';
 
+    setActiveState();   
+    
+    console.log(location.pathname.split('/')[1])
+
 }, [location.pathname]);
+
+const setActiveState = () => {
+
+    const target = location.pathname.split('/')[1]
+
+    if(document.querySelector('current') !== null) {
+
+        document.querySelector('current').classList.remove('current');
+
+    }
+
+    if (target === '') {
+        document.querySelector(`.seth_nav [name="home"]`).classList.add('current');
+    } 
+    else{
+        document.querySelector(`.seth_nav [name=${target}]`).classList.add('current');
+    }
+
+}
 
 const openMobileMenu = () => {
 
@@ -117,7 +140,7 @@ return (
 
                     <Container>
 
-                        <div className="menuForm flex">
+                        <div className="menuForm">
 
                             {/* Site Branding Information */}
 
@@ -133,7 +156,9 @@ return (
 
                             <div className="seth_nav"> 
 
-                                <div className="parentName"> 
+                                <a href='/' className="parentName" name = 'home'> Home <ArrowUpRight/> </a>
+
+                                <div className="parentName" name = 'government'> 
                                    
                                     Government <NavArrowDown/>
 
@@ -166,17 +191,19 @@ return (
 
                                 </div>
 
-                                <a href='/services' className="parentName"> Services <ArrowUpRight/> </a>
+                                <a href='/services' className="parentName" name = 'services'> Services <ArrowUpRight/> </a>
 
-                                <a href='/news/trending' className="parentName">Newsroom <ArrowUpRight/> </a>
+                                <a href='/news/trending' className="parentName" name = 'news'> Newsroom <ArrowUpRight/> </a>
 
-                                <a href='/events/upcoming' className="parentName">Events <ArrowUpRight/> </a>
+                                <a href='/events/upcoming' className="parentName" name = 'events'>Events <ArrowUpRight/> </a>
                                 
-                                <a href='/connect' className="parentName"> Connect <ArrowUpRight/> </a>
-
-                                <div className="parentName searching" onClick={ () => openModal() } > <Search height={17} width={17} strokeWidth={2.4}/> Search </div>
+                                <a href='/connect' className="parentName" name = 'connect'> Connect <ArrowUpRight/> </a>
 
                             </div>
+
+                            {/* <div className="button__search"><div className="parentName searching" onClick={ () => openModal() } > <Search height={17} width={17} strokeWidth={2.4}/> Search </div></div> */}
+
+                            <div className="button__search"><div className="parentName searching" onClick={ () => openModal() } > <Search height={20} width={20} strokeWidth={2.4}/> </div></div>
 
                         </div>
                         

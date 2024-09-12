@@ -13,23 +13,34 @@ import Quick from '../../components/quickIn/quick'
 import Themes from './themes__agenda/Themes'
 import NewsCarrier from './newsZone/NewsCarrier'
 import Subscribe from '../../components/subscriber/subscribe'
+import transitions from '../../utils/transitions'
+import Transitions from '../../utils/transitions'
+import { motion } from 'framer-motion'
 
-export default function Homepage() {
+const Homepage = () => {
 
   const [isActive, setisActive] = useState(false);
+  // console.log(transitions())
 
   return (
 
-    <div className="home">
 
-      <Photo_slider_component/>
-      <QuickCheck/>
-      <Quick/>
-      <Services bgColor = "#fcfff5" location = 'home' data_limit={11} />
-      <NewsCarrier/>
+    <Transitions>
 
-    </div>
+      <div className="home">
+
+        <Photo_slider_component/>
+        <Quick/>
+        <QuickCheck/>
+        <Services bgColor = "#fcfff5" location = 'home' data_limit={11} />
+        <NewsCarrier/>
+
+      </div>
+
+    </Transitions>
 
   )
 
 }
+
+export default Homepage;

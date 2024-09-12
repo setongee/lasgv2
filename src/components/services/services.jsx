@@ -158,7 +158,7 @@ export default function Services({bgColor, location, data_limit}) {
 
                             } else {
                                 setLimit(11);
-                                window.location.href = '/#services'
+                                window.location.href = '#services'
                             }
 
                         } } > 
