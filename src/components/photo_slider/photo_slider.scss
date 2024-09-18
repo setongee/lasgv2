@@ -8,6 +8,10 @@
     max-height: 1080px;
     overflow: hidden;
 
+    .mobile__text{
+        display: none;
+    }
+
     .filters{
         opacity: 1;
     }
@@ -1255,6 +1259,14 @@
 
     .slider{
 
+        .mobile__text{
+            display: block;
+        }
+
+        .desktop__text{
+            display: none;
+        }
+
         .mobile__flash__news{
 
             width: 100%;
@@ -1420,6 +1432,28 @@
 @media (max-width : 500px) {
 
     .slider{
+
+        .filters{
+
+            height:650px;
+            width:650px;
+            opacity: .8;
+
+        }
+    
+        .background__filters{
+            position: fixed;
+            top: -50px;
+            left: -350px;
+        }
+    
+        .orange__part{
+            position: fixed;
+            top: -50px;
+            right: -350px;
+    
+        }
+    
 
         .emergencyField{
 
@@ -1678,8 +1712,13 @@
     
                 .text__area{
 
-                    font-size: 43px;
-                    line-height: 45px;
+                    font-size: 33px;
+                    line-height: 40px;
+                    letter-spacing: -.5px;
+
+                    .mobile__text{
+                        text-align: left;
+                    }
 
                     .holder{
                         margin-bottom: -9.5px;
@@ -1711,8 +1750,9 @@
     
                 .text__area{
 
-                    font-size: 38px;
-                    line-height: 43px;
+                    font-size: 30px;
+                    line-height: 37px;
+                    letter-spacing: -.5px;
 
                     .holder{
                         margin-bottom: -13px;

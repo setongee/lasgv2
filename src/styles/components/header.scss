@@ -406,6 +406,10 @@
 @media (max-width : 1200px) {
 
     .appHeader{
+        
+        .searching{
+            color: #000 !important;
+         }
 
         .MobileBody{
 
@@ -542,7 +546,6 @@
              .siteBranding{
  
                  gap: 15px;
-                 width: 100%;
  
                  .logo{
                      width: 50px;
@@ -561,6 +564,7 @@
              .seth_nav{
                  display: none;
              }
+
  
              .mobileBurger{
                  width: 30px;
@@ -632,16 +636,20 @@
 
         .navigation{
 
-            padding: 10px 0;
+            padding: 13px 0;
 
             .siteBranding{
 
                 gap: 15px;
-                width: 100%;
+                justify-content: flex-start;
+                
 
                 .logo{
-                    width: 45px;
-                    height: 45px;
+                    width: 47px;
+                    height: 47px;
+                    position: absolute;
+                    left: 50%;
+                    transform: translateX(-50%);
                 }
 
                 .siteName{
@@ -669,7 +677,7 @@
             }
 
             .mobileBurger2{
-                margin-left: auto;
+                // margin-left: auto;
             }
             
         }

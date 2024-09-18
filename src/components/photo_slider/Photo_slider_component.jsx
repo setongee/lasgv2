@@ -103,7 +103,17 @@ export default function Photo_slider_component() {
 
                   <div className="text__area">
 
-                    <span>Simplifying</span> your access to Lagos State Government Services
+                    <div className="desktop__text">
+
+                      <span>Simplifying</span> your access to Lagos State Government Services
+
+                    </div>
+
+                    {/* mobile area */}
+
+                    <div className="mobile__text">
+                      <span>Simplifying</span> your access to Lagos State Government Services
+                    </div>
 
                   </div>
 

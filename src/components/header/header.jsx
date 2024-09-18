@@ -148,7 +148,7 @@ return (
 
                                 <a href='/' className="logo"> <img src={lasgLogo} alt="Lagos State Official Digital Logo" /> </a>
 
-                                <div className="mobileBurger mobileBurger2" onClick={ () => openMobileMenu() } > <MenuScale color='#131414' width={20} height={20} strokeWidth={2} /></div>
+                                <div className="mobileBurger mobileBurger2" onClick={ () => openMobileMenu() } > <MenuScale color='#131414' width={22} height={22} strokeWidth={2.5} /></div>
 
                             </div>
 
@@ -203,7 +203,7 @@ return (
 
                             {/* <div className="button__search"><div className="parentName searching" onClick={ () => openModal() } > <Search height={17} width={17} strokeWidth={2.4}/> Search </div></div> */}
 
-                            <div className="button__search"><div className="parentName searching" onClick={ () => openModal() } > <Search height={20} width={20} strokeWidth={2.4}/> </div></div>
+                            <div className="button__search"><div className="parentName searching" onClick={ () => openModal() } > <Search height={20} width={20} strokeWidth={2.7}/> </div></div>
 
                         </div>
                         
