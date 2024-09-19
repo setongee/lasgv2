@@ -112,7 +112,27 @@ export default function Photo_slider_component() {
                     {/* mobile area */}
 
                     <div className="mobile__text">
-                      <span>Simplifying</span> your access to Lagos State Government Services
+
+                     <div className="quick_links"> 
+                      
+                        <div className="fixUp uppercase flex">
+                            
+                            <p> Toll-free emergency lines</p>
+
+                            <div className="numbers flex">
+
+                                <a href="tel:08056250710"> 767 </a>
+                                <p>|</p>
+                                <a href="tel:08033482380"> 112 </a>
+
+                            </div>
+
+                        </div>
+                    
+                      </div>
+
+                      <span>Simplifying</span> Lagos State Government Services
+
                     </div>
 
                   </div>

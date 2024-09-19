@@ -16,7 +16,7 @@ export default function Top__header() {
 
                 <div className="fixUp uppercase flex">
                     
-                    <p> Toll-free emergency lines (LASEMA) dial</p>
+                    <p> Toll-free emergency lines (LASEMA)</p>
 
                     <div className="numbers flex">
 
