@@ -118,6 +118,8 @@ const closeEmergency = () => {
 
                   <div className="text__area">
 
+                    <div className="welcome">Welcome to Lagos - Centre for Excellence</div>
+
                     <span>Simplifying</span> your access to Lagos State Government Services
 
                   </div>
