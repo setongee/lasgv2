@@ -118,76 +118,7 @@ const closeEmergency = () => {
 
                   <div className="text__area">
 
-                    <div className="desktop__text">
-
-                      <span>Simplifying</span> your access to Lagos State Government Services
-
-                    </div>
-
-                    {/* mobile area */}
-
-                    <div className="mobile__text">
-
-                      {/* Emergncy */}
-                      {
-                        openEmergency ? 
-                        <div className="emergencyModal">
-
-                          <div className="closeModalE" onClick={ () => closeEmergency() } > <Xmark/> </div>
-
-                          <div className="fixed__fill"></div>
-
-                          <div className="numbers">
-
-                              <p>Lagos State Emergency Lines</p>
-
-                              <div className="searchNumbers">
-                                <input type="search" placeholder='Search emergency lines...'/>
-                              </div>
-
-                              <div className="link__numbers">
-
-                                <a href="tel:767"> 
-                                  <div className="top"> LASG Emergency Number 1  <ArrowUpRight/> </div> 
-                                  <div className="des">Lorem ipsum dolor sit amet consec.</div>
-                                </a>
-
-                                <a href="tel:112"> 
-                                  <div className="top"> LASG Emergency Number 2  <ArrowUpRight/> </div> 
-                                  <div className="des">Lorem ipsum dolor sit amet consec.</div>
-                                </a>
-
-                                <a href="tel:767"> 
-                                  <div className="top"> Ambulance Services  <ArrowUpRight/> </div> 
-                                  <div className="des">Lorem ipsum dolor sit amet consec.</div>
-                                </a>
-
-                                <a href="tel:767"> 
-                                  <div className="top"> Report Missing Person  <ArrowUpRight/> </div> 
-                                  <div className="des">Lorem ipsum dolor sit amet consec.</div>
-                                </a>
-
-                              </div>
-
-                          </div> 
-
-                        </div>
-                        : null
-                      }
-
-                     <div className="quick_links"> 
-                      
-                        <div className="fixUp uppercase flex" onClick={() => handleEmergency()}>
-                            
-                            <p> Dial Toll-free emergency lines <ArrowUpRight/> </p>
-
-                        </div>
-                    
-                      </div>
-
-                      <span>Simplifying</span> Lagos State Government Services
-
-                    </div>
+                    <span>Simplifying</span> your access to Lagos State Government Services
 
                   </div>
 
