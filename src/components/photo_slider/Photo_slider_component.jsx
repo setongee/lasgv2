@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import './photo_slider.scss'
 import Container from '../container/container'
 import logo from '../../assets/navBar/lasg_logo.png'
-import { ArrowDown, ArrowUpRight, MoreVert, Send } from 'iconoir-react'
+import { ArrowDown, ArrowLeft, ArrowRight, ArrowUpRight, MoreVert, Send, Xmark } from 'iconoir-react'
 import Typewriter from 'typewriter-effect';
 // import { Share } from 'react-twitter-widgets'
 import LasgIllustrations from './lasg_landingpage_illustrations'
@@ -19,6 +19,7 @@ export default function Photo_slider_component() {
 
   const [searchQuery, setSearchQuery] = useState('');
   const [showSearchModal, setShowSearchModal] = useState(false);
+  const [openEmergency, setOpenEmergency] = useState(false);
 
   const closeSearchModal = () => {
 
@@ -77,6 +78,20 @@ export default function Photo_slider_component() {
     })
     
 }
+
+const handleEmergency = () => {
+
+    document.body.style.overflowY = 'hidden';
+    setOpenEmergency(true);
+
+}
+
+const closeEmergency = () => {
+
+  document.body.style.overflowY = 'visible';
+  setOpenEmergency(false);
+
+}
     
   return (
 
@@ -113,19 +128,58 @@ export default function Photo_slider_component() {
 
                     <div className="mobile__text">
 
+                      {/* Emergncy */}
+                      {
+                        openEmergency ? 
+                        <div className="emergencyModal">
+
+                          <div className="closeModalE" onClick={ () => closeEmergency() } > <Xmark/> </div>
+
+                          <div className="fixed__fill"></div>
+
+                          <div className="numbers">
+
+                              <p>Lagos State Emergency Lines</p>
+
+                              <div className="searchNumbers">
+                                <input type="search" placeholder='Search emergency lines...'/>
+                              </div>
+
+                              <div className="link__numbers">
+
+                                <a href="tel:767"> 
+                                  <div className="top"> LASG Emergency Number 1  <ArrowUpRight/> </div> 
+                                  <div className="des">Lorem ipsum dolor sit amet consec.</div>
+                                </a>
+
+                                <a href="tel:112"> 
+                                  <div className="top"> LASG Emergency Number 2  <ArrowUpRight/> </div> 
+                                  <div className="des">Lorem ipsum dolor sit amet consec.</div>
+                                </a>
+
+                                <a href="tel:767"> 
+                                  <div className="top"> Ambulance Services  <ArrowUpRight/> </div> 
+                                  <div className="des">Lorem ipsum dolor sit amet consec.</div>
+                                </a>
+
+                                <a href="tel:767"> 
+                                  <div className="top"> Report Missing Person  <ArrowUpRight/> </div> 
+                                  <div className="des">Lorem ipsum dolor sit amet consec.</div>
+                                </a>
+
+                              </div>
+
+                          </div> 
+
+                        </div>
+                        : null
+                      }
+
                      <div className="quick_links"> 
                       
-                        <div className="fixUp uppercase flex">
+                        <div className="fixUp uppercase flex" onClick={() => handleEmergency()}>
                             
-                            <p> Toll-free emergency lines</p>
-
-                            <div className="numbers flex">
-
-                                <a href="tel:08056250710"> 767 </a>
-                                <p>|</p>
-                                <a href="tel:08033482380"> 112 </a>
-
-                            </div>
+                            <p> Dial Toll-free emergency lines <ArrowUpRight/> </p>
 
                         </div>
                     
