@@ -1,19 +1,16 @@
 import React, {useState} from 'react'
 import './photo_slider.scss'
-import Container from '../container/container'
-import logo from '../../assets/navBar/lasg_logo.png'
-import { ArrowDown, ArrowLeft, ArrowRight, ArrowUpRight, MoreVert, Send, Xmark } from 'iconoir-react'
-import Typewriter from 'typewriter-effect';
-// import { Share } from 'react-twitter-widgets'
-import LasgIllustrations from './lasg_landingpage_illustrations'
-import {motion} from 'framer-motion'
-import SearchQuery from '../search/searchQuery'
-import SpanMotion from './spanMotion'
-import Top__header from '../header/top__header'
-import { DotLottie, DotLottieReact } from '@lottiefiles/dotlottie-react'
 
+import Container from '../container/container'
+import { ArrowDown, ArrowUpRight } from 'iconoir-react'
+import Typewriter from 'typewriter-effect';
+import LasgIllustrations from './lasg_landingpage_illustrations'
+import SearchQuery from '../search/searchQuery'
+
+// filters Background
 import greenFilter from '../../assets/background/filters/blur__gradient.png'
 import orangeFilter from '../../assets/background/filters/blur__gradient__orange.png'
+import grain from '../../assets/background/filters/ grain.png'
 
 export default function Photo_slider_component() {
 
@@ -99,6 +96,7 @@ const closeEmergency = () => {
 
       <div className="filters background__filters"><img src={greenFilter} alt="" /></div>
       <div className="filters orange__part"><img src={orangeFilter} alt="" /></div>
+      <div className="grain"> <img src={grain} alt="" /> </div>
 
         {/* Open Space Search */}
 
