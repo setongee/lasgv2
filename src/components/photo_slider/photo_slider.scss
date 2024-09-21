@@ -282,7 +282,7 @@
         gap: 40px;
         position: relative;
         z-index: 9;
-        margin-top: 180px;
+        margin-top: 150px;
 
         .searchBox{
 
@@ -314,7 +314,7 @@
                     position: relative;
                     z-index: 3;
                     color: #fff;
-                    // color: #000;
+                    color: #000;
 
                 }
 
@@ -347,7 +347,7 @@
                     font-size: 14px;
                     z-index: 1;
                     color: #000;
-                    color: #fff;
+                    //color: #fff;
 
                 }
 
@@ -364,11 +364,11 @@
                 display: flex;
                 align-items: center;
                 margin-top: 10px;
-                background-color: #fff;
-                background-color: #131313;
+                background-color: #ffffff36;
+                // background-color: #131313;
                 padding: 3px;
                 border-radius: 8px;
-                border: 1px solid #909090;
+                border: 1px solid #c5c5c5;
                 border-radius: 100px;
 
 
@@ -461,6 +461,16 @@
                 transition: all .4s ease-in-out;
                 text-align: center;
 
+                .welcome{
+                    font-family: "EB Garamond", serif;
+                    font-weight: 400;
+                    letter-spacing: 0;
+                    font-style: italic;
+                    font-size: 21px;
+                    color: #333;
+                    margin-bottom: 0px;
+                }
+
                 span{
                     color: #108a00;
                 }
@@ -500,7 +510,7 @@
         color: #131313;
         width: max-content;
         cursor: pointer;
-        // display: none;
+        display: none;
 
         &:hover{
             text-decoration: underline;
@@ -1374,7 +1384,7 @@
             gap: 20px;
 
             .searchBox{
-                margin-top: 20px;
+                margin-top: 10px;
 
                 .input__body{
                     margin-top: 0;
@@ -1389,7 +1399,7 @@
 
                 .quickSearches{
                     flex-direction: column;
-                    margin-top: 20px;
+                    margin-top: 15px;
 
                     .tip{
                         display: none;
@@ -1727,7 +1737,7 @@
                 .text__area{
 
                     font-size: 37px;
-                    line-height: 44px;
+                    line-height: 42px;
                     letter-spacing: -0.7px !important;
 
                     .mobile__text{
