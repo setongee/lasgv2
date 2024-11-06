@@ -11,6 +11,7 @@ import {
 } from '@tanstack/react-query'
 
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
+import Authy from './authy';
 
 const queryClient = new QueryClient()
 
@@ -24,7 +25,7 @@ root.render(
 
         <QueryClientProvider client={queryClient}>
           <BrowserRouter>
-              <App />
+              <Authy/>
           </BrowserRouter>
           <ReactQueryDevtools/>
         </QueryClientProvider>
