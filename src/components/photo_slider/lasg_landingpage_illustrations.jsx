@@ -15,6 +15,7 @@ import car1 from '../../assets/LASG Illustrations/car1.svg'
 import car2 from '../../assets/LASG Illustrations/car2.svg'
 import trainStation from '../../assets/LASG Illustrations/train__station.svg'
 import train from '../../assets/LASG Illustrations/lasg__blueline__rail.svg'
+import eyo from '../../assets/LASG Illustrations/eyo.svg'
 
 export default function LasgIllustrations() {
 
@@ -50,6 +51,11 @@ export default function LasgIllustrations() {
          {/* train Component */}
          <div className="lasg__illustration__train">
             <img src={train} alt="" />
+        </div>
+
+        {/* Eyo Component */}
+        <div className="lasg__illustration__eyo">
+            <img src={eyo} alt="" />
         </div>
 
 

@@ -2,6 +2,7 @@ export const servicesDB = [
   {
     id: 1,
     theme: "advertisement",
+    keywords : [ { key : "main" }, { key : "pain seth oau in love" } ],
     sub_service: "On-Premise Signage",
     url: "https://lasaa.lg.gov.ng/permits/on-premise-signage-permit",
     cta: "Apply for Signage now",
@@ -106,7 +107,7 @@ export const servicesDB = [
   {
     id: 10,
     theme: "agriculture",
-    sub_service: "How to Register For a Farm in Lagos",
+    sub_service: "How to seth Register For a Farm in Lagos",
     url: "https://lagosappeals.ng/Programmes/Farm-Owner-Registration",
     cta: "Register for a Farm",
     short: `<p>The Farm-Owner Registration Program is an initiative by the<a target="_blank" rel="noopener noreferrer" href="https://lagosstate.gov.ng/"> Lagos State Government</a> to register and certify farm owners and farmers in the state. The program aims to create a database of farm owners, provide a platform for farmers to access government support and services, and promote sustainable agriculture development in the state.</p>

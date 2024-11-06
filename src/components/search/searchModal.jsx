@@ -5,15 +5,15 @@ import { Xmark } from 'iconoir-react'
 
 export default function ViewSearchModal({data, close}) {
 
-    const { sub_service, theme, url, short, cta } = data
+    const { name, categories, url, cta, content } = data
     const [themeArea, setThemeArea] = useState('')
 
     useEffect(() => {
       
       const info = document.querySelector('.modal_info');
-      info.innerHTML = short;
+      info.innerHTML = content;
 
-      switch (theme.trim()) {
+      switch (categories[0].trim()) {
 
         case 'business_trade_commerce' : setThemeArea('Business, Trade & Commerce')  
         break;
@@ -33,7 +33,7 @@ export default function ViewSearchModal({data, close}) {
         case 'lisense' : setThemeArea('Licenses, Permits & Applications')  
         break;
       
-        default : setThemeArea(theme);
+        default : setThemeArea(categories[0]);
         break;
 
       }
@@ -50,7 +50,7 @@ export default function ViewSearchModal({data, close}) {
 
             <div className="modal_theme"> {themeArea} </div>
 
-            <div className="modal_title"> {sub_service} </div>
+            <div className="modal_title"> {name} </div>
             
             <div className="modal_info"></div>
 

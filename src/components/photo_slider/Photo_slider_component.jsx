@@ -166,12 +166,12 @@ const closeEmergency = () => {
 
                   <div className="quickSearches">
 
-                    <div className="tip"> Popular searches </div>
+                    {/* <div className="tip"> Popular searches </div> */}
 
                     <div className="pills__searches">
                       <p onClick={ e => handleSearchTab(e) } >Pay My Tax</p>
                       <p onClick={ e => handleSearchTab(e) } >Loans</p>
-                      <p onClick={ e => handleSearchTab(e) } >LASSRA</p>
+                      <p onClick={ e => handleSearchTab(e) } >LASRRA</p>
                       <p onClick={ e => handleSearchTab(e) } >Visit Lagos</p>
                       <p onClick={ e => handleSearchTab(e) } >Register LASAA</p>
                       <p onClick={ e => handleSearchTab(e) } >Benefits</p>

@@ -8,12 +8,14 @@ import { servicesDB } from '../../api/data/servicesDB'
 import SearchResultsQuery from './searchResultsQuery'
 import ViewSearchModal from './searchModal'
 import { useLocation } from 'react-router'
+import { getAllServices } from '../../api/read/services.req'
+import { useQuery } from '@tanstack/react-query'
 
 export default function SearchQuery({query, closeModal}) {
 
   const location = useLocation().pathname;
 
-  const [search, setSearch] = useState(query);
+  const [search, setSearch] = useState(query === '' ? " " : query);
   const [queryResults, setQueryResults] = useState([]);
   const [searchView, setSearchView] = useState({});
   const [showInfo, setShowInfo] = useState(false);
@@ -41,48 +43,31 @@ export default function SearchQuery({query, closeModal}) {
 
   }
 
+  const { isLoading, error, data } = useQuery({
+
+    queryKey: ["services"],
+    queryFn: () => getAllServices(),
+
+  })
+
   useEffect(() => {
 
     const fuseOptions = {
 
       includeScore : true,
       shouldSort : true,
-      keys : [ 
-        
-        {
-          name: 'sub_service',
-          weight: 1
-        },
-
-        {
-          name: 'short',
-          weight: 0.6
-        },
-
-        {
-          name: 'cta',
-          weight: 0.7
-        },
-
-        {
-          name: 'theme',
-          weight: 0.5
-        },
-
-        {
-          name: 'url',
-          weight: 0.3
-        }
-      ]
+      keys : ['keywords.key', 'name', 'short']
     
     };
   
-    const fuse = new Fuse(servicesDB, fuseOptions);
+    const fuse = new Fuse(data?.data || [], fuseOptions);
     const results = fuse.search(search);
-    const queriedRes =  results.filter( item => item.score < 0.1 ).map(res => res.item);
+    console.log(results)
+    const queriedRes = results.filter( item => item.score <= 0.2 ).map(res => res.item);
+    console.log(queriedRes)
     setQueryResults(queriedRes);
    
-   }, [search]);
+   }, [search, data]);
 
 
   return (
@@ -121,19 +106,19 @@ export default function SearchQuery({query, closeModal}) {
             <input type="text" placeholder='Search for anything here...' value={search} onChange={ e => setSearch(e.target.value)} />
           </div>
 
-          <div className="results__calculations"> - { queryResults.length } Results found - </div>
+          <div className="results__calculations"> - { queryResults?.length } Results found - </div>
 
           <div className="search__query__results">
 
               {
-                queryResults.length 
+                isLoading ? <h1>Loading...</h1> : 
+                queryResults?.length 
                 ? 
-                queryResults.map( (data, index) => (
+                queryResults.map( (response, index) => (
 
-                  <SearchResultsQuery key = {index} data = {data} i = {index} search = {viewSearch} />
+                  <SearchResultsQuery key = {index} data = {response} i = {index} search = {viewSearch} />
 
                 )) : <p>Oops... There is no search result</p>
-
               }
 
           </div>

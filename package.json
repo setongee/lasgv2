@@ -4,18 +4,26 @@
   "private": true,
   "dependencies": {
     "@lottiefiles/dotlottie-react": "^0.6.3",
+    "@tanstack/react-query": "^5.59.19",
+    "@tanstack/react-query-devtools": "^5.59.19",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.6.8",
+    "date-fns": "^4.1.0",
+    "draft-js": "^0.11.7",
     "firebase": "^10.10.0",
     "framer-motion": "^11.0.25",
     "fuse.js": "^7.0.0",
     "iconoir": "^7.5.0",
     "iconoir-react": "^7.5.0",
     "node-sass": "^7.0.3",
+    "primeflex": "^3.3.1",
+    "primereact": "^10.8.2",
+    "quill": "^2.0.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-draft-wysiwyg": "^1.15.0",
     "react-lazy-load-image-component": "^1.6.0",
     "react-router": "^6.22.3",
     "react-router-dom": "^6.22.3",
@@ -47,5 +55,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@tanstack/eslint-plugin-query": "^5.59.7"
   }
 }

@@ -66,6 +66,9 @@ const RouterClass = () => {
                 {/* resources */}
                 <Route path = 'resources' element = { <Resources/> } />
 
+                {/* search */}
+                <Route path = 'search' element = { <Search/> } />
+
                 {/* connect */}
                 <Route path = 'connect' element = { <Connect/> } />
 

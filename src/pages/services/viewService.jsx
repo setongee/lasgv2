@@ -94,6 +94,8 @@ export default function ViewService() {
     const [isModalOpen, setIsMOdalOpen] = useState(false);
     
    useEffect(() => {
+
+    console.log("yo")
     
     const getService = LASG_SERVICES.filter( res => res.id === params.theme );
     setData(getService[0]);
@@ -142,7 +144,6 @@ export default function ViewService() {
     setQueryResults(queriedRes);
    
    }, [query]);
-
 
 
    const openModal = (data) => {

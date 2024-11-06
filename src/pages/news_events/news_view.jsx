@@ -5,6 +5,8 @@ import { ArrowArchery, ArrowDownLeftCircle, ArrowLeft, ArrowLeftCircle } from 'i
 import { news } from '../../api/data/news'
 import { useNavigate, useParams } from 'react-router'
 import {motion} from 'framer-motion'
+import { getSingleNews } from '../../api/read/news.req'
+import { useQuery } from '@tanstack/react-query'
 
 export default function News_view() {
 
@@ -13,21 +15,32 @@ export default function News_view() {
 
     const navigate = useNavigate();
 
-    const [data, setData] = useState({});
-    const [sub_data, setSub_data] = useState([])
+    // const [data, setData] = useState({});
+    // const [sub_data, setSub_data] = useState([])
+    
+
+    const { isPending, error, data } = useQuery({
+
+        queryKey: ["view_news", {id}],
+        queryFn: () => getSingleNews(id)
+
+    })
 
     useEffect(() => {
         
-        const info = document.getElementById('text');
-        info.innerHTML = news[id].text
-
-        setData(news[id]);
-
-        const subs = Object.entries(news).filter( (item) => item[0] !== id );
+        if(data) {
+            const tc = document.getElementById("text");
+            console.log(data?.data.content)
+            tc.innerHTML = data?.data.content
+        }
         
-        setSub_data(subs)
+    }, [data]);
+    
 
-    }, [id]);
+    if (isPending) return 'Loading...'
+
+    if (error) return 'An error has occurred: ' + error.message
+
 
   return (
     
@@ -42,14 +55,16 @@ export default function News_view() {
                 <div className="current_news">
 
                     <div className="current_news_image">
-                        <img src={data.img} alt="" />
+                        <img src={data?.data.photo} alt="" />
                     </div> 
 
                     <div className="current_news_title">
-                        {data.title}
+                        {data?.data.title}
                     </div>                   
 
-                    <div className="current_news_body" id='text'></div>
+                    <div className="current_news_body" id='text'>
+                        {/* <LASGEditor value = {data.content} readOnly = {true} submittableText = {"hellooooo"} /> */}
+                    </div>
 
                 </div>
 
@@ -58,10 +73,10 @@ export default function News_view() {
                     {
                         sub_data.length ? sub_data.map( (res, index) => (
 
-                            <a className="subs_news" href={`/news/trending/view/${res[0]}`}>
+                            <a className="subs_news" href={`/news/trending/view/${res._id}`}>
 
-                                <div className="sub__image"><img src = {res[1].img} alt="" /></div>
-                                <div className="sub__title"> {res[1].title} </div>
+                                <div className="sub__image"><img src = {res.photo} alt="" /></div>
+                                <div className="sub__title"> {res.title} </div>
 
                             </a>
 
@@ -69,7 +84,6 @@ export default function News_view() {
                     }
 
                 </div> */}
-
 
             </div>
 

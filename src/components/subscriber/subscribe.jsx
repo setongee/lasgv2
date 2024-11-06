@@ -20,9 +20,9 @@ export default function Subscribe() {
 
     <div className="subs">
 
-        {/* {
+        {
           subscription ? <SubscribeModal closeSubscribe = {handleCloseSubscription} /> : null
-        } */}
+        }
         
         <Container>
 

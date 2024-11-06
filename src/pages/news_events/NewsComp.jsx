@@ -3,38 +3,32 @@ import { Timer } from 'iconoir-react'
 import { news } from '../../api/data/news'
 import { useParams } from 'react-router';
 import none from '../../assets/icons/random/no-file.png'
+import { formatDate } from 'date-fns';
 
-export default function NewsComp() {
+export default function NewsComp({ data }) {
 
-const [fetchNews, setFetchedNews] = useState(Object.entries(news));
-let params = useParams().tag;
+    const [news, setNews] = useState(data);
+    const [filteredResults, setFilteredResults] = useState([]);
+
+    // let q = 
 
 useEffect(() => {
     
-    if (params === 'trending') {
+    const exportedData = data?.filter((item, idx) => idx > 0 );
+    setFilteredResults(exportedData);
 
-        setFetchedNews(Object.entries(news));
-
-    } else {
-
-        const refetchedNews = Object.entries(news).filter(item => item[1].tag.toLowerCase() === params );
-
-        setFetchedNews(refetchedNews);
-
-    }
-
-}, [params]);
+}, [data]);
 
     
   return (
 
     <div className="fetchedNews">
         {
-            fetchNews.length ? (
+            data?.length ? (
 
                 <div>
 
-                    <a className="landingNews" href={`/news/trending/view/${fetchNews[0][0]}`} >
+                    <a className="landingNews" href={`/news/trending/view/${data[0]._id}`} >
 
                         <div className="mainHighlight">
 
@@ -42,7 +36,7 @@ useEffect(() => {
 
                             <div className="highlight_image">
 
-                                <img src= {fetchNews[0][1].img} alt="" />
+                                <img src= {data[0].photo} alt="" />
 
                             </div>
 
@@ -50,13 +44,13 @@ useEffect(() => {
 
                                 <div className="highlight_title">
                                     
-                                    {fetchNews[0][1].title}
+                                    {data[0].title}
 
                                 </div>
 
                                 <div className="info">
-                                    <div className="highlight_theme">{ fetchNews[0][1].tag }</div>
-                                    <div className="timeToRead"> <Timer/> { fetchNews[0][1].time } Mins Read - </div>
+                                    <div className="highlight_theme">{ data[0].categories[0] }</div>
+                                    {/* <div className="timeToRead"> <Timer/> { fetchNews[0][1].time } Mins Read - </div> */}
                                 </div>
 
                             </div>
@@ -70,24 +64,24 @@ useEffect(() => {
                         <div className="news_results_section">
 
                             {
-                                fetchNews.length > 1 ? (
+                                filteredResults?.length ? (
 
-                                    fetchNews.filter((item, idx) => idx !== 0 ).map( (res, index) => (
+                                    filteredResults.map( (res, index) => (
 
-                                        <a className="news_card" key = {res[0]} href={`/news/trending/view/${res[0]}`} >
+                                        <a className="news_card" key = {index} href={`/news/trending/view/${res._id}`} >
     
                                             <div className="news_image">
-                                                <img src={res[1].img} />
+                                                <img src={res.photo} />
                                             </div>
     
                                             <div className="news_body_content">
     
-                                                <div className="news_topic"> {res[1].title} </div>
+                                                <div className="news_topic"> {res.title} </div>
     
                                                 <div className="news_details">
     
-                                                    <div className="details_themes"> {res[1].tag} </div>
-                                                    <div className="details_readTime"> <Timer/> {res[1].time} Mins Read - </div>
+                                                    <div className="details_themes"> {res.categories[0]} </div>
+                                                    {/* <div className="details_readTime"> <Timer/> {formatDate(res.data)} - </div> */}
     
                                                 </div>
     
@@ -97,7 +91,7 @@ useEffect(() => {
     
                                     ))
 
-                                ) : <div className="noNewNews">Opps! sorry, no other <span>{params}</span> news found </div>
+                                ) : null
                             }
 
                         </div>
@@ -106,7 +100,7 @@ useEffect(() => {
 
                 </div>
 
-            ) : <div className="noNews"> <div>Oops! sorry, no news on <span>{params}</span> found </div> </div>
+            ) : null
         }
     </div>
 

@@ -9,24 +9,24 @@ import { AnimatePresence } from 'framer-motion';
 
 function App() {
   
-  let location = useLocation();
+  // let location = useLocation();
   
-  useEffect(() => {
+  // useEffect(() => {
 
-    switch (location.pathname) {
+  //   switch (location.pathname) {
 
-      case '/' : document.title = "Ofiicial Lagos State Website | The best place to find government services and information"  
-      break;
+  //     case '/' : document.title = "Ofiicial Lagos State Website | The best place to find government services and information"  
+  //     break;
 
-      case '/services' : document.title = "Services | The best place to find government services and information"  
-      break;
+  //     case '/services' : document.title = "Services | The best place to find government services and information"  
+  //     break;
     
-      default : document.title = "Ofiicial Lagos State Website | The best place to find government services and information"
-      break;
+  //     default : document.title = "Ofiicial Lagos State Website | The best place to find government services and information"
+  //     break;
 
-    }
+  //   }
 
-  }, [location.pathname]);
+  // }, [location.pathname]);
 
 
   return (
@@ -35,15 +35,7 @@ function App() {
 
     {/* Application Header */} 
     <Header/>
-
-    <AnimatePresence mode='wait'>
-
-      {/* All Routers and pages in the Lagos State Web Application */}
-      <RouterClass key = {location.pathname} />
-
-    </AnimatePresence>
-
-
+    <RouterClass />
     <Footer/>
 
     </div>
