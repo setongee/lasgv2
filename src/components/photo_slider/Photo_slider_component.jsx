@@ -120,10 +120,6 @@ const scrollRight = (type) => {
         <Container>
 
           <div className="photo_container">
-
-              <div className="mobile__flash__news uppercase">
-                
-              </div>
           
               <div className="home__content">
 

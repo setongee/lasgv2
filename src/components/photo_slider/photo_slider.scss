@@ -128,7 +128,6 @@
     .lasg__illustration{
 
         position: relative;
-        top: 0;
         // height: 100svh;
         // max-height: 1080px;
         width: 100%;
@@ -527,7 +526,7 @@
                     padding: 0;
                     padding-bottom: 18px;
 
-                    &:nth-child(3), &:nth-child(4), &:nth-child(5), &:nth-child(6), &:nth-child(7), &:nth-child(8){
+                    &:nth-child(3), &:nth-child(4), &:nth-child(5), &:nth-child(6), &:nth-child(7){
                         color: #108a00;
                     }
                 }
@@ -708,72 +707,44 @@
         .photo_container{
 
             .home__content{
-                width: 85%;
+                width: 75%;
+
+                .text__area{
+                    font-size: 60px;
+                    line-height: 53px;
+                }
             }
         }
     }
 
 }
 
-@media (max-width : 1380px) {
+// @media (max-width : 1380px) {
 
-    .slider{
-        .photo_container{
+//     .slider{
+//         .photo_container{
 
-            .searchBox{
-                width: 60%;
-            }
+//             .searchBox{
+//                 width: 60%;
+//             }
 
-            .home__content{
-                width: 90%;
-            }
-        }
-    }
+//             .home__content{
+//                 width: 90%;
+//             }
+//         }
+//     }
 
-}
+// }
 
 
 @media (max-width : 1200px) {
 
     .slider{
-
-        .background__filters{
-            height:1200px;
-            width:1200px;
-            position: fixed;
-            top: -500px;
-            left: -400px;
-    
-            img{
-                width: 100%;
-            }
-        }
-    
-        .orange__part{
-            height:1200px;
-            width:1200px;
-            position: fixed;
-            top: -500px;
-            right: -400px;
-    
-            img{
-                width: 100%;
-            }
-        }
         
-        .lasg__illustration{
-    
-            .lasg__illustration__theatre{
-                width: 650px;
-            }        
-            
-        }
-
-        .mobile__flash__news{
-            margin-top: 120px;
-        }
-
         .photo_container{
+
+            margin-top: 160px;
+            gap: 30px;
 
             .searchBox{
                 width: 80%;
@@ -781,29 +752,12 @@
     
             .home__content{
 
-                width: 100%;
-    
-                .title{
-    
-                    font-size: 12px;
-                    letter-spacing: 2px;
-                    font-weight: 500;
-                    color: #fff;
-                    color: #131313;
-                    text-transform: uppercase;
-                    margin-top: 0px;
-                    margin-bottom: 35px;
-    
-                    span{
-                        color: #108a00;
-                    }
-    
-                }
+                width: 85%;
     
                 .text__area{
 
                     font-size: 55px;
-                    line-height: 67px;
+                    line-height: 48px;
 
                     .holder{
                         margin-bottom: -19px;
@@ -836,7 +790,7 @@
             font-size: 12px;
             font-weight: 600;
             letter-spacing: 2px;
-            margin-top: 60px;
+            margin-top: 40px;
             display: flex;
             align-items: center;
             gap: 4px;
@@ -879,35 +833,41 @@
 @media (max-width : 1024px){
 
     .slider{
-
-        .background__filters, .orange__part{
-            width: 1100px;
-            height: 1100px;
-        }
-
-        .trigger{
-            margin-top: 40px;
-        }
-
+        
         .photo_container{
 
+            margin-top: 170px;
+
             .searchBox{
-                width: 75%;
-                margin-top: -10px;
+                width: 90%;
+
+                .input__body{
+
+                    width: 100%;
+
+                    input, .typeing{
+                        width: calc(100% - 140px);
+                    }
+                }
             }
 
             .home__content{
                 margin-top: 0px;
+                width: 100%;
                 .text__area{
                     font-size: 50px;
-                    line-height: 62px;
+                    line-height: 45px;
                 }
             }
         }
 
         .lasg__illustration{
             .lasg__illustration__theatre{
-                width: 550px;
+                width: 400px;
+            }
+
+            .lasg__illustration__eyo{
+                width: 300px;
             }
 
             .lasg__illustration__station{
@@ -927,7 +887,7 @@
             }
 
             .lasg__illustration__eko{
-                bottom: -300px;
+                bottom: -250px;
             }
         }
     }
@@ -939,7 +899,6 @@
     .slider{
 
         .photo_container{
-            margin-top: 185px;
             width: 100%;
     
             .home__content{
@@ -987,6 +946,11 @@
                     width: 100%;
                     margin: 0 auto;
                 }
+            }
+
+            .lasg__illustration__eyo{
+                bottom: -70px;
+                z-index: 3;
             }
 
             .lasg__illustration__water{
@@ -1156,8 +1120,8 @@
                 .text__area{
     
                     width: 100%;
-                    font-size: 47px;
-                    line-height: 57px;
+                    font-size: 45px;
+                    line-height: 38px;
     
                     span{
                         color: #fff;
@@ -1186,7 +1150,7 @@
             font-size: 12px;
             font-weight: 600;
             letter-spacing: 2px;
-            margin-top: 60px;
+            margin-top: 40px;
             display: flex;
             align-items: center;
             gap: 4px;
@@ -1231,20 +1195,18 @@
 
     .slider{
 
-        .filters{
-            height: 900px;
-            width: 900px;
-            top: -200px;
-        }
-
         .photo_container{
 
             width: 100%;
             display: flex;
 
             .searchBox{
-                margin-top: 30px;
                 width: 100%;
+
+                .quickSearches{
+
+                    padding: 0;
+                }
             }
     
             .home__content{
@@ -1258,8 +1220,8 @@
     
                 .text__area{
 
-                    font-size: 47px;
-                    line-height: 52px;
+                    font-size: 40px;
+                    line-height: 33px;
 
                     .holder{
                         margin-bottom: -22px;
@@ -1292,7 +1254,7 @@
             font-size: 12px;
             font-weight: 600;
             letter-spacing: 2px;
-            margin-top: 60px;
+            margin-top: 40px;
             display: flex;
             align-items: center;
             gap: 4px;
@@ -1301,7 +1263,6 @@
             color: #131313;
             width: max-content;
             cursor: pointer;
-            display: none;
     
             &:hover{
                 text-decoration: underline;
@@ -1340,34 +1301,7 @@
 
     .slider{
 
-        .mobile__flash__news{
-
-            width: 100%;
-            position: relative;
-            display: flex;
-            margin-top: 60px;
-            
-            .flashNews{
-    
-                font-size: 12px;
-                background-color: #fff3d8;
-                padding: 5px 10px;
-                color: var(--dark);
-                font-weight: 600;
-                width: max-content;
-                border-radius: 5px;
-    
-                span{
-                    margin-right: 8px;
-                }
-    
-                a {
-                    color: #108a00;
-                }
-    
-            }
-
-        }
+       
         
         .lasg__illustration{
     
@@ -1451,39 +1385,8 @@
             width: 95%;
             display: flex;
             margin: 0 auto;
-            margin-top: 0px;
+            margin-top: 160px;
             gap: 20px;
-
-            .searchBox{
-                margin-top: 10px;
-
-                .input__body{
-                    margin-top: 0;
-                    height: 58px;
-
-                    .input, .typeing{
-                        overflow: hidden;
-                        max-width: 63%;
-                        white-space: nowrap;
-                    }
-                }
-
-                .quickSearches{
-                    flex-direction: column;
-                    margin-top: 15px;
-
-                    .tip{
-                        display: none;
-                    }
-
-                    .pills__searches{
-                        justify-content: flex-start !important;
-                        gap: 5px;
-                        width: 100%;
-                    }
-                }
-
-            }
     
             .home__content{
     
@@ -1493,29 +1396,11 @@
                 flex-direction: column;
                 flex-shrink: 0;
                 z-index: 99;
-    
-                .title{
-    
-                    font-size: 12px;
-                    letter-spacing: 2px;
-                    font-weight: 500;
-                    color: #fff;
-                    color: #131313;
-                    text-transform: uppercase;
-                    margin-top: 0px;
-                    margin-bottom: 35px;
-    
-                    span{
-                        color: #108a00;
-                    }
-    
-                }
 
                 .text__area{
                     width: 100%;
-                    text-align: left;
                     font-weight: 600;
-                    line-height: 47px;
+                    line-height: 33px;
                 }
     
                
@@ -1540,55 +1425,18 @@
 @media (max-width : 500px) {
 
     .slider{
-
-        .filters{
-
-            height:650px;
-            width:650px;
-            opacity: .8;
-
-        }
-    
-        .background__filters{
-            position: fixed;
-            top: -50px;
-            left: -350px;
-        }
-    
-        .orange__part{
-            position: fixed;
-            top: -50px;
-            right: -350px;
-    
-        }
     
 
         .emergencyField{
-
-            background-color: #131313;
-            position: fixed;
-            left: 0;
-            z-index: 999;
-            font-size: 11px;
-            padding: 15px;
-            top: 70px;
-            width: 100%;
-            text-align: center;
-            letter-spacing: 2px;
-            font-weight: 600;
-            color: #fff;
-            display: flex;
-            align-items: center;
-            height: 45px;
             display: none;
-
-            a{
-                color: #00ff66;
-            }
-
         }
 
         .lasg__illustration{
+            height: 200px;
+
+            .lasg__illustration__eyo{
+                display: none;
+            }
 
             .lasg__illustration__road{
                 position: absolute;
@@ -1698,19 +1546,8 @@
         .photo_container{
 
             gap: 30px;
+            margin-top: 130px;
 
-            .searchBox{
-
-                .input__body{
-                    background: #000;
-                }
-
-                input, .typeing{
-                    background-color: #000;
-                    color: #fff !important;
-                }
-            }
-    
             .home__content{
     
                 width: 100%;
@@ -1739,8 +1576,8 @@
     
                 .text__area{
 
-                    font-size: 45px;
-                    line-height: 52px;
+                    font-size: 35px;
+                    line-height: 28px;
                     width: 100%;
 
                     .welcome{
@@ -1789,6 +1626,29 @@
     .slider{
 
         .photo_container{
+            margin-top: 120px;
+
+            .searchBox{
+
+                .input__body{
+
+                    flex-direction: column;
+                    height: max-content;
+                    align-items: center;
+
+                    .typeing{
+                        top: 0;
+                        transform: translateY(0);
+                    }
+                    
+                    input, .typeing, .search__action__btn{
+
+                        width: 100%;
+                        height: 55px;
+
+                    }
+                }
+            }
     
             .home__content{
     
@@ -1819,9 +1679,9 @@
     
                 .text__area{
 
-                    font-size: 37px;
-                    line-height: 42px;
-                    letter-spacing: -0.7px !important;
+                    font-size: 32px;
+                    line-height: 22px;
+                    letter-spacing: -0.5px !important;
 
                     .mobile__text{
                         text-align: left;

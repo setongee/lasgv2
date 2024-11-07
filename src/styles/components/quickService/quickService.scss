@@ -89,7 +89,20 @@
             
             }
 
-        }   
+        }  
+        
+        .linkServices{
+
+            font-size: 16px;
+            color: #808080;
+
+            a{
+                color: #009C3E;
+                text-decoration: underline;
+                cursor: pointer;
+                font-weight: 500;
+            }
+        }
     
         .quickAsapLinks{
 
@@ -104,23 +117,6 @@
             padding-bottom: 30px;
             margin-top: 40px;
             scroll-behavior: smooth;
-
-            .linkServices{
-
-                font-size: 16px;
-                color: #808080;
-                margin-top: 30px;
-                position: absolute;
-                bottom: 20px;
-                left: 0;
-    
-                a{
-                    color: #009C3E;
-                    text-decoration: underline;
-                    cursor: pointer;
-                    font-weight: 500;
-                }
-            }
             
             .content{
 
@@ -295,6 +291,10 @@
 
     .quickCheck{
 
+        .controlArea{
+            display: none;
+        }
+
         .getStarted{
 
             .textString{
@@ -369,11 +369,16 @@
                 flex-wrap: wrap;
                 gap: 20px;
                 margin-top: 10px;
+                padding-bottom: 0;
 
                 .linkBin{
 
                     width: 100%;
                     min-width: 100%;
+
+                    &:last-child{
+                        margin: 0;
+                    }
 
                     .content .quick__title{
                         padding: 20px;

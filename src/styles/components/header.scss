@@ -567,14 +567,29 @@
 
  
              .mobileBurger{
-                 width: 30px;
                  height: 30px;
                  display: flex;
                  align-items: center;
                  justify-content: center;
                  margin-right: 0px;
-                 width: 40px;
+                 width: max-content;
                  height: 40px;
+                 gap: 10px;
+
+                 font-weight: 600;
+
+                 .men{
+                    
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+
+                    .bar{
+                        width: 15px;
+                        height: 2px;
+                        background-color: #131313;
+                    }
+                 }
              }
  
              .mobileBurger2{
@@ -666,14 +681,7 @@
             }
 
             .mobileBurger{
-                width: 30px;
-                height: 30px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                margin-right: 0px;
-                width: 40px;
-                height: 40px;
+                margin-left: 10px;
             }
         }
 

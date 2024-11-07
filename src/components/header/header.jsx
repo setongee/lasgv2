@@ -150,7 +150,15 @@ return (
 
                                 <a href='/' className="logo"> <img src={lasgLogo} alt="Lagos State Official Digital Logo" /> </a>
 
-                                <div className="mobileBurger mobileBurger2" onClick={ () => openMobileMenu() } > <MenuScale color='#131414' width={22} height={22} strokeWidth={2.5} /></div>
+                                <div className="mobileBurger mobileBurger2" onClick={ () => openMobileMenu() } > 
+
+                                    <div className="men">
+                                        <div className="bar"></div>
+                                        <div className="bar"></div>
+                                    </div> 
+                                    Menu 
+
+                                </div>
 
                             </div>
 

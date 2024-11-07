@@ -36,3 +36,94 @@
     }
 
 }
+
+@media (max-width : 1500px){
+    .budgetting{
+        justify-content: space-between;
+        gap: 0;
+    }
+}
+
+@media (max-width : 1350px){
+    .budgetting{
+
+        .budget__card{
+           p{
+            font-size: 35px;
+           }
+        }
+    }
+}
+
+@media (max-width : 1300px){
+    .budgetting{
+
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 50px;
+        row-gap: 30px;
+
+        .budget__card{
+           p{
+            font-size: 35px;
+           }
+        }
+    }
+}
+
+@media (max-width : 1200px){
+    .budgetting{
+
+        padding: 40px 0;
+    }
+}
+
+@media (max-width : 500px){
+    .budgetting{
+
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 40px;
+        row-gap: 40px;
+
+        .divider{
+            display: none;
+        }
+
+        .budget__card{
+           p{
+            font-size: 35px;
+           }
+        }
+    }
+}
+
+@media (max-width : 500px){
+    .budgetting{
+
+        width: 100%;
+        flex-wrap: nowrap;
+        justify-content: center;
+        flex-direction: column;
+        gap: 50px;
+        row-gap: 30px;
+
+        .divider{
+            display: block;
+            height: 1px;
+            width: 100%;
+        }
+
+        .budget__card{
+
+            align-items: center;
+
+           p{
+            font-size: 40px;
+           }
+
+        }
+    }
+}

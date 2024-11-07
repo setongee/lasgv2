@@ -183,18 +183,17 @@ export default function QuickCheck() {
                                 </div>
 
                             </motion.a>
-
-
-                            <div className="linkServices">
-
-                                Ready to explore? <a onClick={handleServices}>Browse all services</a>
-
-                            </div>
                             
 
                         </div>
 
                         </IconoirProvider>
+
+                        <div className="linkServices">
+
+                                Ready to explore? <a onClick={handleServices}>Browse all services</a>
+
+                            </div>
 
                     </div>
 
