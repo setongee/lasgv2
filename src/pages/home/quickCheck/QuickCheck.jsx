@@ -9,6 +9,7 @@ import housing from '../../../assets/services__illustrations/housing.svg'
 import travel from '../../../assets/services__illustrations/travel.svg'
 import learn from '../../../assets/services__illustrations/learn.svg'
 import work from '../../../assets/services__illustrations/workinlagos.svg'
+import Controls from '../../../components/control/controls';
 
 export default function QuickCheck() {
 
@@ -71,9 +72,13 @@ export default function QuickCheck() {
                         
                         >
 
+                        <div className="controlArea">
+                            <Controls target = 'scrollX' />
+                        </div>
+
                         <div 
                         
-                        className="quickAsapLinks">
+                        className="quickAsapLinks" id='scrollX'>
 
                             <motion.a initial = {{opacity : 0, x : -50}} whileInView = {{opacity : 1, x:1}} transition={{delay : 0.1 }} href="/services/housing" className="linkBin">
 
@@ -127,7 +132,7 @@ export default function QuickCheck() {
 
                             </motion.a>
 
-                            <motion.a initial = {{opacity : 0, x : -50}} whileInView = {{opacity : 1, x:1}} transition={{delay : 0.3 }} href="/services/housing" className="linkBin">
+                            <motion.a initial = {{opacity : 0, x : -50}} whileInView = {{opacity : 1, x:1}} transition={{delay : 0.3 }} href="/services/jobs" className="linkBin">
 
                                 <div className="content">
 
@@ -153,7 +158,7 @@ export default function QuickCheck() {
 
                             </motion.a>
 
-                            <motion.a initial = {{opacity : 0, x : -50}} whileInView = {{opacity : 1, x:1}} transition={{delay : 0.4 }} href="/services/housing" className="linkBin">
+                            <motion.a initial = {{opacity : 0, x : -50}} whileInView = {{opacity : 1, x:1}} transition={{delay : 0.4 }} href="/services/education" className="linkBin">
 
                                 <div className="content">
 

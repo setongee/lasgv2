@@ -1,0 +1,44 @@
+.controls{
+
+    position: absolute;
+    right: 0;
+    z-index: 4;
+    gap: 10px;
+
+    .arrow__nav{
+
+        height: 50px;
+        width: 50px;
+        border-radius: 5px;
+        position: relative;
+        cursor: pointer;
+        background-color: #E0EAE8;
+        font-size: 18px;
+
+        .abs{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            margin-top: 3px;
+            transition: all .2s ease-in-out;
+            color: #1c3f3a;
+        }
+
+        &.abs1:hover{
+
+            .abs{
+                margin-left: -2px;
+            }
+
+        }
+
+        &.abs2:hover{
+
+            .abs{
+                margin-left: 2px;
+            }
+
+        }
+    }
+}

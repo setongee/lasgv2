@@ -5,7 +5,7 @@ import quick from '../../assets/hd/lassra.png'
 import carIn from '../../assets/hd/lagosride.png'
 import feedback from '../../assets/hd/feedback.jpg'
 import './quick.scss'
-import { ArrowRight, NavArrowLeft, NavArrowRight } from 'iconoir-react'
+import { ArrowRight } from 'iconoir-react'
 import { SplitText } from '../../pages/home/SplitText'
 
 export default function Quick() {
@@ -39,38 +39,15 @@ export default function Quick() {
 
     }, []);
 
-
-    const scrollRight = (type, target) => {
-
-        const rt = document.getElementById('search__cards');
-        if(type === 'right'){
-          rt.scrollLeft += 250
-        }else{
-          rt.scrollLeft -= 250
-        }
-    }
-
   return (
 
-        <Container>
+    <Container>
 
-            <div className="quick">
+        <div className="quick">
 
             <img src={image__data[`${image}`]} alt="quick images" />
 
             <div className="quick__main">
-
-                <div className="controls flex">
-
-                    <div className="arrow__nav abs1" onClick={ () => scrollRight('left') }> 
-                        <div className="abs"><NavArrowLeft/></div> 
-                    </div>
-
-                    <div className="arrow__nav abs1" onClick={ () => scrollRight('right') }> 
-                        <div className="abs"><NavArrowRight/></div> 
-                    </div>
-
-                </div>
 
                 <div className="quick__content">
 
@@ -82,9 +59,9 @@ export default function Quick() {
 
                 </div>
 
-                <div className="search__cards__body flex" id='search__cards'>
+                <div className="search__cards__body flex">
 
-                    <a target='_blank' href='https://registration.lagosresidents.gov.ng/register/' className="search__card top" onMouseOver={ () => changeIndexToCurrent(1) }>
+                    <a target='_blank' href='https://registration.lagosresidents.gov.ng/register/' className="search__card active top" onMouseOver={ () => changeIndexToCurrent(1) }>
                     <p> Get your LAG-ID card today.</p>
                     <div className="cta flex flex_align_center">Apply Now <div className="arrt"> <ArrowRight height={18} /></div> </div>
                     </a>
@@ -100,7 +77,7 @@ export default function Quick() {
                     </a>
 
                     <a target='_blank' href = 'https://citizensgate.lagosstate.gov.ng/' className="search__card" onMouseOver={ () => changeIndexToCurrent(3) }>
-                    <p> Send feedback to Lagos State </p>
+                    <p> Send feedbacks to Lagos State </p>
                     <div className="cta flex flex_align_center"> Get Started Here <div className="arrt"> <ArrowRight height={18} /></div> </div>
                     </a>
 
@@ -108,10 +85,9 @@ export default function Quick() {
 
             </div>
 
-            </div>
+        </div>
 
-        </Container>
-    
+    </Container>
 
   )
 }

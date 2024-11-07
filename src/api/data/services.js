@@ -27,7 +27,7 @@ const LASG_SERVICES = [
     {
 
         id: "complaints_feedbacks",
-        title : "Complaints & Feedbacks",
+        title : "Complaints & Feedback",
         text : "Send a feedback or Make a complain to the Lagos State Government.",
 
     },

@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import './photo_slider.scss'
 
 import Container from '../container/container'
-import { ArrowDown, ArrowUpRight } from 'iconoir-react'
+import { ArrowDown, ArrowUpRight, NavArrowLeft, NavArrowRight } from 'iconoir-react'
 import Typewriter from 'typewriter-effect';
 import LasgIllustrations from './lasg_landingpage_illustrations'
 import SearchQuery from '../search/searchQuery'
@@ -11,6 +11,7 @@ import SearchQuery from '../search/searchQuery'
 import greenFilter from '../../assets/background/filters/blur__gradient.png'
 import orangeFilter from '../../assets/background/filters/blur__gradient__orange.png'
 import grain from '../../assets/background/filters/ grain.png'
+import { SplitText } from '../../pages/home/SplitText';
 
 export default function Photo_slider_component() {
 
@@ -89,6 +90,18 @@ const closeEmergency = () => {
   setOpenEmergency(false);
 
 }
+
+const scrollRight = (type) => {
+
+  const rt = document.getElementById('scrollRecent');
+  if(type === 'right'){
+    rt.scrollLeft += 150
+  }else{
+    rt.scrollLeft -= 150
+  }
+
+}
+
     
   return (
 
@@ -116,9 +129,24 @@ const closeEmergency = () => {
 
                   <div className="text__area">
 
-                    <div className="welcome">Welcome to Lagos - Centre for Excellence</div>
+                    {/* <div className="welcome">- Welcome to Lagos - Centre for Excellence -</div> */}
 
-                    <span>Simplifying</span> your access to Lagos State Government Services
+                    {/* <span>Simplifying</span> your access to Lagos State Government Services */}
+
+                    {/* Simplifying your <span>access to Lagos State Government</span> Topics and  Services */}
+
+                    <SplitText
+
+                        major = "many"
+                        initial={{ y: '100%' }}
+                        whileInView={{ y: 0,
+                        transition: { duration : 1.4 }}}   
+                        viewport={{ once: true }}
+                    >
+
+                      Simplifying your access to Lagos State Government Topics and  Services
+
+                    </SplitText>
 
                   </div>
 
@@ -168,7 +196,9 @@ const closeEmergency = () => {
 
                     {/* <div className="tip"> Popular searches </div> */}
 
-                    <div className="pills__searches">
+                    <div className="arrow__nav abs1" onClick={ () => scrollRight('left') }> <div className="abs"><NavArrowLeft/></div> </div>
+
+                    <div className="pills__searches" id='scrollRecent'>
                       <p onClick={ e => handleSearchTab(e) } >Pay My Tax</p>
                       <p onClick={ e => handleSearchTab(e) } >Loans</p>
                       <p onClick={ e => handleSearchTab(e) } >LASRRA</p>
@@ -177,6 +207,8 @@ const closeEmergency = () => {
                       <p onClick={ e => handleSearchTab(e) } >Benefits</p>
                       <p onClick={ e => handleSearchTab(e) } >PAY LUC</p>
                     </div>
+
+                    <div className="arrow__nav abs2" onClick={ () => scrollRight('right') } > <div className="abs"><NavArrowRight/></div> </div>
 
                   </div>
                   

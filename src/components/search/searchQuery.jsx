@@ -4,18 +4,19 @@ import Container from '../container/container'
 import { Search, Xmark } from 'iconoir-react'
 import {motion} from 'framer-motion'
 import Fuse from 'fuse.js'
-import { servicesDB } from '../../api/data/servicesDB'
 import SearchResultsQuery from './searchResultsQuery'
 import ViewSearchModal from './searchModal'
 import { useLocation } from 'react-router'
 import { getAllServices } from '../../api/read/services.req'
 import { useQuery } from '@tanstack/react-query'
 
+import loader from '../../assets/loaders/loader.svg'
+
 export default function SearchQuery({query, closeModal}) {
 
   const location = useLocation().pathname;
 
-  const [search, setSearch] = useState(query === '' ? " " : query);
+  const [search, setSearch] = useState(query === '' ? "" : query);
   const [queryResults, setQueryResults] = useState([]);
   const [searchView, setSearchView] = useState({});
   const [showInfo, setShowInfo] = useState(false);
@@ -52,18 +53,21 @@ export default function SearchQuery({query, closeModal}) {
 
   useEffect(() => {
 
+    let score = 0.05;
+
     const fuseOptions = {
 
       includeScore : true,
       shouldSort : true,
-      keys : ['keywords.key', 'name', 'short']
+      findAllMatches : false,
+      keys : ['keywords.key', 'name']
     
     };
   
     const fuse = new Fuse(data?.data || [], fuseOptions);
     const results = fuse.search(search);
     console.log(results)
-    const queriedRes = results.filter( item => item.score <= 0.2 ).map(res => res.item);
+    const queriedRes = results.filter( item => item.score <= score ).map(res => res.item);
     console.log(queriedRes)
     setQueryResults(queriedRes);
    
@@ -98,7 +102,7 @@ export default function SearchQuery({query, closeModal}) {
 
             </div>
 
-            <motion.div className="top" initial = { { opacity : 0, y : 100 } } animate = { { opacity : 1, y : 0 } } transition={ { delay : .4, duration : .4 } } ><span>Hey there,</span> get curated informations from all news, topics & services </motion.div>
+            <motion.div className="top" initial = { { opacity : 0, y : 100 } } animate = { { opacity : 1, y : 0 } } transition={ { delay : .4, duration : .4 } } ><span>Hey there,</span> get curated information from all news, topics & services </motion.div>
 
           </div>
 
@@ -111,7 +115,7 @@ export default function SearchQuery({query, closeModal}) {
           <div className="search__query__results">
 
               {
-                isLoading ? <h1>Loading...</h1> : 
+                isLoading ? <div className="loader"><img src={loader} alt="" /></div> : 
                 queryResults?.length 
                 ? 
                 queryResults.map( (response, index) => (

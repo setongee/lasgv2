@@ -28,9 +28,7 @@ export default function Footer() {
 
     <div className="footer footer__new">
 
-        <div className="subscribe__holder">
-          <Subscribe/>
-        </div>
+        <Subscribe/>
 
         <Container>
 

@@ -75,8 +75,8 @@
 
     .seth_Link{
 
-        background-color: #3A5A40;
-        height: 40px;
+        background-color: #1c3f3a;
+        height: 35px;
         font-size: 11px;
         color: #fff;
         display: flex;
@@ -105,7 +105,7 @@
                     align-items: center;
                     gap: 5px;
                     text-transform: uppercase;
-                    color: #f0ead2;
+                    color: #E0EAE8;
                     font-weight: 700;
                 }
 
@@ -187,7 +187,7 @@
                 
                 &.current{
                     border-bottom: 1px solid #009C3E;
-                    color: #009C3E;
+                    color: #1c3f3a;
                 }
 
                 &.searching{
