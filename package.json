@@ -12,6 +12,7 @@
     "axios": "^1.6.8",
     "date-fns": "^4.1.0",
     "draft-js": "^0.11.7",
+    "express": "^4.21.1",
     "firebase": "^10.10.0",
     "framer-motion": "^11.0.25",
     "fuse.js": "^7.0.0",
