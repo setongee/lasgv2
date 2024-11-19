@@ -547,7 +547,7 @@
 
         .resultArea{
             .mda_card{
-                width: 100%;
+                width: calc(50% - 20px);
             }
         }
         
@@ -632,6 +632,20 @@
             }
 
         }
+    }
+
+}
+
+@media (max-width : 768px) {
+
+    .government_style{
+
+        .resultArea{
+            .mda_card{
+                width: 100%;
+            }
+        }
+        
     }
 
 }
@@ -724,32 +738,25 @@
         .resultArea{
 
             margin-top: 40px;
+            gap: 20px;
 
             .mda_card{
 
-                gap: 15px;
-                padding: 20px;
+                gap: 0px;
+                padding: 20px 25px;
                 height: 100%;
 
                 .logo{
-                    width: 50px ;
-                    height: 50px ;
-
-                    img{
-                        scale: 1;
-                    }
+                    width: 25px ;
+                    height: 25px ;
                 }
 
                 .mda_name{
 
-                    font-size: 11px;
-                    line-height: 18px;
+                    font-size: 15px;
+                    line-height: 24px;
                     width: 100%;
 
-                }
-
-                .mda_desc{
-                    display: none;
                 }
 
                 .arrowMai{
