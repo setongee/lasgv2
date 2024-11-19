@@ -4,10 +4,10 @@ const app = express();
 
 app.use(express.static(path.join(__dirname, 'build')));
 
-app.get('/', function (req, res) {
+app.get('*', function (req, res) {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
-app.listen(8083, () => {
+app.listen(8080, () => {
     console.log("App is running no sweat!")
 });
