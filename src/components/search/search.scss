@@ -130,18 +130,17 @@
 
     .result__card{
 
-        width: 32%;
-        // min-width: 300px;
-        background-color: #fff;
-        box-shadow: 2px 5px 20px rgba($color: #000000, $alpha: .04);
-        // border: 1px solid #efefef;
-        padding: 30px;
-        border-radius: 7px;
-        cursor: pointer;
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        gap: 30px;
+        background-color: #f6f6f6;
+            background-color: #fff;
+            border: 1px solid #eee;
+            color: var(--dark);
+            width: calc(33% - 25px);
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 25px 30px;
+            border-radius: 10px;
+            cursor: pointer;
         
         .title{
             font-size: 18px;
@@ -190,6 +189,11 @@
 
     }
 
+}
+
+.load{
+    background-color: transparent;
+    width: 100%;
 }
 
 

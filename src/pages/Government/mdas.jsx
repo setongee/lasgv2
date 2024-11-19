@@ -10,13 +10,12 @@ import Fuse from 'fuse.js';
 import MdaResultsComponent from './mdaResultsComponent';
 import { Globe, Internet, Message, Phone, PinSolid, Xmark } from 'iconoir-react';
 import Mda_modal from './mda_modal';
+import { getAllMdas } from '../../api/read/mda.req';
+import Loader from '../../components/loader/loader';
 
 export default function Mdas() {
 
   const alpha = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
-
- const [indexFilter, setIndexFilter] = useState('');
- //const [searchTerm, setSearchTerm] = useState('');
 
  const [isVisible, setIsVisible] = useState(false);
  const targetRef = useRef(null);
@@ -25,8 +24,10 @@ export default function Mdas() {
  let params = useParams().index;
 
  const [ query, setQuery ] = useState('');
- const [queryResults, setQueryResults] = useState(mdaDBv2);
-
+ const [queryResults, setQueryResults] = useState([]);
+ const [globalResult, setGlobalResult] = useState([]); 
+ const [filterResults, setFilterResults] = useState([]);
+ const [isLoading, setIsLoading] = useState(false);
 
  const [isOpen, setIsOpen] = useState(false);
  const [modalData, setModalData] = useState({});
@@ -44,28 +45,42 @@ export default function Mdas() {
 
   }
 
-
  useEffect(() => {
 
   const fuseOptions = {
 
     keys: [
-      "mda",
-      "tags",
-      "short"
+      "name",
+      "type",
+      "subdomain"
     ]
   
   };
 
-  const fuse = new Fuse(mdaDBv2, fuseOptions);
-  const results = fuse.search(query);
-  const queriedRes =  query ? results.map(res => res.item) : mdaDBv2;
-  setQueryResults(queriedRes); 
+  if (params !== "all"){
+
+    const fuse = new Fuse(filterResults, fuseOptions);
+    const results = fuse.search(query);
+    const queriedRes =  query ? results.map(res => res.item) : filterResults;
+    setQueryResults(queriedRes); 
+
+  } 
+  
+  else{
+
+    const fuse = new Fuse(globalResult, fuseOptions);
+    const results = fuse.search(query);
+    const queriedRes =  query ? results.map(res => res.item) : globalResult;
+    setQueryResults(queriedRes); 
+
+  }
+  
  
  }, [query]);
 
-
  useEffect(() => {
+
+setQueryResults([])
 
 const active = document.querySelector('.index__active')
 
@@ -87,24 +102,46 @@ if (active === null) {
 
 if (params !== 'all') {
 
-  const filterByIndex = mdaDBv2.filter( e => e.index === params.toUpperCase());
-  setQueryResults(filterByIndex);
+  if (query !== "") setQuery("")
+
+  if(globalResult.length){
+
+    const filterByIndex = globalResult.filter( e => e.name.split("")[0].toUpperCase() === params.toUpperCase());
+    setFilterResults(filterByIndex);
+    setQueryResults(filterByIndex);
+    
+  } else {
+
+    setIsLoading(true);
+
+    getAllMdas().then((res => {
+
+      const filter = res.filter( e => e.name.split("")[0].toUpperCase() === params.toUpperCase());
+      setFilterResults(filter);
+      setQueryResults(filter);
+      setIsLoading(false);
+
+    } ))
+
+  }
 
 } else {
 
-  const sorted = mdaDBv2.sort(function (a, b) {
+  if (!globalResult.length){
 
-    if (a.mda < b.mda) {
-      return -1;
-    }
-    if (a.mda > b.mda) {
-      return 1;
-    }
-    return 0;
+    setIsLoading(true);
+    getAllMdas().then( res => {
 
-  });
+        setQueryResults(res);
+        setGlobalResult(res);
 
-  setQueryResults(sorted);
+        setIsLoading(false);
+
+    } );
+    
+  } else{
+    setQueryResults(globalResult);
+  }
 
 }
   
@@ -227,7 +264,7 @@ if (params !== 'all') {
 
                                     return <MdaResultsComponent data = {data} key = {index} openModal = {openModal} />
 
-                                } ) : <h1>Oops! Sorry No results Found, Try Again!</h1>
+                                } ) : !isLoading ? <h1>No results were found. Please try again with different search criteria</h1> : <Loader bg = "transparent" />
                               }
                             
 

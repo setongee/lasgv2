@@ -39,8 +39,8 @@ export default function Officials( { officials, uid } ) {
 
                 <div className="nameCarrier">
 
-                    <div className="fullname thick"> {officials.fullname} </div>
                     <div className="position"> {officials.position} </div>
+                    <div className="fullname thick"> {officials.fullname} </div>
 
                 </div>
 

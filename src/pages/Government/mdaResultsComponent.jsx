@@ -6,6 +6,7 @@ import LogoAgency from '../../assets/MDA/agency.svg'
 
 import { ArrowUpRight, Internet } from 'iconoir-react';
 import Mda_modal from './mda_modal';
+import { truncateText } from '../../middleware/middleware';
 
 
 
@@ -16,12 +17,16 @@ export default function MdaResultsComponent( { data, openModal } ) {
     <div className="mda_card" onClick={ () => openModal(data) }>
 
 
-        <div className="logo"> <img src={data.tags === 'ministry ' ? LogoMinistry : data.tags === 'department ' ? LogoDepartment : LogoAgency} alt="Lagos State Ministries, Departments & Agencies" /> </div>
+       <div className="details__zone flex">
+
+          <div className="logo"> <img src={data.type === 'ministry' ? LogoMinistry : data.type === 'department' ? LogoDepartment : LogoAgency} alt="Lagos State Ministries, Departments & Agencies" />  </div>
+
+          <div className="mda_name"> {data.name} </div>
+
+       </div>
 
         <div className="topx">
-
-            <div className="mda_name"> {data.mda} </div>
-            {/* <div className="mda_desc"> {data.short} </div> */}
+            <div className="mda_desc"> { truncateText(data.description, 100) } </div>
 
         </div>
 

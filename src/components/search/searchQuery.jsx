@@ -11,6 +11,7 @@ import { getAllServices } from '../../api/read/services.req'
 import { useQuery } from '@tanstack/react-query'
 
 import loader from '../../assets/loaders/loader.svg'
+import Loader from '../loader/loader'
 
 export default function SearchQuery({query, closeModal}) {
 
@@ -31,6 +32,7 @@ export default function SearchQuery({query, closeModal}) {
 
     setSearchView(data);
     setShowInfo(true);
+    document.body.style.overflow = 'hidden'
 
   }
 
@@ -53,7 +55,7 @@ export default function SearchQuery({query, closeModal}) {
 
   useEffect(() => {
 
-    let score = 0.05;
+    let score = 0.00001;
 
     const fuseOptions = {
 
@@ -66,9 +68,7 @@ export default function SearchQuery({query, closeModal}) {
   
     const fuse = new Fuse(data?.data || [], fuseOptions);
     const results = fuse.search(search);
-    console.log(results)
     const queriedRes = results.filter( item => item.score <= score ).map(res => res.item);
-    console.log(queriedRes)
     setQueryResults(queriedRes);
    
    }, [search, data]);
@@ -115,7 +115,7 @@ export default function SearchQuery({query, closeModal}) {
           <div className="search__query__results">
 
               {
-                isLoading ? <div className="loader"><img src={loader} alt="" /></div> : 
+                isLoading ? <div className="load"><Loader/></div> : 
                 queryResults?.length 
                 ? 
                 queryResults.map( (response, index) => (

@@ -19,3 +19,7 @@
     transform-origin: top;
     z-index: 100;
 }
+
+.fullPortion{
+    height: 700px;
+}

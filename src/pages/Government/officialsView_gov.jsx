@@ -68,7 +68,7 @@ return (
                             </div>
 
                             <div className="highlight">
-                                <img src="https://www.amehnews.com/wp-content/uploads/2023/08/IMG-20230817-WA01251.jpg" alt="highlight" />
+                                <img src="https://res.cloudinary.com/dirmxkznt/image/upload/v1731756405/463000370_18244089694286314_4981945280962590482_n_ndr1tp.jpg" alt="highlight" />
                             </div>
 
                             <div className="highlight">
@@ -85,7 +85,7 @@ return (
 
                     <div className="missionStatement">
 
-                        "The Governor of Lagos State and indeed, Lagos State Government  distance itself from any reckless, divisive and dangerous rhetoric. Lagos remains home to every Nigerian citizen regardless of their ethnic nationality"
+                        "The Governor of Lagos State and indeed, Lagos State Government  distances itself from any reckless, divisive and dangerous rhetoric. Lagos remains home to every Nigerian citizen regardless of their ethnic nationality"
 
                         <p> - Governor Babajide Olusola Sanwo-Olu </p>
 
@@ -165,7 +165,7 @@ return (
                     <div className="imp_img">
 
                          <div className="imageContainer">
-                            <img src="https://newsinvestigatorsng.com/wp-content/uploads/2023/05/IMG_0702.jpeg" /> 
+                            <img src="https://res.cloudinary.com/dirmxkznt/image/upload/v1731756754/271509136_225364289670860_6275307121028768701_n_m6xtmi.jpg" /> 
                          </div>
 
                          <div className="imageContainer">

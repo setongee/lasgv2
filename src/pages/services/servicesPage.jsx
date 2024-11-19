@@ -19,6 +19,7 @@ export default function ServicesPage() {
   const [modalData, setModalData] = useState({});
   const [isModalOpen, setIsMOdalOpen] = useState(false);
 
+
   useEffect(() => {
 
     const fuseOptions = {
@@ -85,7 +86,6 @@ const openModal = (data) => {
 
   return (
 
-    <Transitions>
       <div className="servicesPage">
 
         {
@@ -109,7 +109,7 @@ const openModal = (data) => {
 
                 {/* Search Area Side With Search Input */}
 
-                <div className="searchField">
+                {/* <div className="searchField">
 
                       <input type="text" className="searchInput" value = {query} onChange={ e => setQuery(e.target.value) }/>
 
@@ -134,7 +134,7 @@ const openModal = (data) => {
 
                       }
 
-                </div>
+                </div> */}
 
                 {/* searched query results */}
 
@@ -183,9 +183,7 @@ const openModal = (data) => {
             ) : null
         }
 
-      </div>  
-
-    </Transitions>
+      </div>
     
   )
 }

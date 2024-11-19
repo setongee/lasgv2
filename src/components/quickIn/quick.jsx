@@ -77,7 +77,7 @@ export default function Quick() {
                     <p> Empowering Lagosians : Streamlined Services at Your Fingertips</p>
 
                     <div className="subtitle">
-                        Every family in Lagos has a duty to register with LASRRA to get card for each member of the family.
+                        Every family in Lagos is required to register with LASRRA and obtain a card for each family member.
                     </div>
 
                 </div>

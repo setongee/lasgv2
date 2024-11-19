@@ -111,10 +111,6 @@ export default function Footer() {
 
                           <a target = '_blank' href="https://citizensgate.lagosstate.gov.ng/" className="link"><span><ArrowUpRight/></span> Make complaints </a>
 
-                          <a target = '_blank' href="/services/jobs" className="link"> <span><ArrowUpRight/></span> Work in Lagos </a>
-
-                          <a target = '_blank' href="/services/housing" className="link"> <span><ArrowUpRight/></span> Housing and lands </a>
-
                       </div>
 
                   </div>
@@ -142,10 +138,6 @@ export default function Footer() {
                       <div className="links a-dark flex flex_col">
 
                           <a target = '_blank' href="https://citizensgate.lagosstate.gov.ng/" className="link"> <span><ArrowUpRight/></span> Give feedback </a>
-
-                          <a target = '_blank' href="https://citizensgate.lagosstate.gov.ng/" className="link"> <span><ArrowUpRight/></span> Suggestions </a>
-
-                          <a target = '_blank' href="https://citizensgate.lagosstate.gov.ng/" className="link"><span><ArrowUpRight/></span> Take our survey </a>
 
                       </div>
 

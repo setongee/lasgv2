@@ -4,6 +4,7 @@ import Container from '../../../components/container/container'
 import TabTitle from '../../../components/tabHeading/tabTitle'
 import { ArrowLeft, ArrowRight, Play, PlaySolid, SoundHigh } from 'iconoir-react'
 import { motion } from 'framer-motion'
+import { getAllNews } from '../../../api/read/news.req'
 
 export default function News() {
 
@@ -11,33 +12,35 @@ const [news, setNews] = useState(0)
 const [muted, setMuted] = useState(false);
 const [timemap, setTimeMap] = useState(5);
 
-const newsData = [
+// const newsData = [
 
-    {
-        main : "Our agricultural hubs and food security project is not just thriving—it’s revolutionizing how we approach sustenance in Lagos.",
-        sub : "Lorem ipsum dolor sit amet, consectetur elit adfh, Curabitur venenatis velit eget massa volutpat, at rhoncus turpis consequat.",
-        date : "Tues. 06 April, 2024",
-        video : "https://res.cloudinary.com/dydazqid8/video/upload/v1713201328/Our_agricultural_hubs_and_food_security_project_is_not_just_thriving_it_s_revolutionizing_how_we_approach_sustenance_in_Lagos._Each_day_brings_us_closer_to_a_Lagos_where_everyone_has_access_to_affordable_high-quality_food._It_s_a_jou_ffrlgs.mp4",
-        type : "video",
-        photo : ""
+//     {
+//         main : "Our agricultural hubs and food security project is not just thriving—it’s revolutionizing how we approach sustenance in Lagos.",
+//         sub : "Lorem ipsum dolor sit amet, consectetur elit adfh, Curabitur venenatis velit eget massa volutpat, at rhoncus turpis consequat.",
+//         date : "Tues. 06 April, 2024",
+//         video : "https://res.cloudinary.com/dydazqid8/video/upload/v1713201328/Our_agricultural_hubs_and_food_security_project_is_not_just_thriving_it_s_revolutionizing_how_we_approach_sustenance_in_Lagos._Each_day_brings_us_closer_to_a_Lagos_where_everyone_has_access_to_affordable_high-quality_food._It_s_a_jou_ffrlgs.mp4",
+//         type : "video",
+//         photo : ""
         
-    },
+//     },
 
-    {
-        main : "Gov. Sanwo-Olu meets London-Lagos solo driver, Ms. Pelumi Nubi, at the Lagos house, marina, on Monday, 8th April 2024.",
-        sub : "Lorem ipsum dolor sit amet, consectetur elit adfh, Curabitur venenatis velit eget massa volutpat, at rhoncus turpis consequat.",
-        date : "Tues. 06 April, 2024",
-        photo : "https://pbs.twimg.com/media/GKpzMPhWsAAP1zB?format=jpg",
-    },
+//     {
+//         main : "Gov. Sanwo-Olu meets London-Lagos solo driver, Ms. Pelumi Nubi, at the Lagos house, marina, on Monday, 8th April 2024.",
+//         sub : "Lorem ipsum dolor sit amet, consectetur elit adfh, Curabitur venenatis velit eget massa volutpat, at rhoncus turpis consequat.",
+//         date : "Tues. 06 April, 2024",
+//         photo : "https://pbs.twimg.com/media/GKpzMPhWsAAP1zB?format=jpg",
+//     },
 
-    {
-        main : "I met with the National Emergency Management Agency (NEMA) team led by the Director-General, Mrs. Zubaida Umar.",
-        sub : "Lorem ipsum dolor sit amet, consectetur elit adfh, Curabitur venenatis velit eget massa volutpat, at rhoncus turpis consequat.",
-        date : "Tues. 06 April, 2024",
-        photo : "https://pbs.twimg.com/media/GK-gJQ_XUAEDeia?format=jpg&name=large",
-    }
+//     {
+//         main : "I met with the National Emergency Management Agency (NEMA) team led by the Director-General, Mrs. Zubaida Umar.",
+//         sub : "Lorem ipsum dolor sit amet, consectetur elit adfh, Curabitur venenatis velit eget massa volutpat, at rhoncus turpis consequat.",
+//         date : "Tues. 06 April, 2024",
+//         photo : "https://pbs.twimg.com/media/GK-gJQ_XUAEDeia?format=jpg&name=large",
+//     }
 
-]
+// ]
+
+const [newsData, setNewsData] = useState([])
 
 const nextShow = () => {
 
@@ -115,30 +118,30 @@ const soundControl = e => {
 
 useEffect(() => {
 
-    if(newsData[news].type !== 'video') {   
+    setTimeMap(5);
 
-        setTimeMap(5);
+    // // const interval = setInterval(() => {
 
-        const interval = setInterval(() => {
-
-            nextShow();
-            
-        }, 5000);
+    // //     // nextShow();
         
-        return () => clearInterval(interval);
-
-    } else {
-
-        const videoPlaying = document.getElementById('videoControl');   
-        videoPlaying.onloadedmetadata = function() {
-
-            const duration = Math.round(this.duration);
-            setTimeMap(duration);
-
-          };
-    }
+    // // }, 5000);
+    
+    // return () => clearInterval(interval);
    
 }, [news]);
+
+useEffect(() => {
+        
+    getAllNews(0, 'all').then( (res) => {
+
+        const filteredIndex = res.data.filter( (e, index) => index < 5 )
+        setNewsData(filteredIndex);
+
+    } )
+    
+}, []);
+
+console.log(newsData)
 
 
   return (
@@ -155,15 +158,15 @@ useEffect(() => {
 
                     <div className="tag uppercase">Govornor's Address</div>
                     
-                    <div className="main thick"> { newsData[news].main } </div>
+                    <div className="main thick"> { newsData[news]?.title } </div>
 
-                    <div className="sub"> { newsData[news].sub } </div>
+                    <div className="sub"> { newsData[news]?.sub } </div>
 
                     <div className="date_control">
 
                         <div className="lineCheck" style={{animationDuration :`${timemap}s`}} ></div>
 
-                        <div className="date thick"> { newsData[news].date } </div>
+                        <div className="date thick"> { newsData[news]?.date } </div>
 
                         <div className="arrowOpp">
 
@@ -204,9 +207,9 @@ useEffect(() => {
                 <div className="media">
 
                     {
-                        newsData[news].type !== "video" ? <img src={ newsData[news].photo } alt="" /> : <div className="mintVideo">
+                        newsData[news]?.type !== "video" ? <img src={ newsData[news]?.photo } alt="" /> : <div className="mintVideo">
 
-                            <video autoPlay muted src={newsData[news].video} id='videoControl' onEnded = { () => nextShow() } playsInline > </video>
+                            <video autoPlay muted src={newsData[news]?.video} id='videoControl' onEnded = { () => nextShow() } playsInline > </video>
 
                             <div className="console">
 

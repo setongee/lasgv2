@@ -1,11 +1,31 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import './news__carrier.scss'
 import NewsComp from '../../news_events/NewsComp'
 import Container from '../../../components/container/container'
 import { Timer } from 'iconoir-react'
 import { news } from '../../../api/data/news'
+import { getAllNews } from '../../../api/read/news.req'
+import { convertToTitleCase, formatDate, readingTime, truncateText } from '../../../middleware/middleware'
+import { titleCase } from "title-case";
+
+import dayjs from 'dayjs'
+import relativeTime from 'dayjs/plugin/relativeTime'
 
 export default function NewsCarrier() {
+
+const [news, setNews] = useState([]);
+
+useEffect(() => {
+    
+    getAllNews(1, 'all').then( (res) => {
+
+        const filteredIndex = res.data.filter( (e, index) => index < 5 )
+        setNews(filteredIndex);
+
+    } )
+
+}, []);
+
   
 return (
 
@@ -21,22 +41,24 @@ return (
             <div className="news_results_section">
 
                 {
-                    Object.entries(news).filter( (news_item, idx) => idx < 5 ).map( (res, index) => (
+                    news.map( (res) => (
 
-                        <a className="news_card" key = {res[0]} href={`/news/trending/view/${res[0]}`}  >
+                        <a className="news_card" key = {res._id} href={`/news/trending/view/${res._id}`}  >
 
                             <div className="news_image">
-                                <img src={res[1].img} />
+                                <img src={res.photo} />
                             </div>
 
                             <div className="news_body_content">
 
-                                <div className="news_topic"> {res[1].title} </div>
+                                <div className="date"> {formatDate(res.date)} </div>
+
+                                <div className="news_topic"> { truncateText(convertToTitleCase(res.title), 75) } </div>
 
                                 <div className="news_details">
 
-                                    <div className="details_themes"> {res[1].tag} </div>
-                                    <div className="details_readTime"> <Timer/> {res[1].time} Mins Read - </div>
+                                    <div className="details_themes"> {res.categories[0]} </div>
+                                    <div className="details_readTime"> <Timer/> { readingTime(res.content) } Mins Read - </div>
 
                                 </div>
 

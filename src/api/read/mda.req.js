@@ -10,7 +10,7 @@ const getAllMdas = async () => {
     
     if ( response.status === 200 ) {
 
-        let sortData = response.data.sort((a, b) => a.subdomain.toLowerCase().localeCompare(b.subdomain.toLowerCase(), 'en', { sensitivity: 'accent' }));
+        let sortData = response.data.sort((a, b) => a.name.toLowerCase().localeCompare(b.name.toLowerCase(), 'en', { sensitivity: 'accent' }));
 
         return sortData;
 
@@ -40,49 +40,10 @@ const getSingleMda = async (id) => {
 
 }
 
-const addSingleMda = async (data) => {
-
-    const response = await axios.post(`${base_url}/add`, data);
-    
-    if(response.status === 200) {
-        return response.data;
-    } else{
-        return "There is an issue!";
-    }
-
-}
-
-const updateSingleMda = async (id, data) => {
-
-    const response = await axios.put(`${base_url}/update/${id}`, data);
-    
-    if(response.status === 200) {
-        return response.data;
-    } else{
-        return "There is an issue!";
-    }
-
-}
-
-const deleteSingleMda = async (id) => {
-
-    const response = await axios.delete(`${base_url}/delete/${id}`);
-    
-    if(response.status === 200) {
-        return response.data;
-    } else{
-        return "There is an issue!";
-    }
-
-}
-
 
 export {
 
     getSingleMda,
-    getAllMdas,
-    addSingleMda,
-    updateSingleMda,
-    deleteSingleMda
+    getAllMdas
     
 }

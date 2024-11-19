@@ -3,9 +3,11 @@ import React from 'react'
 import LogoMinistry from '../../assets/MDA/ministry.svg';
 import LogoDepartment from '../../assets/MDA/department.svg';
 import LogoAgency from '../../assets/MDA/agency.svg';
-import { Globe, Internet, Phone, Message, Xmark, MailOut, MailOpen } from 'iconoir-react';
+import { Globe, Internet, Phone, Message, Xmark, MailOut, MailOpen, Pin } from 'iconoir-react';
 
 export default function Mda_modal( { data, closeModal } ) {
+
+  console.log(data)
 
   return (
 
@@ -19,21 +21,18 @@ export default function Mda_modal( { data, closeModal } ) {
 
                 <div className="tag"> {data.type} </div>
 
-                <div className="name_mda"> {data.mda} </div>
+                <div className="name_mda"> {data.name} </div>
 
-                {/* <div className="short"> {data.short} </div> */}
+                <div className="short"> {data.description} </div>
 
                 <div className="address_icon"> <Globe/> Office Address </div>
 
                 <div className="address"> {data.address} </div>
 
-                <div className="getDirections" onClick={ () => window.open(`https://www.google.com/maps?q=${data.mda}`) } >Get Directions</div>
-
                 <div className="contactArea">
 
-                    <div className="icon" onClick={ () => window.open(data.website) } title='Visit Website'> <Internet/> </div>
-                    <div className="icon" onClick={() => window.open(data.contact)} title='Make a phone call or send SMS' > <Phone/> </div>
-                    <div className="icon" title='Send an Email' onClick={ () => window.open(`mailto:${data.email}`) } > <MailOpen /> </div>
+                    <div className="icon target__web" onClick={ () => window.open( data.subdomain.split('.').length > 1 ? `https://${data.subdomain}` : `https://${data.subdomain}.lagosstate.gov.ng`)} title='Visit Website'> <Internet color='#fff'/> <p>Visit Website</p> </div>
+                    <div className="icon target__web target__map" onClick={ () => window.open(`https://www.google.com/maps?q=${data.address}`) } title='Get Google Map Directions'> <Pin/> <p>Get Directions</p> </div>
 
                 </div>
 

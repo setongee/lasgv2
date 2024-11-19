@@ -19,9 +19,8 @@ const Homepage = () => {
     <Stat/>
     <Quick/>
     <QuickCheck/>
-    <Services bgColor = "#f0f7f6" location = 'home' data_limit={11} />
-    {/* <NewsCarrier/> */}
-    {/* <News/> */}
+    <Services bgColor = "#f0f7f6" location = 'home' data_limit={100} />
+    <NewsCarrier/>
 
   </div>
 

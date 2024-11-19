@@ -35,7 +35,7 @@ export default function SubscribeModal({closeSubscribe}) {
                             transition: { duration : 1.4 }}}   
                         >
                         
-                        Never miss a news or event update, setup your interests!
+                        Stay up-to-date with the latest news and events by setting up your interests!
 
                         </SplitText>
 

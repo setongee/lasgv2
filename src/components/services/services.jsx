@@ -1,89 +1,33 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import Container from '../container/container'
 import './services.scss'
 import { useNavigate } from 'react-router'
 import { motion } from 'framer-motion'
 
-import LASG_SERVICES from '../../api/data/services'
-
-import agriculture from '../../assets/icons/service/agriculture.svg'
-import advertisement from '../../assets/icons/service/advertisement.svg'
-import business_trade_commerce from '../../assets/icons/service/business_trade_commerce.svg'
-import complaints_feedbacks from '../../assets/icons/service/complaints_feedbacks.svg'
-import disability_services from '../../assets/icons/service/disability_services.svg'
-import disasters_emergencies from '../../assets/icons/service/disasters_emergencies.svg'
-import education from '../../assets/icons/service/education.svg'
-import environment from '../../assets/icons/service/environment.svg'
-import events from '../../assets/icons/service/events.svg'
-import government from '../../assets/icons/service/government.svg'
-import health from '../../assets/icons/service/health.svg'
-import housing from '../../assets/icons/service/housing.svg'
-import insurance from '../../assets/icons/service/insurance.svg'
-import identity from '../../assets/icons/service/identity.svg'
-import jobs from '../../assets/icons/service/jobs.svg'
-import lands from '../../assets/icons/service/lands.svg'
-import laws from '../../assets/icons/service/laws.svg'
-import lisense from '../../assets/icons/service/lisense.svg'
-import loans from '../../assets/icons/service/loans.svg'
-import media from '../../assets/icons/service/media.svg'
-import news from '../../assets/icons/service/news.svg'
-import payments from '../../assets/icons/service/payments.svg'
-import permits from '../../assets/icons/service/permits.svg'
-import pilgrims from '../../assets/icons/service/pilgrims.svg'
-import reports from '../../assets/icons/service/reports.svg'
-import security from '../../assets/icons/service/security.svg'
-import science from '../../assets/icons/service/science.svg'
-import tourism from '../../assets/icons/service/tourism.svg'
-import transportation from '../../assets/icons/service/transportation.svg'
-import water from '../../assets/icons/service/water.svg'
-import { ArrowDown, ArrowRight, ArrowUp } from 'iconoir-react'
+import { getAllCategory } from '../../api/read/category.req'
+import Loader from '../loader/loader'
 
 
 export default function Services({bgColor, location, data_limit}) {
 
-    const icons = {
+    const [categories, setCategories] = useState([])
 
-        advertisement : advertisement,
-        agriculture : agriculture,
-        business_trade_commerce : business_trade_commerce,
-        complaints_feedbacks : complaints_feedbacks,
-        disability_services : disability_services,
-        disasters_emergencies : disasters_emergencies,
-        education : education,
-        environment : environment,
-        events : events,
-        government : government,
-        health : health,
-        housing : housing,
-        insurance : insurance,
-        identity : identity,
-        jobs : jobs,
-        lands : lands,
-        laws : laws,
-        lisense : lisense,
-        loans : loans,
-        media : media,
-        news : news,
-        payments : payments,
-        permits : permits,
-        pilgrims : pilgrims,
-        reports : reports,
-        security : security,
-        science : science,
-        tourism : tourism,
-        transportation : transportation,
-        water : water
+  const [isLoading, setIsLoading] = useState(false);
 
-    }
+    useEffect(() => {
 
-    
-    const [limit, setLimit] = useState(Number(data_limit));
-    
-    let navigation = useNavigate();
+        setIsLoading(true);
+        
+        getAllCategory().then(e =>{
+            setIsLoading(false);
+            setCategories(e.data);
+        } );
+
+    }, []);
 
   return (
 
-    <div className="services" id='services' style={{backgroundColor : bgColor}} >
+    <div className={`services ${location === "services" ? "server" : ''}`} id='services' style={{backgroundColor : bgColor}} >
 
         <Container>
 
@@ -91,61 +35,62 @@ export default function Services({bgColor, location, data_limit}) {
                 location === 'home' ? (
 
                     <div className="midTopic">
+
                         <div className="topic thick_700">Browse all Lagos State Services & Topics</div>
                         <div className="subtitle uppercase">Making it easier to have quick access to Lagos State services and information</div>
+
                     </div>
 
                 ) : null
             }
 
-            <div className = { `servicesPlatoon ${location === 'services' ? 'servicePagePlatoon' : '' } ` } >
+            {
+                !isLoading ?
+                <div className = { `servicesPlatoon ${location === 'services' ? 'servicePagePlatoon' : '' } ` } >
 
                 {
-                    LASG_SERVICES.map( (lasg_service, index) => {
+                    categories?.map( (lasg_service, index) => {
+                        
+                        return (
 
-                        if (index <= limit) {
+                            <motion.div 
+                            className="services_card" 
+                            onClick={() => window.location.href = `/services/${lasg_service.formattedName}` } key={index}
+                            
+                            >
 
-                            return (
+                                <div className="icon"> 
 
-                                <motion.div 
-                                className="services_card" 
-                                onClick={() => window.location.href = `/services/${lasg_service.id}` } key={index}
-                                
-                                >
-    
-                                    <div className="icon"> 
+                                    <div className="hov hov1">
 
-                                        <div className="hov hov1">
+                                        <img src={lasg_service.icon} alt="" />   
 
-                                            <img src={icons[lasg_service.id]} alt="" />   
+                                    </div>  
 
-                                        </div>  
+                                    <div className="hov hov2">
 
-                                        <div className="hov hov2">
+                                        <img src={lasg_service.icon} alt="" />   
 
-                                            <img src={icons[lasg_service.id]} alt="" />   
+                                    </div>                                      
 
-                                        </div>                                      
+                                </div>
 
-                                    </div>
-    
-                                    <div className="title thick"> {lasg_service.title} </div>
-    
-                                    <div className="subtext"> {lasg_service.text} </div>
-    
-                                </motion.div>      
-    
-                            )
+                                <div className="title thick"> {lasg_service.name} </div>
 
-                        }
+                                <div className="subtext"> {lasg_service.short} </div>
+
+                            </motion.div>      
+
+                        )
 
                     })
                 }
                 
 
-            </div>
+            </div> : <div className="fullPortion"><Loader/></div>
+            }
 
-            {
+            {/* {
                 location === 'home' ? (
 
                     <motion.div className="view_all thick"
@@ -168,7 +113,7 @@ export default function Services({bgColor, location, data_limit}) {
                     </motion.div>
 
                 ) : null
-            }
+            } */}
 
         </Container>
 

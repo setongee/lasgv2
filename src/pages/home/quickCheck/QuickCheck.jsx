@@ -50,7 +50,7 @@ export default function QuickCheck() {
                             </div>
 
                             <div className="pasty">
-                            Lagos State is driven to optimize access government tools for taxes, licenses, permits, and more, online.
+                                Lagos State is committed to improving access to government services online, including taxes, licenses, permits, and more
                             </div>
 
                         </div>
