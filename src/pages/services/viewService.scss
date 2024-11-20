@@ -4,16 +4,14 @@
 
     .viewArea{
 
-        padding-top: 160px;
+        padding-top: 150px;
         
         .navigationPin{
 
             display: flex;
-            text-transform: uppercase;
-            letter-spacing: 2px;
             font-size: 12px;
             font-weight: 500;
-            margin-bottom: 40px;
+            margin-bottom: 0px;
             cursor: pointer;
             justify-content: space-between;
 
@@ -22,6 +20,17 @@
                 display: flex;
                 gap: 20px;
                 align-items: center;
+                font-size: 21px;
+
+            }
+
+            .serviceTitle{
+
+                font-size: 21px;
+                line-height: 57px;
+                letter-spacing: -0.5px;
+                font-weight: 700;
+                text-align: center;
 
             }
 
@@ -35,14 +44,14 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            background-color: red;
 
             .shorts{
-                margin-bottom: 70px;
+                margin-bottom: 50px;
                 width: 50%;
                 text-align: center;
-                font-size: 12px;
-                text-transform: uppercase;
-                letter-spacing: 2px;
+                font-size: 16px;
+                font-weight: 500;
                 line-height: 24px;
             }
     
@@ -59,17 +68,6 @@
 
             }
 
-            .serviceTitle{
-
-                font-size: 45px;
-                width: 70%;
-                line-height: 57px;
-                letter-spacing: -0.5px;
-                font-weight: 700;
-                text-align: center;
-
-            }
-
         }
 
         .searchField{
@@ -80,30 +78,39 @@
     
             .searchInput{
     
-                height: 50px;
+                height: 60px;
                 outline: none;
                 border: none;
-                background-color: transparent;
-                width: 70%;
+                background-color: #000;
+                color: #fff;
+                width: 50%;
                 position: relative;
                 z-index: 5;
                 padding: 0 20px;
-                border: 1px solid #dadada;
-                border-radius: 4px;
+                border: 4px solid transparent;
+                border-radius: 100px;
+                text-align: center;
+
+                &::placeholder{
+                    font-size: 15px;
+                    color: #a8a8a8;
+                }
             }
     
             .typeSide{
     
                 position: absolute;
-                width: 70%;
-                background: #fff;
+                width: 40%;
+                background: #000;
                 z-index: 3;
                 height: 100%;
                 display: flex;
                 align-items: center;
-                padding: 0 20px;
+                justify-content: center;
+                padding: 0 30px;
                 font-size: 14px;
-                color: #777;
+                color: #fff;
+                border-radius: 100px;
     
                 .Typewriter__cursor{
                     display: none;
@@ -113,6 +120,11 @@
     
             input:focus ~ .typeSide{
                 display: none;
+            }
+
+            input:focus{
+                background-color: #000;
+                border-color: green;
             }
     
         }
@@ -150,7 +162,7 @@
             flex-wrap: wrap;
             gap: 22px;
             justify-content: center;
-            margin-bottom: 200px;
+            margin-bottom: 50px;
     
             .parentHere{
                 width: 100%;
@@ -248,25 +260,7 @@
     
                 &:hover{
                     
-                    .arrowMai{
-    
-                        .top{
-    
-                            left: calc(50% + 10px);
-                            top: -10px;
-                            translate: 50% -50%;
-        
-                        }
-        
-                        .bot{
-        
-                            top: 50%;
-                            left: 50%;
-                            translate: -50% -50%;
-        
-                        }
-    
-                    }
+                    border-color: green;
                 }
     
     
@@ -287,17 +281,36 @@
 
             padding-top: 150px;
 
+            .resultArea{
+
+                .mda_card{
+                    .details__zone{
+                        flex-direction: column;
+                        height: 90px;
+                        align-items: flex-start;
+                    }
+                }
+            }
+
         }
 
     }
 
 }
 
-@media (max-width : 850px) {
+@media (max-width : 1000px) {
 
     .viewService{
 
         .viewArea{
+
+
+        padding-top: 130px;
+        
+
+            .navigationPin{
+                margin-bottom: 20px;
+            }
 
             .serviceName{
     
@@ -323,12 +336,18 @@
                 }
             }
 
+            .mdas_sections{
+
+                margin-top: 40px;
+        
+            }
+
             .resultArea{
 
                 margin-top: 40px;
 
                 .mda_card{
-                    width: 100%;
+                    width: calc(50% - 25px);
                 }
             }
 
@@ -344,16 +363,11 @@
 
         .viewArea{
 
-            padding-top: 115px;
-
             .navigationPin{
 
                 display: flex;
-                text-transform: uppercase;
-                letter-spacing: 2px;
                 font-size: 12px;
                 font-weight: 500;
-                margin-bottom: 40px;
                 cursor: pointer;
                 justify-content: space-between;
     
@@ -378,8 +392,9 @@
                 }
 
                 .shorts{
+
                     width: 100%;
-                    font-size: 14px;
+                    font-size: 12px;
                     line-height: 22px;
                     margin-bottom: 40px;
                 }
@@ -400,70 +415,84 @@
                 }
             }
 
+            
+
+            
+
+        }
+
+    }
+
+}
+
+@media (max-width : 768px) {
+
+    .viewService{
+
+        .viewArea{
+
             .mdas_sections{
 
-                margin-top: 40px;
-        
-                .section{
-        
-                    text-transform: uppercase;
-                    font-size: 12px;
-                    letter-spacing: 2px;
-                    cursor: pointer;
-        
-                    &:hover{
-        
-                        color: var(--primary25);
-        
-                    }
-        
-                }
+                margin-top: 30px !important;
         
             }
 
             .resultArea{
+                gap: 10px;
 
-                margin-top: 40px;
-    
                 .mda_card{
-    
-                    gap: 15px;
-                    padding: 20px;
-                    height: 100%;
-    
-                    .logo{
-                        width: 50px ;
-                        height: 50px ;
-    
-                        img{
-                            scale: .5;
-                        }
-                    }
-    
-                    .mda_name{
-    
-                        font-size: 11px;
-                        line-height: 18px;
-                        width: 100%;
-    
-                    }
-    
-                    .mda_desc{
-                        display: none;
-                    }
-    
-                    .arrowMai{
-    
-                        height: 40px;
-                        width: 40px;
-                        display: none;
-                        font-size: 11px;
-                        margin-right: 0;
-    
-                    }
+
+                    width: calc(50% - 10px);
+
                 }
-    
             }
+
+            
+
+        }
+
+    }
+
+}
+
+@media (max-width : 500px) {
+
+    .viewService{
+
+        .viewArea{
+
+            padding-top: 90px;
+
+        }
+
+    }
+
+}
+
+
+
+@media (max-width : 550px) {
+
+    .viewService{
+
+        .viewArea{
+
+            .resultArea{
+                gap: 10px;
+
+                .mda_card{
+
+                    width: calc(100% - 10px);
+                    gap: 5px;
+
+                    .details__zone{
+                        height: max-content;
+                    }
+
+                }
+            }
+
+            
 
         }
 

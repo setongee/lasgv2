@@ -17,14 +17,14 @@ const scrollRight = (type) => {
 
   return (
 
-    <div className="controls flex" id = {target}>
+    <div className="controls flex">
 
         <div className="arrow__nav abs1" onClick={ () => scrollRight('left') }> 
-            <div className="abs"><NavArrowLeft width={20} height={20}/></div> 
+            <div className="abs"><NavArrowLeft strokeWidth={0.7} /></div> 
         </div>
 
         <div className="arrow__nav abs1" onClick={ () => scrollRight('right') }> 
-            <div className="abs"><NavArrowRight width={20} height={20}/></div> 
+            <div className="abs"><NavArrowRight strokeWidth={0.7}/></div> 
         </div>
 
     </div>

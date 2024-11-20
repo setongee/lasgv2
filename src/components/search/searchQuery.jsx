@@ -87,7 +87,25 @@ export default function SearchQuery({query, closeModal}) {
    
    }, [search, data]);
 
-   console.log(relations)
+
+   const textToSpeech = (text) => {
+
+    const finalStatement = `Searching for services on ${text}`
+
+    let utterance = new SpeechSynthesisUtterance(text !== '' ? finalStatement : '');
+
+    utterance.voice = window.speechSynthesis.getVoices()[1];
+  
+    // Speak the utterance
+    window.speechSynthesis.speak(utterance);
+
+   }
+
+   const checkIfMicStopped = (que) => {
+    
+    textToSpeech(que);
+
+   }
 
    
    const transcribeSearch = (transript) => {
@@ -189,7 +207,7 @@ export default function SearchQuery({query, closeModal}) {
                 
               </div>
 
-              <Dictaphone setSpeechQuery = {transcribeSearch} />
+              <Dictaphone setSpeechQuery = {transcribeSearch} checkMic = {checkIfMicStopped} />
             
           </div>
 

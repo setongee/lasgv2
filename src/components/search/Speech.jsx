@@ -6,7 +6,7 @@ import mic from '../../assets/icons/mics/mic.svg'
 import micOpen from '../../assets/icons/mics/mic-open.svg'
 import { MicrophoneSolid, MicrophoneSpeakingSolid } from 'iconoir-react';
 
-const Dictaphone = ({setSpeechQuery}) => {
+const Dictaphone = ({setSpeechQuery, checkMic}) => {
   const {
     transcript,
     listening,
@@ -16,9 +16,33 @@ const Dictaphone = ({setSpeechQuery}) => {
 
   useEffect(() => {
     
-    setSpeechQuery(transcript)
+    setSpeechQuery(transcript);
     
   }, [transcript]);
+
+  useEffect(() => {
+    
+    checkMic(transcript);
+
+    if (listening) {
+
+      document.querySelector('.toast_message').style.display = "flex"
+
+      console.log(document.querySelector('.toast_message'))
+
+    } else if( transcript !== '' ) {
+
+      setTimeout(() => {
+
+        document.querySelector('.toast_message').style.display = "none"
+        
+      }, 2500);
+
+    }
+
+
+  }, [listening]);
+
   
   if (!browserSupportsSpeechRecognition) {
     alert("Browser doesn't support speech recognition.")
@@ -27,10 +51,16 @@ const Dictaphone = ({setSpeechQuery}) => {
   return (
     <div className='mic__holder'>
 
-        {
-            listening ? <div className="toast_message"> <MicrophoneSpeakingSolid/> Mic On - Listening... </div> : null
-        }
-        
+        <div className="toast_message">
+
+          <div className="micIcon listening" id='mic'> 
+            <MicrophoneSpeakingSolid/> 
+          </div> 
+
+         "Speak Now..."
+
+        </div>
+
         <div className="trigger__mic">
 
             { listening ? <div className="mic listen" onClick={SpeechRecognition.stopListening} ><MicrophoneSpeakingSolid /></div> : <div className="mic" onClick={SpeechRecognition.startListening} ><MicrophoneSolid /></div> }

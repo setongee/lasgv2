@@ -95,6 +95,10 @@ export default function ViewService() {
 
 }
 
+const handleChange = (e) => {
+  setQuery(e.target.value);
+}
+
   return (
 
     <div className="viewService">
@@ -109,18 +113,18 @@ export default function ViewService() {
 
                 <div className="navigationPin">
 
-                    <div className="goBack" onClick={()=> window.location.href = '/services' } ><ArrowLeft/> Back to Services</div>
+                    <div className="goBack" onClick={()=> window.location.href = '/services' } ><ArrowLeft/> </div>
 
-                    <div className="theme_icon"> <img src={categoryDetails.icon} alt="" /> </div>
+                    <div className="serviceTitle"> {categoryDetails.name} </div>
 
                 </div>
 
-                <div className="serviceName"> 
+                {/* <div className="serviceName"> 
                 
                     <div className="serviceTitle"> {categoryDetails.name} </div>
                     <div className="shorts"> {categoryDetails.short} </div>
                 
-                </div>
+                </div> */}
 
                 {/* services */}
 
@@ -128,28 +132,7 @@ export default function ViewService() {
 
                 <div className="searchField">
 
-                      <input type="text" className="searchInput" value = {query} onChange={ e => setQuery(e.target.value) }/>
-
-                      {
-                        
-                         query === '' 
-                         ?
-                         <div className="typeSide">
-
-                            <Typewriter          
-                            options={{
-                                strings: [data[0]?.name, data[1]?.name, data[2]?.name],
-                                autoStart: true,
-                                loop: true,
-                                delay : 40,
-                                deleteSpeed : 10
-                            }} />
-            
-                        </div> 
-
-                        : null
-
-                      }
+                      <input type="text" className="searchInput" value = {query} onChange={ e => handleChange(e) } placeholder='Start searching here...' />
 
                 </div>
 

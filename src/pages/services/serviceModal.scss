@@ -95,6 +95,8 @@
             font-size: 14px;
             font-weight: 500;
             cursor: pointer;
+            background-color: #1C3F3A;
+            border-radius: 5px;
 
         }
 
@@ -121,11 +123,20 @@
         .modal_item{
 
             width: 100%;
-            border-radius: 10px 10px 0 0;
+            border-radius: 20px 20px 0 0;
             position: absolute;
             bottom: 0;
             padding: 30px;
             margin: 0;
+
+            .modal_title{
+                width: 100%;
+                font-size: 24px;
+                font-weight: 600;
+                line-height: 32px;
+                margin-top: 10px;
+                margin-bottom: 30px;
+            }
 
         }
 

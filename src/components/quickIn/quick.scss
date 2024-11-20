@@ -35,6 +35,7 @@
             width: 100%;    
             justify-content: space-between;
             bottom: 45px;
+            z-index: 2;
 
             .arrow__nav{
     
@@ -43,8 +44,8 @@
                 border-radius: 5px;
                 position: relative;
                 cursor: pointer;
-                background-color: #fff;
                 font-size: 18px;
+                background-color: #fff;
     
                 .abs{
                     position: absolute;
@@ -107,12 +108,13 @@
             position: relative;
             margin-left: 0px;
             gap: 30px;
-            margin: 0 30px;
+            margin: 0 70px;
             margin-top: 50px;
             overflow-x: auto;
             scrollbar-width: none;
             padding-right: 40px;
             scroll-behavior: smooth;
+            z-index: 5;
 
             .search__card{
 
@@ -185,10 +187,6 @@
 
             img{
                 left: 0;
-            }
-
-            .quick__content, .search__cards__body{
-                // margin-left: 0px;
             }
 
         }
