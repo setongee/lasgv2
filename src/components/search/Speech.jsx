@@ -30,7 +30,7 @@ const Dictaphone = ({setSpeechQuery, checkMic}) => {
 
       setShow(true)
 
-    } else if( transcript !== '' &  !navigator.userAgentData.mobile ) {
+    } else if( transcript !== '' &&  window.innerWidth > 800  && window.innerHeight > 600 ) {
 
       setTimeout(() => {
 
