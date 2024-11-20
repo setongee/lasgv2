@@ -103,7 +103,6 @@ export default function SearchQuery({query, closeModal}) {
 
    const checkIfMicStopped = (que) => {
     
-    const isMobile = navigator.userAgentData.mobile;
     if( window.innerWidth > 800  && window.innerHeight > 600 ){
       textToSpeech(que);
     }
