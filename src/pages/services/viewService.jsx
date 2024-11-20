@@ -119,15 +119,6 @@ const handleChange = (e) => {
 
                 </div>
 
-                {/* <div className="serviceName"> 
-                
-                    <div className="serviceTitle"> {categoryDetails.name} </div>
-                    <div className="shorts"> {categoryDetails.short} </div>
-                
-                </div> */}
-
-                {/* services */}
-
                 {/* Search Area Side With Search Input */}
 
                 <div className="searchField">
