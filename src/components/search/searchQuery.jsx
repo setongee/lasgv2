@@ -181,9 +181,11 @@ export default function SearchQuery({query, closeModal}) {
 
               <div className="useCard">
               
-                <input type="text" placeholder='Search for Anything here...' value={search} onChange={ e => setSearch(e.target.value)} autoFocus />
+                <input type="text" placeholder='Search for Anything here...' value={search} onChange={ e => setSearch(e.target.value)} />
 
-                <div className="closeInput" onClick={ () => setSearch("") } > <Xmark color='#fff'/> </div>
+                {
+                  search !== "" ? <div className="closeInput" onClick={ () => setSearch("") } > <Xmark color='#fff'/> </div> :  null
+                }
                 
               </div>
 

@@ -60,7 +60,7 @@ export default function Quick() {
 
             <div className="quick__main">
 
-                <div className="controls flex">
+                <div className="controls-x flex">
 
                     <div className="arrow__nav abs1" onClick={ () => scrollRight('left') }> 
                         <div className="abs"><NavArrowLeft/></div> 

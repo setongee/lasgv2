@@ -33,7 +33,7 @@ const Dictaphone = ({setSpeechQuery}) => {
         
         <div className="trigger__mic">
 
-            { listening ? <div className="mic" onClick={SpeechRecognition.stopListening} ><MicrophoneSpeakingSolid /></div> : <div className="mic" onClick={SpeechRecognition.startListening} ><MicrophoneSolid /></div> }
+            { listening ? <div className="mic listen" onClick={SpeechRecognition.stopListening} ><MicrophoneSpeakingSolid /></div> : <div className="mic" onClick={SpeechRecognition.startListening} ><MicrophoneSolid /></div> }
 
         </div>
 

@@ -26,10 +26,10 @@
     border-radius: 100px;
     animation: 3s spin linear infinite;
   }
-  .useCard::before{
-    filter: blur(1.5rem);
-    opacity: 0.5;
-  }
+  // .useCard::before{
+  //   filter: blur(1.5rem);
+  //   opacity: 0.5;
+  // }
   @keyframes spin{
     from{
       --angle: 0deg;

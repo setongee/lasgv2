@@ -25,7 +25,7 @@
         justify-content: center;
         gap: 0px;
 
-        .controls{
+        .controls-x{
 
             position: absolute;
             right: 0;
@@ -34,6 +34,7 @@
             margin-top: 40px;
             width: 100%;    
             justify-content: space-between;
+            bottom: 45px;
 
             .arrow__nav{
     
@@ -106,6 +107,7 @@
             position: relative;
             margin-left: 0px;
             gap: 30px;
+            margin: 0 30px;
             margin-top: 50px;
             overflow-x: auto;
             scrollbar-width: none;
@@ -177,12 +179,16 @@
             height: 100%;
             padding: 50px 0;
 
+            .controls-x{
+                bottom: 95px;
+            }
+
             img{
                 left: 0;
             }
 
             .quick__content, .search__cards__body{
-                margin-left: 0px;
+                // margin-left: 0px;
             }
 
         }
@@ -212,7 +218,7 @@
             padding: 20px 0;
             // margin-top: 100px;
 
-            .controls{
+            .controls-x{
                 display: none;
             }
 

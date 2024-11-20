@@ -27,6 +27,11 @@ export default function QuickCheck() {
     
         <div className="quickCheck" id='quickCheck'>
 
+
+<div className="controlArea">
+                            <Controls target = 'scrollX' />
+                        </div>
+
                 <Container>
                     
                     <div className="getStarted">
@@ -71,10 +76,6 @@ export default function QuickCheck() {
                         } 
                         
                         >
-
-                        <div className="controlArea">
-                            <Controls target = 'scrollX' />
-                        </div>
 
                         <div 
                         

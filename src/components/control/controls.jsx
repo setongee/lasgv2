@@ -3,7 +3,7 @@ import './controls.scss'
 
 import { NavArrowLeft, NavArrowRight } from 'iconoir-react';
 
-export default function Controls( { target } ) {
+export default function Controls( { target, style } ) {
 
 const scrollRight = (type) => {
 
@@ -17,7 +17,7 @@ const scrollRight = (type) => {
 
   return (
 
-    <div className="controls flex">
+    <div className="controls flex" id = {target}>
 
         <div className="arrow__nav abs1" onClick={ () => scrollRight('left') }> 
             <div className="abs"><NavArrowLeft width={20} height={20}/></div> 
