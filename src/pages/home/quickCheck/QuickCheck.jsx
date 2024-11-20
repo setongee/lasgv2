@@ -81,7 +81,7 @@ export default function QuickCheck() {
                         
                         className="quickAsapLinks" id='scrollX'>
 
-                            <motion.a initial = {{opacity : 0, x : -50}} whileInView = {{opacity : 1, x:1}} transition={{delay : 0.1 }} href="/services/housing" className="linkBin">
+                            <motion.a initial = {{opacity : 0, x : -50}} whileInView = {{opacity : 1, x:1}} transition={{delay : 0.1 }} href="/services/housingandlands" className="linkBin">
 
                                 <div className="content">
 
@@ -107,7 +107,7 @@ export default function QuickCheck() {
 
                             </motion.a>
 
-                            <motion.a initial = {{opacity : 0, x : -50}} whileInView = {{opacity : 1, x:1}} transition={{delay : 0.2 }} href="/services/tourism" className="linkBin">
+                            <motion.a initial = {{opacity : 0, x : -50}} whileInView = {{opacity : 1, x:1}} transition={{delay : 0.2 }} href="/services/tourism_culture" className="linkBin">
 
                                 <div className="content">
 
@@ -127,13 +127,13 @@ export default function QuickCheck() {
 
                                     </div>
 
-                                    <div className="button__quick"> Go to housing </div>
+                                    <div className="button__quick"> Visit Lagos </div>
 
                                 </div>
 
                             </motion.a>
 
-                            <motion.a initial = {{opacity : 0, x : -50}} whileInView = {{opacity : 1, x:1}} transition={{delay : 0.3 }} href="/services/jobs" className="linkBin">
+                            <motion.a initial = {{opacity : 0, x : -50}} whileInView = {{opacity : 1, x:1}} transition={{delay : 0.3 }} href="/services/jobopportunities" className="linkBin">
 
                                 <div className="content">
 
@@ -149,11 +149,11 @@ export default function QuickCheck() {
                                             Work in Lagos <span><ArrowUpRight/></span>
                                         </div>
 
-                                        <p>book your trip, get a tour guide, how to process your visa</p>
+                                        <p>Find out things to know about working in Lagos</p>
 
                                     </div>
 
-                                    <div className="button__quick"> Go to housing </div>
+                                    <div className="button__quick"> Learn more </div>
 
                                 </div>
 
@@ -175,7 +175,7 @@ export default function QuickCheck() {
                                             School in Lagos State <span><ArrowUpRight/></span>
                                         </div>
 
-                                        <p>book your trip, get a tour guide, how to process your visa</p>
+                                        <p>Find out about schooling in Lagos and Educational services</p>
 
                                     </div>
 

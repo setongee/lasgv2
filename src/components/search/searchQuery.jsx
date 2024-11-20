@@ -94,7 +94,7 @@ export default function SearchQuery({query, closeModal}) {
 
     let utterance = new SpeechSynthesisUtterance(text !== '' ? finalStatement : '');
 
-    utterance.voice = window.speechSynthesis.getVoices()[158];
+    utterance.voice = window.speechSynthesis.getVoices()[159];
   
     // Speak the utterance
     window.speechSynthesis.speak(utterance);
@@ -103,7 +103,11 @@ export default function SearchQuery({query, closeModal}) {
 
    const checkIfMicStopped = (que) => {
     
-    textToSpeech(que);
+    const isMobile = navigator.userAgentData.mobile;
+    if(!isMobile){
+      textToSpeech(que);
+    }
+
 
    }
 

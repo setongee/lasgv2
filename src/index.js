@@ -27,7 +27,6 @@ root.render(
           <BrowserRouter>
               <Authy/>
           </BrowserRouter>
-          <ReactQueryDevtools/>
         </QueryClientProvider>
 
   </React.StrictMode>

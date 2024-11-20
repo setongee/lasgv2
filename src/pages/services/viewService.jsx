@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import { useParams } from 'react-router'
+import { useNavigate, useParams } from 'react-router'
 import Container from '../../components/container/container';
 import { ArrowLeft } from 'iconoir-react';
 import './viewService.scss';
@@ -13,11 +13,14 @@ import { getSingleCategory } from '../../api/read/category.req';
 import { useQuery } from '@tanstack/react-query';
 import Loader from '../../components/loader/loader';
 
+import notfound from '../../assets/404/404.png'
+
 // End of Icons
 
 export default function ViewService() {
 
-    let params = useParams(); 
+    let params = useParams();
+    let navigate = useNavigate(); 
 
     const [data, setData] = useState([]);
     const [ query, setQuery ] = useState('');
@@ -99,6 +102,8 @@ const handleChange = (e) => {
   setQuery(e.target.value);
 }
 
+if (!categoryDetails) return <div className="found"> <div className="photo"><img src={notfound} alt="" /></div> <h1>Oops! Page not found</h1></div>
+
   return (
 
     <div className="viewService">
@@ -113,7 +118,7 @@ const handleChange = (e) => {
 
                 <div className="navigationPin">
 
-                    <div className="goBack" onClick={()=> window.location.href = '/services' } ><ArrowLeft/> </div>
+                    <div className="goBack" onClick={()=> navigate(-1) } ><ArrowLeft/> </div>
 
                     <div className="serviceTitle"> {categoryDetails.name} </div>
 

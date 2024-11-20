@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
 import './speech.scss'
 
@@ -14,6 +14,8 @@ const Dictaphone = ({setSpeechQuery, checkMic}) => {
     browserSupportsSpeechRecognition
   } = useSpeechRecognition();
 
+  const [show, setShow] = useState(false);
+
   useEffect(() => {
     
     setSpeechQuery(transcript);
@@ -26,18 +28,18 @@ const Dictaphone = ({setSpeechQuery, checkMic}) => {
 
     if (listening) {
 
-      document.querySelector('.toast_message').style.display = "flex"
+      setShow(true)
 
-      console.log(document.querySelector('.toast_message'))
-
-    } else if( transcript !== '' ) {
+    } else if( transcript !== '' &  !navigator.userAgentData.mobile ) {
 
       setTimeout(() => {
 
-        document.querySelector('.toast_message').style.display = "none"
+        setShow(false)
         
       }, 2500);
 
+    } else {
+      setShow(false);
     }
 
 
@@ -51,15 +53,19 @@ const Dictaphone = ({setSpeechQuery, checkMic}) => {
   return (
     <div className='mic__holder'>
 
-        <div className="toast_message">
+        {
+          show ? 
+          <div className="toast_message">
 
-          <div className="micIcon listening" id='mic'> 
+          <div className="micIcon listening"> 
             <MicrophoneSpeakingSolid/> 
           </div> 
 
          "Speak Now..."
 
-        </div>
+        </div> : null
+        
+        }
 
         <div className="trigger__mic">
 
@@ -67,10 +73,6 @@ const Dictaphone = ({setSpeechQuery, checkMic}) => {
 
         </div>
 
-      {/* <button onClick={SpeechRecognition.startListening}></button>
-      <button onClick={SpeechRecognition.stopListening}>Stop</button>
-      <button onClick={resetTranscript}>Reset</button>
-      <p>{transcript}</p> */}
     </div>
   );
 };
