@@ -170,10 +170,10 @@ export default function ViewService() {
                       {
                          queryResults.length ? queryResults.map( (res, index) => (
 
-                            <ServiceSearchResults data = {res} key = {res._id} openModal = {openModal} />
+                            <ServiceSearchResults data = {res} key = {res._id} openModal = {openModal} logo = {categoryDetails.icon} />
 
 
-                        ) ) : query !== '' ? <h1>Oops! Sorry No results Found, Try Again!</h1> : data?.map((e, index) => <ServiceSearchResults data = {e} key = {e._id} openModal = {openModal} /> )
+                        ) ) : query !== '' ? <h1>Oops! Sorry No results Found, Try Again!</h1> : data?.map((e, index) => <ServiceSearchResults data = {e} key = {e._id} openModal = {openModal} logo = {categoryDetails.icon}  /> )
 
                       }                    
 

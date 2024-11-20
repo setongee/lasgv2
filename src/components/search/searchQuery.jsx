@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import './search.scss'
 import Container from '../container/container'
-import { Search, Xmark } from 'iconoir-react'
+import { MicrophoneSpeakingSolid, Search, Xmark } from 'iconoir-react'
 import {motion} from 'framer-motion'
 import Fuse from 'fuse.js'
 import SearchResultsQuery from './searchResultsQuery'
@@ -9,18 +9,29 @@ import ViewSearchModal from './searchModal'
 import { useLocation } from 'react-router'
 import { getAllServices } from '../../api/read/services.req'
 import { useQuery } from '@tanstack/react-query'
+import './searchBorderAnimation.scss'
 
 import loader from '../../assets/loaders/loader.svg'
 import Loader from '../loader/loader'
+import Dictaphone from './Speech'
 
 export default function SearchQuery({query, closeModal}) {
 
   const location = useLocation().pathname;
 
   const [search, setSearch] = useState(query === '' ? "" : query);
+
   const [queryResults, setQueryResults] = useState([]);
+  const [relations, setRelations] = useState([]);
+
   const [searchView, setSearchView] = useState({});
   const [showInfo, setShowInfo] = useState(false);
+
+  useEffect(() => {
+   
+    document.body.style.overflow = 'hidden'
+   
+  }, []);
 
   const handleClose = () => {
 
@@ -69,9 +80,25 @@ export default function SearchQuery({query, closeModal}) {
     const fuse = new Fuse(data?.data || [], fuseOptions);
     const results = fuse.search(search);
     const queriedRes = results.filter( item => item.score <= score ).map(res => res.item);
+    const otherRelated = results.filter( item => item.score > score && item.score < 0.5 ).map(res => res.item);
+
     setQueryResults(queriedRes);
+    setRelations(otherRelated)
    
    }, [search, data]);
+
+   console.log(relations)
+
+   
+   const transcribeSearch = (transript) => {
+
+      if (transript !== ""){
+          
+        setSearch(transript);
+
+      }
+
+   }
 
 
   return (
@@ -102,13 +129,11 @@ export default function SearchQuery({query, closeModal}) {
 
             </div>
 
-            <motion.div className="top" initial = { { opacity : 0, y : 100 } } animate = { { opacity : 1, y : 0 } } transition={ { delay : .4, duration : .4 } } ><span>Hey there,</span> get curated information from all news, topics & services </motion.div>
+            <motion.div className="top" initial = { { opacity : 0, y : 100 } } animate = { { opacity : 1, y : 0 } } transition={ { delay : .4, duration : .4 } } ><span>Hey there,</span> get curated information from all news, services & topics </motion.div>
 
           </div>
 
-          <div className="search__field">
-            <input type="text" placeholder='Search for anything here...' value={search} onChange={ e => setSearch(e.target.value)} />
-          </div>
+    
 
           <div className="results__calculations"> - { queryResults?.length } Results found - </div>
 
@@ -122,9 +147,48 @@ export default function SearchQuery({query, closeModal}) {
 
                   <SearchResultsQuery key = {index} data = {response} i = {index} search = {viewSearch} />
 
-                )) : <p>Oops... There is no search result</p>
+                )) : search === "" ? <p className='feedback'> Start searching and get results by typing or speaking...</p> : <p className='feedback'> No results found for <span style={{color : "green"}}>'{search}'</span> at the moment, try a different search term </p>
               }
 
+              {
+                
+                relations.length ?
+
+                  <div className="relations">
+
+                    <div className="relations__title"> - Other Related Services - </div>
+
+                    <div className="search__query__results">
+
+                        {
+                          relations.length ?
+                          relations.map( (response, index) => (
+
+                            <SearchResultsQuery key = {index} data = {response} i = {index} search = {viewSearch} />
+          
+                          )) : null
+                        }
+
+                    </div>
+
+                  </div> : null
+
+              }
+
+          </div>
+
+          <div className="search__field flex">
+
+              <div className="useCard">
+              
+                <input type="text" placeholder='Search for Anything here...' value={search} onChange={ e => setSearch(e.target.value)} autoFocus />
+
+                <div className="closeInput" onClick={ () => setSearch("") } > <Xmark color='#fff'/> </div>
+                
+              </div>
+
+              <Dictaphone setSpeechQuery = {transcribeSearch} />
+            
           </div>
 
         </Container>

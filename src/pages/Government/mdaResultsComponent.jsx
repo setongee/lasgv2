@@ -16,7 +16,6 @@ export default function MdaResultsComponent( { data, openModal } ) {
 
     <div className="mda_card" onClick={ () => openModal(data) }>
 
-
        <div className="details__zone flex">
 
           <div className="logo"> <img src={data.type === 'ministry' ? LogoMinistry : data.type === 'department' ? LogoDepartment : LogoAgency} alt="Lagos State Ministries, Departments & Agencies" />  </div>
