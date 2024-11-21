@@ -27,9 +27,14 @@ export default function SearchQuery({query, closeModal}) {
   const [searchView, setSearchView] = useState({});
   const [showInfo, setShowInfo] = useState(false);
 
+  const [isMobile, setIsMobile] = useState(false);
+
   useEffect(() => {
    
-    document.body.style.overflow = 'hidden'
+    document.body.style.overflow = 'hidden';
+
+    const isMobileDev = window.innerWidth <= 800  && window.innerHeight <= 600
+    setIsMobile(isMobileDev);
    
   }, []);
 
@@ -210,7 +215,7 @@ export default function SearchQuery({query, closeModal}) {
                 
               </div>
 
-              <Dictaphone setSpeechQuery = {transcribeSearch} checkMic = {checkIfMicStopped} />
+              { !isMobile ? <Dictaphone setSpeechQuery = {transcribeSearch} checkMic = {checkIfMicStopped} /> : null }
             
           </div>
 

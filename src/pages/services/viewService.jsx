@@ -14,6 +14,8 @@ import { useQuery } from '@tanstack/react-query';
 import Loader from '../../components/loader/loader';
 
 import notfound from '../../assets/404/404.png'
+import ShareSocial from '../../components/share/Share';
+import ShareSocialTs from '../../components/share/Share';
 
 // End of Icons
 

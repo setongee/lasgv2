@@ -13,7 +13,10 @@
             font-weight: 500;
             margin-bottom: 0px;
             cursor: pointer;
-            justify-content: space-between;
+            gap: 20px;
+            position: relative;
+            margin-bottom: 30px;
+            justify-content: center;
 
             .goBack{
 
@@ -21,12 +24,19 @@
                 gap: 20px;
                 align-items: center;
                 font-size: 21px;
+                position: absolute;
+                left: 0;
 
+            }
+
+            .shareBtn{
+                font-size: 16px;
+                font-weight: 500;
             }
 
             .serviceTitle{
 
-                font-size: 21px;
+                font-size: 24px;
                 line-height: 57px;
                 letter-spacing: -0.5px;
                 font-weight: 700;
@@ -369,13 +379,14 @@
                 font-size: 12px;
                 font-weight: 500;
                 cursor: pointer;
-                justify-content: space-between;
+                justify-content: flex-start;
     
                 .goBack{
     
                     display: flex;
                     gap: 20px;
                     align-items: center;
+                    position: relative;
     
                 }
     
@@ -388,6 +399,7 @@
                     font-size: 30px;
                     width: 100%;
                     text-align: center;
+                    font-size: 21px;
     
                 }
 
