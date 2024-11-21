@@ -32,9 +32,6 @@ export default function SearchQuery({query, closeModal}) {
   useEffect(() => {
    
     document.body.style.overflow = 'hidden';
-
-    const isMobileDev = window.innerWidth <= 800  && window.innerHeight <= 600
-    setIsMobile(isMobileDev);
    
   }, []);
 
@@ -108,10 +105,7 @@ export default function SearchQuery({query, closeModal}) {
 
    const checkIfMicStopped = (que) => {
     
-    if( window.innerWidth > 800  && window.innerHeight > 600 ){
       textToSpeech(que);
-    }
-
 
    }
 
@@ -158,7 +152,6 @@ export default function SearchQuery({query, closeModal}) {
             <motion.div className="top" initial = { { opacity : 0, y : 100 } } animate = { { opacity : 1, y : 0 } } transition={ { delay : .4, duration : .4 } } ><span>Hey there,</span> get curated information from all news, services & topics </motion.div>
 
           </div>
-
     
 
           <div className="results__calculations"> - { queryResults?.length } Results found - </div>
@@ -201,6 +194,8 @@ export default function SearchQuery({query, closeModal}) {
 
               }
 
+
+
           </div>
 
           <div className="search__field flex">
@@ -215,9 +210,11 @@ export default function SearchQuery({query, closeModal}) {
                 
               </div>
 
-              { !isMobile ? <Dictaphone setSpeechQuery = {transcribeSearch} checkMic = {checkIfMicStopped} /> : null }
+              <Dictaphone setSpeechQuery = {transcribeSearch} checkMic = {checkIfMicStopped} />
             
           </div>
+
+          
 
         </Container>
 
