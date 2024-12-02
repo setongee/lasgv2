@@ -2,10 +2,9 @@
 
 .footer__new{
 
-    background-color: #001008;
+    background-color: #fbfffd;
     position: relative;
-    color: #fff;
-    padding-top: 30px;
+    color: #000;
 
     .footerContent{
 
@@ -40,10 +39,10 @@
 
                 .icon{
 
-                    color: #fff;
+                    color: #000;
 
                     &:hover{
-                        color: #00ff66;
+                        color: #009C3E;
                     }
                 }
 
@@ -81,7 +80,7 @@
                         display: flex;
                         gap: 7px;
                         align-items: center;
-                        color: #fff;
+                        color: #000;
 
                         span{
                             font-size: 10px;
@@ -108,7 +107,7 @@
         .footest_footer{
 
             margin-top: 50px;
-            border-top: 1px solid #ffffff1b;
+            border-top: 1px solid #0000001b;
             padding: 40px 0;
 
             .txt{

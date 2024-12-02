@@ -4,13 +4,14 @@ import { news } from '../../api/data/news'
 import { useParams } from 'react-router';
 import none from '../../assets/icons/random/no-file.png'
 import { formatDate } from 'date-fns';
+import Container from '../../components/container/container';
+import { convertToTitleCase, formatDate2, readingTime, truncateText } from '../../middleware/middleware';
 
-export default function NewsComp({ data }) {
+export default function NewsComp({ data, topic }) {
 
     const [news, setNews] = useState(data);
     const [filteredResults, setFilteredResults] = useState([]);
 
-    // let q = 
 
 useEffect(() => {
     
@@ -18,6 +19,34 @@ useEffect(() => {
     setFilteredResults(exportedData);
 
 }, [data]);
+
+const convertNew = (content) => {
+
+    const div = document.createElement('div');
+    div.innerHTML = content;
+    const text = div.innerText
+
+    const truncate = truncateText(text, 100)
+
+    return truncate;
+
+}
+
+const convertCardTitle = (str) => {
+
+    const text = convertToTitleCase(str)
+    const truncate = truncateText(text, 60)
+    return truncate;
+
+}
+
+const shreadTag = (str) => {
+
+    const newStr = str.split(' ')[0]
+    const returnStr = newStr.replace(',' , '')
+    return returnStr;
+
+}
 
     
   return (
@@ -28,7 +57,7 @@ useEffect(() => {
 
                 <div>
 
-                    <a className="landingNews" href={`/news/trending/view/${data[0]._id}`} >
+                    <a className="landingNews" href={`/news/${topic}/view/${data[0]._id}`} >
 
                         <div className="mainHighlight">
 
@@ -40,67 +69,89 @@ useEffect(() => {
 
                             </div>
 
-                            <div className="highlight_content">
+                            <Container>
 
-                                <div className="highlight_title">
-                                    
-                                    {data[0].title}
+                                <div className="contentArea__news">
+
+                                    <div className="highlight_content">
+
+                                        <div className="date"> { formatDate2( data[0]?.date ) } </div>
+
+                                        <div className="highlight_title">
+                                            
+                                            { convertToTitleCase(data[0].title) }
+
+                                        </div>
+
+                                        <div className="highlight__short" >{ convertNew(data[0].content) }</div>
+
+                                        <div className="info">
+                                            <div className="highlight_theme">{ data[0].categories[0] }</div>
+                                            <div className="timeToRead"> <Timer/> { readingTime(data[0].content) } Mins Read - </div>
+                                        </div>
+
+                                    </div>
 
                                 </div>
 
-                                <div className="info">
-                                    <div className="highlight_theme">{ data[0].categories[0] }</div>
-                                    {/* <div className="timeToRead"> <Timer/> { fetchNews[0][1].time } Mins Read - </div> */}
-                                </div>
-
-                            </div>
+                            </Container>
 
                         </div> 
 
                     </a>
 
-                    <div className="news_card_body main">
+                    <div className="holderNewsBar">
 
-                        <div className="news_results_section">
+                        <Container>
 
-                            {
-                                filteredResults?.length ? (
+                            <div className="news_card_body main">
 
-                                    filteredResults.map( (res, index) => (
+                                <div className="news_results_section">
 
-                                        <a className="news_card" key = {index} href={`/news/trending/view/${res._id}`} >
-    
-                                            <div className="news_image">
-                                                <img src={res.photo} />
-                                            </div>
-    
-                                            <div className="news_body_content">
-    
-                                                <div className="news_topic"> {res.title} </div>
-    
-                                                <div className="news_details">
-    
-                                                    <div className="details_themes"> {res.categories[0]} </div>
-                                                    {/* <div className="details_readTime"> <Timer/> {formatDate(res.data)} - </div> */}
-    
-                                                </div>
-    
-                                            </div>
-    
-                                        </a>
-    
-                                    ))
+                                    {
+                                        filteredResults?.length ? (
 
-                                ) : null
-                            }
+                                            filteredResults.map( (res, index) => (
 
-                        </div>
+                                                <a className="news_card" key = {index} href={`/news/${topic}/view/${res._id}`} >
+
+                                                    <div className="news_image">
+                                                        <img src={res.photo} />
+                                                    </div>
+
+                                                    <div className="news_body_content">
+
+                                                        <div className="date"> { formatDate2( res.date ) } </div>
+
+                                                        <div className="news_topic"> { convertCardTitle(res.title) } </div>
+
+                                                        <div className="news_details">
+
+                                                            <div className="details_themes"> {shreadTag(res.categories[0])} </div>
+                                                            <div className="details_readTime"> <Timer/> { readingTime(data[0].content) } Mins Read - </div>
+
+                                                        </div>
+
+                                                    </div>
+
+                                                </a>
+
+                                            ))
+
+                                        ) : <div className='uppercase' style={{letterSpacing : "2px", fontSize : "11px"}}> No other additional news found! </div>
+                                    }
+
+                                </div>
+
+                            </div>
+
+                        </Container>
 
                     </div>
 
                 </div>
 
-            ) : null
+            ) : <div className="loaderPage uppercase-t"> Oops! No news found! </div>
         }
     </div>
 

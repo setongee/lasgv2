@@ -127,3 +127,47 @@
     }
 
 }
+
+@media(max-width : 750px){
+
+    .connect{
+
+        padding-top: 150px;
+        padding-bottom: 50px;
+        .connect__pages{
+            .connect__contact{
+                width: 100%;
+                .connect__heading{
+                    font-size: 35px;
+                }
+
+                .action__connect{
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+}
+
+@media(max-width : 500px){
+
+    .connect{
+
+        padding-top: 105px;
+        padding-bottom: 50px;
+        .connect__pages{
+            .connect__contact{
+                width: 100%;
+                .connect__heading{
+                    font-size: 35px;
+                }
+
+                .action__connect{
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+}

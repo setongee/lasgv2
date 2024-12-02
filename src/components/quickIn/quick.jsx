@@ -40,7 +40,7 @@ export default function Quick() {
     }, []);
 
 
-    const scrollRight = (type, target) => {
+    const scrollRight = (type) => {
 
         const rt = document.getElementById('search__cards');
         if(type === 'right'){

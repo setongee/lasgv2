@@ -58,11 +58,8 @@ export default function ViewService() {
     includeScore : true,
   
       keys: [
-        "keyword.key",
         "short",
-        "cta",
         "name",
-        "url"
       ]
     
     };
@@ -101,7 +98,9 @@ export default function ViewService() {
 }
 
 const handleChange = (e) => {
+
   setQuery(e.target.value);
+
 }
 
 if (!categoryDetails) return <div className="found"> <div className="photo"><img src={notfound} alt="" /></div> <h1>Oops! Page not found</h1></div>

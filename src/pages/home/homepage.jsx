@@ -6,6 +6,7 @@ import Quick from '../../components/quickIn/quick'
 import NewsCarrier from './newsZone/NewsCarrier'
 import News from './news/News'
 import Stat from '../../components/stat/stat'
+import NewQuick from '../../components/quickIn/newQuick'
 
 const Homepage = () => {
 
@@ -17,7 +18,7 @@ const Homepage = () => {
 
     <Photo_slider_component/>
     <Stat/>
-    <Quick/>
+    <NewQuick/>
     <QuickCheck/>
     <Services bgColor = "#f0f7f6" location = 'home' data_limit={100} />
     <NewsCarrier/>

@@ -19,7 +19,7 @@ export default function SearchQuery({query, closeModal}) {
 
   const location = useLocation().pathname;
 
-  const [search, setSearch] = useState(query === '' ? "" : query);
+  const [search, setSearch] = useState(query === "" ? "" : query);
 
   const [queryResults, setQueryResults] = useState([]);
   const [relations, setRelations] = useState([]);
@@ -28,6 +28,8 @@ export default function SearchQuery({query, closeModal}) {
   const [showInfo, setShowInfo] = useState(false);
 
   const [isMobile, setIsMobile] = useState(false);
+
+  const [serviceData, setServiceData] = useState([]);
 
   useEffect(() => {
    
@@ -68,26 +70,93 @@ export default function SearchQuery({query, closeModal}) {
 
   useEffect(() => {
 
-    let score = 0.00001;
+      let newService = data?.data;
+      
+      if (newService?.length) updateAll(newService);
+
+    
+  }, [data]);
+
+  const updateAll = (dat) => {
+
+      const newp = dat.map( (res, index) => {
+
+          const response = res.keywordsGroup;
+          const arr = Object.entries(response).map(res => res[1]);
+          const newArray = [].concat(...arr);
+
+          res.keywordsTrim = newArray;
+
+          return res;
+
+      })
+
+      setServiceData(newp);
+
+  }
+
+  useEffect(() => {
+
+    let score = 0.01;
 
     const fuseOptions = {
 
       includeScore : true,
       shouldSort : true,
-      findAllMatches : false,
-      keys : ['keywords.key', 'name']
+      threshold : 0.5,
+      ignoreLocation : true,
+      ignoreFieldNorm : true,
+      useExtendedSearch : true,
+      // keys : ['name', 'keywords.key', 'categories', 'url']
+      // keys : ['name', 'keywordsTrim.key']
+      
+      keys: [
+        {
+          name: 'name',
+          weight: 0.7
+        },
+        {
+          name: 'keywordsTrim.key',
+          weight: 0.3
+        },
+        {
+          name: 'customKeywords.key',
+          weight: 0.3
+        },
+        {
+          name: 'url.key',
+          weight: 0.3
+        },
+        {
+          name: 'keywords.key',
+          weight: 0.2
+        },
+        
+      ]
     
     };
+
+    let newSearch = search;
+
+    const newFilterIndex = search.toLowerCase().split(' ');
+    if (newFilterIndex.length > 1 && newFilterIndex.includes('lagos')){
+
+      let nS = search.replace('lagos', '')
+
+      newSearch = `'${nS}`;
+
+    }
   
-    const fuse = new Fuse(data?.data || [], fuseOptions);
-    const results = fuse.search(search);
+    const fuse = new Fuse(serviceData || [], fuseOptions);
+    const results = fuse.search(newSearch);
     const queriedRes = results.filter( item => item.score <= score ).map(res => res.item);
-    const otherRelated = results.filter( item => item.score > score && item.score < 0.5 ).map(res => res.item);
+    const otherRelated = results.filter( item => item.score > score && item.score < 0.4 ).map(res => res.item);
 
     setQueryResults(queriedRes);
     setRelations(otherRelated)
+    console.log(results)
    
-   }, [search, data]);
+   }, [search, serviceData]);
 
 
    const textToSpeech = (text) => {
@@ -175,7 +244,7 @@ export default function SearchQuery({query, closeModal}) {
 
                   <div className="relations">
 
-                    <div className="relations__title"> - Other Related Services - </div>
+                    <div className="relations__title"> - Other Related Services - {relations?.length} Results </div>
 
                     <div className="search__query__results">
 
@@ -193,8 +262,6 @@ export default function SearchQuery({query, closeModal}) {
                   </div> : null
 
               }
-
-
 
           </div>
 

@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 
 import { NavArrowDown, Xmark, ArrowUpRight } from 'iconoir-react'
 import { useNavigate } from 'react-router'
+import lasgLogo from '../../assets/navBar/lasg_logo.png'
 
 export default function MobileView({closeModal}) {
 
@@ -31,8 +32,8 @@ export default function MobileView({closeModal}) {
         <div className="menuMobile">
 
           <div className="menuBarArea uppercase">
-              <div className="title" onClick={ () => { navigate('/'); closeModal(); window.scrollTo(0,0) } } > LASG Home </div>
-              <div className="close" onClick={ () => closeModal(false) } > <Xmark width={30} height={30} strokeWidth={1}/> </div>
+              <div className="title" onClick={ () => { navigate('/'); closeModal(); window.scrollTo(0,0) } } > <img src={lasgLogo} alt="Lagos State Official Digital Logo" /> </div>
+              <div className="close" onClick={ () => closeModal(false) } > <Xmark width={45} height={45} strokeWidth={1}/> </div>
           </div>
 
           <div className="menu_sm dropdown"> 
@@ -45,18 +46,18 @@ export default function MobileView({closeModal}) {
 
             <div className="dropdownBottom">
 
-                <p onClick={()=>navigate('/government/elected_officials')} > Executive Council </p>
-                <p onClick={()=>navigate('/government/mdas/all')}> Explore Ministries </p>
+                <p onClick={()=>{closeModal(); navigate('/government/elected_officials')}} > Executive Council </p>
+                <p onClick={()=>{closeModal(); navigate('/government/mdas/all')}}> Explore Ministries </p>
                 <a href="https://lagoshouseofassembly.gov.ng/home/our-team/" target='_Blank' onClick={()=>closeModal(false)} > Legislative Officers </a>
                 <a href="https://lagosjudiciary.gov.ng/directories.html#directories" target='_Blank' onClick={()=>closeModal(false)} > Judiciary Officers </a>
 
             </div>
 
           </div>
-          <div className="menu_sm" onClick={ () => navigate('/services') } >Services</div>    
-          <div className="menu_sm" onClick={ () => navigate('/news/trending') } >Newsroom </div>   
-          <div className="menu_sm" onClick={ () => navigate('/events') } >Events </div>    
-          <div className="menu_sm" onClick={ () => navigate('/connect') } > Connect </div>   
+          <div className="menu_sm" onClick={ () => {closeModal(); navigate('/services')} } >Services</div>    
+          <div className="menu_sm" onClick={ () => {closeModal(); navigate('/news/all/1')} } >Newsroom </div>   
+          <div className="menu_sm" onClick={ () => {closeModal(); navigate('/events/upcoming')} } >Events </div>    
+          <div className="menu_sm" onClick={ () => {closeModal(); navigate('/connect')} } > Connect </div>   
 
         </div>
 

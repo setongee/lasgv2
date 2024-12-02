@@ -27,10 +27,7 @@ export default function QuickCheck() {
     
         <div className="quickCheck" id='quickCheck'>
 
-
-<div className="controlArea">
-                            <Controls target = 'scrollX' />
-                        </div>
+                <Controls target = 'scrollX' />
 
                 <Container>
                     

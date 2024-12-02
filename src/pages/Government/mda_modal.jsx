@@ -1,13 +1,12 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 
 import LogoMinistry from '../../assets/MDA/ministry.svg';
 import LogoDepartment from '../../assets/MDA/department.svg';
 import LogoAgency from '../../assets/MDA/agency.svg';
 import { Globe, Internet, Phone, Message, Xmark, MailOut, MailOpen, Pin } from 'iconoir-react';
+import { convertToTitleCase } from '../../middleware/middleware';
 
 export default function Mda_modal( { data, closeModal } ) {
-
-  console.log(data)
 
   return (
 
@@ -21,9 +20,9 @@ export default function Mda_modal( { data, closeModal } ) {
 
                 <div className="tag"> {data.type} </div>
 
-                <div className="name_mda"> {data.name} </div>
+                <div className="name_mda"> {convertToTitleCase(data.name)} </div>
 
-                <div className="short"> {data.description} </div>
+                <div className="short"> {convertToTitleCase(data.description)} </div>
 
                 <div className="address_icon"> <Globe/> Office Address </div>
 

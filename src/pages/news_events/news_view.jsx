@@ -5,39 +5,59 @@ import { ArrowArchery, ArrowDownLeftCircle, ArrowLeft, ArrowLeftCircle } from 'i
 import { news } from '../../api/data/news'
 import { useNavigate, useParams } from 'react-router'
 import {motion} from 'framer-motion'
-import { getSingleNews } from '../../api/read/news.req'
+import { getAllNews, getSingleNews } from '../../api/read/news.req'
 import { useQuery } from '@tanstack/react-query'
+import { convertToTitleCase, formatDate, formatDate3, readingTime, sortArray, truncateText } from '../../middleware/middleware'
+import Loader from '../../components/loader/loader'
 
 export default function News_view() {
 
-    const params = useParams();
-    const id = params.id;
-
+    const {id, topic} = useParams();
     const navigate = useNavigate();
 
-    // const [data, setData] = useState({});
-    // const [sub_data, setSub_data] = useState([])
+    const [sub_data, setSub_data] = useState([])
     
 
-    const { isPending, error, data } = useQuery({
+    const { isLoading, error, data } = useQuery({
 
         queryKey: ["view_news", {id}],
         queryFn: () => getSingleNews(id)
 
     })
 
+    const newsData = useQuery({
+
+        queryKey: ["view-news", topic, id],
+        queryFn: () => getAllNews(0, topic)
+
+    })
+
+    useEffect(() => {
+        
+        sortArray(newsData?.data?.data, "date").then( sortedArr => setSub_data(sortedArr) );
+        
+    }, [newsData?.data]);
+
     useEffect(() => {
         
         if(data) {
+            
             const tc = document.getElementById("text");
-            console.log(data?.data.content)
             tc.innerHTML = data?.data.content
         }
         
     }, [data]);
+
+    
+    const navigateBack = () => {
+
+        navigate(-1);
+        navigate(-1);
+
+    }
     
 
-    if (isPending) return 'Loading...'
+    if (isLoading) return <div className="loaderPage"><Loader/></div>
 
     if (error) return 'An error has occurred: ' + error.message
 
@@ -48,42 +68,79 @@ export default function News_view() {
 
         <Container>
 
-            <motion.div whileHover={{scale : 1.05}} whileTap={{scale : 0.9}} className="back_to_news"> <a href='/news/trending'> < ArrowLeft /> <span>Back to news</span> </a> </motion.div>
+            <div className="overhold flex">
 
-            <div className="news_container">
+                <div className="news_container">
 
-                <div className="current_news">
+                    <div className="back_to_news" onClick = { () => navigateBack() } > <ArrowLeft/> </div>
 
-                    <div className="current_news_image">
-                        <img src={data?.data.photo} alt="" />
-                    </div> 
+                    <div className="current_news">
 
-                    <div className="current_news_title">
-                        {data?.data.title}
-                    </div>                   
+                        <div className="dateNow"> 
+                            
+                            <div className="firstPart flex">
 
-                    <div className="current_news_body" id='text'>
-                        {/* <LASGEditor value = {data.content} readOnly = {true} submittableText = {"hellooooo"} /> */}
+                                { formatDate3(data?.data.date) }
+
+                                <p>-</p>
+
+                                <div className="readtime"> {readingTime(data?.data.content) } Mins Read  </div>
+
+                            </div>
+                        
+                            <div className="tagsArea"> { data?.data.categories.map( (e, index) => <div className="categoryTag" key={index}> {e} </div> ) } </div>
+                        
+                        </div>
+
+                        <div className="current_news_title">
+                            { convertToTitleCase(data?.data.title) }
+                        </div>    
+
+                        <div className="current_news_image">
+                            <img src={data?.data.photo} alt="" />
+                        </div>                
+
+                        <div className="current_news_body" id='text'>
+                            
+                        </div>
+
                     </div>
 
                 </div>
 
-                {/* <div className="sub_news_container">
+                <div className="sub_news_container">
 
-                    {
-                        sub_data.length ? sub_data.map( (res, index) => (
+                    <div className="title__sub__news">
+                        <p>Other Related News </p>
+                    </div>
 
-                            <a className="subs_news" href={`/news/trending/view/${res._id}`}>
+                    <div className="sub__news__data">
 
-                                <div className="sub__image"><img src = {res.photo} alt="" /></div>
-                                <div className="sub__title"> {res.title} </div>
+                        {
+                            sub_data?.length ? sub_data.map( (res, index) => {
 
-                            </a>
+                                if (index < 8) {
 
-                        ) ) : null
-                    }
+                                    return (
+                                        <a className="subs_news" href={`/news/${topic}/view/${res._id}`}>
 
-                </div> */}
+                                            <div className="sub__image"><img src = {res.photo} alt="" /></div>
+                                            <div className="sub__title flex"> 
+                                                { truncateText(convertToTitleCase(res.title), 60) } 
+                                                <div className="date">{ formatDate3(res.date) }</div>
+                                            </div>
+
+                                        </a>
+                                    )
+
+                                }
+
+                            } ) : null
+                        }
+
+                    </div>
+
+                </div>
 
             </div>
 

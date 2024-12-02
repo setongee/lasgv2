@@ -236,6 +236,7 @@
     flex-wrap: wrap;
     gap: 20px;
     padding-bottom: 200px;
+    width: 100%;
 
     p{
         font-weight: 600;
@@ -247,6 +248,7 @@
     .relations{
 
         margin-top: 20px;
+        width: 100%;
 
         .relations__title{
             font-size: 11px;
@@ -260,7 +262,7 @@
 
     .result__card{
 
-        background-color: #f6f6f6;
+            background-color: #f6f6f6;
             background-color: #fff;
             border: 1px solid #eee;
             color: var(--dark);

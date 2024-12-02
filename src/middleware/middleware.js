@@ -12,6 +12,12 @@ export const formatDate = (date) => {
     
 }
 
+export const formatDate3 = (date) => {
+
+    return format(new Date(date), "dd MMMM'.' yyyy");
+    
+}
+
 export const formatDate2 = (date) => {
 
     return format(new Date(date), "dd-MM-yyyy");
@@ -88,3 +94,12 @@ export const convertToTitleCase = (str) => {
     return str;
 
   }
+
+
+export const sortArray = async (data, field) => {
+
+    let sortData = data?.sort((a, b) => a[field].toLowerCase().localeCompare(b[field].toLowerCase(), 'en', { sensitivity: 'accent' }));
+
+    return await sortData;
+
+}

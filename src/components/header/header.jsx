@@ -21,11 +21,13 @@ import StripLines from './StripLines';
 export default function Header() {  
 
 const [isMobileOpen, setIsMobileOpen] = useState(false);
-
 const [showSearch, setShowSearch] = useState(false);
 
-let location = useLocation();
+const { pathname } = useLocation();
 let navigate = useNavigate();
+
+const [target, setTarget] = useState({ url : pathname, page : `${pathname.split('/')[1] === "" ? "home" : pathname.split('/')[1]}` });
+
   
 //--- States Management - The problem of dynamic animated nests lolz --- 
 
@@ -43,35 +45,28 @@ const openModal = () => {
 
 }
 
+const path = (url, page) => {
+
+    setTarget( {url, page} );
+
+}
+
 useEffect(() => {
     
     window.scroll(0,0);
     setIsMobileOpen(false);
     document.body.style.overflowY = 'visible';
-
-    setActiveState();   
     
-    console.log(location.pathname.split('/')[1])
+    navigate(target.url)  
+    setActiveState(target.page); 
 
-}, [location.pathname]);
+}, [target]);
 
-const setActiveState = () => {
+const setActiveState = (page) => {
 
-    const target = location.pathname.split('/')[1]
-
-    if(document.querySelector('current') !== null) {
-
-        document.querySelector('current').classList.remove('current');
-
-    }
-
-    if (target === '') {
-        document.querySelector(`.seth_nav [name="home"]`).classList.add('current');
-    } 
-    else{
-        document.querySelector(`.seth_nav [name=${target}]`).classList.add('current');
-    }
-
+    document.querySelector('.current')?.classList.remove('current');
+    document.querySelector(`.seth_nav [name=${page}]`).classList.add('current')
+    
 }
 
 const openMobileMenu = () => {
@@ -166,7 +161,7 @@ return (
 
                             <div className="seth_nav"> 
 
-                                <a href='/' className="parentName" name = 'home'> Home <ArrowUpRight/> </a>
+                                <div onClick={ () => path("/", "home")  } className="parentName current" name = 'home'> Home <ArrowUpRight/> </div>
 
                                 <div className="parentName" name = 'government'> 
                                    
@@ -201,13 +196,13 @@ return (
 
                                 </div>
 
-                                <a href='/services' className="parentName" name = 'services'> Services <ArrowUpRight/> </a>
+                                <div onClick={ () => path("/services", "services")  } className="parentName" name = 'services'> Services <ArrowUpRight/> </div>
 
-                                <a href='/news/trending' className="parentName" name = 'news'> Newsroom <ArrowUpRight/> </a>
+                                <div  onClick={ () => path("/news/all/1", "news")  } className="parentName" name = 'news'> Newsroom <ArrowUpRight/> </div>
 
-                                <a href='/events/upcoming' className="parentName" name = 'events'>Events <ArrowUpRight/> </a>
+                                <div onClick={ () => path("/events/upcoming", "events")  } className="parentName" name = 'events'>Events <ArrowUpRight/> </div>
                                 
-                                <a href='/connect' className="parentName" name = 'connect'> Connect <ArrowUpRight/> </a>
+                                <div onClick={ () => path("/connect", "connect")  } className="parentName" name = 'connect'> Connect <ArrowUpRight/> </div>
 
                             </div>
 

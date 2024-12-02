@@ -6,24 +6,26 @@ import { motion } from 'framer-motion'
 
 import { getAllCategory } from '../../api/read/category.req'
 import Loader from '../loader/loader'
+import { sortArray } from '../../middleware/middleware'
+import { useQuery } from '@tanstack/react-query'
 
 
 export default function Services({bgColor, location, data_limit}) {
 
     const [categories, setCategories] = useState([])
 
-  const [isLoading, setIsLoading] = useState(false);
+    const categoryData = useQuery({
+
+        queryKey: ["category"],
+        queryFn: () => getAllCategory()
+
+    })
 
     useEffect(() => {
-
-        setIsLoading(true);
         
-        getAllCategory().then(e =>{
-            setIsLoading(false);
-            setCategories(e.data);
-        } );
-
-    }, []);
+        sortArray(categoryData?.data?.data, "name").then( sortedArr => setCategories(sortedArr) );
+        
+    }, [categoryData?.data]);
 
   return (
 
@@ -45,7 +47,7 @@ export default function Services({bgColor, location, data_limit}) {
             }
 
             {
-                !isLoading ?
+                !categoryData.isLoading ?
                 <div className = { `servicesPlatoon ${location === 'services' ? 'servicePagePlatoon' : '' } ` } >
 
                 {

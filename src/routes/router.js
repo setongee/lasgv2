@@ -60,8 +60,8 @@ const RouterClass = () => {
                 </Route>
 
                 {/* News */}
-                <Route path = 'news/:tag' element = { <News_Events/> } />
-                <Route path = 'news/:tag/view/:id' element = { <News_view/> } />
+                <Route path = 'news/:topic/:page' element = { <News_Events/> } />
+                <Route path = 'news/:topic/view/:id' element = { <News_view/> } />
 
                 {/* resources */}
                 <Route path = 'resources' element = { <Resources/> } />

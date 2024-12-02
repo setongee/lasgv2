@@ -71,6 +71,7 @@
                 line-height: 23px;
                 margin-bottom: 30px;
                 color: #777;
+                text-transform: capitalize;
             }
 
             .address_icon{
@@ -911,34 +912,14 @@
 
 }
 
-
-@media (max-width : 500px) {
+@media (max-width : 700px) {
 
     .government_style{
 
-        padding-top: 120px;
-
-        .topArea{
-
-            .mdaHeader{
-
-                margin-bottom: 50px;
-
-                .mdaTitle{
-                    width: 100%;
-                    font-size: 45px;
-                    line-height: 48px;
-                }
-
-                .mdaTitleSubs{
-
-                    width: 100%;
-                    font-size: 14px;
-
-                }
-
+        .resultArea{
+            .mda_card{
+                width: 100%;
             }
-
         }
 
         .openMdaModal{
@@ -1062,6 +1043,175 @@
                     
                     .icon{
                         cursor: pointer;
+                    }
+                }
+    
+            }
+        }
+        
+    }
+
+}
+
+
+@media (max-width : 500px) {
+
+    .government_style{
+
+        padding-top: 120px;
+
+        .topArea{
+
+            .mdaHeader{
+
+                margin-bottom: 50px;
+
+                .mdaTitle{
+                    width: 100%;
+                    font-size: 45px;
+                    line-height: 48px;
+                }
+
+                .mdaTitleSubs{
+
+                    width: 100%;
+                    font-size: 14px;
+
+                }
+
+            }
+
+        }
+
+        .openMdaModal{
+
+            position: fixed;
+            background-color: rgba($color: #000000, $alpha: .4);
+            height: 100vh;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 999999999;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+    
+            .modal{
+    
+                background-color: #fff;
+                width: 100%;
+                padding: 60px 35px;
+                display: flex;
+                position: relative;
+                height: 500px;
+                //align-items: center;
+                flex-direction: column;
+                margin-top: 0px;
+                border-radius: 20px 20px 0 0;
+                overflow-y: auto;
+    
+                .closeModal{
+    
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    margin: 40px;
+                    cursor: pointer;
+    
+                }
+    
+                .logoPart{
+                    display: flex;
+                    margin-left: 10px;
+                    margin-bottom: 30px;
+    
+                    img{
+                        scale: 1.8;
+                    }
+                }
+    
+                .tag{
+    
+                    font-size: 12px;
+                    text-transform: uppercase;
+                    letter-spacing: 2px;
+                    font-weight: 500;
+                    margin-bottom: 30px;
+                    color: #777;
+    
+                }
+    
+                .name_mda{
+    
+                    font-size: 24px;
+                    font-weight: 700;
+                    //text-align: center;
+                    margin-bottom: 20px;
+                    width: 100%;
+                    text-transform: capitalize;
+    
+                }
+    
+                .short{
+                    font-size: 15px;
+                    line-height: 23px;
+                    margin-bottom: 30px;
+                    color: #777;
+                    width: 100%;
+                }
+    
+                .address_icon{
+    
+                    font-size: 9px;
+                    letter-spacing: 2px;
+                    text-transform: uppercase;
+                    font-weight: 600;
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    margin-bottom: 20px;
+                    background-color: #fff5d2;
+                    width: max-content;
+                    padding: 5px;
+                    border-radius: 3px;
+                    color: #ff8820;
+    
+                }
+    
+                .address{
+    
+                    width: 100%;
+                    font-size: 15px;
+                    line-height: 28px;
+                    margin-bottom: 0px;
+                    text-decoration: underline;
+    
+                }
+    
+                .getDirections{
+                    font-size: 10px;
+                    text-transform: uppercase;
+                    letter-spacing: 2px;
+                    font-weight: 600;
+                    margin-top: 10px;
+                    margin-bottom: 50px;
+                    text-decoration: underline;
+                }
+    
+                .contactArea{
+    
+                    display: flex;
+                    gap: 12px;
+                    font-size: 14px;
+                    flex-direction: column;
+                    
+                    .icon{
+                        cursor: pointer;
+
+                    }
+
+                    .target__web{
+                        justify-content: center;
                     }
                 }
     

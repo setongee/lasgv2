@@ -195,13 +195,14 @@ const scrollRight = (type) => {
                     <div className="arrow__nav abs1" onClick={ () => scrollRight('left') }> <div className="abs"><NavArrowLeft/></div> </div>
 
                     <div className="pills__searches" id='scrollRecent'>
+                      <p onClick={ e => handleSearchTab(e) } >Benefits</p>
+                      <p onClick={ e => handleSearchTab(e) } >Advertise in Lagos</p>
+                      <p onClick={ e => handleSearchTab(e) } >Visit Lagos</p>
+                      <p onClick={ e => handleSearchTab(e) } >Pay Government Bills</p>
+                      <p onClick={ e => handleSearchTab(e) } >LASRRA</p>
                       <p onClick={ e => handleSearchTab(e) } >Pay My Tax</p>
                       <p onClick={ e => handleSearchTab(e) } >Loans</p>
-                      <p onClick={ e => handleSearchTab(e) } >LASRRA</p>
-                      <p onClick={ e => handleSearchTab(e) } >Visit Lagos</p>
-                      <p onClick={ e => handleSearchTab(e) } >Register LASAA</p>
-                      <p onClick={ e => handleSearchTab(e) } >Benefits</p>
-                      <p onClick={ e => handleSearchTab(e) } >PAY LUC</p>
+                      <p onClick={ e => handleSearchTab(e) } >Land Use Charge</p>
                     </div>
 
                     <div className="arrow__nav abs2" onClick={ () => scrollRight('right') } > <div className="abs"><NavArrowRight/></div> </div>
