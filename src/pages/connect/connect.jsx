@@ -46,7 +46,7 @@ export default function Connect() {
                                   <a target= '_blank' href = 'https://x.com/followlasg' className="soc x"><X/></a>
                                   <a target= '_blank' href='https://web.facebook.com/followlasg' className="soc fb"><Facebook/></a>
                                   <a target= '_blank' href='https://www.linkedin.com/company/lagosstategovernment/?originalSubdomain=ng' className="soc linkdn"><Linkedin/></a>
-                                  <a target= '_blank' href='https://web.facebook.com/followlasg' className="soc yt"><Youtube/></a>
+                                  <a target= '_blank' href='https://youtube.com/@lasgpage' className="soc yt"><Youtube/></a>
 
                               </div>
 

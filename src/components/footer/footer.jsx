@@ -45,7 +45,7 @@ export default function Footer() {
                   <a target = '_blank' href = 'https://x.com/followlasg' className="icon"><X width={22} strokeWidth={1.6}/></a>
                   <a target = '_blank' href='https://web.facebook.com/followlasg' className="icon"><FacebookTag width={22} strokeWidth={1.6}/></a>
                   <a target = '_blank' href='https://www.linkedin.com/company/lagosstategovernment/?originalSubdomain=ng' className="icon"><Linkedin width={22} strokeWidth={1.6}/></a> 
-                  <a target = '_blank' href='https://www.linkedin.com/company/lagosstategovernment/?originalSubdomain=ng' className="icon"><Youtube width={22} strokeWidth={1.6}/></a> 
+                  <a target = '_blank' href='https://youtube.com/@lasgpage' className="icon"><Youtube width={22} strokeWidth={1.6}/></a> 
 
                 </div>
 
