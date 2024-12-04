@@ -313,6 +313,10 @@
             scrollbar-width: none;
             cursor: pointer;
 
+            &::-webkit-scrollbar{
+                display: none !important;
+            }
+
             .highlight{
                 height: 200px;
                 min-width: 300px;

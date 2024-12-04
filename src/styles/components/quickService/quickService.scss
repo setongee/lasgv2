@@ -118,6 +118,10 @@
             margin-top: 40px;
             scroll-behavior: smooth;
             z-index: 2;
+
+            &::-webkit-scrollbar{
+                display: none !important;
+            }
             
             .content{
 

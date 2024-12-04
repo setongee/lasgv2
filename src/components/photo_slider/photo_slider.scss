@@ -454,6 +454,10 @@
                     scroll-behavior: smooth;
                     scrollbar-width: none;
 
+                    &::-webkit-scrollbar{
+                        display: none !important;
+                    }
+
                     &:hover{
 
                         mask-image: none;

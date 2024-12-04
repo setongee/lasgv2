@@ -16,6 +16,10 @@
         z-index: 2;
         cursor: pointer;
 
+        &::-webkit-scrollbar{
+            display: none !important;
+        }
+
         .quickId{
 
             min-width: 800px;
