@@ -82,17 +82,17 @@ export default function Footer() {
 
                       <div className="links a-dark flex flex_col">
 
-                          <a target = '_blank' href="/services/jobs" className="link"> <span><ArrowUpRight/></span> Work in Lagos </a>
+                          <a target = '_blank' href="/services/jobopportunities" className="link"> <span><ArrowUpRight/></span> Work in Lagos </a>
 
-                          <a target = '_blank' href="/services/housing" className="link"> <span><ArrowUpRight/></span> Housing and lands </a>
+                          <a target = '_blank' href="/services/housingandlands" className="link"> <span><ArrowUpRight/></span> Housing and lands </a>
 
-                          <a target = '_blank' href="/services/tourism" className="link"> <span><ArrowUpRight/></span> Tourism and travels </a>
+                          <a target = '_blank' href="/services/tourism_culture" className="link"> <span><ArrowUpRight/></span> Tourism and travels </a>
 
-                          <a target = '_blank' href="/services/payments" className="link"> <span><ArrowUpRight/></span> Payments and levies </a>
+                          <a target = '_blank' href="/services/payments_levies" className="link"> <span><ArrowUpRight/></span> Payments and levies </a>
 
                           <a target = '_blank' href="/services/advertisement" className="link"> <span><ArrowUpRight/></span> Advertisement </a>
 
-                          <a target = '_blank' href="/services/government" className="link"> <span><ArrowUpRight/></span> Government Benefits </a>
+                          <a target = '_blank' href="/services/governmentbenefits" className="link"> <span><ArrowUpRight/></span> Government Benefits </a>
 
                       </div>
 
