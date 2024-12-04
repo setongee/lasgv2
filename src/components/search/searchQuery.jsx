@@ -95,11 +95,9 @@ export default function SearchQuery({query, closeModal}) {
 
   }
 
-  console.log(serviceData)
-
   useEffect(() => {
 
-    let score = 0.01;
+    let score = 0.1;
 
     const fuseOptions = {
 
@@ -115,19 +113,19 @@ export default function SearchQuery({query, closeModal}) {
       keys: [
         {
           name: 'name',
-          weight: 0.8
+          weight: 1
         },
         {
           name: 'keywordsTrim.key',
-          weight: 0.3
+          weight: 0.1
         },
         {
           name: 'customKeywords.key',
-          weight: 0.3
+          weight: 0.1
         },
         {
-          name: 'url',
-          weight: 0.2
+          name: 'categories',
+          weight: 0.8
         },
         
       ]

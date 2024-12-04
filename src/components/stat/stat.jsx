@@ -12,7 +12,7 @@ export default function Stat() {
             <div className="budget__card">
 
                 <div className="tiny">Est. Population</div>
-                <p>16.54mn+</p>
+                <p>22mn+</p>
                 
             </div>
 
@@ -48,7 +48,7 @@ export default function Stat() {
             <div className="budget__card">
 
                 <div className="tiny">biggest economy</div>
-                <p>3rd in Africa</p>
+                <p>6th in Africa</p>
                 
             </div>
 
