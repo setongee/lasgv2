@@ -1,5 +1,4 @@
 import React,{useState, useEffect} from 'react'
-import footerImg from '../../assets/photoAssets/footer_area.svg'
 import Container from '../container/container'
 import './footer.scss'
 import { ArrowUpRight, FacebookTag, Instagram, Linkedin, X, Youtube } from 'iconoir-react'
@@ -46,6 +45,7 @@ export default function Footer() {
                   <a target = '_blank' href = 'https://x.com/followlasg' className="icon"><X width={22} strokeWidth={1.6}/></a>
                   <a target = '_blank' href='https://web.facebook.com/followlasg' className="icon"><FacebookTag width={22} strokeWidth={1.6}/></a>
                   <a target = '_blank' href='https://www.linkedin.com/company/lagosstategovernment/?originalSubdomain=ng' className="icon"><Linkedin width={22} strokeWidth={1.6}/></a> 
+                  <a target = '_blank' href='https://www.linkedin.com/company/lagosstategovernment/?originalSubdomain=ng' className="icon"><Youtube width={22} strokeWidth={1.6}/></a> 
 
                 </div>
 

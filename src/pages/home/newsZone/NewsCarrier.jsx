@@ -1,15 +1,10 @@
 import React, {useEffect, useState} from 'react'
 import './news__carrier.scss'
-import NewsComp from '../../news_events/NewsComp'
 import Container from '../../../components/container/container'
 import { Timer } from 'iconoir-react'
-import { news } from '../../../api/data/news'
 import { getAllNews } from '../../../api/read/news.req'
 import { convertToTitleCase, formatDate, readingTime, truncateText } from '../../../middleware/middleware'
-import { titleCase } from "title-case";
 
-import dayjs from 'dayjs'
-import relativeTime from 'dayjs/plugin/relativeTime'
 
 export default function NewsCarrier() {
 
@@ -43,7 +38,7 @@ return (
                 {
                     news.map( (res) => (
 
-                        <a className="news_card" key = {res._id} href={`/news/trending/view/${res._id}`}  >
+                        <a className="news_card" key = {res._id} href={`/news/${res.categories[0]}/view/${res._id}`}  >
 
                             <div className="news_image">
                                 <img src={res.photo} />

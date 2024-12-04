@@ -1,7 +1,7 @@
 import React from 'react'
 import Container from '../../components/container/container'
 import './connect.scss'
-import { Facebook, Instagram, Linkedin, X } from 'iconoir-react'
+import { Facebook, Instagram, Linkedin, X, Youtube } from 'iconoir-react'
 
 export default function Connect() {
 
@@ -19,7 +19,7 @@ export default function Connect() {
 
                         Connect with Lagos
 
-                        <p>Send an email manually, or complete the form to get in touch with Lagos state government.</p>
+                        <p>Send an email manually to get in touch with Lagos state government.</p>
 
                     </div>
 
@@ -46,6 +46,7 @@ export default function Connect() {
                                   <a target= '_blank' href = 'https://x.com/followlasg' className="soc x"><X/></a>
                                   <a target= '_blank' href='https://web.facebook.com/followlasg' className="soc fb"><Facebook/></a>
                                   <a target= '_blank' href='https://www.linkedin.com/company/lagosstategovernment/?originalSubdomain=ng' className="soc linkdn"><Linkedin/></a>
+                                  <a target= '_blank' href='https://web.facebook.com/followlasg' className="soc yt"><Youtube/></a>
 
                               </div>
 

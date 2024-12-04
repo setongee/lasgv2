@@ -25,7 +25,7 @@ root.render(
 
         <QueryClientProvider client={queryClient}>
           <BrowserRouter>
-              <Authy/>
+              <App/>
           </BrowserRouter>
         </QueryClientProvider>
 

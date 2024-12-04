@@ -95,6 +95,8 @@ export default function SearchQuery({query, closeModal}) {
 
   }
 
+  console.log(serviceData)
+
   useEffect(() => {
 
     let score = 0.01;
@@ -113,7 +115,7 @@ export default function SearchQuery({query, closeModal}) {
       keys: [
         {
           name: 'name',
-          weight: 0.7
+          weight: 0.8
         },
         {
           name: 'keywordsTrim.key',
@@ -124,11 +126,7 @@ export default function SearchQuery({query, closeModal}) {
           weight: 0.3
         },
         {
-          name: 'url.key',
-          weight: 0.3
-        },
-        {
-          name: 'keywords.key',
+          name: 'url',
           weight: 0.2
         },
         

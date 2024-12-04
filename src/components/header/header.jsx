@@ -179,12 +179,12 @@ return (
 
                                         <a href='/government/mdas/all' className="hover">
                                             <p>Explore Ministries and Departments <ArrowUpRight/> </p>
-                                            <span>View all the Legitlative Officers elected by lagosians this tenure.</span>
+                                            <span>A-Z index of Lagos Government Ministries, Departments & Agencies</span>
                                         </a>
 
                                         <a target='_blank' href='https://lagoshouseofassembly.gov.ng/home/our-team/' className="hover">
                                             <p>Legislative Officers  <ArrowUpRight/></p>
-                                            <span>View all the Legitlative Officers elected by lagosians this tenure.</span>
+                                            <span>View all the Legislative Officers elected by lagosians this tenure.</span>
                                         </a>
 
                                         <a target = '_blank' href='https://lagosjudiciary.gov.ng/directories.html#directories' className="hover">
