@@ -19,7 +19,7 @@ export default function Connect() {
 
                         Connect with Lagos
 
-                        <p>Send an email manually to get in touch with Lagos state government.</p>
+                        <p>Send a message to the email address below to get in touch.</p>
 
                     </div>
 

@@ -1,5 +1,5 @@
 {
-    "name":"LAGOS STATE OffiCIAL WEBSITE",
+    "name":"LAGOS STATE OFFICIAL WEBSITE",
     "short_name":"LASG WEBSITE",
     "icons":[
         {
@@ -9,7 +9,7 @@
             "src":"/android-chrome-512x512.png","sizes":"512x512","type":"image/png"
         }
     ],
-    "theme_color":"#009C3E",
+    "theme_color":"#1c3f3a",
     "background_color":"#fcfff5",
     "display":"standalone"
 }
