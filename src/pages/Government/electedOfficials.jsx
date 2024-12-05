@@ -1,16 +1,29 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import Container from '../../components/container/container'
 import './officials.scss'
 import OFFICIALS_DATA from '../../components/government/officials_data'
 import { useLocation } from 'react-router'
 import Officials from '../../components/government/officials'
+import { getAllMembers } from '../../api/read/executives.req'
+import { useQuery } from '@tanstack/react-query'
+import FetchedOfficials from '../../components/government/fetchedList'
+import Loader from '../../components/loader/loader'
 
 export default function ElectedOfficials() {
 
 let location = useLocation();
 
 const [paramsUrl, setparamsUrl] = useState(location.pathname.split('/')[2]);
+const [members, setMembers] = useState([])
 
+const {isLoading, data} = useQuery({
+
+    queryKey: ["exec"],
+    queryFn: () => getAllMembers()
+
+})
+
+    if(isLoading) return <div className="fullPortion"><Loader/></div>
 
   return (
 
@@ -40,7 +53,18 @@ const [paramsUrl, setparamsUrl] = useState(location.pathname.split('/')[2]);
                         return <Officials officials = { resData[1] } key = {index} uid = {resData[0]} />
 
                     } )
+
                 }
+
+                {
+                    !isLoading ? data?.data.map( (resData, index) => {
+
+                        return <FetchedOfficials officials = { resData } key = {index} />
+
+                    } ) : null
+
+                }
+                
                 
             </div>
 
