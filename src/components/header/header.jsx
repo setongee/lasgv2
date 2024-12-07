@@ -17,6 +17,9 @@ import SearchQuery from '../search/searchQuery';
 import Top__header from './top__header';
 import StripLines from './StripLines';
 
+// analytics
+import ReactGA from "react-ga"
+
 
 export default function Header() {  
 
@@ -61,6 +64,13 @@ useEffect(() => {
     setActiveState(target.page); 
 
 }, [target]);
+
+
+useEffect(() => {
+    
+    ReactGA.pageview(pathname);
+        
+}, []);
 
 const setActiveState = (page) => {
 
