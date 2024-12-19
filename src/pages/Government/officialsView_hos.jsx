@@ -132,8 +132,8 @@ return (
                         Mr. Agoro joined the Lagos State Government as a Senior Special Assistant to the Governor (Lands). In October 2003 he was elevated to head the Directorate of Land Services, Lands Bureau and was later absorbed into the Mainstream Civil Service in 2007 as Director (Administration) and redeployed to Lands Bureau as Director, Land Regularization, a position he held from 2007 to 2015 before his appointment as Permanent Secretary in August 2015. He served as Permanent Secretary Lands Bureau for eight years till his appointment as the 22nd Head of Service in September, 2024.
                     
                         {<br></br>} {<br></br>}
-
-                        A well-rounded Public Administrator, Dr. Hamzat is a strategic thinker, who has coordinated the execution of numerous world-class projects and developmental programs towards transforming Lagos State into Africa’s model megacity and financial hub. He is a doer, who pushes the boundaries of excellence in public service without seeking undue limelight and only finds joy in his public office achievements, only when his efforts impact lives positively while serving the overall public interest.</p>
+                    
+                    </p>
 
 
                     </div>
