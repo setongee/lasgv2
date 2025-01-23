@@ -29,7 +29,7 @@ const OFFICIALS_DATA = {
 
         hos : { 
 
-            image : "https://thelagosmag.com/wp-content/uploads/2023/09/Shuaheeb-Olabode-Agoro.jpg",
+            image : "https://res.cloudinary.com/dirmxkznt/image/upload/v1737591707/headofservicemr.olabodeshuaheebagoro.jpg",
             isIcon : false,
             fullname : "Mr. Olabode Shuaheeb Agoro",
             position : "Head of Service"

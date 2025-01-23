@@ -8,7 +8,7 @@ import '../../styles/global.scss'
 //----------- End of styles -----------------
 
 import {ArrowUpRight, IconoirProvider, Menu, MenuScale, NavArrowDown, Search, Xmark } from 'iconoir-react';
-import lasgLogo from '../../assets/navBar/lasg_logo.png'
+import lasgLogo from '../../assets/navBar/lasg__logo.png'
 import Container from '../container/container';
 
 import { useLocation, useNavigate } from 'react-router';

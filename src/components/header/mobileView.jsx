@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 
 import { NavArrowDown, Xmark, ArrowUpRight } from 'iconoir-react'
 import { useNavigate } from 'react-router'
-import lasgLogo from '../../assets/navBar/lasg_logo.png'
+import lasgLogo from '../../assets/navBar/lasg__logo.png'
 
 export default function MobileView({closeModal}) {
 

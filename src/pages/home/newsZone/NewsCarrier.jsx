@@ -12,7 +12,7 @@ const [news, setNews] = useState([]);
 
 useEffect(() => {
     
-    getAllNews(1, 'all').then( (res) => {
+    getAllNews(0, 'all').then( (res) => {
 
         const filteredIndex = res.data.filter( (e, index) => index < 5 )
         setNews(filteredIndex);

@@ -73,7 +73,7 @@ const RouterClass = () => {
                 <Route path = 'connect' element = { <Connect/> } />
 
                 {/* events */}
-                <Route path = 'events/:id' element = { <Events/> } />
+                <Route path = 'events/:topic/:page' element = { <Events/> } />
 
                 {/* 404 Page Not Found */}
                 <Route path="*" element = {<h1>Page not found</h1>} />

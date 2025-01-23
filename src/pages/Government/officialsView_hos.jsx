@@ -46,10 +46,10 @@ return (
                     </div>
 
                     <div className="official_photo">
-                        <img src="https://thelagosmag.com/wp-content/uploads/2023/09/Shuaheeb-Olabode-Agoro.jpg" alt="" />
+                        <img src="https://res.cloudinary.com/dirmxkznt/image/upload/v1737591707/headofservicemr.olabodeshuaheebagoro.jpg" alt="" />
                     </div>
 
-                    <div className="downloadPortrait" onClick={ () => window.open('https://thelagosmag.com/wp-content/uploads/2023/09/Shuaheeb-Olabode-Agoro.jpg') } > <DownloadCircle/> Download Official Portrait </div>
+                    <div className="downloadPortrait" onClick={ () => window.open('https://res.cloudinary.com/dirmxkznt/image/upload/v1737591707/headofservicemr.olabodeshuaheebagoro.jpg') } > <DownloadCircle/> Download Official Portrait </div>
 
                     <div className="official_highlights">
 

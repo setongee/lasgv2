@@ -45,38 +45,38 @@ export default function Mdas() {
 
   }
 
- useEffect(() => {
+  useEffect(() => {
 
-  const fuseOptions = {
+    const fuseOptions = {
 
-    keys: [
-      "name",
-      "type",
-      "subdomain"
-    ]
+      keys: [
+        "name",
+        "type",
+        "subdomain"
+      ]
+    
+    };
+
+    if (params !== "all"){
+
+      const fuse = new Fuse(filterResults, fuseOptions);
+      const results = fuse.search(query);
+      const queriedRes =  query ? results.map(res => res.item) : filterResults;
+      setQueryResults(queriedRes); 
+
+    } 
+    
+    else{
+
+      const fuse = new Fuse(globalResult, fuseOptions);
+      const results = fuse.search(query);
+      const queriedRes =  query ? results.map(res => res.item) : globalResult;
+      setQueryResults(queriedRes); 
+
+    }
+    
   
-  };
-
-  if (params !== "all"){
-
-    const fuse = new Fuse(filterResults, fuseOptions);
-    const results = fuse.search(query);
-    const queriedRes =  query ? results.map(res => res.item) : filterResults;
-    setQueryResults(queriedRes); 
-
-  } 
-  
-  else{
-
-    const fuse = new Fuse(globalResult, fuseOptions);
-    const results = fuse.search(query);
-    const queriedRes =  query ? results.map(res => res.item) : globalResult;
-    setQueryResults(queriedRes); 
-
-  }
-  
- 
- }, [query]);
+  }, [query]);
 
  useEffect(() => {
 
