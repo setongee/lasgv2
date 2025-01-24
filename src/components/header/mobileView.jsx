@@ -56,7 +56,7 @@ export default function MobileView({closeModal}) {
           </div>
           <div className="menu_sm" onClick={ () => {closeModal(); navigate('/services')} } >Services</div>    
           <div className="menu_sm" onClick={ () => {closeModal(); navigate('/news/all/1')} } >Newsroom </div>   
-          <div className="menu_sm" onClick={ () => {closeModal(); navigate('/events/upcoming')} } >Events </div>    
+          <div className="menu_sm" onClick={ () => {closeModal(); navigate('/events/all/1')} } >Events </div>    
           <div className="menu_sm" onClick={ () => {closeModal(); navigate('/connect')} } > Connect </div>   
 
         </div>

@@ -210,7 +210,7 @@ return (
 
                                 <div  onClick={ () => path("/news/all/1", "news")  } className="parentName" name = 'news'> Newsroom <ArrowUpRight/> </div>
 
-                                <div onClick={ () => path("/events/upcoming", "events")  } className="parentName" name = 'events'>Events <ArrowUpRight/> </div>
+                                <div onClick={ () => path("/events/all/1", "events")  } className="parentName" name = 'events'>Events <ArrowUpRight/> </div>
                                 
                                 <div onClick={ () => path("/connect", "connect")  } className="parentName" name = 'connect'> Connect <ArrowUpRight/> </div>
 
