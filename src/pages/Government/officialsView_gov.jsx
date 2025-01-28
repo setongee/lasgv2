@@ -4,10 +4,22 @@ import { useParams } from 'react-router'
 import Container from '../../components/container/container';
 import { DownloadCircle } from 'iconoir-react/solid';
 import { Send } from 'iconoir-react';
+import { useQuery } from '@tanstack/react-query'
+import { getSingleMember } from '../../api/read/executives.req';
+import Loader from '../../components/loader/loader';
 
 export default function GovernorsView() {
 
 let params = useParams();
+
+const {isLoading, data} = useQuery({
+
+    queryKey: ["exec"],
+    queryFn: () => getSingleMember("6797e188984d6e2dadb77e90")
+
+})
+
+if(isLoading) return <div className="fullPortion"><Loader/></div>
 
 return (
 
@@ -41,17 +53,17 @@ return (
 
                     <div className="official_details">
 
-                        <div className="official_name">Babajide Olusola Sanwo-Olu</div>
-                        <div className="post"> - Executive Governor - </div>
+                        <div className="official_name"> {data?.data?.fullname} </div>
+                        <div className="post"> - {data?.data?.position} - </div>
                         <div className="shortBio"> Mr. Babajide Olusola Sanwo-Olu was elected the 15th Governor of Lagos State on the platform of the All Progressives Congress (APC). He was declared winner of the March 9, 2019 gubernatorial elections by the Independent Electoral Commission (INEC) on Sunday, March 10, 2019...</div>
 
                     </div>
 
                     <div className="official_photo">
-                        <img src="https://cdn.pmnewsnigeria.com/wp-content/uploads/2023/05/Sanwo-Olus-official-portrait.jpg" alt="" />
+                        <img src={data?.data?.photo} alt = {`${data?.data?.fullname} - ${data?.data?.position} of Lagos State official photo`} />
                     </div>
 
-                    <div className="downloadPortrait" onClick={ () => window.open('https://cdn.pmnewsnigeria.com/wp-content/uploads/2023/05/Sanwo-Olus-official-portrait.jpg') } > <DownloadCircle/> Download Official Portrait </div>
+                    <div className="downloadPortrait" onClick={ () => window.open(data?.data?.photo) } > <DownloadCircle/> Download Official Portrait </div>
 
                     <div className="official_highlights">
 

@@ -103,3 +103,14 @@ export const sortArray = async (data, field) => {
     return await sortData;
 
 }
+
+export const sortArrayByNumber = async (data, field) => {
+
+    let sortData = data.sort((a, b) =>  {
+        return (Number(a[field])) - Number(b[field]);
+    } );
+
+    return await sortData;
+
+}
+

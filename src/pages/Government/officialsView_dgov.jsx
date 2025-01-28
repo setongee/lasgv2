@@ -5,9 +5,22 @@ import Container from '../../components/container/container';
 import { DownloadCircle } from 'iconoir-react/solid';
 import { Send } from 'iconoir-react';
 
+import { useQuery } from '@tanstack/react-query'
+import { getSingleMember } from '../../api/read/executives.req';
+import Loader from '../../components/loader/loader';
+
 export default function DGovernorsView() {
 
 let params = useParams();
+
+const {isLoading, data} = useQuery({
+
+    queryKey: ["exec"],
+    queryFn: () => getSingleMember("6797e207984d6e2dadb77eb6")
+
+})
+
+if(isLoading) return <div className="fullPortion"><Loader/></div>
 
 return (
 
@@ -41,17 +54,17 @@ return (
 
                     <div className="official_details">
 
-                        <div className="official_name">Dr. Kadri Obafemi Hamzat</div>
-                        <div className="post"> - Deputy Governor - </div>
+                        <div className="official_name">{data?.data?.fullname}</div>
+                        <div className="post"> - {data?.data?.position} - </div>
                         <div className="shortBio">Dr. Kadri Obafemi Hamzat, was re-elected the Deputy Governor of Lagos State for a second term, following the victory of the All Progressives Congress (APC) at the March 18, 2023 gubernatorial election. He remained the running mate to the Governor...</div>
 
                     </div>
 
                     <div className="official_photo">
-                        <img src="https://deputygovernor.lagosstate.gov.ng/wp-content/uploads/sites/130/2023/05/IMG-20230529-WA0001.jpg" alt="" />
+                        <img src={data?.data?.photo} alt = {`${data?.data?.fullname} - ${data?.data?.position} of Lagos State official photo`} />
                     </div>
 
-                    <div className="downloadPortrait" onClick={ () => window.open('https://deputygovernor.lagosstate.gov.ng/wp-content/uploads/sites/130/2023/05/IMG-20230529-WA0001.jpg') } > <DownloadCircle/> Download Official Portrait </div>
+                    <div className="downloadPortrait" onClick={ () => window.open(data?.data?.photo) } > <DownloadCircle/> Download Official Portrait </div>
 
                     <div className="official_highlights">
 

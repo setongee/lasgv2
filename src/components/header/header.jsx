@@ -75,7 +75,9 @@ useEffect(() => {
 const setActiveState = (page) => {
 
     document.querySelector('.current')?.classList.remove('current');
-    document.querySelector(`.seth_nav [name=${page}]`).classList.add('current')
+    const addCurrent = document.querySelector(`.seth_nav [name=${page}]`);
+
+    if (addCurrent !== null) addCurrent.classList.add('current');
     
 }
 

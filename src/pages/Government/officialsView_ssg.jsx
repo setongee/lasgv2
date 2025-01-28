@@ -5,9 +5,22 @@ import Container from '../../components/container/container';
 import { DownloadCircle } from 'iconoir-react/solid';
 import { Send } from 'iconoir-react';
 
+import { useQuery } from '@tanstack/react-query'
+import { getSingleMember } from '../../api/read/executives.req';
+import Loader from '../../components/loader/loader';
+
 export default function SSGView() {
 
 let params = useParams();
+
+const {isLoading, data} = useQuery({
+
+    queryKey: ["exec"],
+    queryFn: () => getSingleMember("6797e22c984d6e2dadb77ebe")
+
+})
+
+if(isLoading) return <div className="fullPortion"><Loader/></div>
 
 return (
 
@@ -41,17 +54,17 @@ return (
 
                     <div className="official_details">
 
-                        <div className="official_name"> Barr. ‘Bimbola Salu-Hundeyin </div>
-                        <div className="post"> - Secretary to the State Government - </div>
+                        <div className="official_name"> {data?.data?.fullname} </div>
+                        <div className="post"> - {data?.data?.position} - </div>
                         <div className="shortBio">Mrs. Abimbola Salu-Hundeyin is an esteemed Nigerian lawyer, administrator, and public servant, whose career spans over three decades of dedicated service to the nation. A Solicitor of the Supreme Court of Nigeria...</div>
 
                     </div>
 
                     <div className="official_photo">
-                        <img src="https://ssg.lagosstate.gov.ng/wp-content/uploads/sites/131/2023/10/2d62eb7a-bcc7-4730-b34e-de72ea055a20-684x1024.jpeg" alt="" />
+                        <img src={data?.data?.photo} alt = {`${data?.data?.fullname} - ${data?.data?.position} of Lagos State official photo`} />
                     </div>
 
-                    <div className="downloadPortrait" onClick={ () => window.open('https://ssg.lagosstate.gov.ng/wp-content/uploads/sites/131/2023/10/2d62eb7a-bcc7-4730-b34e-de72ea055a20-684x1024.jpeg') } > <DownloadCircle/> Download Official Portrait </div>
+                    <div className="downloadPortrait" onClick={ () => window.open(data?.data?.photo) } > <DownloadCircle/> Download Official Portrait </div>
 
                     <div className="official_highlights">
 

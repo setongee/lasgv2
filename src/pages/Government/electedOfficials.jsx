@@ -11,6 +11,8 @@ import Loader from '../../components/loader/loader'
 
 export default function ElectedOfficials() {
 
+const [execArr, setExecArr] = useState([]);
+
 let location = useLocation();
 
 const [paramsUrl, setparamsUrl] = useState(location.pathname.split('/')[2]);
@@ -47,17 +49,17 @@ const {isLoading, data} = useQuery({
 
             <div className="items">
 
-                {
+                {/* {
                     Object.entries(OFFICIALS_DATA[paramsUrl]).map( (resData, index) => {
 
                         return <Officials officials = { resData[1] } key = {index} uid = {resData[0]} />
 
                     } )
 
-                }
+                } */}
 
                 {
-                    !isLoading ? data?.data.map( (resData, index) => {
+                    !isLoading ? data.map( (resData, index) => {
 
                         return <FetchedOfficials officials = { resData } key = {index} />
 

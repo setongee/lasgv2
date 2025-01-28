@@ -20,6 +20,7 @@ import News_view from '../pages/news_events/news_view';
 import Connect from '../pages/connect/connect';
 import Search from '../pages/search/search';
 import Events from '../pages/events/events';
+import NotFound from '../pages/notFound/notFound';
 
 const RouterClass = () => {
 
@@ -76,7 +77,7 @@ const RouterClass = () => {
                 <Route path = 'events/:topic/:page' element = { <Events/> } />
 
                 {/* 404 Page Not Found */}
-                <Route path="*" element = {<h1>Page not found</h1>} />
+                <Route path="*" element = { <NotFound/> } />
 
             </Route>
  

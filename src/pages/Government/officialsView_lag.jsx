@@ -5,9 +5,22 @@ import Container from '../../components/container/container';
 import { DownloadCircle } from 'iconoir-react/solid';
 import { Send } from 'iconoir-react';
 
+import { useQuery } from '@tanstack/react-query'
+import { getSingleMember } from '../../api/read/executives.req';
+import Loader from '../../components/loader/loader';
+
 export default function LagView() {
 
 let params = useParams();
+
+const {isLoading, data} = useQuery({
+
+    queryKey: ["exec"],
+    queryFn: () => getSingleMember("6797e36f984d6e2dadb77f0c")
+
+})
+
+if(isLoading) return <div className="fullPortion"><Loader/></div>
 
 return (
 
@@ -41,17 +54,18 @@ return (
 
                     <div className="official_details">
 
-                        <div className="official_name"> Mr. Sam Egube </div>
-                        <div className="post"> - Deputy Chief of Staff - </div>
+                        <div className="official_name"> {data?.data?.fullname} </div>
+                        <div className="post"> - {data?.data?.position} - </div>
                         <div className="shortBio">Samuel Avwerosuo Egube, born on March 5, 1969, hails from Uwheru, Ugehelli in Delta State. He began his education at Agbado Model Primary School in Benin City, followed by Edo College in Benin City. He then earned a Second Class Upper Honours degree in Civil Engineering... </div>
 
                     </div>
 
                     <div className="official_photo">
-                        <img src="https://guardian.ng/wp-content/uploads/2022/06/Sam-Pix-1424x802.jpg" alt="" />
+                        <img src={data?.data?.photo} alt = {`${data?.data?.fullname} - ${data?.data?.position} of Lagos State official photo`} />
                     </div>
 
-                    <div className="downloadPortrait" onClick={ () => window.open('https://guardian.ng/wp-content/uploads/2022/06/Sam-Pix-1424x802.jpg') } > <DownloadCircle/> Download Official Portrait </div>
+                    <div className="downloadPortrait" onClick={ () => window.open(data?.data?.photo) } > <DownloadCircle/> Download Official Portrait </div>
+
 
                     <div className="official_highlights">
 

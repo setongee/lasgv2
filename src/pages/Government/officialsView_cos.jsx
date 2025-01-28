@@ -5,9 +5,22 @@ import Container from '../../components/container/container';
 import { DownloadCircle } from 'iconoir-react/solid';
 import { Send } from 'iconoir-react';
 
+import { useQuery } from '@tanstack/react-query'
+import { getSingleMember } from '../../api/read/executives.req';
+import Loader from '../../components/loader/loader';
+
 export default function COSView() {
 
 let params = useParams();
+
+const {isLoading, data} = useQuery({
+
+    queryKey: ["exec"],
+    queryFn: () => getSingleMember("6797e34d984d6e2dadb77f06")
+
+})
+
+if(isLoading) return <div className="fullPortion"><Loader/></div>
 
 return (
 
@@ -39,17 +52,17 @@ return (
 
                     <div className="official_details">
 
-                        <div className="official_name"> Mr. Tayo Akinmade Ayinde </div>
-                        <div className="post"> - Chief of Staff - </div>
+                        <div className="official_name">{data?.data?.fullname} </div>
+                        <div className="post"> -{data?.data?.position} - </div>
                         <div className="shortBio">Mr. ‘Tayo Akinmade Ayinde was born on the 24th of August 1964 at Alausa, Ikeja, Lagos. He attended St Peters’ Anglican Primary School, Alausa, Ikeja where he obtained ...</div>
 
                     </div>
 
                     <div className="official_photo">
-                        <img src="https://pbs.twimg.com/media/EgKICkwWkAILpeg.jpg" alt="" />
+                        <img src={data?.data?.photo} alt = {`${data?.data?.fullname} - ${data?.data?.position} of Lagos State official photo`} />
                     </div>
 
-                    <div className="downloadPortrait" onClick={ () => window.open('https://pbs.twimg.com/media/EgKICkwWkAILpeg.jpg') } > <DownloadCircle/> Download Official Portrait </div>
+                    <div className="downloadPortrait" onClick={ () => window.open(data?.data?.photo) } > <DownloadCircle/> Download Official Portrait </div>
 
                     <div className="official_highlights">
 

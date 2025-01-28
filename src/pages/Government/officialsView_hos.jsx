@@ -5,9 +5,22 @@ import Container from '../../components/container/container';
 import { DownloadCircle } from 'iconoir-react/solid';
 import { Send } from 'iconoir-react';
 
+import { useQuery } from '@tanstack/react-query'
+import { getSingleMember } from '../../api/read/executives.req';
+import Loader from '../../components/loader/loader';
+
 export default function HOSView() {
 
 let params = useParams();
+
+const {isLoading, data} = useQuery({
+
+    queryKey: ["exec"],
+    queryFn: () => getSingleMember("6797e25f984d6e2dadb77ecb")
+
+})
+
+if(isLoading) return <div className="fullPortion"><Loader/></div>
 
 return (
 
@@ -39,17 +52,17 @@ return (
 
                     <div className="official_details">
 
-                        <div className="official_name"> Mr. Olabode Shuaheeb Agoro </div>
-                        <div className="post"> - Head of Service - </div>
+                        <div className="official_name"> {data?.data?.fullname} </div>
+                        <div className="post"> - {data?.data?.position} - </div>
                         <div className="shortBio">Mr. Agoro, Shuaheeb, Olabode, the last born of five, was born on the 3rd of August 1967 to the family of late Justice Idowu Olayimika Agoro, the first Solicitor General / Permanent Secretary, Lagos State Ministry of Justice and retired Justice of the Court of Appeal...</div>
 
                     </div>
 
                     <div className="official_photo">
-                        <img src="https://res.cloudinary.com/dirmxkznt/image/upload/v1737591707/headofservicemr.olabodeshuaheebagoro.jpg" alt="" />
+                        <img src={data?.data?.photo} alt = {`${data?.data?.fullname} - ${data?.data?.position} of Lagos State official photo`} />
                     </div>
 
-                    <div className="downloadPortrait" onClick={ () => window.open('https://res.cloudinary.com/dirmxkznt/image/upload/v1737591707/headofservicemr.olabodeshuaheebagoro.jpg') } > <DownloadCircle/> Download Official Portrait </div>
+                    <div className="downloadPortrait" onClick={ () => window.open(data?.data?.photo) } > <DownloadCircle/> Download Official Portrait </div>
 
                     <div className="official_highlights">
 
