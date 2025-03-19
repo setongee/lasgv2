@@ -362,6 +362,11 @@
         gap: 30px;
         line-height: 26px;
         text-align: justify;
+
+        &.customBio{
+            gap: 0;
+        }
+
         .heading{
             font-weight: 600;
             color: var(--primary25);

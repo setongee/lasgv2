@@ -21,6 +21,7 @@ import Connect from '../pages/connect/connect';
 import Search from '../pages/search/search';
 import Events from '../pages/events/events';
 import NotFound from '../pages/notFound/notFound';
+import Executive__view from '../pages/Government/view/executive__view';
 
 const RouterClass = () => {
 
@@ -47,6 +48,9 @@ const RouterClass = () => {
 
                     <Route path='judiciary_officials' element = { <JudiciaryOfficials/> } />
                     <Route path='legistlative_officials' element = { <LegistlativeOfficials/> } />
+
+                    {/* Other Executives */}
+                    <Route path='elected_officials/view/:name' element = { <Executive__view/> } />
 
                     <Route path='mdas/:index' element = { <Mdas/> } />
           

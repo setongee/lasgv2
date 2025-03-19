@@ -36,3 +36,21 @@ export const getSingleMember = async (id) => {
 
 }
 
+export const getSingleMemberByName = async (name) => {
+
+    const newName = decodeURI(name);
+
+    const response = await axios.get(`${base_url}/get/${newName}`);
+    
+    if(response.status === 200) {
+
+        if(response.data?.data?.length){
+            return response.data.data[0];
+        }
+        
+    } else{
+        return [];
+    }
+
+}
+

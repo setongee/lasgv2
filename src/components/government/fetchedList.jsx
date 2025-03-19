@@ -19,7 +19,7 @@ export default function FetchedOfficials( { officials } ) {
 
   return (
     
-    <div className="officialsPage" onClick={ () => role !== "" ? window.location.href = `/government/elected_officials/${role}/view` : null }>
+    <div className="officialsPage" onClick={ () => role !== "" ? window.location.href = `/government/elected_officials/${role}/view` : window.location.href = `/government/elected_officials/view/${officials.fullname}` }>
 
         <div className="photosPoint">
 
@@ -30,7 +30,7 @@ export default function FetchedOfficials( { officials } ) {
                     <img src= {officials.photo} /> 
 
                     {
-                        Number(officials.phone) < 7 ?
+                        Number(officials.phone) > 0 ?
 
                         <motion.div 
         
