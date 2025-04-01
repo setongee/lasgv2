@@ -12,6 +12,7 @@ import {
 
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import Authy from './authy';
+import Cookie from './cookie';
 
 const queryClient = new QueryClient()
 

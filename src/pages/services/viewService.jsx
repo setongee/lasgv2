@@ -3,7 +3,6 @@ import { useNavigate, useParams } from 'react-router'
 import Container from '../../components/container/container';
 import { ArrowLeft } from 'iconoir-react';
 import './viewService.scss';
-import Typewriter from 'typewriter-effect';
 import Fuse from 'fuse.js';
 
 import ServiceSearchResults from './serviceSearchResults';
@@ -14,8 +13,6 @@ import { useQuery } from '@tanstack/react-query';
 import Loader from '../../components/loader/loader';
 
 import notfound from '../../assets/404/404.png'
-import ShareSocial from '../../components/share/Share';
-import ShareSocialTs from '../../components/share/Share';
 
 // End of Icons
 
@@ -44,7 +41,7 @@ export default function ViewService() {
       setIsLoading(false)
       setData(e.data);
     });
-    getSingleCategory(params.theme).then( e => setCategoryDetails(e.data[0]) )
+    getSingleCategory(params.theme).then( e => setCategoryDetails(e.data[0]))
 
    }, []); 
 
