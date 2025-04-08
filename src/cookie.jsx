@@ -1,10 +1,13 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import './cookie.scss'
 import Container from './components/container/container'
 import { Settings } from 'iconoir-react'
 import Cookies from 'js-cookie';
+import { useLocation } from 'react-router';
 
 export default function Cookie({cookieStatus}) {
+
+var {pathname} = useLocation();
 
  const setCookie = () => {
 
@@ -22,6 +25,7 @@ export default function Cookie({cookieStatus}) {
 
  }
 
+
   return (
     
     <div className="cookieBanner">
@@ -38,7 +42,7 @@ export default function Cookie({cookieStatus}) {
 
             <div className="poi">
 
-                We use cookies to enhance your browsing experience, content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies. <a href="/privacy">Learn More</a>
+                We use cookies to enhance your browsing experience, content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies. <a href="/privacy"> View our data privacy policy </a>
 
             </div>
         

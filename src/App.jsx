@@ -7,12 +7,13 @@ import ReactGA from "react-ga"
 import Cookie from './cookie';
 import Cookies from 'js-cookie';
 import React, {useState, useEffect} from 'react'
-
+import { useLocation } from 'react-router';
 const TRACKING_ID = "G-NB0QB4RDM7" // LASG Main Site Tracking ID
 
 function App() {
 
   const [cookies, setCookies] = useState(false);
+  const {pathname} = useLocation();
 
   useEffect(() => {
 
@@ -21,6 +22,8 @@ function App() {
     if(cookieInfo === undefined){
 
       setCookies(false);
+
+      if (pathname === "/privacy") setCookies(true);
 
     }else{
 
@@ -37,7 +40,7 @@ function App() {
 
     }
 
-  }, [cookies]);
+  }, [cookies, pathname]);
 
   const setCookieStatus = (stat) => {
 

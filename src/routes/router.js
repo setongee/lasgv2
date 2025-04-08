@@ -22,6 +22,7 @@ import Search from '../pages/search/search';
 import Events from '../pages/events/events';
 import NotFound from '../pages/notFound/notFound';
 import Executive__view from '../pages/Government/view/executive__view';
+import Privacy from '../pages/privacy/Privacy';
 
 const RouterClass = () => {
 
@@ -79,6 +80,9 @@ const RouterClass = () => {
 
                 {/* events */}
                 <Route path = 'events/:topic/:page' element = { <Events/> } />
+
+                {/* Privacy Page */}
+                <Route path = '/privacy' element = { <Privacy/> } />
 
                 {/* 404 Page Not Found */}
                 <Route path="*" element = { <NotFound/> } />

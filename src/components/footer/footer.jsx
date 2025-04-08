@@ -123,9 +123,11 @@ export default function Footer() {
 
                           <a target = '_blank' href="/connect" className="link"> <span><ArrowUpRight/></span> Contact us </a>
 
-                          <a target = '_blank' href="/government/mdas/all" className="link"><span><ArrowUpRight/></span> MDA directory </a>
+                          <a target = '_blank' href="https://mail.lagosstate.gov.ng/owa" className="link"><span><ArrowUpRight/></span> Lagos Mail Login </a>
 
                           <a target = '_blank' href="https://lasrab.lagosstate.gov.ng/" className="link"> <span><ArrowUpRight/></span> Archives </a>
+
+                          <a target = '_blank' href="/privacy" className="link"> <span><ArrowUpRight/></span> Privacy Policy </a>
 
                       </div>
 
